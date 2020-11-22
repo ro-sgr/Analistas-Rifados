@@ -70,34 +70,8 @@
         <div class="hero-container">
             <div class="left">
                 <p class="i-am">
-                    Cálculo
+                    Problema 1
                 </p>
-                <h2>
-                    Diferencial
-                </h2>
-                <h2>
-                    e Integral
-                </h2>
-
-                <a href="#contact" class="btn">Fac. de Ciencias UNAM</a>
-
-                <div class="social-icons">
-                    <a href="#">
-                        <img src="images/twitter-logo.png" alt=""/>
-                    </a>
-
-                    <a href="#">
-                        <img src="images/dribbble-logo.png" alt=""/>
-                    </a>
-
-                    <a href="#">
-                        <img src="images/instagram-logo.png" alt=""/>
-                    </a>
-                </div>
-            </div>
-
-            <div class="right">
-                <img src="images/hero-image.png" alt=""/>
             </div>
         </div>
     </header>
@@ -108,31 +82,32 @@
             <p>
                 Sean \(U=\{0,1,2,4,6,8,9\}\), \(A=\{0,6,2\}\), \(B=\{2,4,8\}\) y \(C=\{1,6,9\}\). Determine el resultado
                 y dibuja el diagrama de Venn para cada una de las siguientes operaciones:
-                a) \((A\cup(B\cap A)^{c})^{c}\).
             </p>
-            <p>
-                Comenzamos calculando \(B\cap A\), es decir, el conjunto de los elementos que tienen en común \(A\) y
-                \(B\): $$(B\cap A)=\{2\}$$ Luego, calculamos el complemento de este conjunto, i.e.
-                $$(B\cap A)^{c}=U-(B\cap A)=\{0,1,4,6,8,9\}$$ Hacemos la unión entre el conjunto anterior y \(A\):
-                $$(A\cup (B\cap A)^{c})=\{0,1,2,4,6,8,9\}$$ Finalmente tendremos que \((A\cup (B\cap
-                A)^{c})^{c}=\emptyset\).
-            </p>
-        </div>
-    </section>
+            <ol type="a">
+                <li>\((A\cup(B\cap A)^{c})^{c}\).<br>
+                    <p>
+                        Comenzamos calculando \(B\cap A\), es decir, el conjunto de los elementos que tienen en común
+                        \(A\) y
+                        \(B\): $$(B\cap A)=\{2\}$$ Luego, calculamos el complemento de este conjunto, i.e.
+                        $$(B\cap A)^{c}=U-(B\cap A)=\{0,1,4,6,8,9\}$$ Hacemos la unión entre el conjunto anterior y
+                        \(A\):
+                        $$(A\cup (B\cap A)^{c})=\{0,1,2,4,6,8,9\}$$ Finalmente tendremos que \((A\cup (B\cap
+                        A)^{c})^{c}=\emptyset\).
+                    </p>
+                    <img src="P1.1.png">
+                </li>
+                \((A-B)\cap C\).<br>
+                <span>Resolvemos la diferencia de conjuntos, es decir, los elementos de \(A\) que no están en \(B\):</span>
+                $$(A-B)=\{0,6\}$$
+                <span>Luego hacemos la intersección con el conjunto \(C\), teniendo que </span>
+                $$(A-B)\cap C=\{6\}$$
+                <img src="P1.2.png">
+                <li>
 
-    <section id="work">
-        <h2>My Work</h2>
+                </li>
+            </ol>
 
-        <div class="section-content">
-            <div class="work-container">
-                <img src="images/project1.png" alt=""/>
-                <img src="images/project2.png" alt=""/>
-                <img src="images/project3.png" alt=""/>
-                <img class="mobile-hide" src="images/project4.png" alt=""/>
-                <img class="mobile-hide" src="images/project5.png" alt=""/>
-                <img class="mobile-hide" src="images/project6.png" alt=""/>
-            </div>
-            <a href="#" class="btn light">View All Projects</a>
+
         </div>
     </section>
 
