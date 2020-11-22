@@ -73,7 +73,7 @@
         </div>
     </header>
 
-    <section id="about-me">
+    <section>
         <h2>P1</h2>
         <div class="section-content">
             <p>
@@ -81,40 +81,80 @@
                 y dibuja el diagrama de Venn para cada una de las siguientes operaciones:
             </p>
             <ol type="a">
-                <li>\((A\cup(B\cap A)^{c})^{c}\).<br>
-                    <p>
-                        Comenzamos calculando \(B\cap A\), es decir, el conjunto de los elementos que tienen en común
-                        \(A\) y
-                        \(B\): $$(B\cap A)=\{2\}$$ Luego, calculamos el complemento de este conjunto, i.e.
-                        $$(B\cap A)^{c}=U-(B\cap A)=\{0,1,4,6,8,9\}$$ Hacemos la unión entre el conjunto anterior y
-                        \(A\):
-                        $$(A\cup (B\cap A)^{c})=\{0,1,2,4,6,8,9\}$$ Finalmente tendremos que \((A\cup (B\cap
-                        A)^{c})^{c}=\emptyset\).
-                    </p>
-                    <img src="P1.1.png">
-                </li>
-                <li>\((A-B)\cap C\).<br>
-                    <span>Resolvemos la diferencia de conjuntos, es decir, los elementos de \(A\) que no están en \(B\):</span>
-                    $$(A-B)=\{0,6\}$$
-                    <span>Luego hacemos la intersección con el conjunto \(C\), teniendo que </span>
-                    $$(A-B)\cap C=\{6\}$$
-                    <img src="P1.2.png"></li>
-                <li>\((A\cup B)\cap (A\cup C)\).<br>
-                    Calculando primero ambas uniones, se tiene que: $$A\cup B=\{0,2,4,6,8\}$$ $$A\cup C=\{0,1,2,6,9\}$$
-                    Finalmente, calculamos la intersección entre estos dos conjuntos. $$(A\cup B)\cap (A\cup
-                    C)=\{0,2,6\}$$
-                    <img src="P1.3.png"></li>
-                </li>
-                <li>\((A\cap B)\cup (A\cap C)\).<br>
-                    Calculando las intersecciones, tendremos $$A\cap B=\{2\}$$ $$A\cap C=\{6\}$$ Luego la unión entre
-                    ambos conjuntos obteniéndose que $$(A\cap B)\cup (A\cap C)=\{2,6\}$$
-                    <img src="P1.4.png"></li>
-                </li>
-                <li>\(C^{c}\cap (A\cup B\cup C)\).<br>
-                    Desarrollando tendremos lo siguiente: $$\{0,2,4,8\}\cap (\{0,1,2,4,6,8,9\}=\{0,2,4,8\}=C^{c}$$
-                    <img src="P1.5.png"></li>
-                </li>
+                <li>\((A\cup(B\cap A)^{c})^{c}\).</li>
+                <li>\((A-B)\cap C\).</li>
+                <li>\((A\cup B)\cap (A\cup C)\).</li>
+                <li>\((A\cap B)\cup (A\cap C)\).</li>
+                <li>\(C^{c}\cap (A\cup B\cup C)\).</li>
             </ol>
+        </div>
+    </section>
+
+    <!-- P1.A -->
+    <section>
+        <h2>P1.A</h2>
+        <div class="section-content">
+            <p>\((A\cup(B\cap A)^{c})^{c}\).</p>>
+            <p>
+                Comenzamos calculando \(B\cap A\), es decir, el conjunto de los elementos que tienen en común
+                \(A\) y \(B\):
+                $$(B\cap A)=\{2\}$$
+                Luego, calculamos el complemento de este conjunto, i.e.
+                $$(B\cap A)^{c}=U-(B\cap A)=\{0,1,4,6,8,9\}$$
+                Hacemos la unión entre el conjunto anterior y \(A\):
+                $$(A\cup (B\cap A)^{c})=\{0,1,2,4,6,8,9\}$$
+                Finalmente tendremos que \((A\cup (B\cap A)^{c})^{c}=\emptyset\).
+            </p>
+            <img src="P1.1.png">
+        </div>
+    </section>
+
+    <!-- P1.B -->
+    <section>
+        <h2>P1.B</h2>
+        <div class="section-content">
+            <p>\((A-B)\cap C\).</p>
+            <p>Resolvemos la diferencia de conjuntos, es decir, los elementos de \(A\) que no están en \(B\):</p>
+            $$(A-B)=\{0,6\}$$
+            <p>Luego hacemos la intersección con el conjunto \(C\), teniendo que </p>
+            $$(A-B)\cap C=\{6\}$$
+            <img src="P1.2.png">
+        </div>
+    </section>
+
+    <!-- P1.C -->
+    <section>
+        <h2>P1.C</h2>
+        <div class="section-content">
+            <p>\((A\cup B)\cap (A\cup C)\).</p>
+            Calculando primero ambas uniones, se tiene que: $$A\cup B=\{0,2,4,6,8\}$$ $$A\cup C=\{0,1,2,6,9\}$$
+            Finalmente, calculamos la intersección entre estos dos conjuntos. $$(A\cup B)\cap (A\cup
+            C)=\{0,2,6\}$$
+            <img src="P1.3.png">
+        </div>
+    </section>
+
+    <!-- P1.D -->
+    <section>
+        <h2>P1.D</h2>
+        <div class="section-content">
+            <p>\((A\cap B)\cup (A\cap C)\).</p>
+            Calculando las intersecciones, tendremos
+            $$A\cap B=\{2\}$$ $$A\cap C=\{6\}$$
+            Luego la unión entre ambos conjuntos obteniéndose que
+            $$(A\cap B)\cup (A\cap C)=\{2,6\}$$
+            <img src="P1.4.png">
+        </div>
+    </section>
+
+    <!-- P1.E -->
+    <section>
+        <h2>P1.E</h2>
+        <div class="section-content">
+            <p>\(C^{c}\cap (A\cup B\cup C)\).</p>
+            Desarrollando tendremos lo siguiente:
+            $$\{0,2,4,8\}\cap (\{0,1,2,4,6,8,9\}=\{0,2,4,8\}=C^{c}$$
+            <img src="P1.5.png">
         </div>
     </section>
 
