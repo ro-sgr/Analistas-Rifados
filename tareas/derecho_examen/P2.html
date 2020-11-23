@@ -48,24 +48,27 @@
 
             <!-- Lema -->
             <section>
-                <strong>Lema.</strong> Para cualesquiera proposiciones \(p\), \(q\) y \(r\) se tiene que
-                i) \(p\lor(q\land r)\equiv(p\lor q)\land(p\lor r)\)
-                ii) \(p\land(q\lor r)\equiv(p\land q)\lor(p\land r)\)
+                <h3>Lema.</h3>
+                Para cualesquiera proposiciones \(p\), \(q\) y \(r\) se tiene que
+                <ol type="i">
+                    <li>\(p\lor(q\land r)\equiv(p\lor q)\land(p\lor r)\)</li>
+                    <li>\(p\land(q\lor r)\equiv(p\land q)\lor(p\land r)\)</li>
+                </ol>
             </section>
 
             <!-- Demostración A -->
             <section>
                 <h2>P2. A</h2>
-                \(\subseteq)\) Sea \(x\in A\cup(B\cap C)\).
-                \(\iff x\in A\lor x\in(B\cap C)\)
-                \(\iff x\in A\lor (x\in B\land x\in C)\)
-                \(\iff (x\in A\lor x\in B)\land (x\in A\lor x\in C)\qquad\text{por i) del Lema}\)
-                \(\iff x\in A\cup B\land x\in A\cup C\)
-                \(\iff x\in (A\cup B)\cap (A\cup C)\)
-                De donde \(A\cup(B\cap C)\subseteq(A\cup B)\cap (A\cup C)\).
+                \(\subseteq)\) Sea \(x\in A\cup(B\cap C)\). <br>
+                \(\iff x\in A\lor x\in(B\cap C)\)<br>
+                \(\iff x\in A\lor (x\in B\land x\in C)\)<br>
+                \(\iff (x\in A\lor x\in B)\land (x\in A\lor x\in C)\qquad\text{por i) del Lema}\)<br>
+                \(\iff x\in A\cup B\land x\in A\cup C\)<br>
+                \(\iff x\in (A\cup B)\cap (A\cup C)\)<br>
+                De donde \(A\cup(B\cap C)\subseteq(A\cup B)\cap (A\cup C)\).<br>
 
                 \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cup(B\cap C)\supseteq(A\cup B)\cap
-                (A\cup C)\).
+                (A\cup C)\).<br>
 
                 Por lo tanto, \(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\). \(\blacksquare\)
             </section>
@@ -73,16 +76,16 @@
             <!-- Demostración B -->
             <section>
                 <h2>P2. B</h2>
-                \(\subseteq)\) Sea \(x\in A\cap(B\cup C)\).
-                \(\iff x\in A\land x\in(B\cup C)\)
-                \(\iff x\in A\land (x\in B\lor x\in C)\)
-                \(\iff (x\in A\land x\in B)\lor (x\in A\land x\in C)\qquad\text{por ii) del Lema}\)
-                \(\iff x\in A\cap B\lor x\in A\cap C\)
-                \(\iff x\in (A\cap B)\cup (A\cap C)\)
-                De donde \(A\cap(B\cup C)\subseteq(A\cap B)\cup (A\cap C)\)\).
+                \(\subseteq)\) Sea \(x\in A\cap(B\cup C)\).<br>
+                \(\iff x\in A\land x\in(B\cup C)\)<br>
+                \(\iff x\in A\land (x\in B\lor x\in C)\)<br>
+                \(\iff (x\in A\land x\in B)\lor (x\in A\land x\in C)\qquad\text{por ii) del Lema}\)<br>
+                \(\iff x\in A\cap B\lor x\in A\cap C\)<br>
+                \(\iff x\in (A\cap B)\cup (A\cap C)\)<br>
+                De donde \(A\cap(B\cup C)\subseteq(A\cap B)\cup (A\cap C)\)\).<br>
 
                 \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cap(B\cup C)\supseteq(A\cap B)\cup
-                (A\cap C)\).
+                (A\cap C)\).<br>
 
                 Por lo tanto, \(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\). \(\blacksquare\)
             </section>
@@ -113,7 +116,7 @@
                             <li><a href="#">Límite de funciones</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Tareas</a></li>
+                    <li><a href="/tarea.html">Tareas</a></li>
                 </ul>
             </nav>
 
@@ -128,11 +131,11 @@
 </div>
 
 <!-- Scripts -->
-<script src="../../assets/js/jquery.min.js"></script>
-<script src="../../assets/js/browser.min.js"></script>
-<script src="../../assets/js/breakpoints.min.js"></script>
-<script src="../../assets/js/util.js"></script>
-<script src="../../assets/js/main.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
 
 </body>
 </html>
