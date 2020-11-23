@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 13 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 13</h1>
+                </header>
+                Muestra que las siguientes proposiciones no son ciertas en general:
+                <ol type="a">
+                    <li>Si \(a &lt; b\), entonces \(a^{2} &lt; b^{2}\)</li>
+                    <li>Si \(a^{2} &lt; b^{2}\), entonces \(a &lt; b\)</li>
+                    <li>Si \(a &lt; b\), entonces \(\frac{1}{b} &lt; \frac{1}{a}\)</li>
+                </ol>
+                Da las condiciones donde lo anterior sí sea cierto y demuéstralo en general.
+            </section>
+
+            <section>
+                <h1>P13.A</h1>
+                Si \(a &lt; b\), entonces \(a^{2} &lt; b^{2}\) <br>
+                Supongamos que \(a=-1\) y \(b=0\), entonces tendríamos lo siguiente:
+                $$ -1 &lt; 0 \implies (-1)^{2} &lt; 0^{2} $$
+                es decir, \(1 &lt; 0\) lo cual no es cierto. <br> <br>
+
+                Condiciones donde lo anterior es cierto. <br>
+                <strong>Demostración</strong><br>
+                Por hipótesis, si \(a=0 \implies b &gt; 0\)<br>
+                Luego, \(b \cdot b &gt; 0 \cdot b \implies b^{2} &gt; 0\)<br>
+                \(a &lt; b\) Por hipótesis<br>
+                \(a \cdot a &lt; b \cdot a\) Propiedad multiplicativa<br>
+                \(\implies a^{2} &lt; ab\)<br>
+                \(a \cdot b &lt; b \cdot b\) Propiedad multiplicativa<br>
+                \(\implies ab &lt; b^{2}\)<br>
+                Como \(a^{2} &lt; ab &lt; b^{2}\), entonces \(a^{2} &lt; b^{2}\) Por transitividad. \(\blacksquare\)
+            </section>
+
+            <section>
+                <h1>P13.B</h1>
+                Si \(a^{2} &lt; b^{2}\), entonces \(a &lt; b\) <br>
+                Si \(a=-1\) y \(b=-2\) se tendría que
+                $$(-1)^{2} &lt; (-2)^{2} \implies 1 &lt; 4 $$
+                lo cual es cierto; sin embargo, \(-1 &lt; -2\) es falso. <br> <br>
+
+                Condiciones donde lo anterior es cierto. <br>
+                <strong>Demostración</strong><br>
+                Por hipótesis, \(a^{2} &lt; b^{2} \implies b^{2} - a^{2} &gt; 0\)
+                \(\implies (b+a)(b-a) &gt; 0\)
+                \(\iff (b+a)>0 \wedge (b-a) &gt; 0\) ó \((b+a) &lt; 0 \wedge (b-a) &lt; 0\)
+                \(\iff b &gt; -a \wedge b &gt; a\) ó \(b<-a \wedge b &lt; a\)
+                De lo anterior analizamos lo siguiente: Como \(b &gt; 0\), no puede suceder que \(b &lt; -a\) (pues
+                \(a &gt; 0 \Rightarrow -a &lt; 0\)); por lo tanto, la segunda parte de la disyunción genera un absudo.
+                Mientras que la primera parte de la disyunción será cierta debido a la hipótesis, por lo que podemos
+                concluir que
+                $$ b &gt; a \implies a &lt; b \blacksquare $$
+            </section>
+
+            <section>
+                <h1>P13.C</h1>
+                Si \(a &lt; b\), entonces \(\frac{1}{b} &lt; \frac{1}{a}\) <br>
+                Si \(a=-1\) y \(b=2\), veremos que se llega a un absurdo:
+                $$ -1 &lt; 2 \implies \frac{1}{2} &lt; \frac{1}{-1} \implies \frac{1}{2} &lt; - 1 $$
+                Además, si \(a\) y \(b\) fuesen cero, tampoco podría ser verdadera tal proposición. <br> <br>
+
+                Condiciones donde lo anterior es cierto. <br>
+                <strong>Demostración</strong><br>
+                Para conocer las condiciones necesarias, procedemos con el siguiente análisis:<br>
+                \(\bullet\) Si \(a=1\) y \(b=2\), entonces \(\frac{1}{2} &lt; 1\) \(\checkmark\)<br>
+                \(\bullet\) Si \(a=-2\) y \(b=-1\), entonces \(-1 &lt; -\frac{1}{2}\) \(\checkmark\)<br>
+                Lo anterior indica que si \(a &lt; b\) y además tienen el mismo signo, la desigualdad se cumple.<br>
+                Veamos ahora si es válida cuando \(a\) y \(b\) tienen signos diferentes:<br>
+                Si \(a = -1\) y \(b = 2\), entonces \(\frac{1}{2} &lt; -1\) \(\times\)<br>
+                Por lo tanto, el teorema que probaremos es el siguiente:<br>
+                Para todo \(a,b \in \mathbb{R}\), donde \(a\) y \(b\) tienen el mismo signo, si \(a &lt; b \implies
+                \frac{1}{b} &lt; \frac{1}{a}\)<br>
+                Teorema 1. \(\forall a \in \mathbb{R}, a\not=0, a>0 \implies a^{-1}>0\) y \(a<0 \implies a^{-1}<0\)<br>
+                Teorema 2. Si \(a &lt; b\) y \(c &lt; 0\), entonces \(ac &gt; bc\).<br>
+                Demostración. <br>
+                Caso 1. \(a &gt; 0\) y \(b &gt; 0\)<br>
+                \(a &lt; b\) Por hipótesis<br>
+                \(a^{-1} &gt; 0\) y \(b^{-1} &gt; 0\) Por Teorema 1<br>
+                \(a \cdot a^{-1} &lt; b \cdot a^{-1}\) Propiedad multiplicativa <br>
+                \((a \cdot a^{-1}) \cdot b^{-1}<(b \cdot a^{-1}) \cdot b^{-1}\) Asociatividad y prop. multiplicativa<br>
+                \((a \cdot a^{-1}) \cdot b^{-1}<(b \cdot b^{-1}) \cdot a^{-1}\) Asociatividad <br>
+                \(1 \cdot b^{-1} &lt; 1 \cdot a^{-1}\) Inverso multiplicativo <br>
+                \(b^{-1} &lt; a^{-1}\) Neutro multiplicativo<br>
+                Caso 2. \(a &lt; 0\) y \(b &lt; 0\)<br>
+                \(a &lt; b\) Por hipótesis<br>
+                \(a^{-1} &lt; 0\) y \(b^{-1} &lt; 0\) Por Teorema 1<br>
+                \(a \cdot a^{-1} &gt; b \cdot a^{-1}\) Por Teorema 2<br>
+                \((a \cdot a^{-1}) \cdot b^{-1} &lt; (b \cdot a^{-1}) \cdot b^{-1}\) Asociatividad y Teorema 2<br>
+                \(1 \cdot b^{-1} &lt; 1 \cdot a^{-1}\) Inverso multiplicativo <br>
+                \(b^{-1} &lt; a^{-1}\) Neutro multiplicativo<br>
+                De esta manera, llegamos al resultado deseado en ambos casos. \(\blacksquare\)<br>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/generic.html">Generic</a></li>
+                    <li><a href="/elements.html">Elements</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="#">Números reales</a></li>
+                            <li><a href="#">Funciones</a></li>
+                            <li><a href="#">Axioma del Supremo</a></li>
+                            <li><a href="#">Sucesiones</a></li>
+                            <li><a href="#">Límite de funciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/tarea.html">Tareas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
