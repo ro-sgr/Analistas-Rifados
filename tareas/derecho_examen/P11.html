@@ -45,7 +45,163 @@
                     <li>\(x &lt; \frac{5x-2}{2} &lt; 7-x\)</li>
                     <li>\(\frac{3}{x+5} &lt; x\)</li>
                     <li>\(x^{2} &lt; 4x\)</li>
+                    <li>\(x^2 \leq x+2\)</li>
+                    <li>\(\frac{x}{1-x}\geq\frac{2+x}{x}\)</li>
+                    <li>\(\frac{x^2-1}{x^2+2} &lt; 3\)</li>
+                    <li>\(\frac{x^2-4x}{x^2} \geq 1-x\)</li>
                 </ol>
+            </section>
+
+            <section>
+                <h3>P11.A</h3>
+                <p>\(4x-5 &lt; 7x-4\)</p>
+                <strong>Demostración</strong>
+                \(\implies -5+4<7x-4x\implies -1<3x\implies x>-\frac{1}{3}\)<br>
+                Por lo que \(\boxed{x\in(-\frac{1}{3},\infty)}\)
+            </section>
+
+            <section>
+                <h3>P11.B</h3>
+                <p>\(x &lt; \frac{5x-2}{2} &lt; 7-x\)</p>
+                <strong>Demostración</strong>
+                <ol type="i">
+                    <li>\(x &lt; \frac{5x-2}{2}\implies 2x &lt; 5x-2\implies 2 &lt; 3x\implies x &gt; \frac{3}{2}\)
+                        Por lo que \(x\in(\frac{3}{2},\infty)\)<br>
+                    </li>
+                    <li>\(\frac{5x-2}{2} &lt; 7-x\implies 5x-2 &lt; 14-2x \implies 7x &lt; 16\implies x &lt;
+                        \frac{16}{7}\)<br>
+                        Por lo que \(x\in(-\infty,\frac{16}{7})\)
+                    </li>
+                    Así, \(x\in(\frac{3}{2},\infty)\cap(-\infty,\frac{16}{7})\), de donde
+                    \(\boxed{x\in(\frac{3}{2},\frac{16}{7})}\)
+                </ol>
+            </section>
+
+            <section>
+                <h3>P11.C</h3>
+                <p>\(\frac{3}{x+5} &lt; x\)</p>
+                <strong>Demostración</strong>
+                <ol type="i">
+                    <li>\(x+5 &gt; 0\implies x &gt; -5\)</li>
+                    \(\implies 3 &lt; x(x+5) = x^{2} + 5x\)<br>
+                    \(\implies x^{2} + 5x + \frac{25}{4} &gt; 3 + \frac{25}{4}\)<br>
+                    \(\implies (x + \frac{5}{2})^{2} &gt; \frac{37}{4}\)<br>
+                    \(\implies |x + \frac{5}{2}| &gt; \frac{\sqrt{37}}{2}\)<br>
+                    \(\implies x + \frac{5}{2} &gt; \frac{\sqrt{37}}{2}\) o \(x+\frac{5}{2} &lt;
+                    -\frac{\sqrt{37}}{2}\)<br>
+                    \(\implies x>\frac{-5+\sqrt{37}}{2}\) o \(x &lt; \frac{-5-\sqrt{37}}{2}\)<br>
+                    Así, \( x \in [( - \infty, \frac{-5 -\sqrt{37}}{2}) \cup (\frac{ -5 + \sqrt{37}}{2}, \infty)] \cap
+                    (-5,\infty)\).<br>
+                    Por lo tanto, \(x\in(\frac{-5+\sqrt{37}}{2},\infty)\).<br><br>
+
+                    <li>\(x+5 &lt; 0\implies x &lt; -5\)</li>
+                    \(\implies 3 &lt; x(x+5)\)
+                    \(\vdots\)
+                    \( \mid x+\frac{5}{2} \mid &lt; \frac{\sqrt{37}}{2}\)
+                    \(-\frac{\sqrt{37}}{2} &lt; x + \frac{5}{2}<\frac{\sqrt{37}}{2}\)
+                    \(\frac{-5-\sqrt{37}}{2} &lt; x &lt; \frac{-5+\sqrt{37}}{2}\)
+                    Así, \(x\in(\frac{-5-\sqrt{37}}{2},\frac{-5+\sqrt{37}}{2})\cap(-\infty,-5)\).
+                    Por lo tanto, \(x\in(\frac{-5-\sqrt{37}}{2},-5)\).
+
+                    Así, \(\boxed{x\in(\frac{-5-\sqrt{37}}{2},-5) \cup (\frac{-5+\sqrt{37}}{2},\infty)}\)
+                </ol>
+            </section>
+
+            <section>
+                <h3>P11.D</h3>
+                <p>\(x^{2} &lt; 4x\)</p>
+                <strong>Demostración</strong>
+                \(\implies x^{2} - 4x &lt; 0 \implies x^{2} - 4x + 4 &lt; 4 \implies (x-2)^{2} &lt; 4\)
+                \(\implies \lvert x-2 \rvert &lt; 2\)
+                \(\implies -2 &lt; x-2 &lt; 2\)
+                \(\implies 0 &lt; x &lt; 4\)
+                Por lo tanto, \(\boxed{x\in(0,4)}\)
+            </section>
+
+            <section>
+                <h3>P11.E</h3>
+                <p>\(x^{2} \leq x+2\)</p>
+                <strong>Demostración</strong>
+                \(\implies x^{2} - x \leq 2 \implies x^{2} - x + \frac{1}{4} \leq 2 + \frac{1}{4} \implies
+                (x - \frac{1}{2})^{2} \leq \frac{9}{4}\)
+                \(\implies | x - \frac{1}{2} | \leq \frac{3}{2}\)
+                \(\implies -\frac{3}{2} \leq x-\frac{1}{2} \leq \frac{3}{2}\)
+                \(\implies -1 \leq x \leq 2 \)
+                Por lo tanto, \(\boxed{x\in(-1,2)}\)
+            </section>
+
+            <section>
+                <h3>P11.F</h3>
+                <p>\(\frac{x}{1-x} \geq \frac{2+x}{x}\)</p>
+                <strong>Demostración</strong>
+                <ol type="i">
+                    <li>\(1-x &gt; 0\) y \(x &gt; 0 \implies x &gt; 0\) y \(x &lt; 1\implies 0 &lt; x &lt; 1\)</li>
+                    \(\implies x^{2} \geq (2+x)(1-x) = 2 -2x + x -x^{2} \) <br>
+                    \(\implies x^{2} \geq 2-x-x^2 \implies 2x^{2} + x \geq 2\) <br>
+                    \(\implies x^{2} + \frac{1}{2}x \geq 1 \implies x^{2} + \frac{1}{2}x + \frac{1}{16} \geq 1 +
+                    \frac{1}{16}\)<br>
+                    \(\implies (x + \frac{1}{4})^{2} \geq \frac{17}{16}\implies |x+\frac{1}{4}|\geq
+                    \frac{\sqrt{17}}{4}\)<br>
+                    \(\implies x + \frac{1}{4}\geq\frac{\sqrt{17}}{4}\) o \(x+\frac{1}{4}\leq -\frac{\sqrt{17}}{4}\)<br>
+                    \(\implies x \geq \frac{-1+\sqrt{17}}{4}\) o \(x \leq \frac{-1-\sqrt{17}}{4}\)<br>
+                    Así, \(x\in\{(-\infty,\frac{-1-\sqrt{17}}{4})\cup(\frac{-1+\sqrt{17}}{4},\infty)\}\cap(0,1)\).<br>
+                    Por lo tanto, \(x\in [\frac{-1+\sqrt{17}}{4},1)\).<br>
+                    <li>\(1-x &gt; 0\) y \(x &lt; \implies x &lt; 0\) y \(x &lt; 1\implies x &lt; 0\)</li>
+                    \(\implies x^2\leq (2+x)(1-x)\) <br>
+                    \(\vdots\) <br>
+                    \(\implies | x + \frac{1}{4} | \leq \frac{\sqrt{17}}{4}\) <br>
+                    \(\implies -\frac{\sqrt{17}}{4} \leq x + \frac{1}{4} \leq \frac{\sqrt{17}}{4}\) <br>
+                    \(\implies \frac{-1-\sqrt{17}}{4}\leq x \leq \frac{-1+\sqrt{17}}{4}\) <br>
+                    Así, \(x\in [\frac{-1-\sqrt{17}}{4},\frac{-1+\sqrt{17}}{4}] \cap (-\infty,0)\). <br>
+                    Por lo tanto, \(x \in [\frac{-1-\sqrt{17}}{4},0)\). <br>
+                    <li>\(1-x &lt; 0\) y \(x &gt; 0\implies x &gt; 0\) y \(x &gt; 1 \implies 1 &lt; x\)</li>
+                    \(\implies x^2\leq (2+x)(1-x)\) <br>
+                    \(\vdots\) <br>
+                    \(\implies \frac{-1-\sqrt{17}}{4} \leq x \leq \frac{-1+\sqrt{17}}{4}\) <br>
+                    Así, \(x\in [\frac{-1-\sqrt{17}}{4},\frac{-1+\sqrt{17}}{4}]\cup(1,\infty)\). <br>
+                    Por lo tanto, \(x \in \emptyset\).
+
+                    <li>\(1-x &lt; 0\) y \(x &lt; 0\implies x &lt; 0\) y \(x &gt; 1\) !</li>
+                    Por lo tanto, \(x\in\emptyset\).<br>
+                    Así, \(\boxed{x \in [\frac{-1-\sqrt{17}}{4},0) \cup [\frac{-1+\sqrt{17}}{4},1)}\)
+                </ol>
+            </section>
+
+            <section>
+                <h3>P11.G</h3>
+                <p>\(\frac{x^{2} - 1}{x^{2} + 2} &lt; 3\)</p>
+                <strong>Demostración</strong>
+                <ol type="i">
+                    <li>\(x^{2} + 2 &gt; 0 \implies x^{2} &gt; -2\) (tautología, pues \(x^{2} \geq 0 &gt; -2\))</li>
+                    \(x^{2} - 1 = 3x^{2} + 6 \implies -7 &lt; 2x^{2} \implies x^{2} &gt; -\frac{7}{2}\) (tautología,
+                    pues \(x^{2} \ geq 0 &gt; -\frac{7}{2}\)) <br>
+                    Por lo tanto, \(x \in \mathbb{R}\).
+                    <li>\(x^{2} + 2 &lt; 0 \implies x^{2} &lt; -2\) !</li>
+                    Así, \(\boxed{x \in \mathbb{R}}\)
+                </ol>
+            </section>
+
+            <section>
+                <h3>P11.H</h3>
+                <p> \(\frac{x^{2} - 4x}{x^{2}} \geq 1-x\)</p>
+                <strong>Demostración</strong>
+                Como \(x^2\geq 0\), <br>
+                \(x^{2} - 4x \geq x^{2}(1-x) \implies x^{2} - 4x \geq x^{2} - x^{3} \) <br>
+                \(\implies -4x \geq -x^{3} \implies x^{3} - 4x \geq 0 \implies x(x^{2} - 4) \geq 0\) <br><br>
+
+                Que se cumple si:
+
+                <ol type="i">
+                    <li>\(x \geq 0\)  y  \(x^{2} - 4 \geq 0\) \(\implies x \geq 0\) y \(x^{2} \geq 4\)</li>
+                    \(\implies x\geq 0\) y \((x\geq 2\) o \(x\leq -2)\) <br>
+                    \(\implies x\geq 2\), i.e. \(x\in [2,\infty)\). <br>
+
+                    <li>\(x &lt; 0\)  y  \(x^{2} - 4 &lt; 0\) \(\implies x &lt; 0\) y \(x^{2} &lt; 4\)</li>
+                    \(\implies x &lt; 0\)  y  \(-2 &lt; x &lt; 2\) <br>
+                    \(\implies 0 &lt; x &lt; 2\), i.e. \(x\in (0,2)\). <br>
+                </ol>
+
+                Por lo tanto, \(x\in(0,2)\cup [2,\infty)\), de donde\(\boxed{x\in (0,\infty)}\)
             </section>
 
         </div>
