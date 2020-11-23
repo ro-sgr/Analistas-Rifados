@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 2 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="../assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 2</h1>
+                </header>
+                <p>Demuestra que para todo conjunto \(A\), \(B\) y \(C\),</p>
+                <ol type="a">
+                    <li>\(A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\)</li>
+                    <li>\(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\)</li>
+                </ol>
+            </section>
+
+            <!-- Lema -->
+            <section>
+                <strong>Lema.</strong> Para cualesquiera proposiciones \(p\), \(q\) y \(r\) se tiene que
+                i) \(p\lor(q\land r)\equiv(p\lor q)\land(p\lor r)\)
+                ii) \(p\land(q\lor r)\equiv(p\land q)\lor(p\land r)\)
+            </section>
+
+            <!-- Demostración A -->
+            <section>
+                <h2>P2. A</h2>
+                \(\subseteq)\) Sea \(x\in A\cup(B\cap C)\).
+                \(\iff x\in A\lor x\in(B\cap C)\)
+                \(\iff x\in A\lor (x\in B\land x\in C)\)
+                \(\iff (x\in A\lor x\in B)\land (x\in A\lor x\in C)\qquad\text{por i) del Lema}\)
+                \(\iff x\in A\cup B\land x\in A\cup C\)
+                \(\iff x\in (A\cup B)\cap (A\cup C)\)
+                De donde \(A\cup(B\cap C)\subseteq(A\cup B)\cap (A\cup C)\).
+
+                \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cup(B\cap C)\supseteq(A\cup B)\cap
+                (A\cup C)\).
+
+                Por lo tanto, \(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\). \(\blacksquare\)
+            </section>
+
+            <!-- Demostración B -->
+            <section>
+                <h2>P2. B</h2>
+                \(\subseteq)\) Sea \(x\in A\cap(B\cup C)\).
+                \(\iff x\in A\land x\in(B\cup C)\)
+                \(\iff x\in A\land (x\in B\lor x\in C)\)
+                \(\iff (x\in A\land x\in B)\lor (x\in A\land x\in C)\qquad\text{por ii) del Lema}\)
+                \(\iff x\in A\cap B\lor x\in A\cap C\)
+                \(\iff x\in (A\cap B)\cup (A\cap C)\)
+                De donde \(A\cap(B\cup C)\subseteq(A\cap B)\cup (A\cap C)\)\).
+
+                \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cap(B\cup C)\supseteq(A\cap B)\cup
+                (A\cap C)\).
+
+                Por lo tanto, \(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\). \(\blacksquare\)
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/generic.html">Generic</a></li>
+                    <li><a href="/elements.html">Elements</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="#">Números reales</a></li>
+                            <li><a href="#">Funciones</a></li>
+                            <li><a href="#">Axioma del Supremo</a></li>
+                            <li><a href="#">Sucesiones</a></li>
+                            <li><a href="#">Límite de funciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tareas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>
