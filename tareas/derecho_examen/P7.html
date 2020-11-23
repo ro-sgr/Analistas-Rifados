@@ -6,10 +6,10 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 2 | Tarea</title>
+    <title>Problema 7 | Tarea</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -37,57 +37,17 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 2</h1>
+                    <h1>Problema 6</h1>
                 </header>
-                <p>Demuestra que para todo conjunto \(A\), \(B\) y \(C\),</p>
-                <ol type="a">
-                    <li>\(A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\)</li>
-                    <li>\(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\)</li>
-                </ol>
+                <p>Si \( a \in \mathbb{R} \) tal que \( a<0 \), entonces \( \frac{1}{a}<0 \)</p>
             </section>
 
-            <!-- Lema -->
+            <!-- Demostración -->
             <section>
-                <h3>Lema.</h3>
-                Para cualesquiera proposiciones \(p\), \(q\) y \(r\) se tiene que
-                <ol type="i">
-                    <li>\(p\lor(q\land r)\equiv(p\lor q)\land(p\lor r)\)</li>
-                    <li>\(p\land(q\lor r)\equiv(p\land q)\lor(p\land r)\)</li>
-                </ol>
-            </section>
-
-            <!-- Demostración A -->
-            <section>
-                <h2>P2. A</h2>
-                \(\subseteq)\) Sea \(x\in A\cup(B\cap C)\). <br>
-                \(\iff x\in A\lor x\in(B\cap C)\)<br>
-                \(\iff x\in A\lor (x\in B\land x\in C)\)<br>
-                \(\iff (x\in A\lor x\in B)\land (x\in A\lor x\in C)\qquad\text{por i) del Lema}\)<br>
-                \(\iff x\in A\cup B\land x\in A\cup C\)<br>
-                \(\iff x\in (A\cup B)\cap (A\cup C)\)<br>
-                De donde \(A\cup(B\cap C)\subseteq(A\cup B)\cap (A\cup C)\).<br>
-
-                \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cup(B\cap C)\supseteq(A\cup B)\cap
-                (A\cup C)\).<br>
-
-                Por lo tanto, \(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\). \(\blacksquare\)
-            </section>
-
-            <!-- Demostración B -->
-            <section>
-                <h2>P2. B</h2>
-                \(\subseteq)\) Sea \(x\in A\cap(B\cup C)\).<br>
-                \(\iff x\in A\land x\in(B\cup C)\)<br>
-                \(\iff x\in A\land (x\in B\lor x\in C)\)<br>
-                \(\iff (x\in A\land x\in B)\lor (x\in A\land x\in C)\qquad\text{por ii) del Lema}\)<br>
-                \(\iff x\in A\cap B\lor x\in A\cap C\)<br>
-                \(\iff x\in (A\cap B)\cup (A\cap C)\)<br>
-                De donde \(A\cap(B\cup C)\subseteq(A\cap B)\cup (A\cap C)\)\).<br>
-
-                \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cap(B\cup C)\supseteq(A\cap B)\cup
-                (A\cap C)\).<br>
-
-                Por lo tanto, \(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\). \(\blacksquare\)
+                <strong>Demostración</strong><br>
+                $$ \begin{align*} a < 0 & \implies a \left( \frac{a}{a} \right) < 0 \\ & \implies (a)(a)\left(
+                \frac{1}{a} \right) < 0 \\ & \implies \frac{1}{a} < \frac{0}{a} \\ & \implies \frac{1}{a} < 0
+                \end{align*} $$
             </section>
 
         </div>

@@ -6,10 +6,10 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 2 | Tarea</title>
+    <title>Problema 5 | Tarea</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -37,57 +37,32 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 2</h1>
+                    <h1>Problema 5</h1>
                 </header>
-                <p>Demuestra que para todo conjunto \(A\), \(B\) y \(C\),</p>
-                <ol type="a">
-                    <li>\(A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\)</li>
-                    <li>\(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\)</li>
-                </ol>
+                <p>Si \(a\) es un número real tal que \(a>0\), entonces \(1/a>0\).</p>
             </section>
 
-            <!-- Lema -->
+            <!-- Demostración -->
             <section>
-                <h3>Lema.</h3>
-                Para cualesquiera proposiciones \(p\), \(q\) y \(r\) se tiene que
-                <ol type="i">
-                    <li>\(p\lor(q\land r)\equiv(p\lor q)\land(p\lor r)\)</li>
-                    <li>\(p\land(q\lor r)\equiv(p\land q)\lor(p\land r)\)</li>
-                </ol>
-            </section>
+                <strong>Demostración</strong><br>
+                Supóngase lo contrario, i.e. \(a>0\) y \(1/a\leq 0\). En clase se demostró que no existe \(1/0\in\mathbb
+                {R} \), y como se está suponiendo que \(a\) y \(1/a\) son inversos multiplicativos, ninguno puede ser
+                cero. Así, \(1/a<0\).<br>
 
-            <!-- Demostración A -->
-            <section>
-                <h2>P2. A</h2>
-                \(\subseteq)\) Sea \(x\in A\cup(B\cap C)\). <br>
-                \(\iff x\in A\lor x\in(B\cap C)\)<br>
-                \(\iff x\in A\lor (x\in B\land x\in C)\)<br>
-                \(\iff (x\in A\lor x\in B)\land (x\in A\lor x\in C)\qquad\text{por i) del Lema}\)<br>
-                \(\iff x\in A\cup B\land x\in A\cup C\)<br>
-                \(\iff x\in (A\cup B)\cap (A\cup C)\)<br>
-                De donde \(A\cup(B\cap C)\subseteq(A\cup B)\cap (A\cup C)\).<br>
+                Por la propiedad de tricotomía, \(a\) es positivo y \(-1/a\) es positivo.<br>
 
-                \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cup(B\cap C)\supseteq(A\cup B)\cap
-                (A\cup C)\).<br>
+                Obs. En clase se demostró que \(1>0\), por lo que 1 es positivo y, por tricotomía, \(-1\) no lo es.<br>
 
-                Por lo tanto, \(A\cup(B\cap C)=(A\cup B)\cap (A\cup C)\). \(\blacksquare\)
-            </section>
+                Por el inciso c) del problema 4 se tiene<br>
 
-            <!-- Demostración B -->
-            <section>
-                <h2>P2. B</h2>
-                \(\subseteq)\) Sea \(x\in A\cap(B\cup C)\).<br>
-                \(\iff x\in A\land x\in(B\cup C)\)<br>
-                \(\iff x\in A\land (x\in B\lor x\in C)\)<br>
-                \(\iff (x\in A\land x\in B)\lor (x\in A\land x\in C)\qquad\text{por ii) del Lema}\)<br>
-                \(\iff x\in A\cap B\lor x\in A\cap C\)<br>
-                \(\iff x\in (A\cap B)\cup (A\cap C)\)<br>
-                De donde \(A\cap(B\cup C)\subseteq(A\cap B)\cup (A\cap C)\)\).<br>
+                \(a\cdot(-\frac{1}{a})=-(a\cdot\frac{1}{a})\)<br>
 
-                \(\supseteq)\) Todos los argumentos son reversibles, por lo que \(A\cap(B\cup C)\supseteq(A\cap B)\cup
-                (A\cap C)\).<br>
+                \(a\cdot(-\frac{1}{a})=-1\qquad\text{Inversos multiplicativos}\)<br>
 
-                Por lo tanto, \(A\cap(B\cup C)=(A\cap B)\cup (A\cap C)\). \(\blacksquare\)
+                Como \(a\) y \(-1/a\) son ambos positivos, la propiedad de cerradura del producto asegura que
+                \(a\cdot(-\frac{1}{a})\) también es positivo, por lo que \(-1\) es positivo !<br>
+
+                Por lo tanto, \(a>0\Rightarrow 1/a> 0\).
             </section>
 
         </div>
