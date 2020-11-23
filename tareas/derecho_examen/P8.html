@@ -6,7 +6,7 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 7 | Tarea</title>
+    <title>Problema 8 | Tarea</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
@@ -37,27 +37,50 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 7</h1>
+                    <h1>Problema 8</h1>
                 </header>
-                <p>Sean \(a\), \(b\) y \(c\) números reales. Demostrar que, si \(a &gt; b\) y \(c &lt; 0\), entonces
-                    \(ac &lt; bc \)
-                </p>
+                <p>\(ab>0\) si y solo si \(a>0\) y \(b>0\) o \(a<0\) y \(b<0\).</p>
             </section>
 
             <section>
-                <h3>Definición</h3>
-                <p>\(b &lt; a\) si y sólo si \(a-b\) es positivo. En particular, \(a-0=a\) es positivo si y sólo si
-                    \(0 &lt; a\).</p>
-            </section>
+                <h3>Demostración.</h3>
+                <p>\(\Rightarrow\)) Sea \(ab>0\).</p>
+                i) Sea \(a>0\). Por el problema 5, \(a^{-1}>0\),
 
-            <section>
-                <h3>Teorema</h3>
-                <p>\(\forall a \in \mathbb{R}, a \cdot 0=0\)</p>
-            </section>
+                \(\Rightarrow ab\cdot a^{-1}>0\cdot a^{-1}\qquad\text{Propiedad multiplicativa}\)
 
-            <!-- Demostración -->
-            <section>
-                Insertar imagen
+                \(\Rightarrow a\cdot a^{-1}\cdot b>0\cdot a^{-1}\qquad\text{Conmutatividad del producto}\)
+
+                \(\Rightarrow (a\cdot a^{-1})\cdot b>0\cdot a^{-1}\qquad\text{Asociatividad del producto}\)
+
+                \(\Rightarrow 1\cdot b>0\cdot a^{-1}\qquad\text{Inversos multiplicativos}\)
+
+                \(\Rightarrow b>0\cdot a^{-1}\qquad\text{Identidad multiplicativa}\)
+
+                \(\Rightarrow b>0\qquad0\cdot x=0\)
+
+                ii) Sea \(a<0\). Por el problema 6, \(a^{-1}<0\),
+
+                \(\Rightarrow ab\cdot a^{-1}<0\cdot a^{-1}\qquad\text{Propiedad multiplicativa}\)
+
+                \(\Rightarrow a\cdot a^{-1}\cdot b<0\cdot a^{-1}\qquad\text{Conmutatividad del producto}\)
+
+                \(\Rightarrow (a\cdot a^{-1})\cdot b<0\cdot a^{-1}\qquad\text{Asociatividad del producto}\)
+
+                \(\Rightarrow 1\cdot b<0\cdot a^{-1}\qquad\text{Inversos multiplicativos}\)
+
+                \(\Rightarrow b<0\cdot a^{-1}\qquad\text{Identidad multiplicativa}\)
+
+                \(\Rightarrow b<0\qquad0\cdot x=0\)
+
+                \(\Leftarrow\)) Sea \(a>0\) y \(b>0\) o \(a<0\) y \(b<0\).
+
+                Si \(a>0\) y \(b>0\), \(a\) y \(b\) son ambos positivos y la propiedad de cerradura de la multiplicación
+                asegura que \(ab\) también lo es, por lo que \(ab>0\).
+
+                Si \(a<0\) y \(b<0\), \(-a>0\) y \(-b>0\), por lo que la propiedad de cerradura de la multiplicación
+                asegura que \((-a)(-b)\) es positivo, y por el inciso d) del problema 4 se tiene que \((-a)(-b)=ab\),
+                por lo que \(ab\) es positivo y \(ab>0\). \(\blacksquare\)
             </section>
 
         </div>
