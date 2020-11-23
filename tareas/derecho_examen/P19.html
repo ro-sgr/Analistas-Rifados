@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 19 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 19</h1>
+                </header>
+                Demuestra que \(\forall a,b \in \mathbb{R}\), si \(0 &lt; a &lt; b \implies \frac{a-1}{b-1} &lt;
+                \frac{a}{b}\)
+
+                <hr class="major"/>
+
+                <strong>Teorema.</strong> Sean \(a, b\) y \(c\) números reales, si \(a &lt; b\) y \(c &lt; 0\), entonces
+                \(ac &gt; bc\)
+
+                <hr class="major"/>
+
+                <h2>Demostración</h2>
+                Por hipótesis, \(a &lt; b\) <br>
+                \(\implies -b &lt; -a\) Por Teorema 1 <br>
+                \(a &gt; 0\) y \(b &gt; 0\) Por hipótesis <br>
+                \(\implies -b + ab &lt; -a + ab\) Aditividad  <br>
+                \(\implies b(a-1) &lt; a(b-1)\) Distributividad <br>
+                Si \(b &gt; 1 \Rightarrow b-1 &gt; 0\)  <br>
+                \(\implies \frac{b(a-1)}{b-1} &lt; \frac {a(b-1)}{b-1}\) Propiedad multiplicativa <br>
+                \(\implies \frac{b(a-1)}{b-1}<a\) <br>
+                Como \(b &gt; 0\), entonces  <br>
+                \(\frac{b(a-1)}{b(b-1)} &lt; \frac{a}{b}\) Propiedad multiplicativa <br>
+                \(\implies \frac{a-1}{b-1} &lt; \frac{a}{b}\) <br>
+                \(\blacksquare\)
+
+            </section>
+
+            <!-- Demostración -->
+            <section>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/generic.html">Generic</a></li>
+                    <li><a href="/elements.html">Elements</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="#">Números reales</a></li>
+                            <li><a href="#">Funciones</a></li>
+                            <li><a href="#">Axioma del Supremo</a></li>
+                            <li><a href="#">Sucesiones</a></li>
+                            <li><a href="#">Límite de funciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/tarea.html">Tareas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
