@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 16 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 16</h1>
+                </header>
+                Demostrar lo siguiente: Sean \(a\) y \(b\) números reales, si para toda \(\mu>0\) en \(\mathbb{R}\), se
+                tiene que \(a \leq b+\mu\), entonces \(a \leq b\). Además, demostrar que de lo anterior no se infiere
+                que \(a &lt; b\).
+            </section>
+
+            <!-- Demostración -->
+            <section>
+                <h2>Demostración</h2>
+                Por contrapositiva, habrá que demostrar que
+                $$ a &gt; b \implies \exists \mu &gt; 0, a &gt; b + \mu $$
+                Por hipótesis, \(a &gt; b\). Sea \(\mu=\frac{a-b}{2}\) se tendrá lo siguiente:
+                $$ a &gt; b + \frac{a-b}{2}$$
+                $$ \implies a &gt; \frac{2b+a-b}{2} $$
+                $$ \implies a &gt; \frac{a+b}{2} $$
+                Como \(a &gt; b\), es decir, \(a\) está por delante de \(b\) en la recta numérica, entonces
+                \(\frac{a+b}{2}\) sigue siendo menor que \(a\), al tratarse del punto medio del segmento que une a \(b\)
+                con \(a\).<br>
+                \(\blacksquare\) <br> <br>
+
+                Daremos un contraejemplo para evidenciar que \(a &lt; b\) no se puede inferir del teorema anterior. Por
+                ejemplo, si \(a\) y \(b\) tienen un valor de 2, tendríamos que
+                $$ 2 \leq 2+\mu \iff (2<2+\mu) \lor (2 = 2 + \mu) $$
+                $$ \iff \mu>0 \lor \mu = 0 $$
+                sin embargo, \(\mu \not = 0\), por lo tanto \(\mu>0\) y entonces la hipótesis del teorema sí se cumple
+                cuando \(a = b\); por lo que no necesariamente \(a &lt; b\).<br>
+                \(\blacksquare\)
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/generic.html">Generic</a></li>
+                    <li><a href="/elements.html">Elements</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="#">Números reales</a></li>
+                            <li><a href="#">Funciones</a></li>
+                            <li><a href="#">Axioma del Supremo</a></li>
+                            <li><a href="#">Sucesiones</a></li>
+                            <li><a href="#">Límite de funciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/tarea.html">Tareas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
