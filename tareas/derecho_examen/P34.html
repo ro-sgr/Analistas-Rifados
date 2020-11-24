@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 34 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 34</h1>
+                </header>
+                Una relación que satisface que a cada elemento de su dominio le corresponde uno y sólo un elemento en su
+                contradominio se llama función.
+
+                <strong>Definiciones fundamentales. </strong>
+                <ol type="a">
+                    <li>
+                        Una función \(f: A \rightarrow B\) es inyectiva o uno a uno si y sólo si para cualesquiera \(a,b
+                        \in A\) con \(a \not =b\) se tiene que \(f(a) \not = f(b)\), i.e. \( \forall a,b \in A (a \not =
+                        b \implies f(a) \not = f(b))\)
+                    </li>
+                    <li>
+                        Una función \(f: A \rightarrow B\) es sobreyectiva o sobre si y sólo si para todo \(y \in B\)
+                        existe \(x \in A\) tal que \(f(x)=y\), i.e.
+                        \(\forall y (y \in B \implies \exists x (x \in A \land f(x)=y))\)
+                    </li>
+                    <li>Una función es biyectiva si y sólo si es inyectiva y sobreyectiva.</li>
+                    <li>Una función es invertible si y sólo si es biyectiva.</li>
+                </ol>
+
+                En cada uno de los siguientes ejercicios determina si \(f: A \rightarrow B\) es o no una función. En
+                caso de serlo demuestra si la función es
+                <ol type="i">
+                    <li>Inyectiva</li>
+                    <li>Sobreyectiva</li>
+                    <li>Biyectiva</li>
+                    <li>Invertible</li>
+                </ol>
+                En caso de que existan da las expresiones de \(f\) y \(f^{-1}\).
+
+                <hr class="major"/>
+
+                <h2>P34.A</h2>
+                IMAGEN <br>
+                <ol type="i">
+                    <li>Sí inyectiva, pues para todo par de elementos distintos del dominio, les corresponde un elemento
+                        distinto respectivamente en el contradominio.
+                    </li>
+                    <li>Sí es sobreyectiva, pues todo elemento del contradominio es imagen de un elemento en el dominio
+                        de dicha función.
+                    </li>
+                    <li>Por ser inyectiva y sobreyectiva a la vez, es una función biyectiva.</li>
+                    <li>Al tratarse de una función biyectiva, tiene inversa, la cual será de la siguiente forma:</li>
+                    IMAGEN
+                </ol>
+
+                <hr class="major"/>
+
+                <h2>P32.B</h2>
+                IMAGEN <br>
+                <ol type="i">
+                    <li>Es una función que no es inyectiva. Supongamos que \(Domf=A\), entonces se cumple la negación de
+                        que una función sea inyectiva: \(\exists 1, 2 \in A (1\not=2 \land f(1)=f(2))\)
+                    </li>
+                    <li>La función no es sobreyectiva, pues se cumple la negación de que una función sea sobre:
+                        \(\exists 0 (0 \in B \land \forall x (x \notin A \lor f(x) \not=0))\)
+                        Suponiendo que \(domf=A\) y su contradominio es el conjunto B.
+                    </li>
+                    <li>Como la función no es inyectiva y no es sobre, entonces no es biyectiva.</li>
+                    <li>Al no ser una función biyectiva, no posee inversa.</li>
+                </ol>
+
+                <hr class="major"/>
+
+                <h2>P32.C</h2>
+                IMAGEN <br>
+                La relación anterior no es una función, pues existe el valor 4 del dominio, y los valores 8 y 16 del
+                contradominio tales que, los pares ordenados \((4, 8)\) y \((4, 16)\) pertenecen a la relación y, sin
+                embargo, \(8\not=16\). Todo esto en simbología lógica equivale a lo siguiente:<br>
+                \( \exists 4 \in A, \exists 8, 16 \in B [((4, 8) \in f \land (4, 16) \in f) \land 4 \not=16]\)<br>
+                Debido a que esta relación no es una función, no será inyectiva, sobre, biyectiva e invertible.
+
+                <hr class="major"/>
+
+                <h2>P32.D</h2>
+                <strong>\(f: A \subset \mathbb{R} \rightarrow B \subset \mathbb{R}\) definida por
+                    \(f(x)=\frac{x-3}{6x+2}\)</strong><br>
+                i) Inyectividad: Supongamos que \(f(a)=f(b)\), por demostrar que \(a=b\).<br>
+                \(\frac{a-3}{6a+2}=\frac{b-3}{6b+2} \implies (a-3)(6b+2)=(6a+2)(b-3)\)<br>
+                \(\implies 6ab+2a-18b-6=6ab-18a+2b-6 \implies 2a-18b=-18a+2b\)<br>
+                \(\implies 2a+18a=2b+18b \implies 20a=20b \therefore a=b\) y \(f(x)\) es inyectiva. \(\blacksquare\)<br>
+
+                ii) Sobreyectividad: Por demostrar que, para todo \(y \in B\), existe \(x \in A\) tal que \(f(x)=y\).<br>
+                Si \(y=\frac{x-3}{6x+2} \implies 6xy+2y=x-3 \implies 6xy-x=-3-2y \implies x(6y-1)=-3-2y\)<br>
+                \(\implies x=\frac{-3-2y}{6y-1}\)<br>
+                De la expresión anterior, tenemos que \(6y-1 \not=0 \implies y \not=\frac{1}{6},\)<br>
+                por lo que existe \(y=\frac{1}{6}\) el cual pertenece al contradominio de \(f\) y, sin embargo, \(f(x)
+                \not=y\). Por lo tanto, \(f(x)\) no es sobreyectiva. \(\blacksquare\)
+
+                <hr class="major"/>
+
+                <h2>P32.E</h2>
+                \(f: A \subset \mathbb{R} \rightarrow B \subset \mathbb{R}\) definida por \(f(x)=\frac{x+1}{x^{2}-1}\)<br>
+
+                <hr class="major"/>
+
+                <h2>P32.F</h2>
+                \(f: A \subset \mathbb{R} \rightarrow B \subset \mathbb{R}\) definida por \(f(x)=\frac{-2x+5}{3x+1}\)<br>
+
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/generic.html">Generic</a></li>
+                    <li><a href="/elements.html">Elements</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="#">Números reales</a></li>
+                            <li><a href="#">Funciones</a></li>
+                            <li><a href="#">Axioma del Supremo</a></li>
+                            <li><a href="#">Sucesiones</a></li>
+                            <li><a href="#">Límite de funciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/tarea.html">Tareas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 17 | Tarea</title>
+    <title>Problema 35 | Tarea</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
@@ -37,95 +37,52 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 21</h1>
+                    <h1>Problema 35</h1>
                 </header>
-                Da cinco elementos de los siguientes conjuntos:
-                <ol type="a">
-                    <li>\( \{ -\frac{1}{n}: n \in \mathbb{N} \} \)</li>
-                    <li>\( 1 + \frac{1}{n}: n \in \mathbb{N} \)</li>
-                    <li>\( \frac{(-1)^{n}}{n} + n: n \in \mathbb{N} \)</li>
-                    <li>\( (-1)^{n}(\frac{1-n}{n}): n \in \mathbb{N} \)</li>
-                    <li>\( x \in \mathbb{Q}: x^{2} < 2 \)</li>
-                    <li>\( n: 2^{n} \leq n! \) y \( n \in \mathbb{N} \)</li>
+                Demostrar que las siguientes funciones son pares, impares o ninguna.
+                <ol>
+                    <li>\(f(x)=2x^2-3\)</li>
+                    <li>\(f(x)=-3x^3+2x\)</li>
+                    <li>\(f(x)=10x^3-4x^2+3x-8\)</li>
+                    <li>\(f(x)=-7x^4+x^2\)</li>
+                    <li>\(f(x)=x^3-x^2-1\)</li>
                 </ol>
 
                 <hr class="major"/>
 
-                <!-- Conjunto A -->
-                <h2>P21.A</h2>
-                \( \{ -\frac{1}{n}: n \in \mathbb{N} \} \) <br>
-                <ol type="1">
-                    <li>\( -1 \)</li>
-                    <li>\( -\frac{1}{3} \)</li>
-                    <li>\( -\frac{1}{5} \)</li>
-                    <li>\( -\frac{1}{7} \)</li>
-                    <li>\( -\frac{1}{9} \)</li>
-                </ol>
+                <h2>P34.A</h2>
+                <strong>P.D.</strong> \(f\) definida por \(f(x)=2x^2-3\) es par.<br>
+                <strong>Demostración.</strong> \(f(-x)=2(-x)^2-3=2x^2-3=f(x)\)
+                $$f(-x)=f(x)\iff f\text{ es par}\qquad\blacksquare$$
 
                 <hr class="major"/>
 
-                <!-- Conjunto B -->
-                <h2>P21.B</h2>
-                \( 1 + \frac{1}{n}: n \in \mathbb{N} \) <br>
-                <ol type="1">
-                    <li>2</li>
-                    <li>\( \frac{3}{2} \)</li>
-                    <li>\( \frac{7}{6} \)</li>
-                    <li>\( \frac{13}{12} \)</li>
-                    <li>\( \frac{42}{41} \)</li>
-                </ol>
+                <h2>P32.B</h2>
+                <strong>P.D.</strong> \(f\) definida por \(f(x)=-3x^3+2x\) es impar.<br>
+                <strong>Demostración.</strong> \(f(-x)=-3(-x)^3+2(-x)=3x^3-2x=-(-3x^3+2x)=-f(x)\)
+                $$f(-x)=-f(x)\iff f\text{ es impar}\qquad\blacksquare$$
 
                 <hr class="major"/>
 
-                <!-- Conjunto C -->
-                <h2>P21.C</h2>
-                \( \frac{(-1)^{n}}{n} + n: n \in \mathbb{N} \) <br>
-                <ol type="1">
-                    <li>\( \frac{48}{7} \)</li>
-                    <li>\( \frac{24}{5} \)</li>
-                    <li>\( 0 \)</li>
-                    <li>\( \frac{5}{2} \)</li>
-                    <li>\( \frac{8}{3} \)</li>
-                </ol>
+                <h2>P32.C</h2>
+                <strong>P.D.</strong> \(f\) definida por \(f(x)=10x^3-4x^2+3x-8\) no es par ni impar.<br>
+                <strong>Demostración.</strong> \(f(-x)=10(-x)^3-4(-x)^2+3(-x)-8=-10x^3-4x^2-3x-8\not=f(x)\) y
+                \(f(-x)=-10x^3-4x^2-3x-8\not=-f(x)\)
+                $$f(-x)\not=f(x)\text{ y }f(-x)\not=-f(x)\Longrightarrow f\text{ no es par ni impar}\qquad\blacksquare$$
 
                 <hr class="major"/>
 
-                <!-- Conjunto D -->
-                <h2>P21.D</h2>
-                \( (-1)^{n}(\frac{1-n}{n}): n \in \mathbb{N} \) <br>
-                <ol type="1">
-                    <li>\( -\frac{1}{2} \)</li>
-                    <li>\( \frac{4}{5} \)</li>
-                    <li>\( 0 \)/li>
-                    <li>\( \frac{12}{13} \)</li>
-                    <li>\( -\frac{19}{20} \)</li>
-                </ol>
+                <h2>P32.D</h2>
+                <strong>P.D.</strong> \(f\) definida por \(f(x)=-7x^4+x^2\) es par.<br>
+                <strong>Demostración.</strong> \(f(-x)=-7(-x)^4+(-x)^2=7x^4+x^2=f(x)\)
+                $$f(-x)=f(x)\iff f\text{ es par}\qquad\blacksquare$$
 
                 <hr class="major"/>
 
-                <!-- Conjunto E -->
-                <h2>P21.E</h2>
-                \( x \in \mathbb{Q}: x^{2} < 2 \) <br>
-                <ol type="1">
-                    <li>\( x = 1 \)</li>
-                    <li>\( x = \frac{1}{2} \)</li>
-                    <li>\( x = \frac{3}{20} \)</li>
-                    <li>\( x = \frac{7}{43} \)</li>
-                    <li>\( x = \frac{1}{21} \)</li>
-                </ol>
-
-                <hr class="major"/>
-
-                <!-- Conjunto F -->
-                <h2>P21.F</h2>
-                \( n: 2^{n} \leq n! \) y \( n \in \mathbb{N} \) <br>
-                <ol type="1">
-                    <li>\( n = 5 \)</li>
-                    <li>\( n = 8 \)</li>
-                    <li>\( n = 13 \)</li>
-                    <li>\( n = 21 \)</li>
-                    <li>\( n = 34 \)</li>
-                </ol>
+                <h2>P32.E</h2>
+                <strong>P.D.</strong> \(f\) definida por \(f(x)=x^3-x^2-1\) no es par ni impar.<br>
+                <strong>Demostración.</strong> \(f(-x)=(-x)^3-(-x)^2-1=-x^3-x^2-1\not=f(x)\) y \(f(-x)=-x^3-x^2-1\not=-f(x)\)
+                $$f(-x)\not=f(x)\text{ y }f(-x)\not=-f(x)\Longrightarrow f\text{ no es par ni impar}\qquad\blacksquare$$
 
             </section>
 
