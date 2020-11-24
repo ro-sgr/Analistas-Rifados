@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Números Reales</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Números Reales</h1>
+                </header>
+
+                <a href="#introduccion">Introducción</a><br>
+                <a href="#prop_reales">Propiedades de los números Reales</a><br>
+                <a href="#prop_camp_reales">Propiedades de campo de los Reales</a><br>
+                <a href="#rel_ord_reales">Relación de orden en los reales</a><br>
+
+                <h2 id="introduccion" >Introducción</h2>
+                <p>El concepto de número es uno con el que estamos familiarizados desde una corta edad, y no obstante
+                    sigue siendo un concepto increíblemente difícil de definir. En las secciones venideras se verá que
+                    la noción de número real se puede comprender a partir de sus propiedades, por lo que no nos
+                    preocuparemos por dar una definición concreta.</p>
+                <p>Los llamados tipos de números conllevan un sentido de historicidad, nos arrojan una fragmentación de
+                    los reales basada en el acontecer histórico del ser humano: la forma en que el humano encontró a los
+                    números con el paso del tiempo. Los tipos de números que nos competen son:</p>
+                <ol>
+                    <li>Los <strong>números naturales</strong> \(\mathbb{N}\), entendidos comúnmente como los números de
+                        contar, i.e.
+                        $$\mathbb{N}=\{1,2,3,...\}$$
+                    </li>
+                    <li>Los <strong>números enteros</strong> \(\mathbb{Z}\), que introducen la noción del cero y de los
+                        negativos, además de contemplar a los naturales, i.e.
+                        $$\mathbb{N}=\{...,-3,-2,-1,0,1,2,3,...\}$$
+                    </li>
+                    <li>Los <strong>números racionales</strong> \(\mathbb{Q}\), que incluyen el concepto de fracción,
+                        los números que
+                        pueden ser expresados como un cociente de dos enteros, i.e.
+                        $$\mathbb{Q}=\left\{\frac{p}{q}\,|\,p,q\in\mathbb{Z};q\not=0\right\}$$
+                    </li>
+                    <li>Los <strong>números irracionales</strong> \(\mathbb{Q'}\) o \(\mathbb{I}\), probablemente los
+                        más difíciles de definir en esta lista. Un número es considerado irracional si no es racional
+                        (evidentemente), lo que quiere decir que es imposible expresarlo como un cociente de dos
+                        enteros. Algunos ejemplos de irracionales son los números \(\pi\), \(e\) y \(\sqrt{2}\).
+                        Generalmente no es para nada trivial demostrar que un número es irracional, aunque la
+                        demostración de la irracionalidad de \(\sqrt{2}\) se verá en una sección futura (la tarea).
+                    </li>
+                    <li>Entenderemos a los números reales \(\mathbb{R}\) como la unión de los racionales y los
+                        irracionales, i.e.
+                        $$\mathbb{R}=\mathbb{Q}\cup\mathbb{Q'}$$
+                    </li>
+                </ol>
+                <p>Los números reales conllevan inherentemente la idea de continuidad, que por ahora entenderemos como
+                    una carencia de huecos en los reales (no existen dos números reales entre los cuales no haya otro
+                    real). En matemáticas es de gran ayuda poder ilustrar el tema en cuestión mediante diagramas o
+                    dibujos, aunque sea como un apoyo. Así, los números reales se asocian a los puntos de una línea
+                    recta, llamada la recta real, que va en concordancia con la idea de carencia de huecos en los
+                    reales. En la recta se escoge un punto arbitrario, que jugará el rol del cero, y una unidad (de
+                    longitud) para poder ubicar a los demás reales a partir del cero. Por convención, los números
+                    positivos se hallan a la derecha del cero y los negativos se hallan a su izquierda.</p>
+                <img src="">
+
+                <hr class="major"/>
+
+                <h2 id="prop_reales">Propiedades de los números Reales</h2>
+                <p>A lo largo de nuestra vida académica hemos cursado una multitud de materias donde se han atacado "de
+                    lado" los conceptos que se verán en esta sección. Aquí se hará evidente que todas las operaciones y
+                    <em>características</em> de los números (entiéndase por ello la suma, la resta, la multiplicación,
+                    la
+                    división, la factorización, los productos notables, la resolución de ecuaciones e inecuaciones y
+                    otros procesos algebraicos) se pueden sintetizar en una serie de propiedades sencillas e
+                    inmediatas.</p>
+                <p>El sistema de los números reales es un conjunto \(\mathbb{R}\), junto con dos operaciones \(+\) y
+                    \(\cdot\) (suma y producto, o adición y multiplicación) y una relación de orden \( &lt; \) (leída
+                    "es menor que"), que satisfacen una serie de axiomas o propiedades, que se estudiarán en tres
+                    subsecciones siguientes.</p>
+
+                <h3 id="prop_camp_reales">Propiedades de campo de los Reales</h3>
+                <p>Para cualesquiera \(a,b,c\in\mathbb{R}\) se satisfacen las siguientes propiedades:</p>
+                <ul>
+                    <li><b>Cerradura</b></li>
+                    $$\text{A}_1:\qquad a+b\in\mathbb{R}$$
+                    $$\text{M}_1:\qquad a\cdot b\in\mathbb{R}$$
+                    <li><b>Conmutatividad</b></li>
+                    $$\text{A}_2:\qquad a+b=b+a$$
+                    $$\text{M}_2:\qquad a\cdot b=b\cdot a$$
+                    <li><b>Asociatividad</b></li>
+                    $$\text{A}_3:\qquad a+(b+c)=(a+b)+c$$
+                    $$\text{M}_3:\qquad a\cdot (b\cdot c)=(a\cdot b)\cdot c$$
+                    <li><b>Existencia del elemento neutro</b></li>
+                    $$\text{A}_4:\qquad \exists 0\in\mathbb{R}: \forall a\in\mathbb{R},\, a+0=0+a=a$$
+                    $$\text{M}_4:\qquad \exists 1\in\mathbb{R},\,1\not=0: \forall a\in\mathbb{R}, \, a\cdot 1=1\cdot
+                    a=a$$
+                    <li><b>Existencia de elementos inversos</b></li>
+                    $$\text{A}_5:\qquad \forall a\in\mathbb{R}\quad \exists -a\in\mathbb{R}:a+(-a)=-a+a=0$$
+                    $$\text{M}_5:\qquad \forall a\in\mathbb{R}-\{0\}\quad \exists a^{-1}\in\mathbb{R}-\{0\}:a\cdot
+                    a^{-1}=a^{-1}\cdot a=1$$
+                    <li><b>Distributividad</b></li>
+                    $$\text{D}:\qquad a\cdot (b+c)=a\cdot b+a\cdot c$$
+                </ul>
+                <p>Nótese que las propiedades \(\text{A}_1\) hasta \(\text{A}_5\) refieren a la adición, mientras que
+                    \(\text{M}_1\) a \(\text{M}_1\) son propiedades análogas de la multiplicación. Las propiedades
+                    \(\text{A}_4\) y \(\text{M}_4\) definen la existencia de dos elementos neutros para cada operación,
+                    distintos entre ellos y llamados "cero" y "uno", respectivamente. La propiedad \(\text{D}\)
+                    relaciona ambas operaciones.</p>
+                <p>Aunque no se incluye ninguna definición para la relación de equivalencia \(=\), se entiende que
+                    \(a=b\) significa que \(a\) y \(b\) son el mismo elemento. Así, se obviarán identidades como "\(a=b
+                    \land b=c \Rightarrow a=c\)" y "\(a=b \Rightarrow a+c=b+c\)".</p>
+                <p>De las propiedades de campo se desprende una cantidad colosal de teoremas, de los cuales se
+                    enunciarán y demostrarán varios (los más útiles para nuestros fines).</p>
+                <p>FALTAN MILOCHOMIL TEOREMAS</p>
+
+                <h3 id="rel_ord_reales">Relación de orden en los reales</h3>
+                <p>Dentro de los reales está contenido un conjunto llamado el conjunto de los <em>positivos</em>,
+                    denotado como \(\mathbb R^+\) o simplemente \(P\). Este conjunto también cumple con las dos
+                    propiedades de cerradura ya expuestas en la sección anterior; es decir, se cumple que</p>
+                $$\text{A}_1':\qquad a+b\in\mathbb{R}^+$$
+                $$\text{M}_1':\qquad a\cdot b\in\mathbb{R}^+$$
+                <p>Además de una nueva propiedad, denominada tricotomía, que afirma lo siguiente:</p>
+                $$\text{T}:\,\forall a\in\mathbb{R}\text{ se cumple una y solo una de las siguientes tres afirmaciones
+                :}$$
+                <ol type="i">
+                    <li>(a\in\mathbb R^+\)</li>
+                    <li>(-a\in\mathbb R^+\)</li>
+                    <li>(a=0\)</li>
+                </ol>
+                <p>Y motivados por estas propiedades se define la relación de orden en los reales.</p>
+
+                <p><b>Definición.</b> Se define la relación de orden \( &lt; \) en los reales, leída "es menor que",
+                    para dos elementos \(a,b\in\mathbb R\) como:
+                    $$ a &lt; b \iff b-a \in \mathbb R^{+} $$</p>
+                <p>Además, se define lo siguiente:</p>
+                <p><strong>Definición. </strong>Dados \(a,b\in\mathbb R\), se define:</p>
+                <ol type="i">
+                    <li>\( a &gt; b \iff b &lt; a\), y \( &gt; \) se lee "mayor que".</li>
+                    <li>\( a\leq b \iff a &lt; b \lor a=b\), y \(\leq\) se lee "menor o igual que".</li>
+                    <li>\( a\geq b \iff a &gt; b \lor a=b\), y \(\geq\) se lee "mayor o igual que".</li>
+                </ol>
+                <p>Esta relación de orden cumple con una serie de "axiomas" (que con estas definiciones pasan a ser
+                    teoremas), que a continuación se enunciarán y demostrarán. Nótese que el primero de ellos es una
+                    equivalencia de la tricotomía ya expuesta.</p>
+
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="#">Números reales</a></li>
+                            <li><a href="#">Funciones</a></li>
+                            <li><a href="#">Axioma del Supremo</a></li>
+                            <li><a href="#">Sucesiones</a></li>
+                            <li><a href="#">Límite de funciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/tarea.html">Tareas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

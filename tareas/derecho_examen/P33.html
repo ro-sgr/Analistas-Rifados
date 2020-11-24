@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 33 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 33</h1>
+                </header>
+                Demuestra que los números racionales son densos en \( \mathbb{R} \)
+
+                <hr class="major"/>
+
+                <strong>Demostración.</strong><br>
+                <p style="text-align: justify;">Sean \( a,b \in \mathbb{R} \), \( a &lt; b \).</p>
+                <p style="text-align: justify;">Ya que \( a &lt; b \implies b - a &gt; 0 \), suponga \( \frac{1}{b-a}
+                    \). Puesto que \( \mathbb{N} \) no está acotado, se puede afirmar que</p>
+                <p style="text-align: justify;">$$ \exists n \in&nbsp; \mathbb{N} \text{ tal que } n &gt; \frac{1}{b-a}
+                    \text{ es decir } b-a &gt; \frac{1}{n} $$</p>
+                <p style="text-align: justify;">Suponga que \( c \in \mathbb{Z} \) es la parte entera de \( na \).
+                    Entonces</p>
+                <p style="text-align: justify;">$$ c \leq na &lt; c+1 \implies \frac{c}{n} \leq a \text{ y } a &lt;
+                    \frac{c+1}{n} $$</p>
+                <p style="text-align: justify;">Así pues, se cumple que</p>
+                <p style="text-align: justify;">$$ b = a + (b-a) &gt; \frac{c}{n} + \frac{1}{n} = \frac{c+1}{n} &gt; a
+                    $$</p>
+                <p style="text-align: justify;">Es decir,</p>
+                <p style="text-align: justify;">$$ a &lt; \frac{c+1}{n} &lt; b \text{, siendo } \frac{c+1}{n} \text{ un
+                    } \mathbb{Q} \quad \blacksquare&nbsp; $$</p>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="#">Números reales</a></li>
+                            <li><a href="#">Funciones</a></li>
+                            <li><a href="#">Axioma del Supremo</a></li>
+                            <li><a href="#">Sucesiones</a></li>
+                            <li><a href="#">Límite de funciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/tarea.html">Tareas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
