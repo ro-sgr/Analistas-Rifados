@@ -41,34 +41,41 @@
                 </header>
                 <p> Si \(a\) es un número real cualquiera, entonces:</p>
                 <ol type="a">
-                    <li>\(-(-a)=a\)</li>
-                    <li>\((-1)a=-a\)</li>
+                    <li><a href="#P4A">\(-(-a)=a\)</a></li>
+                    <li><a href="#P4B">\((-1)a=-a\)</a></li>
                     <li>\(a(-b)=(-a)b=-ab\)</li>
                     <li>\((-a)(-b)=ab\)</li>
                     <li>\((ab)^{-1}=a^{-1}b^{-1}, a\not=0, b\not=0\)</li>
                     <li>\(\frac{a}{b}\frac{c}{d}=\frac{ac}{bd}\), \(b\not=0\), \(d\not=0\)</li>
+                    <li>\(\frac{a}{c}+\frac{b}{c}=\frac{a+b}{c}\), \(c\not=0\)</li>
+                    <li>\(\frac{a}{b}+\frac{c}{d}=\frac{ad+cb}{bd}\), \(b\not=0\), \(d\not=0\)</li>
                 </ol>
+
+                <strong id="t1">Teorema 1. </strong>\(\forall a \in \mathbb{R}, a \cdot 0=0\)
+                <strong id="t2">Teorema 2. </strong>Sean \(a, b\) y \(c\) números reales. Si \(a+c=b+c \implies a=b\)
 
                 <hr class="major"/>
 
                 <!-- Demostración A -->
-                <h2>P4.A</h2>
+                <h2 id="P4A">P4.A</h2>
+                <strong>P.D. </strong>\(-(-a)=a\)<br>
                 <strong>Demostración</strong><br>
                 \(-a-(-a)=0\quad\) Inversos aditivos<br>
                 \(a-a-(-a)=a+0\)<br>
                 \(0-(-a)=a+0\quad\) Inversos aditivos b<br>
                 \(-(-a)=a\quad\) Neutro aditivo<br>
-		\(\blacksquare\)<br>
+                \(\blacksquare\)<br>
 
                 <hr class="major"/>
 
                 <!-- Demostración B -->
-                <h2>P4.B</h2>
+                <h2 id="P4B">P4.B</h2>
+                <strong>P.D. </strong>\( (-1)a = -a\)<br>
                 <strong>Demostración</strong><br>
                 \((-1)a=(-1)a+0\quad\) Neutro aditivo<br>
                 \((-1)a=(-1)a+a+(-a)\quad\) Inversos aditivos<br>
                 \((-1)a=((-1)a+a)+(-a)\quad\) Asociatividad<br>
-		\((-1)a=((-1)a+1\cdot a)+(-a)\quad\) Neutro multiplicativo<br>
+                \((-1)a=((-1)a+1\cdot a)+(-a)\quad\) Neutro multiplicativo<br>
                 \((-1)a=(-1+1)a+(-a)\quad\) Distributividad<br>
                 \((-1)a=(0)a+(-a)\quad\) Inversos aditivos<br>
                 \((-1)a=0+(-a)\quad\) Teorema 1 de las notas<br>
@@ -79,47 +86,71 @@
 
                 <!-- Demostración C -->
                 <h2>P4.C</h2>
+                <strong>P.D. </strong>\(a(-b)=(-a)b=-ab\)<br>
                 <strong>Demostración</strong><br>
                 \(a(-b)=a((-1)b)\quad\) Propiedad del inciso b<br>
                 \(a(-b)=(a(-1))b\quad\) Asociatividad<br>
-		\(a(-b)=((-1)a)b\quad\) Conmutatividad<br>
+                \(a(-b)=((-1)a)b\quad\) Conmutatividad<br>
                 \(a(-b)=(-a)b\quad\) Propiedad del inciso b<br>
                 Asociando y conmutando el producto de otra forma, tenemos<br>
                 \(a(-b)=a((-1)b)\quad\) Propiedad del inciso b<br>
                 \(a(-b)=a(-1)b\quad\) Asociatividad<br>
-		\(a(-b)=(-1)ab\quad\) Conmutatividad<br>
-		\(a(-b)=(-1)(ab)\quad\) Asociatividad<br>
-		\(a(-b)=-ab\quad\) Propiedad del inciso b<br>
+                \(a(-b)=(-1)ab\quad\) Conmutatividad<br>
+                \(a(-b)=(-1)(ab)\quad\) Asociatividad<br>
+                \(a(-b)=-ab\quad\) Propiedad del inciso b<br>
                 Así, hemos obtenido las dos equivalencias buscadas. \(\blacksquare\)<br>
 
                 <hr class="major"/>
 
                 <!-- Demostración D -->
                 <h2>P4.D</h2>
+                <strong>P.D. </strong>\((-a)(-b)=ab\)<br>
                 <strong>Demostración</strong><br>
-		\((-a)(-b)=(-a)(-b)+0\quad\) Neutro aditivo<br>
-                \((-a)(-b)=(-a)(-b)+ab-ab\quad\) Inversos aditivos<br>
-                \((-a)(-b)=(-a)(-b)+ab+a(-b)\quad\) Propiedad del inciso c<br>
-                \((-a)(-b)=(-a)(-b)+a(-b)+ab\quad\) Conmutatividad<br>
-		\((-a)(-b)=((-a)(-b)+a(-b))+ab\quad\) Asociatividad<br>
-                \((-a)(-b)=(-a+a)(-b)+ab\quad\) Distributividad<br>
-                \((-a)(-b)=(0)(-b)+ab\quad\) Inversos aditivos<br>
-                \((-a)(-b)=0+ab\quad\) Teorema 1 de las notas <br>
-                \((-a)(-b)=ab\quad\) Neutro aditivo \(\blacksquare\)<br>
+                \((-a)(-b)+0=(-a)(-b)+ab-ab\) Neutro y opuesto aditivo <br>
+                \(=(-a)(-b)+ab+a(-b)\) Propiedad del inciso c <br>
+                \(=((-a)(-b)+a(-b))+ab\) Asociatividad<br>
+                \(=(-b)(-a+a)+ab\) Distributividad<br>
+                \(=(-b)(0)+ab\) Opuesto aditivo<br>
+                \(=ab\) Por <a href="#t1">Teorema 1</a> \(\blacksquare\)
 
                 <hr class="major"/>
 
                 <!-- Demostración E -->
                 <h2>P4.E</h2>
+                <strong>P.D. </strong>((ab)^{-1}=a^{-1}b^{-1}, a\not=0, b\not=0\)<br>
                 <strong>Demostración</strong><br>
-                \(ab\cdot a^{-1}\cdot b^{-1}=a\cdot a^{-1}\cdot b\cdot b^{-1}\quad\) Asociatividad<br>
-                \(ab\cdot a^{-1}\cdot b^{-1}=1\cdot 1\quad\) Inversos multiplicativos<br>
-                \(ab\cdot a^{-1}\cdot b^{-1}=1\quad\) Neutro multiplicativo<br>
+                Como todo real distinto de cero tiene inverso multiplicativo, tenemos que:
+                $$aa^{-1}=1, bb^{-1}=1$$
+                Multiplicando miembro a miembro e igualando:
+                $$(aa^{-1})(bb^{-1})=1$$
+                Por conmutatividad y asociatividad del producto, podemos reescribir como sigue:
+                $$(a^{-1}b^{-1})(ab)=1$$
                 Dado que \((ab)\) es un real no nulo, existe su inverso multiplicativo \((ab)^{-1}\). Multiplicando a
-                ambos lados de la igualdad anterior por este inverso tendremos que <br>
-                \((ab)^{-1}\cdot ab\cdot a^{-1}\cdot b^{-1}=(ab)^{-1}\cdot 1\quad\) <br>
-                \(1\cdot a^{-1}\cdot b^{-1}=(ab)^{-1}\cdot 1\quad\) Inversos multiplicativos<br>
-                \(a^{-1}\cdot b^{-1}=(ab)^{-1}\cdot 1\quad\) Neutro multiplicativo \(\blacksquare\)<br>
+                ambos lados de la igualdad anterior por este inverso tendremos que
+                $$(a^{-1}b^{-1})(ab)(ab)^{-1}=1(ab)^{-1}$$
+                Finalmente, por el neutro e inverso multiplicativo, obtenemos lo que se quería demostrar.
+                $$a^{-1}b^{-1}=(ab)^{-1} \blacksquare$$
+
+                <hr class="major"/>
+
+                <!-- Demostración F -->
+                <h2>P4.F</h2>
+                <strong>P.D. </strong>\(\frac{a}{b}\frac{c}{d}=\frac{ac}{bd}\), \(b\not=0\), \(d\not=0\)<br>
+                <strong>Definición 2. </strong>\(\frac{a}{b}=a\frac{1}{b}=ab^{-1}\), \(b\not=0\)<br>
+                <img src="img/P14.F.png">
+
+                <hr class="major"/>
+
+                <!-- Demostración G -->
+                <h2>P4.G</h2>
+                <strong>P.D. </strong>\(\frac{a}{c}+\frac{b}{c}=\frac{a+b}{c}\), \(c\not=0\)<br>
+                <img src="img/P14.G.png">
+
+                <!-- Demostración H -->
+                <h2>P4.H</h2>
+                <strong>P.D. </strong>\(\frac{a}{b}+\frac{c}{d}=\frac{ad+cb}{bd}\), \(b\not=0\), \(d\not=0\)<br>
+                <img src="img/P14.H.png">
+
 
             </section>
 
