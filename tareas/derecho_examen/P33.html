@@ -43,22 +43,32 @@
 
                 <hr class="major"/>
 
-                <strong>Demostración.</strong><br>
-                <p style="text-align: justify;">Sean \( a,b \in \mathbb{R} \), \( a &lt; b \).</p>
-                <p style="text-align: justify;">Ya que \( a &lt; b \implies b - a &gt; 0 \), suponga \( \frac{1}{b-a}
-                    \). Puesto que \( \mathbb{N} \) no está acotado, por el teorema demostrado en la <a
-                            href="/tareas/derecho_examen/P29.html">tarea 29</a> se puede asegurar que \(n &gt; \frac{1}{b-a}
-                    \text{ es decir } b-a &gt; \frac{1}{n} \)</p>
-                <p style="text-align: justify;">Suponga que \( c \in \mathbb{Z} \) es la parte entera de \( na \).
-                    Entonces</p>
-                <p style="text-align: justify;">$$ c \leq na &lt; c+1 \implies \frac{c}{n} \leq a \text{ y } a &lt;
-                    \frac{c+1}{n} $$</p>
-                <p style="text-align: justify;">Así pues, se cumple que</p>
-                <p style="text-align: justify;">$$ b = a + (b-a) &gt; \frac{c}{n} + \frac{1}{n} = \frac{c+1}{n} &gt; a
-                    $$</p>
-                <p style="text-align: justify;">Es decir,</p>
-                <p style="text-align: justify;">$$ a &lt; \frac{c+1}{n} &lt; b \text{, siendo } \frac{c+1}{n} \text{ un
-                    } \mathbb{Q} \quad \blacksquare&nbsp; $$</p>
+                <p><strong>P.D.</strong> Dados \( a,b \in \mathbb{R} \implies k \in \mathbb{Q}: a &lt; m &lt; b \) </p>
+                <p><strong>Demostración.</strong> Suponga \( a,b \in \mathbb{R} \), de tal modo que \( a &lt;
+                    b \) lo cual implica \( b - a &gt; 0 \) </p>
+                <p>Ahora bien, considere la siguiente fracción: \( \frac{1}{b-a} \). Puesto que \( a \neq b \) no
+                    tendremos porblemas de división entre cero y, además como se sabe que \( b - a &gt; 0 \) la fracción
+                    será mayor que cero.</p>
+                <p>Además, note que como \( \frac{1}{b-a} \in \mathbb{R} \) la <a
+                        href="/tareas/derecho_examen/P29.html">Propiedad Arquimediana</a> nos dice que \( \exists n \in
+                    \mathbb{N} \) tal que \( n > \frac{1}{b-a} \). Esto podemos asegurarlo ya que previamente se
+                    demostró que <a href="">los naturales no están acotados</a>. Por tanto
+                </p>
+                $$ n &gt; \frac{1}{b-a} \iff n(b-a) &gt; 1 \iff nb - na &gt; 1 \iff nb &gt; nb &gt; 1 + na $$
+                <p>Note que \( na \in \mathbb{R} \), por tanto, \( na \) puede ser un \( \mathbb{Z} \) o bien un \(
+                    \mathbb{Q} \). Para cualesquiera sea el caso, \( na \) siempre tendrá una parte entera.
+                </p>
+                <p> Así pues, dígase que \( p \in \mathbb{Z} \) es la parte entera de \( na \) de modo que \( p \leq na
+                    \). Consecuente de esto, note que \( p \leq na &lt p +1 \). Por propiedad de la aditividad se puede
+                    obtener
+                </p>
+                $$ p \leq na \iff p+1 \leq na + 1 $$
+                <p>Por transitividad de las desigualdades que hemos encontrado podemos observar que</p>
+                $$ p \leq na &lt; p + 1 \leq na + 1 &lt; nb $$
+                $$ na &lt; p + 1 &lt; nb $$
+
+                <p>Note que \( p+1 \in \mathbb{Z} \). Así pues, denote \( p+1 = k \). Por tanto, </p>
+                $$ na &lt; k &lt; nb \qquad\qquad\blacksquare $$
 
             </section>
 
