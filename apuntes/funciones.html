@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+
+<head>
+    <title>Funciones</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Contenido -->
+                <section>
+                    <header class="main">
+                        <h1>Funciones</h1>
+                    </header>
+
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#conceptos">Conceptos fundamentales</a><br>
+
+                    <h2 id="introduccion">Introducción</h2>
+                    <p>Seguramente hemos escuchado en repetidas ocasiones a nuestro profesor de matemáticas diciendo que
+                        las <strong>funciones</strong> son el objeto más importante que podemos estudiar en un curso de
+                        precálculo; yefectivamente, cuando nos enfrentamos a clases de Cálculo (particularmente Cálculo
+                        I) descubrimos que la importancia de esta herramienta nunca se deja por debajo de algún otro
+                        objeto matemático.
+                    </p>
+                    <p>Ya que hemos comprendido un poco mejor cómo se comportan y operan los números reales, a partir de
+                        este punto del curso, estudiaremos la forma en la que interactúan algunos objetos matemáticos
+                        que relacionan a diferentes subconjuntos de números reales entre sí. A estos objetos los
+                        conocemos con el nombre de función. Sin embargo, nunca hay que creer que las funciones sólo
+                        manejan números reales, que son un tema obligatorio a estudiar desde la escuela secundaria, que
+                        siempre tendrán un gráfico ideal a base de líneas continuas dibujadas sobre un plano, o que se
+                        denotan como \(f(x)\), \(y\), \(f(t)\), \(g(x)\), etc.
+                    </p>
+                    <p>
+                        ¿Recuerdas este juguete?
+                    </p>
+                    <p>
+                        Estamos prácticamente seguros de que alguna vez jugaste o viste jugar a algún bebé con tal artefacto. Este juguete
+                        que consiste en relacionar y luego encajar una figura de plástico con una y sólo una de las múltiples cavidades con
+                        las que cuenta, es un claro ejemplo de que el concepto intuitivo de función está presente en nuestra cotidianidad
+                        desde la eduación preescolar.
+                    </p>
+                    <p>
+                        Regresando al ámbito de la ciencia, existen leyes en las que se relacionan distintas magnitudes:
+                        temperatura-presión, masa-velocidad, intensidad del sonido-distancia, etc. Es decir, a partir de los valores de
+                        algunas magnitudes se obtienen los valores de otras directamente de expresiones o fórmulas ya demostradas. Al
+                        conjunto \(A\) de valores iniciales lo conoceremos como el dominio de nuestra función, y al conjunto \(B\) de
+                        valores finales como el contradomio de dicha función.
+                    </p>
+                    <p>
+                        Las características más importantes de una función, están pautadas en su definición formal y rigurosa que
+                        enunciaremos más adelante. Sin embargo, ya podemos adelantar que en una función, todo el dominio debe participar y
+                        cada uno de sus elementos deberá estar relacionado con un sólo elemento del contradominio; mientras que todos los
+                        elementos del contradominio no siempre provendrán de uno del dominio, pues pensemos en lo siguiente: ¿Qué pasa con
+                        las cavidades que no rellenamos a falta de una que otra figura que extravíamos en aquél juguete de la infancia?
+                        Todas las cavidades están ahí, que sean ocupadas dependerá de las condiciones con las que esté definida nuestra
+                        función.
+                    </p>
+
+                    <h2 id="conceptos">Conceptos fundamentales</h2>
+                    <p>En esta sección nos ocuparemos de enunciar las definiciones rigurosas que habrá que conocer para comprender cómo se
+                        comportan las funciones, particularmente en matemáticas.
+                    </p>
+                    <strong>Definición 1.</strong> Sean \(A\) y \(B\) dos conjuntos no vacíos cualesquiera. Una función de
+                    \(A\) en \(B\) es una relación \(f \subseteq A \times B\) la cual cumple que:
+                    <ol type='i'>
+                        <li>Para todo \(x\) en \(A\) existe \(y\) en \(B\) tal que \((x, y)\) pertenece a la función, i.e.\( \forall x, x
+                            \in A \implies (\exists y, y \in B \land (x, y) \in f) \)</li>
+                        <li>
+                            Cada elemento de \(A\) tiene asociado sólo uno de \(B\), i.e. \( \forall x \in A, \forall y_1, y_2 \in B, [((x,
+                            y_1)
+                            \in f \land (x, y_2) \in f) \implies y_1=y_2] \)
+                        </li>
+                    </ol>
+                    <p><strong>Definición 1.1</strong> El hecho de que \(f\) sea función de \(A\) en \(B\) se denota como \(f: A \rightarrow
+                        B\).
+                    </p>
+                    <p><strong>Definición 1.2</strong> Al conjunto \(B\) se le llama el contradominio de \(f\).</p>
+                    <p><strong>Definición 1.3</strong> La condición expresada en el inciso i) es equivalente a decir que \(\text{Dom}f=A\).
+                    </p>
+                    <p><strong>Definición 1.4</strong> Si \(f: A \rightarrow B\), para cada elemento \(x \in A\) denotamos con \(f(x)\) al
+                        único elemento \(y
+                        \in B\) que le corresponde, es decir, \(y=f(x)\).</p>
+                    <br>
+                    <p><strong>Definición 2.</strong> Sea \(f: A \rightarrow B\) una relación binaria entre A y B, se define la imagen de \(f\) como:
+                    \( \text{im}f=\{b \in B: \exists a (a \in A \land (a, b) \in f)\} \)</p>
+                    <p><strong>Definición 2.1</strong> Como \(f: A \rightarrow B\) es una función, entonces la imagen de \(f\) es:
+                    \( \text{im}f=\{y \in B: \exists x \in A (f(x)=y)\}=\{f(x): x \in A\}, \)
+                    por lo que \( \text{im}f \subseteq B \).</p>
+
+
+
+
+
+
+
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li>
+                            <span class="opener">Apuntes</span>
+                            <ul>
+                                <li><a href="#">Números reales</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Tareas</span>
+                            <ul>
+                                <li><a href="">Morales</a></li>
+                                <li><a href="/tareas/derecho_examen.html">Derecho a examen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">"Por mi raza hablará el espíritu"</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>

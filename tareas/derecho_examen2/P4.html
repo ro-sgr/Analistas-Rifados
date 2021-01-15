@@ -6,10 +6,12 @@
 -->
 <html lang="es">
 <head>
-    <title>Tareas | Analistas Rifados</title>
+    <title>Problema 4 | Tarea 2</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body class="is-preload">
 
@@ -22,7 +24,7 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
                 <ul class="icons">
                     <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
                             class="label">Github</span></a></li>
@@ -36,30 +38,21 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Tareas</h1>
+                    <h1>Problema 4</h1>
                 </header>
+                <p>Demuestra que toda sucesión monótona decreciente y acotada converge a su ínfimo.</p>
 
-                <p>
-                    En esta sección podrá encontrar todos los problemas de tareas que se han dejado a lo largo del
-                    semestre
-                </p>
-
-                <!-- Botones -->
-                <div class="row">
-                    <div class="col-3 col-12-medium">
-                        <a href="#" class="button primary btn-lg btn-block">Tareas morales</a>
-                    </div>
-                    <br>
-                    <div class="col-4 col-12-medium">
-                        <a href="/tareas/derecho_examen1.html" class="button success btn-lg btn-block">Tarea derecho a
-                            1° examen</a>
-                    </div>
-                    <br>
-                    <div class="col-4 col-12-medium">
-                        <a href="/tareas/derecho_examen2.html" class="button success btn-lg btn-block">Tarea derecho a
-                            2° examen</a>
-                    </div>
-                </div>
+                <p><strong>Definición 1.</strong> Una sucesión \( \{a_n\}_{n \in \mathbb{N}} \) es monótona decreciente si $$ \forall n \in \mathbb{N}: a_n \geq a_{n+1}. $$</p>
+                
+                <p><strong>Definición 2.</strong></p> Una sucesión \( \{a_n\}_{n \in \mathbb{N}} \) está acotada si $$ \forall n \in \mathbb{N}, \exists M \in \mathbb{R}: |{a_n}| \leq M. $$
+                
+                <p><strong>Definición 3.</strong></p> \( \beta = inf \{a_n | n \in \mathbb{N}\} \) es el ínfimo de una sucesión \( \{a_n\}_{n \in \mathbb{N}} \) si se cumple que: $$ \forall n \in \mathbb{N}, \beta \leq a_n $$ $$\forall \varepsilon >0, \exists N \in \mathbb{N}: \beta + \varepsilon > a_{N}, \forall n \geq N. $$
+                <br>
+                <p><strong>Demostración.</strong> Si \( \{a_n\} \) es monótona decreciente y acotada, pongamos \( \beta = inf \{a_k:k \in \mathbb{N}\} \)
+                para probar que \( \{a_n\} \rightarrow \beta \). Dado \( \varepsilon >0\), por definición de ínfimo existe \(N \in
+                \mathbb{N}\) tal que \( \beta + \varepsilon > a_N \). Pero entonces, para \(n \geq N\) se tendrá $$ \beta \leq a_n \leq
+                a_N < \beta + \varepsilon $$ $$ \Longleftrightarrow \beta - \varepsilon < \beta \leq a_n \leq a_N < \beta + \varepsilon,
+                    $$ de donde \( |a_n-\beta|<\varepsilon\), es decir, \( \{a_n}</p>
 
             </section>
 
@@ -76,7 +69,7 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li>
                         <span class="opener">Apuntes</span>
                         <ul>

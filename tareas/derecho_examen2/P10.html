@@ -6,10 +6,12 @@
 -->
 <html lang="es">
 <head>
-    <title>Tareas | Analistas Rifados</title>
+    <title>Problema 10 | Tarea 2</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body class="is-preload">
 
@@ -22,7 +24,7 @@
 
             <!-- Header -->
             <header id="header">
-                <a href="index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
                 <ul class="icons">
                     <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
                             class="label">Github</span></a></li>
@@ -36,31 +38,16 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Tareas</h1>
+                    <h1>Problema 10</h1>
                 </header>
+                <p>Demostrar que toda sucesión acotada tiene al menos una subsucesión convergente.</p>
 
-                <p>
-                    En esta sección podrá encontrar todos los problemas de tareas que se han dejado a lo largo del
-                    semestre
-                </p>
-
-                <!-- Botones -->
-                <div class="row">
-                    <div class="col-3 col-12-medium">
-                        <a href="#" class="button primary btn-lg btn-block">Tareas morales</a>
-                    </div>
-                    <br>
-                    <div class="col-4 col-12-medium">
-                        <a href="/tareas/derecho_examen1.html" class="button success btn-lg btn-block">Tarea derecho a
-                            1° examen</a>
-                    </div>
-                    <br>
-                    <div class="col-4 col-12-medium">
-                        <a href="/tareas/derecho_examen2.html" class="button success btn-lg btn-block">Tarea derecho a
-                            2° examen</a>
-                    </div>
-                </div>
-
+                <p><strong>Demostración.</strong> El resultado del problema 7 afirma la existencia de una subsucesión monótona (ya sea creciente o decreciente) de
+                cualquier sucesión. Sea \(\{a_n\}\) la sucesión y \(\{b_n\}\) su subsucesión monótona, donde se cumple que
+                \(\{b_n\}\subseteq\{a_n\}\). Como \(\{a_n\}\) es acotada, \(\{b_n\}\) también lo es, pues \(\exists
+                M\in\mathbb{R}\;\forall a_n:\, a_n\leq M\) y toda \(b_n\) es alguna \(a_m\). Así, como el problema 4 afirma que
+                cualquier sucesión decreciente y acotada converge (y lo equivalente se cumple para funciones crecientes), entonces la
+                sucesión \(\{b_n\}\subseteq\{a_n\}\) converge. \(\blacksquare\)</p>
             </section>
 
         </div>
@@ -76,7 +63,7 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li>
                         <span class="opener">Apuntes</span>
                         <ul>
