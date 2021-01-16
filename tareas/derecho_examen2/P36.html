@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 36 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 36</h1>
+                </header>
+                <p>Demostrar que</p>
+                $$ \lim_{\theta\to0}\frac{\sin\theta}{\theta} = 1 $$
+
+                <img src="img/P36.png">
+
+                <p>Dem. Obsérvese la figura que acompaña la demostración. En la figura se ilustra la definición de \(\sin\theta\) y
+                    \(\tan\theta\) en la circunferencia unitaria. Más aún, como el radio es 1, el arco que subtiende al ángulo
+                    \(\theta\) mide \(\theta\). Suponiendo que \(0 &lt; \theta &lt; \frac{\pi}{2}\) se cumple que</p>
+                $$\sin\theta  &lt; \theta &lt; \tan\theta$$
+                
+                <p>Notando que \(\frac{\sin\theta}{\theta} &gt; 0\) y \(\theta\) se sigue que</p>
+                $$ \frac{1}{\sin\theta}>\frac{1}{\theta} &gt; \frac{1}{\tan\theta}$$
+                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta}{\tan\theta}$$
+                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta\cdot\cos\theta}{\sin\theta}$$
+                $$ \frac{\theta}{\sin\theta} \frac{\sin\theta}{\theta} &gt; 1 \cdot \frac{\sin\theta}{\theta} &gt;
+                \frac{\theta\cdot\cos\theta}{\sin\theta} \frac{\sin\theta}{\theta}$$
+                $$ \cos\theta &lt; \frac{\sin\theta}{\theta} &lt; 1$$
+                    
+                <p>Además, como el seno es una función impar y el coseno es una función par se tiene que \(\frac{\sin\theta}{\theta} =
+                    \frac{\sin(-\theta)}{-\theta}\) y \(\cos\theta=\cos(-\theta)\), la misma desigualdad se cumple para \(\theta &lt; 0\).
+                    Esto último nos permite tomar el límite \(\theta\to 0\) sin necesidad de hacerlo por la derecha. Así,</p>
+                $$ \lim_{\theta\to 0} \cos\theta \leq\lim_{\theta\to 0} \frac{\sin\theta}{\theta} \leq \lim_{\theta\to 0}1 $$
+                
+                <p>Notando que \(\displaystyle \lim_{\theta\to 0}\cos\theta=1\), por el teorema del sándwich se tiene que
+                $$ \lim_{\theta\to 0}\frac{\sin\theta}{\theta} = 1 \qquad \blacksquare $$</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="">Morales</a></li>
+                            <li><a href="/tareas/derecho_examen.html">Derecho a examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
