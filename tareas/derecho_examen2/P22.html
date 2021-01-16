@@ -6,7 +6,7 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 40 | Tarea 2</title>
+    <title>Problema 22 | Tarea 2</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
@@ -38,33 +38,35 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 40</h1>
+                    <h1>Problema 22</h1>
                 </header>
-                Demuestra que la función \(f:\mathbb{R}\to\mathbb{R}\), \(f(x)=\sin(x)\) es continua.
+                Analiza la continuidad de la función \(f\) en cada uno de los siguientes puntos \(x=-1\) y \(x=2\).
+                $$ f(x) = \left\{
+                    \begin{array}\\
+                        -x-2 && x &lt; -1 \\
+                        x && -1 &lt; x &lt; 2 \\
+                        0 && x = -1 \\
+                        1 && x \geq 2
+                    \end{array}
+                \right.$$
+
+                <img src="img/P22.png">
+
+                <p>Definición. Se dice que una función \(f(x)\) es continua en \(x=a\) si y sólo si \( \displaystyle \lim_{x\to a} f(x)
+                    = f(a) \)</p>
                 
-                Se probará que \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\).
+                Continuidad de \(f\) en \(x=-1\):
+                $$ \displaystyle \lim_{x\to -1^+} f(x) = \displaystyle \lim_{x\to -1} x = -1 $$
+                $$ \displaystyle \lim_{x\to -1^-} f(x) = \displaystyle \lim_{x\to -1} -x-2 = -1 $$
+                $$ \displaystyle \lim_{x\to -1^+} f(x) = \displaystyle \lim_{x\to -1^-} f(x) \not= f(-1)=0, $$ por lo tanto, \(f\) no es
+                continua en \(x=-1\).
                 
-                ** Trabajo previo
-                
-                Nótese que \(x=\frac{x+a}{2}+\frac{x-a}{2}\), y que \(a=\frac{x+a}{2}+\frac{a-x}{2}\). Por la identidad de suma de
-                ángulos se tiene que
-                
-                $$\begin{align}\sin(x)-\sin(a)&=\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{x-a}{2}\right)+\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)\\&\quad-\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{a-x}{2}\right)-\sin\left(\frac{a-x}{2}\right)\cos\left(\frac{x+a}{2}\right)\end{align}$$
-                
-                Como el seno es impar y el coseno es par se tiene que
-                
-                $$\sin(x)-\sin(a)=2\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)$$
-                
-                Así, sea \(|\sin(x)-\sin(a)|<\varepsilon\) $$\iff
-                    2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ Nótese que
-                    \(|\cos\theta|\leq 1\) para cualquier \(\theta\), y por la definición del seno en la circunferencia unitaria se
-                    tiene que \(|\sin\theta|\leq |x|\) (véase el problema 36). Así,
-                    $$2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ $$\iff
-                    2\left|\frac{x-a}{2}\right|<\varepsilon$$ $$\iff \left|x-a\right|<\varepsilon$$ Dem. Sea \(\delta=\epsilon\). Por
-                    hipótesis se tiene que \(|x-a|<\delta\), y por el trabajo previo se sigue que \(|\sin(x)-\sin(a)|<\varepsilon\).
-                    Así, $$\forall\varepsilon>0\,\exists\delta>0:|x-a|<\delta\implies |\sin(x)-\sin(a)|<\varepsilon$$ Por lo que
-                        \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\) para cualquier \(a\in\mathbb{R}\) y la función seno es continua.
-                        \(\blacksquare\)
+                Continuidad de \(f\) en \(x=2\):
+                $$ \displaystyle \lim_{x\to 2^+} f(x) = \displaystyle \lim_{x\to 2} 1 = 1$$
+                $$ \displaystyle \lim_{x\to 2^-} f(x) = \displaystyle \lim_{x\to 2} x = 2 $$
+                $$ \displaystyle \lim_{x\to 2^+} f(x) \not= \displaystyle \lim_{x\to 2^-} f(x) \implies \displaystyle \lim_{x\to 2} f(x)
+                = \nexists, $$ por lo tanto, a pesar de que \(f(2)\) existe y es 1, \(f\) no es continua en \(x=2\).
+
             </section>
 
         </div>

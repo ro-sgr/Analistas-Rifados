@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 17 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 17</h1>
+                </header>
+                Demostrar por la definición que
+                
+                a) \(\displaystyle \lim_{x\to 2}4x+1=9\)
+                
+                ** Trabajo previo
+                
+                Sea \(|(4x+1)-9|<\varepsilon\) $$\iff |4x-8|<\varepsilon$$ $$\iff |4(x-2)|<\varepsilon$$ $$\iff |4||x-2|<\varepsilon$$
+                    $$\iff |x-2|<\frac{\varepsilon}{4}$$ Demostración. Sea \(\delta=\frac{\varepsilon}{4}\). Por hipótesis,
+                    \(0<|x-2|<\delta\) y por el trabajo previo se concluye que \(|(4x+1)-9|<\varepsilon\). Así, \(\forall \varepsilon>0
+                    \; \exists\delta>0 : 0<|x-2|<\delta \implies |(4x+1)-9|<\varepsilon\). \(\blacksquare\) b) \(\displaystyle
+                        \lim_{x\to 2}x^2=4\) ** Trabajo previo Sea \(|x^2-4|<\varepsilon\) $$\iff |(x+2)(x-2)|<\varepsilon$$ $$\iff
+                        |x-2|<\varepsilon$$ $$\iff |x-2|<\frac{\varepsilon}{|x+2|}$$ Acotaremos \(\frac{1}{|x+2|}\). Supongamos que
+                        \(\delta<1\). Así, $$|x-2|<1$$ $$-1<x-2<1$$ $$3<x+2<5$$ $$|3|<|x+2|<|5|$$ $$\frac{1}{|3|}>
+                        \frac{1}{|x+2|}>\frac{1}{|5|}$$
+                
+                        $$\frac{\varepsilon}{3}>\frac{\varepsilon}{|x+2|}>\frac{\varepsilon}{5}$$
+                
+                        Por lo que \(|x^2-4|<\varepsilon\iff |x-2|<\frac{\varepsilon}{3} \) Demostración. Sea
+                            \(\delta=\min\{1,\frac{\varepsilon}{3}\}\). Por hipótesis, \(0<|x-2|<\delta\) y por el trabajo previo se
+                            concluye que \(|x^2-4|<\varepsilon\). Así, \(\forall \varepsilon>0 \; \exists\delta>0 : 0<|x-2|<\delta
+                                \implies |x^2-4|<\varepsilon\). \(\blacksquare\) c) \(\displaystyle \lim_{x\to 3}\frac{x^2-9}{x-3}=6\)
+                                ** Trabajo previo Sea \(|\frac{x^2-9}{x-3}-6|<\varepsilon\) $$\iff
+                                \left|\frac{x^2-9}{x-3}-6\right|<\varepsilon$$ $$\iff
+                                \left|\frac{(x+3)(x-3)}{x-3}-6\right|<\varepsilon$$ $$\iff |x+3-6|<\varepsilon$$ $$\iff
+                                |x-3|<\varepsilon$$ Demostración. Sea \(\delta=\varepsilon\). Por hipótesis, \(0<|x-3|<\delta\) y por el
+                                trabajo previo se concluye que \(|\frac{x^2-9}{x-3}-6|<\varepsilon\). Así, \(\forall \varepsilon>0 \;
+                                \exists\delta>0 : 0<|x-3|<\delta \implies |\frac{x^2-9}{x-3}-6|<\varepsilon\). \(\blacksquare\) d)
+                                    \(\displaystyle \lim_{x\to 8^+}\frac{1}{x-8}=+\infty\) Definición. \(\displaystyle \lim_{x\to
+                                    x_0^+}f(x)=\infty\iff \forall M> 0\; \exists \delta >0: 0<x-x_0<\delta \implies f(x)>M\)
+                
+                                        ** Trabajo previo
+                
+                                        Sea \(\frac{1}{x-8}>M\)
+                
+                                        $$\iff \frac{1}{M}>x-8$$
+                
+                                        $$\iff \frac{1}{M}>x-8$$
+                
+                                        Demostración. Sea \(\delta = \frac{1}{M}\). Por hipótesis, \(0<x-8<\delta\) y por el trabajo
+                                            previo se concluye que \(\frac{1}{x-8}>M\). Así, \(\forall M > 0\; \exists \delta >0: 0
+                                            <x-8<\delta \implies \frac{1}{x-8}>M\). \(\blacksquare\)
+                
+                
+                
+                                                e) \(\displaystyle \lim_{x\to -\infty}\frac{1}{x^2}=0\)
+                
+                                                Definición. \(\displaystyle \lim_{x\to -\infty}f(x)=L\iff \forall \varepsilon > 0\;
+                                                \exists N < 0: x<N \implies |f(x)-L|<\varepsilon\) ** Trabajo previo Sea
+                                                    \(|\frac{1}{x^2}-0|<\varepsilon\) $$\iff \left|\frac{1}{x^2}\right|<\varepsilon$$
+                                                    $$\iff \frac{1}{x^2}<\varepsilon$$ $$\iff \frac{1}{\varepsilon}<x^2$$ $$\iff
+                                                    \sqrt{\frac{1}{\varepsilon}}<\sqrt{x^2}$$ $$\iff \sqrt{\frac{1}{\varepsilon}}<|x|$$
+                                                    Como \(x\to -\infty,\,x<0\), $$\sqrt{\frac{1}{\varepsilon}}<|x|$$ $$\iff
+                                                    \sqrt{\frac{1}{\varepsilon}}<-x$$ $$\iff -\sqrt{\frac{1}{\varepsilon}}>x$$
+                
+                                                    Demostración. Sea \(N = -\sqrt{\frac{1}{\varepsilon}}\). Por hipótesis, \(x<N\) y
+                                                        por el trabajo previo se concluye que \(|\frac{1}{x^2}-0|<\varepsilon\). Así,
+                                                        \(\forall \varepsilon> 0\; \exists N < 0: x<N \implies
+                                                            |\frac{1}{x^2}-0|<\varepsilon\). \(\blacksquare\)
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="">Morales</a></li>
+                            <li><a href="/tareas/derecho_examen.html">Derecho a examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 40 | Tarea 2</title>
+    <title>Problema 13 | Tarea 2</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
@@ -38,33 +38,55 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 40</h1>
+                    <h1>Problema 13</h1>
                 </header>
-                Demuestra que la función \(f:\mathbb{R}\to\mathbb{R}\), \(f(x)=\sin(x)\) es continua.
+                Encuentra las asíntotas de la función \(f(x)=\frac{\sqrt{2x^2+1}}{3x-5}\)
                 
-                Se probará que \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\).
+                Definición 1. Se llama asíntota vertical de una una curva a la recta paralela al eje \(Y\) que hace que la rama de dicha
+                curva tienda a infinito. Si existe alguno de estos dos límites:
                 
-                ** Trabajo previo
+                $$\lim_{x\to a^+} f(x) = \pm\infty$$
                 
-                Nótese que \(x=\frac{x+a}{2}+\frac{x-a}{2}\), y que \(a=\frac{x+a}{2}+\frac{a-x}{2}\). Por la identidad de suma de
-                ángulos se tiene que
+                $$\lim_{x\to a^-} f(x) = \pm\infty$$
                 
-                $$\begin{align}\sin(x)-\sin(a)&=\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{x-a}{2}\right)+\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)\\&\quad-\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{a-x}{2}\right)-\sin\left(\frac{a-x}{2}\right)\cos\left(\frac{x+a}{2}\right)\end{align}$$
+                a la recta \(x=a\) se le denomina asíntota vertical.
                 
-                Como el seno es impar y el coseno es par se tiene que
+                Convención: El dominio de \(f(x)\) determina las asíntotas verticales.
                 
-                $$\sin(x)-\sin(a)=2\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)$$
+                Definición 2. Se llama asíntota horizontal de una curva a la recta paralela al eje X que hace que la rama de dicha curva
+                tienda a infinito. Si existe el límite
                 
-                Así, sea \(|\sin(x)-\sin(a)|<\varepsilon\) $$\iff
-                    2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ Nótese que
-                    \(|\cos\theta|\leq 1\) para cualquier \(\theta\), y por la definición del seno en la circunferencia unitaria se
-                    tiene que \(|\sin\theta|\leq |x|\) (véase el problema 36). Así,
-                    $$2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ $$\iff
-                    2\left|\frac{x-a}{2}\right|<\varepsilon$$ $$\iff \left|x-a\right|<\varepsilon$$ Dem. Sea \(\delta=\epsilon\). Por
-                    hipótesis se tiene que \(|x-a|<\delta\), y por el trabajo previo se sigue que \(|\sin(x)-\sin(a)|<\varepsilon\).
-                    Así, $$\forall\varepsilon>0\,\exists\delta>0:|x-a|<\delta\implies |\sin(x)-\sin(a)|<\varepsilon$$ Por lo que
-                        \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\) para cualquier \(a\in\mathbb{R}\) y la función seno es continua.
-                        \(\blacksquare\)
+                $$\lim_{x\to \pm \infty} f(x) =a$$
+                
+                la recta \(y=a\) es una asíntota horizontal.
+                
+                Sol. Sea \(f(x)=\frac{\sqrt{2x^2+1}}{3x-5}\). Nótese que \(3x-5\not = 0\), por lo que \(x\not = \frac{3}{5}\); es decir,
+                \(f\) tiene una asíntota vertical en \(x= \frac{3}{5}\). En efecto,
+                
+                $$\lim_{x\to \frac{3}{5}^+} f(x) = \infty$$
+                
+                $$\lim_{x\to \frac{3}{5}^-} f(x) = -\infty$$
+                
+                Para saber si \(f(x)\) tiene asíntotas horizontales, calculamos los siguientes límites:
+                
+                $$\begin{align} \lim_{x\to \infty} \frac{\sqrt{2x^2+1}}{3x-5} &=\lim_{x\to \infty}
+                \frac{\sqrt{\frac{2x^2}{x^2}+\frac{1}{x^2}}}{\frac{3x}{x}-\frac{5}{x}} = \lim_{x\to \infty}
+                \frac{\sqrt{2+\frac{1}{x^2}}}{3-\frac{5}{x}}\\ &=
+                \frac{\sqrt{2+\frac{1}{\infty^2}}}{3-\frac{5}{\infty}}=\frac{\sqrt{2}}{3} \end{align}$$
+                
+                $$\lim_{x\to -\infty} \frac{\sqrt{2x^2+1}}{3x-5} = \lim_{x\to \infty}
+                \frac{\sqrt{x^2(2+\frac{1}{x^2}})}{x(3-\frac{5}{x})} = \lim_{x\to \infty}
+                \frac{|x|\sqrt{2+\frac{1}{x^2}}}{x(3-\frac{5}{x})}$$
+                
+                Como \(x\to-\infty\), \(|x|=-x\), de donde
+                
+                $$\begin{align} \lim_{x\to -\infty} \frac{\sqrt{2x^2+1}}{3x-5} =\lim_{x\to \infty}
+                -\frac{\sqrt{2+\frac{1}{x^2}}}{3-\frac{5}{x}}=
+                -\frac{\sqrt{2+\frac{1}{\infty^2}}}{3-\frac{5}{\infty}}=-\frac{\sqrt{2}}{3} \end{align}$$
+                
+                Por lo tanto, \(f\) tiene una asíntota vertical en \(x= \frac{3}{5}\) y dos asíntotas horizontales, una en
+                \(y=\frac{\sqrt{2}}{3}\) y otra en \(y=-\frac{\sqrt{2}}{3}\).
+
             </section>
 
         </div>

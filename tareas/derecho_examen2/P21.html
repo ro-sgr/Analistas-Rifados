@@ -6,7 +6,7 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 40 | Tarea 2</title>
+    <title>Problema 21 | Tarea 2</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
@@ -38,33 +38,49 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 40</h1>
+                    <h1>Problema 21</h1>
                 </header>
-                Demuestra que la función \(f:\mathbb{R}\to\mathbb{R}\), \(f(x)=\sin(x)\) es continua.
+                <p>Dada la siguiente gráfica de una función \(f(x)\):</p>
                 
-                Se probará que \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\).
+                <img src="img/P21.png">
+
+                <p>Calcular los siguiente:</p>
                 
-                ** Trabajo previo
+                <p>1. \( \displaystyle \lim_{x\to 2^+} f(x) = \)</p>
+                Este tipo de límites se pueden calcular con tal solo observar la gráfica. En este caso, el resultado es infinito
+                positivo; sin embargo, vamos a complementar la respuesta con su justificación mediante la definición de límite infinito:
+                $$ \displaystyle \lim_{x\to 2^+} f(x) = \infty \Longleftrightarrow \forall \varepsilon &gt; 0, \exists M &gt; 0 : 0
+                &lt; x-2 &lt; M \rightarrow f(x) &gt; M $$
                 
-                Nótese que \(x=\frac{x+a}{2}+\frac{x-a}{2}\), y que \(a=\frac{x+a}{2}+\frac{a-x}{2}\). Por la identidad de suma de
-                ángulos se tiene que
+                <p>2. \( \displaystyle \lim_{x\to 2^-} f(x) = \)</p>
+                $$ \displaystyle \lim_{x\to 2^-} f(x) = -\infty \Longleftrightarrow \forall \varepsilon &lt; 0, \exists M &gt; 0 : 0
+                &lt; 2-x &lt; M \rightarrow f(x) &lt; M $$
+                        
+                <p>3. \( \displaystyle \lim_{x\to 3^+} f(x)=\)</p>
+                $$ \displaystyle \lim_{x\to 3^+} f(x)=0 \Longleftrightarrow \forall \varepsilon &gt; 0, \exists \delta &gt; 0 : 0 &lt;
+                x-3 &lt; \delta \rightarrow |f(x)-0| &lt; \varepsilon $$
+
+                4. \( \displaystyle \lim_{x\to 3^-} f(x)=\)
+                $$ \displaystyle \lim_{x\to 3^-} f(x)=1 \Longleftrightarrow \forall \varepsilon &gt; 0, \exists \delta &gt; 0 : 0
+                &lt; 3-x &lt; \delta \rightarrow |f(x)-1| &lt; \varepsilon $$
+                    
+                5. \( \displaystyle \lim_{x\to 3} f(x)=\)
                 
-                $$\begin{align}\sin(x)-\sin(a)&=\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{x-a}{2}\right)+\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)\\&\quad-\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{a-x}{2}\right)-\sin\left(\frac{a-x}{2}\right)\cos\left(\frac{x+a}{2}\right)\end{align}$$
+                Dado que \( \displaystyle \lim_{x\to 3^+} f(x) \not=\displaystyle \lim_{x\to 3^-} f(x) \), se dice que
+                $$ \displaystyle \lim_{x\to 3} f(x)=\nexists, $$
+                es decir, no existe.
                 
-                Como el seno es impar y el coseno es par se tiene que
+                6. \( f(3)=\) Nótese que el punto \( (3, 3) \) forma parte de \(f(x)\), por lo cual, \(f(3)=3\). 7. \( \displaystyle
+                \lim_{x\to -\infty} f(x)=\)
                 
-                $$\sin(x)-\sin(a)=2\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)$$
-                
-                Así, sea \(|\sin(x)-\sin(a)|<\varepsilon\) $$\iff
-                    2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ Nótese que
-                    \(|\cos\theta|\leq 1\) para cualquier \(\theta\), y por la definición del seno en la circunferencia unitaria se
-                    tiene que \(|\sin\theta|\leq |x|\) (véase el problema 36). Así,
-                    $$2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ $$\iff
-                    2\left|\frac{x-a}{2}\right|<\varepsilon$$ $$\iff \left|x-a\right|<\varepsilon$$ Dem. Sea \(\delta=\epsilon\). Por
-                    hipótesis se tiene que \(|x-a|<\delta\), y por el trabajo previo se sigue que \(|\sin(x)-\sin(a)|<\varepsilon\).
-                    Así, $$\forall\varepsilon>0\,\exists\delta>0:|x-a|<\delta\implies |\sin(x)-\sin(a)|<\varepsilon$$ Por lo que
-                        \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\) para cualquier \(a\in\mathbb{R}\) y la función seno es continua.
-                        \(\blacksquare\)
+                $$ \displaystyle \lim_{x\to -\infty} f(x)=0 \Longleftrightarrow \forall \varepsilon>0, \exists M &lt; 0 : x &lt; M
+                    \rightarrow |f(x)-0| &lt; \varepsilon $$
+                        
+                Las definiciones mencionadas son muy importantes y la mayoría de las veces no se les da mucha importancia como a la
+                definición formal de límite que todos conocemos, la cual vale la pena enunciar a continuación:
+                $$ \displaystyle \lim_{x\to a} f(x)=L \Longleftrightarrow \forall \varepsilon &gt; 0, \exists \delta &gt; 0 : 0 &lt;
+                |x-a| &lt; \delta \rightarrow |f(x)-L| &lt; \varepsilon. $$
+
             </section>
 
         </div>
