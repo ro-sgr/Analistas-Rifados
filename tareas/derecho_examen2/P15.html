@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 15 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 15</h1>
+                </header>
+                Suponga que \( \lim\limits_{x \to a} f(x) = F \) y \( \lim\limits_{x \to a} g(x) = G \), con \(F\),\(G\) números reales.
+                Demostrar:
+                <ol type="a">
+                    <li>\( \lim\limits_{x \to a}(f + g)(x) = F + G \)</li>
+                    <li>\( \lim\limits_{x \to a}(fg)(x) = FG \)</li>
+                </ol>
+
+                <hr class="major"/>
+
+                <h2><strong>Definición (\( \varepsilon, \delta \))</strong> </h2>
+
+                <hr class="major"/>
+
+                <h3><strong>Inciso a.</strong></h3>
+                <p><strong>P.D.</strong> \( \forall \varepsilon &gt; 0\), \(\exists \delta &gt; 0 \) tal que, si \( 0 &lt; |x-a| &lt; \delta
+                    \), entonces \( | f(x) + g(x) - (F+G) | &lt; \varepsilon \)</p>
+                <p><strong>Demostración.</strong> </p>
+                <ol>
+                    <li>
+                        Puesto que, \( \lim\limits_{x \to a} f(x) = F \). Se tiene, entonces que \( \forall \varepsilon_1 &gt; 0\), \(\exists
+                        \delta_1 &gt; 0 \) tal que, si \( 0 &lt; |x-a| &lt; \delta_1 \), entonces \( | f(x) - F | &lt; \varepsilon_1 \)
+                    </li>
+                    <li>
+                        Puesto que, \( \lim\limits_{x \to a} g(x) = G \). Se tiene, entonces que \( \forall \varepsilon_2 &gt; 0\), \(\exists
+                        \delta_2 &gt; 0 \) tal que, si \( 0 &lt; |x-a| &lt; \delta_2 \), entonces \( | g(x) - G | &lt; \varepsilon_2 \)
+                    </li>
+                </ol>
+                <p>Suponga que \( \varepsilon_1 = \frac{\varepsilon}{2} \) y \( \varepsilon_2 = \frac{\varepsilon}{2} \). Además, que \(
+                    \delta = min\{\delta_1, \delta_2\} \). Consecuentemente se tiene entonces</p>
+                $$ \text{Si} \quad 0 &lt; |x-a| &lt; \delta, \text{ entonces } | f(x) - F | &lt; \frac{\varepsilon}{2} \quad \text{y} \quad |
+                g(x) - G | &lt; \frac{\varepsilon}{2} $$
+                $$ \text{Si} \quad 0 &lt; |x-a| &lt; \delta, \text{ entonces } | f(x) - F | + |g(x) - G | &lt; \frac{\varepsilon}{2} +
+                \frac{\varepsilon}{2} = \varepsilon $$
+
+                <p>Por la desigualdad del triángulo ( \( |x+y| &leq; |x| + |y| \) ) se obtiene</p>
+                $$ \text{Si} \quad 0 &lt; |x-a| &lt; \delta, \text{ entonces } | f(x) - F + g(x) - G | &leq; | f(x) - F | + |g(x) - G
+                | &lt; \varepsilon $$
+
+                <p>Reacomodando los términos, se sigue</p>
+                $$ \text{Si} \quad 0 &lt; |x-a| &lt; \delta, \text{ entonces } | f(x) + g(x) - (F + G) | &lt; \varepsilon $$
+
+                <p>Que es precisamente lo que queríamos demostrar. \( \quad \blacksquare \)</p>
+
+                <hr class="major"/>
+
+                <h3><strong>Inciso b.</strong></h3>
+                <p><strong>P.D.</strong> \( \forall \varepsilon &gt; 0\), \(\exists \delta &gt; 0 \) tal que, si \( 0 &lt; |x-a| &lt; \delta
+                    \), entonces \( | f(x)g(x) - FG | &lt; \varepsilon \)</p>
+
+                <p><strong>Demostración. b.</strong> </p>
+                <ol>
+                    <li>
+                        Puesto que, \( \lim\limits_{x \to a} f(x) = F \). Se tiene, entonces que \( \forall \varepsilon_1 &gt; 0\), \(\exists
+                        \delta_1 &gt; 0 \) tal que, si \( 0 &lt; |x-a| &lt; \delta_1 \), entonces \( | f(x) - F | &lt; \varepsilon_1 \)
+                    </li>
+                    <li>
+                        Puesto que, \( \lim\limits_{x \to a} g(x) = G \). Se tiene, entonces que \( \forall \varepsilon_2 &gt; 0\), \(\exists
+                        \delta_2 &gt; 0 \) tal que, si \( 0 &lt; |x-a| &lt; \delta_2 \), entonces \( | g(x) - G | &lt; \varepsilon_2 \)
+                    </li>
+                </ol>
+                <p>Suponga que \( \varepsilon_1 = \sqrt{\varepsilon} \) y \( \varepsilon_2 = \sqrt{\varepsilon} \). Además, que \(
+                    \delta = min\{\delta_1, \delta_2\} \). Consecuentemente se tiene entonces</p>
+                $$\text{Si} \quad 0 &lt; |x-a| &lt; \delta, \text{ entonces } | f(x) - F | &lt; \sqrt{\varepsilon} \quad \text{y} \quad |
+                g(x) - G | &lt; \sqrt{\varepsilon} $$
+                $$ \text{Si} \quad 0 &lt; |x-a| &lt; \delta, \text{ entonces } | f(x) - F | | g(x) - G | &lt; \sqrt{\varepsilon}
+                \sqrt{\varepsilon} = \varepsilon $$
+                $$ \text{Si} \quad 0 &lt; |x-a| &lt; \delta, \text{ entonces } | f(x)g(x) - G f(x) - F g(x) + FG | &lt; \varepsilon $$
+
+                <p>Observe que</p>
+                $$ \begin{align}
+                    (f(x) - F)(g(x) - G) & = f(x)g(x) - G f(x) - F g(x) + FG \\
+                    f(x)g(x) & = (f(x) - F)(g(x) - G) + G f(x) + F g(x) - FG
+                \end{align} $$
+
+                <p>Tomando el límite</p>
+                $$ \begin{align}
+
+                    \lim\limits_{x \to a} f(x)g(x) & = \lim\limits_{x \to a} ( f(x) - F ) ( g(x) - G ) + \lim\limits_{x \to a} G f(x) +
+                    \lim\limits_{x \to a} F g(x) - \lim\limits_{x \to a} FG \\
+
+                    & = 0 + \lim\limits_{x \to a} G f(x) + \lim\limits_{x \to a} F g(x) - \lim\limits_{x \to a} FG \\
+                    
+                    & = GF + FG - FG \\
+
+                    & = FG
+
+                \end{align} $$
+
+                \( \blacksquare \)
+
+                <hr class="major"/>
+
+
+                <h2><strong>Definición de límite</strong> </h2>
+
+                <hr class="major"/>
+
+                <p><strong>Demostración. a.</strong> </p>
+
+                <hr class="major"/>
+
+                <p><strong>Demostración. b.</strong> </p>
+
+
+            </section>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="">Morales</a></li>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
