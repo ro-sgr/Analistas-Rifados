@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 35 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 35</h1>
+                </header>
+                Demostrar que \( \lim\limits_{x \to 0} \cos(x) = 1 \).
+
+                <hr class="major"/>
+                
+                <p>Para ello, consideraremos la siguiente proposición cuya demostración se muestra en el <a href="P40.html">problema
+                        40</a></p>
+
+                <p>La función \(f: \mathbb{R} \rightarrow \mathbb{R}, f(x)=\sin(x) \) es continua. Es decir</p>
+                $$ \lim\limits_{x \to a} \sin(x) = \sin(a). $$
+
+                <hr class="major"/>
+            
+                <strong>Demostración.</strong>
+
+                $$ L=\displaystyle\lim_{x\to0}cos(x) = \displaystyle\lim_{x\to0}\sqrt{1-sen^2x} = \displaystyle\lim_{x\to0}
+                \frac{(\sqrt{1-sen^2x}) (\sqrt{1-sen^2x})}{\sqrt{1-sen^2x}} = \displaystyle\lim_{x\to0} \frac{1-sen^2x}{\sqrt{1-sen^2x}}
+                = \frac{\displaystyle\lim_{x\to0} (1-sen^2x)}{\displaystyle\lim_{x\to0} \sqrt{1-sen^2x}} $$ $$ \iff L^2 =
+                \displaystyle\lim_{x\to0} (1-sen^2x) = \displaystyle\lim_{x\to0}1-\displaystyle\lim_{x\to0}sen^2x =
+                \displaystyle\lim_{x\to0}1 - \displaystyle\lim_{x\to0}sen(x) \displaystyle\lim_{x\to0}sen(x) = 1 - sen(0) \cdot sen(0) =
+                1 $$ $$ \iff L=1 \therefore \displaystyle\lim_{x\to0}cos(x) = 1 $$ \(\blacksquare\)
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="">Morales</a></li>
+                            <li><a href="/tareas/derecho_examen.html">Derecho a examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

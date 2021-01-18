@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 39 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 17</h1>
+                </header>
+                <p>Usando el teorema del valor intermedio, demuestra que \(f(x)=x^4+x-3\) tiene una raíz en \([1,2]\). </p>
+
+                <hr class="major"/>
+                
+                <p><strong>Demostración.</strong> Por definición, si \(f:\mathbb{R}\rightarrow \mathbb{R}\), \(c\) es una raíz de \(f\)
+                    si \(f(c)=0\).</p>
+
+                <p>Ahora, como \(f:[1,2]\rightarrow \mathbb{R}\), con \(f(x)=x^4+x-3\), basta demostrar que \(\exists c \in
+                    [1,2]:f(c)=0\). Más aún, podemos ver que: </p>
+
+                <p>\(f(1)=1^4+1-3=-1\) y que \(f(2)=2^4+2-3=15\); de manera que \(f(a) &lt; 0\) y \(f(b) &gt; 0\).</p>
+
+                <p>Así, como \(f\) es continua en todo su dominio y, en particular, en \(x=0\); por
+                    el teorema del valor intermedio:</p>
+
+                $$ \forall \alpha: f(a) &lt; \alpha &lt; f(b), \exists \beta \in Dom(f): f(\beta)=\alpha $$
+                
+                Concluimos que \(\exists c \in [1,2]:f(c)=0. \quad \blacksquare\)
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="">Morales</a></li>
+                            <li><a href="/tareas/derecho_examen.html">Derecho a examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
