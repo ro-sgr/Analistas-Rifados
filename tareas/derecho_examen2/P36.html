@@ -40,23 +40,24 @@
                 <header class="main">
                     <h1>Problema 36</h1>
                 </header>
-                <p>Demostrar que</p>
-                $$ \lim_{\theta\to0}\frac{\sin\theta}{\theta} = 1 $$
+                <p>Demostrar que \( \lim_{\theta\to0}\frac{\sin\theta}{\theta} = 1 \) </p>
 
                 <img src="img/P36.png">
 
-                <p>Dem. Obsérvese la figura que acompaña la demostración. En la figura se ilustra la definición de \(\sin\theta\) y
-                    \(\tan\theta\) en la circunferencia unitaria. Más aún, como el radio es 1, el arco que subtiende al ángulo
-                    \(\theta\) mide \(\theta\). Suponiendo que \(0 &lt; \theta &lt; \frac{\pi}{2}\) se cumple que</p>
-                $$\sin\theta  &lt; \theta &lt; \tan\theta$$
+                <hr class="major"/>
+
+                <p><strong>Demostración.</strong> Obsérvese la figura que acompaña la demostración. En la figura se ilustra la
+                    definición de \(\sin\theta\) y \(\tan\theta\) en la circunferencia unitaria. Más aún, como el radio es 1, el arco que
+                    subtiende al ángulo \(\theta\) mide \(\theta\). Suponiendo que \(0 &lt; \theta &lt; \frac{\pi}{2}\) se cumple que</p>
+                $$ \sin\theta  &lt; \theta &lt; \tan\theta $$
                 
                 <p>Notando que \(\frac{\sin\theta}{\theta} &gt; 0\) y \(\theta\) se sigue que</p>
-                $$ \frac{1}{\sin\theta}>\frac{1}{\theta} &gt; \frac{1}{\tan\theta}$$
-                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta}{\tan\theta}$$
-                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta\cdot\cos\theta}{\sin\theta}$$
-                $$ \frac{\theta}{\sin\theta} \frac{\sin\theta}{\theta} &gt; 1 \cdot \frac{\sin\theta}{\theta} &gt;
-                \frac{\theta\cdot\cos\theta}{\sin\theta} \frac{\sin\theta}{\theta}$$
-                $$ \cos\theta &lt; \frac{\sin\theta}{\theta} &lt; 1$$
+                $$ \frac{1}{\sin\theta}>\frac{1}{\theta} &gt; \frac{1}{\tan\theta} $$
+                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta}{\tan\theta} $$
+                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta\cdot\cos\theta}{\sin\theta} $$
+                $$ \frac{\theta}{\sin\theta} \frac{\sin\theta}{\theta} &gt; 1 \cdot \frac{\sin\theta}{\theta} &gt; \frac{ \theta \cdot
+                \cos \theta}{ \sin \theta} \frac{\sin\theta}{\theta} $$
+                $$ \cos\theta &lt; \frac{\sin\theta}{\theta} &lt; 1 $$
                     
                 <p>Además, como el seno es una función impar y el coseno es una función par se tiene que \(\frac{\sin\theta}{\theta} =
                     \frac{\sin(-\theta)}{-\theta}\) y \(\cos\theta=\cos(-\theta)\), la misma desigualdad se cumple para \(\theta &lt; 0\).

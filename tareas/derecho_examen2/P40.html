@@ -41,30 +41,49 @@
                     <h1>Problema 40</h1>
                 </header>
                 Demuestra que la función \(f:\mathbb{R}\to\mathbb{R}\), \(f(x)=\sin(x)\) es continua.
+
+                <hr class="major"/>
                 
-                Se probará que \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\).
+                <strong>P.D.</strong> \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\).
                 
-                ** Trabajo previo
+                <p>**<em>Trabajo previo</em></p>
                 
-                Nótese que \(x=\frac{x+a}{2}+\frac{x-a}{2}\), y que \(a=\frac{x+a}{2}+\frac{a-x}{2}\). Por la identidad de suma de
-                ángulos se tiene que
+                <p>Nótese que \(x=\frac{x+a}{2}+\frac{x-a}{2}\), y que \(a=\frac{x+a}{2}+\frac{a-x}{2}\). Por la identidad de suma de
+                    ángulos se tiene que</p>
                 
-                $$\begin{align}\sin(x)-\sin(a)&=\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{x-a}{2}\right)+\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)\\&\quad-\sin\left(\frac{x+a}{2}\right)\cos\left(\frac{a-x}{2}\right)-\sin\left(\frac{a-x}{2}\right)\cos\left(\frac{x+a}{2}\right)\end{align}$$
+                $$ \begin{align}
+                        \sin(x)-\sin(a)
+                        & = \sin \left(\frac{x+a}{2}\right) \cos \left(\frac{x-a}{2}\right) + \sin \left( \frac{x-a}{2} \right) \cos \left(
+                        \frac{x+a}{2} \right)\\
+                        & \quad - \sin \left(\frac{x+a}{2}\right) \cos \left(\frac{a-x}{2}\right) - \sin \left( \frac{a-x}{2}\right) \cos \left(
+                        \frac{x+a}{2} \right)
+                \end{align} $$
                 
-                Como el seno es impar y el coseno es par se tiene que
+                <p>Como el seno es impar y el coseno es par se tiene que</p>
                 
-                $$\sin(x)-\sin(a)=2\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right)$$
+                $$ \sin(x) - \sin(a) = 2\sin\left(\frac{x-a}{2}\right)\cos\left(\frac{x+a}{2}\right) $$
                 
-                Así, sea \(|\sin(x)-\sin(a)|<\varepsilon\) $$\iff
-                    2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ Nótese que
-                    \(|\cos\theta|\leq 1\) para cualquier \(\theta\), y por la definición del seno en la circunferencia unitaria se
-                    tiene que \(|\sin\theta|\leq |x|\) (véase el problema 36). Así,
-                    $$2\left|\sin\left(\frac{x-a}{2}\right)\right|\left|\cos\left(\frac{x+a}{2}\right)\right |<\varepsilon$$ $$\iff
-                    2\left|\frac{x-a}{2}\right|<\varepsilon$$ $$\iff \left|x-a\right|<\varepsilon$$ Dem. Sea \(\delta=\epsilon\). Por
-                    hipótesis se tiene que \(|x-a|<\delta\), y por el trabajo previo se sigue que \(|\sin(x)-\sin(a)|<\varepsilon\).
-                    Así, $$\forall\varepsilon>0\,\exists\delta>0:|x-a|<\delta\implies |\sin(x)-\sin(a)|<\varepsilon$$ Por lo que
-                        \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\) para cualquier \(a\in\mathbb{R}\) y la función seno es continua.
-                        \(\blacksquare\)
+                Así, sea \(|\sin(x)-\sin(a)| &lt; \varepsilon\)
+                
+                $$ \iff 2 \left| \sin \left( \frac{x-a}{2} \right) \right| \left| \cos \left( \frac{x+a}{2} \right) \right | &lt;
+                \varepsilon $$
+                
+                Nótese que \(|\cos\theta|\leq 1\) para cualquier \(\theta\), y por la definición del seno en la circunferencia unitaria
+                se tiene que \(|\sin\theta|\leq |x|\) (véase el <a href="P36.html">problema 36</a>). Así,
+                
+                $$ 2 \left| \sin \left( \frac{x-a}{2} \right) \right| \left| \cos \left( \frac{x+a}{2} \right) \right | &lt; \varepsilon$$
+                $$ \iff 2 \left| \frac{x-a}{2} \right| &lt; \varepsilon $$
+                $$ \iff \left| x-a \right| &lt; \varepsilon $$
+
+                <hr class="major"/>
+                
+                <p><strong>Demostración.</strong> Sea \(\delta=\epsilon\). Por hipótesis se tiene que \(|x-a| &lt; \delta\), y por el
+                    trabajo previo se sigue que \(|\sin(x)-\sin(a)| &lt; \varepsilon\). Así,</p>
+                
+                $$ \forall \varepsilon &gt; 0 \, \exists \delta &gt; 0:|x-a| &lt; \delta\implies |\sin(x)-\sin(a)| &lt; \varepsilon $$
+                
+                <p>Por lo que \(\displaystyle \lim_{x\to a}\sin(x)=\sin(a)\) para cualquier \(a\in\mathbb{R}\) y la función seno es
+                    continua. \( \quad \blacksquare\)</p>
             </section>
 
         </div>
