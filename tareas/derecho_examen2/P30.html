@@ -40,16 +40,28 @@
                 <header class="main">
                     <h1>Problema 30</h1>
                 </header>
-                <p>Si alguno o ambos límites \(\displaystyle\lim_{x\to a}f(x)\) y \(\displaystyle\lim_{x\to a}g(x)\) no existen, ¿puede
-                existir \(\displaystyle\lim_{x\to a}(f\cdot g)(x)\)?</p>
+                <p>Demostrar que todo número tiene una raíz cuadrada.</p>
+
+                <hr class="major"/>
+
+                <p><strong>P.D.</strong> Si \( \alpha >0 \) entonces existe \( x \in \mathbb{R} \) tal que \( x^2=\alpha \).</p>
+                <p><strong>Demostración.</strong> Sea \( f(x)=x^2 \) continua en todo \(\mathbb{R}\). En particular \(f\) es continua en
+                    el intervalo \([0,b]\). A saber </p>
+                $$ \exists b >0: \alpha &lt; f(b).$$
                 
-                <p><strong>Solución: </strong> Sí. Obsérvese el siguiente ejemplo:</p>
+                <p>Por lo que tendremos dos casos:</p>
+                <ol>
+                    <li>Si \(\alpha &lt; 1 \) hacemos \( b=1\),</li>
+                    <li>Si \(\alpha &gt; 1 \) hacemos \( b=\alpha\).</li>
+                </ol>
+
+                Por hipótesis sabemos que \( f(0) &lt; \alpha &lt; f(b)\). Sea \( g(x)=f(x)-\alpha\),
+                $$ f(0) &lt; \alpha &lt; f(b) \Longleftrightarrow f(0)-\alpha &lt; \alpha-\alpha &lt; f(b)-\alpha \Longleftrightarrow
+                g(0) &lt; 0 &lt; g(b) $$
                 
-                Sean \(f\) y \(g\) definidas por \(f(x)=x\) y \(g(x)=\frac{1}{x}\), y tómese el límite en cero. Se tiene que
-                
-                $$\lim_{x\to0}(f\cdot g)(x)=\lim_{x\to0}\left(x\cdot\frac{1}{x}\right)=1$$
-                
-                Sin embargo, no existe \(\displaystyle\lim_{x\to 0}\frac{1}{x}\) (i.e. no existe \(\displaystyle\lim_{x\to 0}g(x)\)).
+                Por el teorema del valor intermedio, si \(g(x)\) es continua en \([0,b]\) y \( g(0) &lt; 0 &lt; g(b) \), entonces existe
+                algún \(x \in [0,b]\) tal que \( g(x)=0 \). Pero \(g(x)=f(x)-\alpha\). Luego, \(f(x)-\alpha = 0 \Longleftrightarrow
+                f(x) = \alpha \Longleftrightarrow x^2=\alpha\). \( \quad \blacksquare\)
 
             </section>
 

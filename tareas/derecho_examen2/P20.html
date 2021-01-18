@@ -6,7 +6,7 @@
 -->
 <html lang="es">
 <head>
-    <title>Problema 19 | Tarea 2</title>
+    <title>Problema 20 | Tarea 2</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="/assets/css/main.css"/>
@@ -37,47 +37,35 @@
             <!-- Contenido -->
             <section>
                 <header class="main">
-                    <h1>Problema 19</h1>
+                    <h1>Problema 20</h1>
                 </header>
-                Demostrar que \( \lim\limits_{x \to a}f(x) = \lim\limits_{h \to 0}f(a+h) \) si y sólo si \(f\) es continua en \(x=a\).
+                Demostrar que \( \lim\limits_{x \to 0} \frac{1}{x} \) no existe.
 
                 <hr class="major"/>
 
-                <p><strong>Observación.</strong> \(\lim\limits_{x \to a}f(x) = f(a)\)  </p>
+                <strong>Observación.</strong> La negación de la existencia de un límite es
+                $$ \exists \varepsilon &gt; 0: \forall \delta > 0, \exists x \text{ tal que } 0 &lt; |x-a| &lt; \delta \text{ y } | f(x)
+                - L| &ge; \varepsilon $$
 
                 <hr class="major"/>
 
                 <strong>Demostración.</strong><br>
-
-                <p><strong>P.D.</strong> \(f\) es continua en \(a\)</p>
-                <p>\( \implies) \) Suponga que \( \lim\limits_{x \to a}f(x) = \lim\limits_{h \to 0}f(a+h) \). Sea \( \varepsilon &gt; 0
-                    \). Así pues, se está buscando un \( \delta &gt; 0 \) tal que \( 0 &lt; | x- a | &lt; \delta \) entonces \( 0 &lt; |
-                    f(x) - f(a) | &lt; \varepsilon \)</p>
-
-                    <p>Sea \( a + h = x \). De tal modo que</p>
-                    $$ \lim\limits_{h \to 0}f(a+h) = f(a) $$
-
-                    <p>Consecuentemente, se sigue</p>
-                    $$ 0 &lt; | h | &lt; \delta \implies | f(a+h)- f(a) | &lt; \varepsilon $$
-                    $$ \begin{align}
-                            0 &lt; | x - a | &lt; \delta & \implies | f(a + x - a)- f(a) | &lt; \varepsilon \\
-                            & \implies | f(x)- f(a) | &lt; \varepsilon
-                    \end{align} $$
                 
-                <p>Por tanto, \(f\) es continua en \(a\).</p>
+                <p>Sea \( \lim\limits_{x \to 0} \frac{1}{x} = L \). De tal modo, se busca un \( \varepsilon &gt; 0, \forall \delta > 0,
+                    \exists x \text{ tal que } 0 &lt; |x| &lt; \delta \text{ y } \left| \frac{1}{x} - L \right| &ge; \varepsilon \). </p>
 
-                <br>
-                <p><strong>P.D.</strong> \( \lim\limits_{h \to 0}f(a+h) = f(a) \)</p>
-                <p>\( \impliedby) \) Suponga que \(f\) es continua en \(a\). Sea \( g(h) = a + h \). Así pues</p>
-                $$ \begin{align}
-                        \lim\limits_{h \to 0} f(a+h)
-                        & = \lim\limits_{h \to 0} f(g(h)) \\
-                        & = f \left( \lim\limits_{h \to 0} g(h) \right) \quad \quad f \text{ es continua} \\
-                        & = f \left( \lim\limits_{h \to 0} a + h \right) \\
-                        & = f(a)
-                \end{align} $$
+                <p>Suponga \( x = \min(\frac{\delta}{2}, \frac{1}{\varepsilon + |L| })\). Puesto que \(x &gt; 0\), se sigue
+                    entonces que \(\frac{\delta}{2} &gt; 0\) y que \( \frac{1}{\varepsilon + |L|} &gt; 0 \).</p>
 
-                <p>De esta manera, se ha conseguido lo que se quería probar. \( \quad \blacksquare \)</p>
+                <p>De tal modo, \( 0 &lt; x &le; \frac{\delta}{2} &lt; \delta \implies 0 &lt; x &lt; \delta \implies 0 &lt; |x| &lt;
+                    \delta \) </p>
+
+                <p>Análogamente, \( 0 &lt; x &le; \frac{1}{\varepsilon + |L|} \implies \frac{1}{x} &ge; \varepsilon + |L|
+                    \). Note que, \( |L| &ge; L \), por tanto \( \frac{1}{x} &ge; \varepsilon + L \implies \frac{1}{x} - L &ge; \varepsilon
+                    \). Como \( \varepsilon &gt; 0 \), entonces se tiene que \( \frac{1}{x} - L &ge; \varepsilon &gt; 0 \).
+                    Consecuentemente, \( \left|\frac{1}{x} - L \right| &ge; \varepsilon \).</p>
+
+                <p>Obteniendo, lo que se quería demostrar. \( \quad \blacksquare \)</p>
 
             </section>
         </div>
