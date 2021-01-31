@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+
+<head>
+    <title>Sucesiones</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Contenido -->
+                <section>
+                    <header class="main">
+                        <h1>Sucesiones</h1>
+                    </header>
+
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#limite">Límite de una sucesión</a><br>
+                    <a href="#acotadas_monotonas">Sucesiones acotadas monótonas</a><br>
+
+                    <hr class="major"/>
+
+                    <h2 id="introduccion">Introducción</h2>
+                    <p>
+                        <strong>Def. </strong>Una sucesión es una función \(S:\mathbb{N}\to\mathbb{R}\). Esta puede ser representada como \(S(n)\) o
+                        \(\{S_n\}\), donde \(n\in\mathbb{N}\).
+                    </p>
+                    <p><strong>Ejemplo:</strong></p>
+                    <ul>
+                        <li>Sea \(S\) definida por \(S(n)=\sqrt{2}\). Se tiene que \(S=\{(1,\sqrt{2}),(2,\sqrt{2}),(3,\sqrt{2})...\}\).</li>
+                        <li>Sea \(S\) definida por \(S(n)=2n\). Se tiene que \(S=\{(1,2),(2,4),(3,6)...\}\).</li>
+                        <li>Sea \(S\) definida por \(S(n)=\frac{1}{n}\). Se tiene que \(S=\{(1,1),(2,\frac{1}{2}),(3,\frac{1}{3})...\}\).</li>
+                    </ul>
+                    <p>
+                        Puesto que el primer elemento de cada par ordenado es un natural, es común que las sucesiones se identifiquen solo por sus imágenes,
+                        bajo el supuesto de que están escritas en orden de acuerdo al natural al que corresponden. Para el ejemplo 3, la sucesión se escribiría
+                        como \(\{1,\frac{1}{2},\frac{1}{3},\frac{1}{4},...\}\).
+                    </p>
+
+                    <hr class="major"/>
+
+                    <h2 id="limite">Límite de una sucesión</h2>
+
+                    <p>Obsérvese que el valor de esta sucesión se acerca más a cero conforme \(n\) se hace grande. Se podría intentar afirmar incluso que
+                        el valor de la sucesión se podría acercar a cero tanto como quisiéramos haciendo que \(n\) sea suficientemente grande. Esto genera
+                        una idea de encontrar el valor de una sucesión "en el infinito", al que denominamos límite.
+                    </p>
+                    <p>Def.  Se denota por \(\displaystyle\lim_{n\to\infty}S_n\) al límite de la sucesión \(\{S_n\}\), y
+                        $$ \lim_{n\to\infty} S_n = L \iff \forall \varepsilon &gt; 0\; \exists N &gt; 0: \; n &gt; N \implies |S_n-L| &lt; \varepsilon $$
+                        Esto quiere decir que, dada cualquier distancia \(\varepsilon\), se puede hallar un valor \(N\) suficientemente grande tal que \(S_n\)
+                        diste de \(L\) por un valor menor que \(\varepsilon\).
+                    </p>
+                    <p>Para el caso de \(\{\frac{1}{n}\}\) se tiene que \(L=0\). Para demostrar esto, se debe exhibir un valor de \(N\) en función de
+                        \(\varepsilon\) para el que se cumpla la definición.
+                    </p>
+                    <p><strong>P.D.</strong> \(\displaystyle\lim_{n\to \infty}\frac{1}{n}=0\).</p>
+                    <p>Dem. Se debe cumplir que \(|\frac{1}{n}-0|=\frac{1}{n} &lt; \varepsilon\) para \(n &gt; N\). Como \(N\in\mathbb{N}\), no se puede pedir
+                        \(N=\frac{1}{\varepsilon}\), pero se puede pedir \(N &gt; \frac{1}{\varepsilon}\) para el primer natural que lo cumpla. Así, sea
+                        \(N &gt; \frac{1}{\varepsilon}\). Si \(n&gt;N&gt;\frac{1}{\varepsilon}\) se sigue que \(\frac{1}{n}&lt;\varepsilon\) y \( | \frac{1}{n}
+                        | &lt; \varepsilon\), pues \(\frac{1}{n} = | \frac{1}{n} |\). Por lo tanto, \(L=0\).     \(\blacksquare\)
+                    </p>
+                    <p>Esta demostración echa mano de la llamada propiedad arquimediana de los números naturales, que afirma que
+                        $$ \forall x,y\in\mathbb{R},\, x &gt; 0,\, \exists n\in\mathbb{N}:\;nx &gt; y $$</p>
+                    <p>Si una sucesión tiene límite \(L\), se dice que converge a \(L\). Si no tiene límite, se dice que no converge, o bien, que diverge.</p>
+                    <p><strong>Ejemplo:</strong></p>
+                    <ul>
+                        <li>La sucesión identidad \(\{n\}\) no converge.</li>
+                        <li>La sucesión definida por \(\{(-1)^n\}\) no converge a cero.</li>
+                    </ul>
+                    <p>Se demostrará esto último. Basta con exhibir \(\varepsilon>0\) tal que no se cumpla la definición. Sea \(\varepsilon =\frac{1}{2}\),
+                        de donde \(|(-1)^n| &lt; \frac{1}{2}\) y \(1 &lt; \frac{1}{2}\) !</p>
+                    <p>Veamos un ejercicio más complejo. Sea \(\{\sqrt{n+1}-\sqrt{n}\}\), ¿converge? Aparentemente, la sucesión converge a cero, pues el
+                        valor de \(\sqrt{n+1}\) y de \(\sqrt{n}\) es muy similar para números grandes. Se reescribe la sucesión para obtener
+                        $$
+                        \begin{align}
+                        \sqrt{n+1} - \sqrt{n}
+                        &= \sqrt{n+1} - \sqrt{n} \cdot \frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} + \sqrt{n}}\\
+                        &= \frac{n+1-n}{\sqrt{n+1} + \sqrt{n}}\\
+                        &= \frac{1}{\sqrt{n+1}+\sqrt{n}} &lt; \frac{1}{2\sqrt{n}} 
+                        \end{align}
+                        $$
+                    </p>
+                    <p>Así, si se deseara tener \(|\sqrt{n+1}-\sqrt{n}-0| &lt; \varepsilon\), bastaría con hacer \(\frac{1}{2\sqrt{n}} &lt; \varepsilon\),
+                        de donde \(\frac{1}{4\varepsilon^2} &lt; n\).
+                    </p>
+                    <p><strong>Dem.</strong> Sea \(N &gt; \frac{1}{4\varepsilon^2}\). Si \(n &gt; N\), entonces</p>
+                    $$ n &gt; \frac{1}{4\varepsilon^2} $$
+                    $$ \frac{1}{2\sqrt{n}} &lt; \varepsilon $$
+                    $$ \frac{1}{\sqrt{n+1}-\sqrt{n}} &lt; \varepsilon $$
+                    $$ \left| \frac{1}{\sqrt{n+1}-\sqrt{n}}-0 \right| &lt; \varepsilon\qquad \blacksquare$$
+
+                    <hr class="major"/>
+
+                    <h2 id="acotadas_monotonas">Sucesiones acotadas y monótonas</h2>
+                    <p>
+                        Def. Se dice que una sucesión \(\{a_n\}\) es acotada si el conjunto de sus imágenes lo está. Esto es, \(\exists M:\,\forall n \in
+                        \mathbb{N},\,M\geq |a_n|\).
+                    </p>
+                    <p>Def. Sea \(\{a_n\}\) una sucesión cualquiera. Se dice que </p>
+                    <ul>
+                        <li>\(\{a_n\}\) es creciente si \(\forall n\in\mathbb{N},\,a_n\leq a_{n+1}\).</li>
+                        <li>\(\{a_n\}\) es decreciente si \(\forall n\in\mathbb{N},\,a_n\geq a_{n+1}\).</li>
+                        <li>\(\{a_n\}\) es estrictamente creciente si \(\forall n\in\mathbb{N},\,a_n &lt; a_{n+1}\).</li>
+                        <li>\(\{a_n\}\) es estrictamente decreciente si \(\forall n\in\mathbb{N},\,a_n &gt; a_{n+1}\).</li>
+                    </ul>
+                    <p>A estas sucesiones se les llama monótonas, pues conservan un comportamiento a lo largo de todos los naturales.</p>
+                    <p>
+                        <strong>Ej.</strong> Sea \(\{\frac{n}{n+1}\}\), por lo que se genera la sucesión \(\{\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},
+                        ...\}\). Obsérvese que \(a_{n+1}-a_{n}=\frac{n+1}{n+2}-\frac{n}{n+1}=\frac{1}{n^2+3n+2}>0\), por lo que \(a_{n+1}>a_{n}\),
+                        y \(\{\frac{n}{n+1}\}\) es creciente.
+                    </p>
+                    <p>
+                        <strong>Ej.</strong> Sea \(\{\frac{n}{n+1}\}\), por lo que se genera la sucesión \(\{\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{4}{5},
+                        ...\}\). Obsérvese que \(a_{n+1}-a_{n}=\frac{n+1}{n+2}-\frac{n}{n+1}=\frac{1}{n^2+3n+2}>0\), por lo que \(a_{n+1}>a_{n}\), y
+                        \(\{\frac{n}{n+1}\}\) es reciente.
+                    </p>
+                    <p>Piénsese en lo siguiente: </p>
+                    <p>
+                        Supóngase que \(\{b_n\}\) es una sucesión monótona y \(\displaystyle\lim_{n\to\infty}b_n=L\). Una pregunta que surge es si \(\{b_n\}\)
+                        estará acotada. De forma intuitiva, es aparente que sí lo está, pues una función no acotada "se va al infinito", y se necesitarían
+                        infinitos elementos de la imagen para lograr esto. Veremos si podemos demostrarlo. Sin pérdida de generalidad, supongamos que
+                        \(\{b_n\}\) es creciente.
+                    </p>
+                    <p>
+                        Si \(\{b_n\}\) no fuera acotada, se dice que \(\nexists B\in\mathbb{R}\) tal que \(b_n\leq B,\;\forall n\in\mathbb{N}\). Esto quiere
+                        decir que \(\forall B\in\mathbb{R}\,\exists n\in\mathbb{N}:\, b_n>B\).
+                    </p>
+                    <p> Así, como \(\{b_n\}\) no es acotada, </p>
+                    $$ b_n-L &gt; B-L $$
+                    <p>
+                        Sea \(\varepsilon=B-L\) (podemos asegurar que \(\varepsilon>0\) pidiendo \(B>L\), que es posible porque el análisis es válido
+                        para cualquier real). Se tiene que
+                    </p>
+                    $$ b_n-L &gt; \varepsilon $$
+                    <p>Y como \(|b_n-L|\geq b_n-L\),</p>
+                    $$ |b_n - L| \geq \varepsilon $$
+                    <p>
+                        Por lo que \(\exists \varepsilon>0\,\forall N\in\mathbb{N}:\, n>N \land |b_n-L|\geq \varepsilon\), que contradice la existencia
+                        del límite original, por lo que suponer que \(\{b_n\}\) no es acotada arrojó una contradicción. Así,
+                    </p>
+                    <p>
+                        <strong>Teorema.</strong> Sea \(\{b_n\}\) una sucesión monótona tal que \(\displaystyle\lim_{n\to\infty}b_n=L\). Entonces \(\{b_n\}\)
+                        está acotada.
+                    </p>
+                    <p>Una cuestión que se sigue naturalmente es la de la unicidad del límite, pues en la definición no se pide que el valor de \(L\) sea único.
+                        Veremos que es necesario que lo sea.
+                    </p>
+
+                    <p><strong>Lema.</strong> Si \(0\leq L &lt; \varepsilon\;\forall\varepsilon &gt; 0\), entonces \(L=0\).</p>
+                    <p><strong>Demostración.</strong> Supóngase por el contrario que \(0\leq L &lt; \varepsilon\) y \(L\not = 0\). Sea \(\varepsilon =
+                        \frac{L}{2}\), de donde
+                    </p>
+                    <p><strong>Demostración.</strong></p>
+                    $$ 0\leq L &lt; \frac{L}{2} $$                    
+                    $$ 2L &lt; L $$
+                    <p>Y como \(L\not = 0\), se sigue que \(2=1\)!    \(\blacksquare\)</p>
+
+                    <p><strong>Teorema de unicidad del límite.</strong> Si \(\displaystyle\lim_{n\to\infty}a_n=L\) y \(\displaystyle\lim_{n\to\infty}a_n=M\),
+                        entonces \(L=M\).
+                    </p>
+                    <p><strong>Demostración.</strong> Supóngase que \(\displaystyle\lim_{n\to\infty}a_n=L\) y \(\displaystyle\lim_{n\to\infty}a_n=M\). Así,</p>
+                    $$ \forall \varepsilon &gt; 0 \, \exists N_1 \in \mathbb{N}: \; n &gt; N_1 \implies |a_n-L| &lt; \frac{\varepsilon}{2} $$
+                    $$ \forall \varepsilon &gt; 0 \, \exists N_2 \in \mathbb{N}: \; n &gt; N_2 \implies |a_n-M| &lt; \frac{\varepsilon}{2} $$
+                    <p>
+                        De modo que, dado \(\varepsilon>0\), sea \(N=\max\{N_1,N_2\}\), de donde \(|a_n-L| &lt; \frac{\varepsilon}{2}\) y \(|a_n-M| &lt; 
+                        \frac{\varepsilon}{2}\). Se sigue que
+                    </p>
+                    $$ |a_n - L| + |a_n - M| &lt; \frac{\varepsilon}{2}+\frac{\varepsilon}{2} $$
+                    $$ |L - a_n| + |a_n - M| &lt; \varepsilon $$
+                    $$ |L - a_n + a_n - M| &lt; |L - a_n| + |a_n - M| &lt; \varepsilon $$
+                    $$ |L - M| &lt; \varepsilon, \; \forall \varepsilon &gt; 0 $$
+                    <p>
+                        Y del lema se tiene que \(|L-M|=0\), que implica \(L=M\).   \(\blacksquare\)
+                    </p>
+                    <p>Veamos más resultados de sucesiones monótonas.</p>
+                    <p><strong>Teorema.</strong> Si \(\{a_n\}\) es creciente y acotada superiormente, entonces \(\{a_n\}\) converge.</p>
+                    <p><strong>Demostración.</strong> Sea \(A=\{a_n\,|\, n\in\mathbb{N}\}\). Como \(A\not = \varnothing\) y está acotado superiormente, \(A\)
+                        tiene supremo. Sea \(\alpha=\sup A\).
+                    </p>
+                    <p><em>Observación:</em> \(\forall\varepsilon\;\exists N\in\mathbb{N}:\; \alpha-\varepsilon &lt; a_N \leq \alpha\)</p>
+                    <p>Como \(\{a_n\}\) es creciente, \(\forall n &gt; N\; a_n \geq a_N\). Luego,</p>
+                    $$ \forall \varepsilon \; \exists N \in \mathbb{N}: \; \forall n &gt; N,\; \alpha - \varepsilon &lt; a_N \leq a_n \leq \alpha $$
+                    $$ -\varepsilon &lt; a_n-\alpha\leq 0$$
+                    $$ \varepsilon>a_n-\alpha\geq 0 $$
+                    $$ |\alpha-a_n| &lt; \varepsilon $$
+                    $$ |a_n-\alpha| &lt; \varepsilon $$
+                    <p>Por lo tanto \(\displaystyle \lim_{n\to\infty}a_n=\alpha\).   \(\blacksquare\)</p>
+
+                    <p><strong>Definición.</strong> Una subsucesión \(\{a_{n_j}\}\) es un subconjunto de la sucesión \(\{a_n\}\) donde los \(n_j\) cumplen</p>
+                    $$ a_{n_1} &lt; a_{n_2} &lt; a_{n_3} &lt; ... $$
+
+                    <p><strong>Lema.</strong> Cualquier sucesión contiene una subsucesión monótona.</p>
+                    <p>
+                        <strong>Demostración.</strong> Definamos como punto cumbre a los valores \(n\in\mathbb{N}\) tales que \(a_n > a_m\;\forall m>n\)
+                        (gráficamente, es un punto que se encuentra más alto que todos los siguientes).
+                    </p>
+                    <ul>
+                        <li>Caso 1. Si hay infinitos puntos cumbre, entonces \(n_1 &lt; n_2 &lt; n_3 &lt; ...\) y \(a_{n_1} &gt; a_{n_2} &gt; a_{n_3} &gt; ...\),
+                            por lo que la sucesión \(\{a_{n_k}\}\) es decreciente y está contenida en \(\{a_n\}\).
+                        </li>
+                        <li>Caso 2. Hay un número finito de puntos cumbre. Sean \(n_1\) un punto mayor que todos los puntos cumbre. De aquí se sigue que \(n_1\)
+                            no es un punto cumbre. Como no es punto cumbre, \(\exists n_2:\;a_{n_2}\geq a_{n_1}\) (si no existiera, \(n_1\) sería punto cumbre).
+                            Como \(n_2\) no es punto cumbre, \(\exists n_3:\;a_{n_3}\geq a_{n_2}\). El argumento se sigue ad infinitum. La sucesión
+                            \(\{a_{n_k}\}\) es monótona.  \(\blacksquare\)
+                        </li>
+                    </ul>
+                    
+                    <p><strong>Teorema de Bolzano-Weierstrass.</strong> Toda sucesión acotada tiene una subsucesión convergente.</p>
+                    <p>
+                        <strong>Demostración.</strong> Sea \(\{a_n\}\) una sucesión acotada. Por el lema, existe una subsucesión monótona \(\{a_{n_k}\}\).
+                        Como \(\{a_n\}\) está acotada, \(\{a_{n_k}\}\) está acotada. Por lo tanto, por el teorema anterior, \(\{a_{n_k}\}\) converge.
+                        \(\blacksquare\)
+                    </p>
+                    
+                    <p>
+                        <strong>Teorema.</strong> ean \(\{a_n\}\) y \(\{b_n\}\) sucesiones convergentes, y sea \(\displaystyle \lim_{n\to\infty}a_n = a\)
+                        S y \(\displaystyle \lim_{n\to\infty}b_n = b\). Entonces,
+                    </p>
+                    <ol>
+                        <li>\(\displaystyle \lim_{n\to\infty}(a_n+b_n) = a+b\)</li>
+                        <li>\(\displaystyle \lim_{n\to\infty}(a_n\cdot b_n) = a\cdot b\)</li>
+                        <li>
+                            Además, si se restringe \(\{b_n\}\) a las \(n\) tales que \(b_n \not=0\) y \(b\not = 0\), \(\displaystyle
+                            \lim_{n\to\infty}\frac{a_n}{b_n} = \frac{a}{b}\)
+                        </li>
+                    </ol>
+                    <p>
+                        <strong>Demostración.</strong> Por hipótesis,
+                        $$ \forall \tfrac{\varepsilon}{2} &gt; 0 \, \exists N_1 \in \mathbb{N}: \; n &gt; N_1 \implies |a_n-a| &lt; \frac{\varepsilon}{2} $$
+                        $$ \forall \tfrac{\varepsilon}{2} &gt; 0 \, \exists N_2 \in \mathbb{N}: \; n &gt; N_2 \implies |b_n-b| &lt; \frac{\varepsilon}{2} $$
+                    </p>
+                    <p>
+                        Sea \(N=\max\{N_1,N_2\}\), por lo que se cumplen ambas condiciones y
+                        $$ |a_n - a|+|b_n - b| &lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} $$
+                        $$ |a_n - a + b_n - b| &lt; \varepsilon $$
+                        $$ |(a_n + b_n) - (a+b)| &lt; \varepsilon $$
+                    </p>
+                    <p>
+                        Se quiere llegar a \(|a_n b_n-ab| &lt; \varepsilon\).
+                        $$
+                            \begin{align}
+                                |a_n b_n - ab|
+                                & = |a_n b_n - b_n + ab_n - ab|\\
+                                & = |(a_n - a)b_n + (b_n - b)a| \\
+                                & \leq |a_n - a|\,|b_n| + |b_n - b|\,|a|
+                            \end{align}
+                        $$
+                    </p>
+                    <p>
+                        <em>Observación:</em> Como \(\{b_n\}\) converge, \(\exists B\in\mathbb{R}:\, |b_n|\leq B\;\forall n\in\mathbb{N}\). De modo que
+                        $$
+                            \begin{align}
+                                |a_n-a| \, |b_n| + |b_n - b| \, |a|
+                                & \leq |a_n-a|B + |b_n - b|\,|a| \\
+                                &\leq |a_n-a|B + (1 + |a|)|b_n-b|
+                            \end{align}
+                        $$
+                    </p>
+                    <p>
+                        Por hipótesis, \(\forall\frac{\varepsilon}{2B} &gt; 0\,\exists N_1\in\mathbb{N}:\; n &gt; N_1 \implies |a_n-a| &lt;
+                        \frac{\varepsilon}{2B}\) y \( \forall\frac{\varepsilon}{2(|a| + 1)} &gt; 0 \, \exists N_2 \in \mathbb{N}: \; n &gt; N_2 \implies
+                        |a_n-a| &lt; \frac{\varepsilon}{2(|a|+1)}\).
+
+                    </p>
+                    <p>
+                        Así, sea \(N=\max\{N_1,N_2\}\), de donde
+                        $$ |a_n b_n -ab| &lt; |a_n-a|B + |b_n-b|(|a|+1) &lt; \frac{\varepsilon}{2B}B + \frac{\varepsilon}{2(|a|+1)} (|a|+1)
+                        &lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon $$
+                        Por lo tanto, \(|a_n b_n -ab| &lt; \varepsilon\).
+                    </p>
+                    <p>
+                        Por hipótesis,
+                        $$ \forall \varepsilon' &gt; 0\,\exists N_1 \in \mathbb{N}: \; n &gt; N_1 \implies |a_n-a| &lt; \varepsilon' $$
+                        $$ \forall \varepsilon'' &gt; 0\, \exists N_2 \in \mathbb{N}:\; n &gt; N_2 \implies |a_n-a| &lt; \varepsilon'' $$
+                        En particular, existe \(N_1\in\mathbb{N}\) tal que
+                        $$ n &gt; N_1 \implies |b_n-b| &lt; \varepsilon' = \frac{|b|}{2} $$
+                    </p>
+                    <p>
+                        <em>Observación:</em> \(|x|-|y|\leq |y-x|\), pues \(|y|=|y+x-x|\leq |y-x|+|x|\). De ahí, \(|b|-|b_n|\leq |b-b_n| &lt; \frac{|b|}{2}\),
+                        por lo que
+                        $$ \frac{|b|}{2} &lt; |b| \implies 0 &lt; \frac{|b|}{2} &lt; |b_n| $$
+                        Basta con probar que \(\displaystyle\lim_{n\to\infty}\frac{1}{b_n}=\frac{1}{b}\), pues el cociente se define como \(a_n\cdot
+                        \frac{1}{b_n}\), por lo que basta con mostrar que
+                        $$ \forall\varepsilon^* \; \exists N \in \mathbb{N}: \; n &gt; N \implies \left| \frac{1}{b_n} - \frac{1}{b} - \right| &lt;
+                            \varepsilon^* $$
+                        **\(|\frac{1}{b_n}-\frac{1}{b}| &lt; \varepsilon\implies \frac{|b_n-b|}{|b|\,|b_n|} &lt; \varepsilon\).
+                    </p>
+                    <p>
+                        Por hipótesis, se tiene la existencia de \(N^*\in\mathbb{N}\) tal que \(n>N\implies |b_n-b| &lt; \varepsilon\). Como \(\{b_n\}\)
+                        converge, está acotada. Como \(|b_n|>\frac{|b|}{2}\), entonces \(\frac{2}{|b|}>\frac{1}{|b_n|}\). Sea \(\varepsilon'>|b_n-b|\).
+                        Por lo tanto,
+                        $$ \frac{|b_n-b|}{|b|\,|b_n|} &lt; \frac{2\varepsilon'}{|b|^2} $$
+                        Sea \(N=\max\{N_1,N^*\}\). Sea \(|b_n-b| &lt; \frac{b^2\varepsilon}{2} \), de modo que \(\frac{2|b_n-b|}{b^2} &lt; \varepsilon\) y
+                        como \(\left| \frac{1}{b_n} - \frac{1}{b} \right| &lt; \frac{2|b_n-b|}{b^2} \), entonces \(\left| \frac{1}{b_n} - \frac{1}{b} \right|
+                        &lt; \varepsilon\). \(\blacksquare\)
+                    </p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li>
+                            <span class="opener">Apuntes</span>
+                            <ul>
+                                <li><a href="#">Números reales</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Tareas</span>
+                            <ul>
+                                <li><a href="">Morales</a></li>
+                                <li><a href="/tareas/derecho_examen.html">Derecho a examen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">"Por mi raza hablará el espíritu"</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
