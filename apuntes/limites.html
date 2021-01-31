@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+
+<head>
+    <title>Límites</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Contenido -->
+                <section>
+                    <header class="main">
+                        <h1>Sucesiones</h1>
+                    </header>
+
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#def-de">Definición \( \delta - \epsilon \) del límite</a>
+
+                    <hr class="major"/>
+
+                    <h2 id="introduccion">Introducción</h2>
+                    <p> La herramienta fundamental para el análisis del comportamiento de funciones es el límite.</p>
+                    <p>Particularmente, se dice que una función \(f\) tiene un límite \(L\) en \(c\) si en las proximidades de \(c\) los valores \(f(x)\)
+                        se acercan arbitrariamente a \(L\). Esto se denota</p>
+                    $$ \lim_{x\to c}f(x) = L $$
+                    <p>Que se lee "el límite de \(f\) cuando \(x\) tiende a \(c\)". Esto quiere decir que los valores de \(f(x)\) se acercan a \(L\) tanto
+                        como se desee haciendo que \(x\) diste lo suficiente de \(c\). </p>
+                    <p>Intuitivamente (e incorrectamente), para funciones que se portan bien, bastará con corroborar que \(f(c)=L\) para comprobar que los
+                        valores del contradominio bailan cerca de \(L\) cuando los valores del dominio bailan cerca de \(c\).</p>
+                    <p>
+                        <strong>Ejemplo:</strong>
+                        <ul>
+                            <li>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</li>
+                            <li>
+                                Calcular \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1}\). Se puede comprobar fácilmente que, al evaluar directamente,
+                                se llega a una expresión de la forma \(\frac{0}{0}\). Para determinar el valor, se factoriza para obtener
+                                $$ \lim_{x\to1} \frac{3x^2-3x}{x-1} = \lim_{x\to1}\frac{3x(x-1)}{x-1} = \lim_{x\to1}3x = 3(1) = \boxed{3} $$
+                            </li>
+                        </ul>
+                        Este acercamiento es muy útil en la mayoría de los contextos, mas es insuficiente para nuestros propósitos, pues se pierde la noción
+                        de cercanía en un punto. Por ejemplo, considérese la función \(f\) definida por
+                        $$
+                        f(x) = \left\{ 
+                                \begin{array}
+                                    x^2 & x\not = 0\\
+                                    1 & x = 0
+                                \end{array}
+                            \right.
+                        $$
+                        Es casi evidente que \(\displaystyle\lim_{x\to0}f(x)=0\), y no obstante \(f(0)\not =0\), por lo que este acercamiento al concepto de
+                        límite es esencialmente incorrecto (las funciones cuyos límites coinciden con su valor en un punto se estudiarán en la sección de
+                        Continuidad).
+                    </p>
+
+                    <hr class="major"/>
+
+                    <h2 id="def-de">Definición \( \delta - \epsilon \) del límite</h2>
+                    <p>
+                        La noción de "acercarse" conlleva inherentemente el concepto de "cercanía", que claramente no está definido. ¿Qué tan cerca es cerca?
+                        Pues bien, para evitar ambigüedades, es tanto como uno quiera. De esta idea y de la definición informal de la sección anterior se
+                        tiene la definición.
+                    </p>
+                    <p>
+                        <strong>Definición.</strong> Se denota por \(\displaystyle\lim_{x\to a}f(x)\) al límite en \(a\) de una función \(f\), y
+                        $$ \lim_{x\to a}f(x) = L \iff \forall \varepsilon &gt; 0 \, \exists \delta &gt; 0:\; 0 &lt; |x-a| &lt; \delta \implies |f(x)-L| &lt;
+                        \varepsilon $$
+                    </p>
+                    <p>Esta definición retoma la idea de "acercamiento" a \(a\) sin la necesidad de evaluar la función en ese punto, por lo que solamente se
+                        tratan los valores en una vecindad de \(a\).</p>
+                    <p>La definición estipula que, sin importar qué tan cerca se desea estar de \(L\) (a esta distancia se le llama \(\varepsilon\)), siempre
+                        es posible acercarse lo suficiente a \(a\) (tanto como \(\delta\)) para que los valores \(f(x)\) se acerquen a \(L\) tanto como se
+                        deseaba.</p>
+                    <p>Recuperando los ejemplos anteriores,</p>
+                    <p><strong>Ejemplo:</strong></p>
+                    <ol>
+                        <li>Demostrar que \(\displaystyle\lim_{x\to 2}7x-4=10\)</li>
+                        <strong>Demostración.</strong> Se quiere demostrar que
+                        $$ \forall\varepsilon &gt; 0\,\exists\delta &gt; 0:\; 0 &lt; |x-2| &lt; \delta\implies |7x-4-10| &lt; \varepsilon $$
+                        Para realizar la demostración se debe exhibir un valor de \(\delta\) (o bien constante o bien dependiente de \(\varepsilon\)) tal que
+                        la implicación se cumpla. Los asteriscos indicarán trabajo previo que no corresponde a la demostración per se, pero bien pueden ser la
+                        parte más importante de ella, pues dan pauta para proponer un valor de \(\delta\).<br>
+                        **
+                        $$ |7x-4-10| &lt; \varepsilon \iff |7x-14| &lt; \varepsilon \iff 7|x-2| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{7} $$
+                        Así, sea \(\delta=\frac{\varepsilon}{7}\), y sea \(|x-2| &lt; \delta\), de donde<br>
+                        $$ |x-2| &lt; \frac{\varepsilon}{7} \implies 7|x-2| &lt; \varepsilon \implies |7x-14| &lt; \varepsilon \implies |7x-4-10| &lt;
+                        \varepsilon $$
+                        Que es lo que se quería demostrar. Obsérvese que hay que ser especialmente cuidadoso con los bicondicionales en el trabajo previo.
+                        \(\blacksquare\)
+                        <!---->
+                        <li>Demostrar que \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1} = 3\)</li>
+                    </ol>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li>
+                            <span class="opener">Apuntes</span>
+                            <ul>
+                                <li><a href="#">Números reales</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Tareas</span>
+                            <ul>
+                                <li><a href="">Morales</a></li>
+                                <li><a href="/tareas/derecho_examen.html">Derecho a examen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Navegación</h2>
+                    </header>
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#limite">Límite de una sucesión</a><br>
+                    <a href="#acotadas_monotonas">Sucesiones acotadas monótonas</a><br>
+                    <a href="#unicidad-limite">Unicidad del límite</a><br>
+                    <a href="#bolzano-weierstrass">Teorema de Bolzano-Weierstrass</a>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">"Por mi raza hablará el espíritu"</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
