@@ -39,7 +39,7 @@
                 <!-- Contenido -->
                 <section>
                     <header class="main">
-                        <h1>Sucesiones</h1>
+                        <h1>Límites</h1>
                     </header>
 
                     <a href="#introduccion">Introducción</a><br>
@@ -103,21 +103,53 @@
                     <p><strong>Ejemplo:</strong></p>
                     <ol>
                         <li>Demostrar que \(\displaystyle\lim_{x\to 2}7x-4=10\)</li>
-                        <strong>Demostración.</strong> Se quiere demostrar que
-                        $$ \forall\varepsilon &gt; 0\,\exists\delta &gt; 0:\; 0 &lt; |x-2| &lt; \delta\implies |7x-4-10| &lt; \varepsilon $$
-                        Para realizar la demostración se debe exhibir un valor de \(\delta\) (o bien constante o bien dependiente de \(\varepsilon\)) tal que
-                        la implicación se cumpla. Los asteriscos indicarán trabajo previo que no corresponde a la demostración per se, pero bien pueden ser la
-                        parte más importante de ella, pues dan pauta para proponer un valor de \(\delta\).<br>
-                        **
+                        <strong>P.D.</strong> $ \forall\varepsilon &gt; 0\,\exists\delta &gt; 0:\; 0 &lt; |x-2| &lt; \delta\implies |7x-4-10| &lt;
+                            \varepsilon $ <br>
+                        <em>**Trabajo previo.</em>
                         $$ |7x-4-10| &lt; \varepsilon \iff |7x-14| &lt; \varepsilon \iff 7|x-2| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{7} $$
-                        Así, sea \(\delta=\frac{\varepsilon}{7}\), y sea \(|x-2| &lt; \delta\), de donde<br>
+                        <strong>Demostración.</strong>  Para realizar la demostración se debe exhibir un valor de \(\delta\) (o bien constante o bien
+                        dependiente de \(\varepsilon\)) tal que la implicación se cumpla. Los asteriscos indicarán trabajo previo que no corresponde
+                        a la demostración per se, pero bien pueden ser la parte más importante de ella, pues dan pauta para proponer un valor de \(\delta\).<br>
+                        Sea \(\delta=\frac{\varepsilon}{7}\), y sea \(|x-2| &lt; \delta\), de donde
                         $$ |x-2| &lt; \frac{\varepsilon}{7} \implies 7|x-2| &lt; \varepsilon \implies |7x-14| &lt; \varepsilon \implies |7x-4-10| &lt;
                         \varepsilon $$
                         Que es lo que se quería demostrar. Obsérvese que hay que ser especialmente cuidadoso con los bicondicionales en el trabajo previo.
                         \(\blacksquare\)
                         <!---->
                         <li>Demostrar que \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1} = 3\)</li>
+                        <strong>P.D.</strong> $ \forall\varepsilon>0\,\exists\delta>0:\; 0 &lt; |x-1| &lt; \delta\implies |\frac{3x^2-3x}{x-1}-3| &lt; 
+                        \varepsilon $ <br>
+                        <em>**Trabajo previo.</em>
+                        $$
+                            \begin{align}
+                                \left|\frac{3x^2-3x}{x-1}-3\right| &lt; \varepsilon
+                                & \iff \left|\frac{3x(x-1)}{x-1}-3\right| &lt; \varepsilon \\
+                                & \iff |3x-3| &lt; \varepsilon \\ &\iff 3|x-1| &lt; \varepsilon \\
+                                & \iff |x-1| &lt; \frac{\varepsilon}{3}
+                            \end{align}
+                        $$
+                        <strong>Demostración.</strong> Sea \(\delta=\frac{\varepsilon}{3}\), y sea \(|x-1| &lt; \delta\), de donde
+                        $$
+                            |x-1| &lt; \frac{\varepsilon}{3} \implies |3x-3| &lt; \varepsilon \implies \left| \frac{3x(x-1)}{x-1}-3 \right| &lt; \varepsilon
+                            \implies \left| \frac{3x^2-3x}{x-1} - 3 \right| &lt; \varepsilon
+                        $$
+                        Que es lo que se quería demostrar.   \(\blacksquare\)
                     </ol>
+
+                    <hr class="major"/>
+
+                    <p>
+                        Podemos definir una suerte de receta (que para nada pretende ser un algoritmo de demostración que sea correcto en todos los casos) para
+                        poder guiar estas demostraciones:
+                        <ol>
+                            <li>Identificar \(|x-a|\).</li>
+                            <li>Evaluar \(|f(x)-L|\).</li>
+                            <li>Simplificar la expresión hasta encontrar algo de la forma \(\alpha|x-a|\)</li>
+                            <li>Hacer \(\delta=\frac{\varepsilon}{\alpha}\) y demostrar el límite.</li>
+                        </ol>
+                    </p>
+
+                    <hr class="major"/>
 
                 </section>
 
@@ -158,10 +190,7 @@
                         <h2>Navegación</h2>
                     </header>
                     <a href="#introduccion">Introducción</a><br>
-                    <a href="#limite">Límite de una sucesión</a><br>
-                    <a href="#acotadas_monotonas">Sucesiones acotadas monótonas</a><br>
-                    <a href="#unicidad-limite">Unicidad del límite</a><br>
-                    <a href="#bolzano-weierstrass">Teorema de Bolzano-Weierstrass</a>
+                    <a href="#def-de">Definición \( \delta - \epsilon \) del límite</a>
                 </section>
 
                 <!-- Footer -->
