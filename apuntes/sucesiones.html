@@ -183,9 +183,10 @@
                     $$ 2L &lt; L $$
                     <p>Y como \(L\not = 0\), se sigue que \(2=1\)!    \(\blacksquare\)</p>
 
-                    <p><strong>Teorema de unicidad del límite.</strong> Si \(\displaystyle\lim_{n\to\infty}a_n=L\) y \(\displaystyle\lim_{n\to\infty}a_n=M\),
-                        entonces \(L=M\).
-                    </p>
+                    <hr class="major"/>
+
+                    <h3 id="unicidad-limite">Teorema de unicidad del límite.</h3>
+                    <p>Si \(\displaystyle\lim_{n\to\infty}a_n=L\) y \(\displaystyle\lim_{n\to\infty}a_n=M\), entonces \(L=M\). </p>
                     <p><strong>Demostración.</strong> Supóngase que \(\displaystyle\lim_{n\to\infty}a_n=L\) y \(\displaystyle\lim_{n\to\infty}a_n=M\). Así,</p>
                     $$ \forall \varepsilon &gt; 0 \, \exists N_1 \in \mathbb{N}: \; n &gt; N_1 \implies |a_n-L| &lt; \frac{\varepsilon}{2} $$
                     $$ \forall \varepsilon &gt; 0 \, \exists N_2 \in \mathbb{N}: \; n &gt; N_2 \implies |a_n-M| &lt; \frac{\varepsilon}{2} $$
@@ -201,6 +202,9 @@
                         Y del lema se tiene que \(|L-M|=0\), que implica \(L=M\).   \(\blacksquare\)
                     </p>
                     <p>Veamos más resultados de sucesiones monótonas.</p>
+
+                    <hr class="major"/>
+
                     <p><strong>Teorema.</strong> Si \(\{a_n\}\) es creciente y acotada superiormente, entonces \(\{a_n\}\) converge.</p>
                     <p><strong>Demostración.</strong> Sea \(A=\{a_n\,|\, n\in\mathbb{N}\}\). Como \(A\not = \varnothing\) y está acotado superiormente, \(A\)
                         tiene supremo. Sea \(\alpha=\sup A\).
@@ -232,13 +236,18 @@
                             \(\{a_{n_k}\}\) es monótona.  \(\blacksquare\)
                         </li>
                     </ul>
+
+                    <hr class="major"/>
                     
-                    <p><strong>Teorema de Bolzano-Weierstrass.</strong> Toda sucesión acotada tiene una subsucesión convergente.</p>
+                    <h3 id="bolzano-weierstrass">Teorema de Bolzano-Weierstrass.</h3>
+                    <p>Toda sucesión acotada tiene una subsucesión convergente.</p>
                     <p>
                         <strong>Demostración.</strong> Sea \(\{a_n\}\) una sucesión acotada. Por el lema, existe una subsucesión monótona \(\{a_{n_k}\}\).
                         Como \(\{a_n\}\) está acotada, \(\{a_{n_k}\}\) está acotada. Por lo tanto, por el teorema anterior, \(\{a_{n_k}\}\) converge.
                         \(\blacksquare\)
                     </p>
+
+                    <hr class="major"/>
                     
                     <p>
                         <strong>Teorema.</strong> ean \(\{a_n\}\) y \(\{b_n\}\) sucesiones convergentes, y sea \(\displaystyle \lim_{n\to\infty}a_n = a\)
@@ -355,6 +364,18 @@
                         </li>
                     </ul>
                 </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Navegación</h2>
+                    </header>
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#limite">Límite de una sucesión</a><br>
+                    <a href="#acotadas_monotonas">Sucesiones acotadas monótonas</a><br>
+                    <a href="#unicidad-limite">Unicidad del límite</a>
+                    <a href="#bolzano-weierstrass">Teorema de Bolzano-Weierstrass</a>
+                </section>
 
                 <!-- Footer -->
                 <footer id="footer">
