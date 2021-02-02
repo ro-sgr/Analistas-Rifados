@@ -42,20 +42,33 @@
                 </header>
                 Demostrar por la definición que
                 
-                a) \(\displaystyle \lim_{x\to 2}4x+1=9\)
+                <ol type="a">
+                    <li>\(\displaystyle \lim_{x\to 2}4x+1=9\)</li>
+                    <li>\(\displaystyle \lim_{x\to 2}x^2=4\)</li>
+                    <li>\(\displaystyle \lim_{x\to 3}\frac{x^2-9}{x-3}=6\)</li>
+                    <li>\(\displaystyle \lim_{x\to 8^+}\frac{1}{x-8}=+\infty\)</li>
+                    <li>\(\displaystyle \lim_{x\to -\infty}\frac{1}{x^2}=0\)</li>
+                </ol>
                 
-                ** Trabajo previo
-                
-                Sea \(|(4x+1)-9| &lt; \varepsilon\)
-                $$ \iff |4x-8| &lt; \varepsilon $$
-                $$ \iff |4(x-2)| &lt; \varepsilon $$
-                $$ \iff |4||x-2| &lt; \varepsilon $$
-                $$ \iff |x-2| &lt; \frac{\varepsilon}{4}$$
-                
+                <hr class="major"/>
+
+                <!-- Problema A -->
+                <p><strong>a)</strong> \(\displaystyle \lim_{x\to 2}4x+1=9\)</p>
+                <p>
+                    <em>** Trabajo previo</em> Sea \(|(4x+1)-9| &lt; \varepsilon\)
+                    $$ \iff |4x-8| &lt; \varepsilon $$
+                    $$ \iff |4(x-2)| &lt; \varepsilon $$
+                    $$ \iff |4||x-2| &lt; \varepsilon $$
+                    $$ \iff |x-2| &lt; \frac{\varepsilon}{4}$$
+                </p> 
                 <p><strong>Demostración.</strong> Sea \(\delta=\frac{\varepsilon}{4}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y por el trabajo previo se
                 concluye que \(|(4x+1)-9| &lt; \varepsilon\). Así, \(\forall \varepsilon &gt; 0 \; \exists\delta>0 : 0 &lt; |x-2| &lt; \delta \implies
-                |(4x+1)-9| &lt; \varepsilon\). \(\blacksquare\) b) \(\displaystyle \lim_{x\to 2}x^2=4\)</p>
-                
+                |(4x+1)-9| &lt; \varepsilon\). \(\blacksquare\)</p>
+
+                <hr class="major"/>
+
+                <!-- Problema B -->
+                <p><strong>b)</strong> \(\displaystyle \lim_{x\to 2}x^2=4\)</p>
                 <p><em>** Trabajo previo.</em> Sea \(|x^2-4| &lt; \varepsilon\)
                     $$\iff |(x+2)(x-2)| &lt; \varepsilon$$
                     $$\iff |x-2| &lt; \varepsilon$$
@@ -72,7 +85,12 @@
                 <p>Por lo que \(|x^2-4| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{3} \) Demostración. Sea \(\delta = \min \{1,
                     \frac{\varepsilon}{3}\}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y por el trabajo previo se concluye que \(|x^2-4| &lt;
                     \varepsilon\). Así, \(\forall \varepsilon &gt; 0 \; \exists\delta &gt; 0 : 0 &lt; |x-2| &lt; \delta \implies |x^2-4| &lt; 
-                    \varepsilon\). \(\blacksquare\) c) \(\displaystyle \lim_{x\to 3}\frac{x^2-9}{x-3}=6\)</p>                        
+                    \varepsilon\). \(\blacksquare\)</p>
+                    
+                <hr class="major"/>
+
+                <!-- Problema C -->
+                <p><strong>c)</strong> \(\displaystyle \lim_{x\to 3}\frac{x^2-9}{x-3}=6\)</p>
                 <p><em>** Trabajo previo.</em> Sea \(|\frac{x^2-9}{x-3}-6| &lt; \varepsilon\)
                     $$\iff \left|\frac{x^2-9}{x-3}-6\right| &lt; \varepsilon$$
                     $$\iff \left|\frac{(x+3)(x-3)}{x-3}-6\right| &lt; \varepsilon$$
@@ -85,23 +103,32 @@
                     |\frac{x^2-9}{x-3}-6| &lt; \varepsilon\). \(\blacksquare\) 
                 </p>
 
-                <p>d)\(\displaystyle \lim_{x\to 8^+}\frac{1}{x-8}=+\infty\)</p>
-                    
-                <p>Definición. \(\displaystyle \lim_{x\to x_0^+}f(x)=\infty\iff \forall M &gt; 0\; \exists \delta &gt; 0: 0 &lt; x-x_0 &lt; \delta \implies
-                    f(x) &gt; M\)</p>
-            
-                <em>** Trabajo previo.</em>
+                <hr class="major"/>
 
-                Sea \(\frac{1}{x-8}>M\)
-                $$\iff \frac{1}{M}>x-8$$
-                $$\iff \frac{1}{M}>x-8$$
-                <strong>Demostración.</strong> Sea \(\delta = \frac{1}{M}\). Por hipótesis, \(0<x-8<\delta\) y por el trabajo
-                    previo se concluye que \(\frac{1}{x-8}>M\). Así, \(\forall M > 0\; \exists \delta >0: 0
-                    <x-8<\delta \implies \frac{1}{x-8}>M\). \(\blacksquare\)
-                <p>e) \(\displaystyle \lim_{x\to -\infty}\frac{1}{x^2}=0\)</p>
+                <!-- Problema D -->
+                <p><strong>d)</strong> \(\displaystyle \lim_{x\to 8^+}\frac{1}{x-8}=+\infty\)</p>
+                <p><strong>Definición.</strong> \(\displaystyle \lim_{x\to x_0^+}f(x)=\infty\iff \forall M &gt; 0\; \exists \delta &gt; 0: 0 &lt; x-x_0 &lt;
+                    \delta \implies f(x) &gt; M\)
+                </p>
+                <p>
+                    <em>** Trabajo previo.</em> Sea \(\frac{1}{x-8}>M\)
+                    $$\iff \frac{1}{M}>x-8$$
+                    $$\iff \frac{1}{M}>x-8$$
+                </p>
+                <p>
+                    <strong>Demostración.</strong> Sea \(\delta = \frac{1}{M}\). Por hipótesis, \(0 &lt; x-8 &lt; \delta\) y por el trabajo previo se concluye
+                    que \(\frac{1}{x-8} &gt; M\). Así, \(\forall M &gt; 0\; \exists \delta &gt; 0: 0 &lt; x-8 &lt; \delta \implies \frac{1}{x-8} &gt; M\).
+                    \(\blacksquare\)
+                </p>
+
+                <hr class="major"/>
+
+                <!-- Problema E -->
+                <p><strong>e)</strong> \(\displaystyle \lim_{x\to -\infty}\frac{1}{x^2}=0\)</p>
                 <p>
                     <strong>Definición.</strong> \(\displaystyle \lim_{x\to -\infty}f(x)=L\iff \forall \varepsilon &gt; 0\; \exists N &lt; 0: x &lt; N \implies
-                    |f(x)-L| &lt; \varepsilon\)</p>
+                    |f(x)-L| &lt; \varepsilon\)
+                </p>
                 <p>
                     <em>** Trabajo previo.</em> Sea \(|\frac{1}{x^2}-0| &lt; \varepsilon\)
                     $$ \iff \left|\frac{1}{x^2}\right| &lt; \varepsilon $$
