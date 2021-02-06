@@ -43,14 +43,14 @@
                     </header>
 
                     <a href="#introduccion">Introducción</a><br>
-                    <a href="#limite">Límite de una sucesión</a><br>
-                    <a href="#acotadas_monotonas">Sucesiones acotadas monótonas</a><br>
+                    <a href="#tres_teoremas">Tres teoremas fuertes de continuidad</a><br>
 
                     <hr class="major"/>
 
                     <h2 id="introduccion">Introducción</h2>
+
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-8">
                             <p>Intuitivamente, podemos entender que una función es continua si su gráfica se puede dibujar sin despegar el lápiz del papel.
                                 Para definir continuidad se puede partir de la idea que, sin importar cuánto se acerque uno a un punto en una función, el
                                 valor de la función en ese punto está determinado por los valores que lo rodean. Si la función tiende a un valor en un punto,
@@ -58,17 +58,16 @@
                                 (ya sea porque no exista el límite, la función no está definida en \(a\), o simplemente no sean iguales), pero las funciones
                                 que lo cumplen son aquellas que consideraremos continuas en el punto (pues se "portan bien" cerca de dicho punto).</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-4">
                             <img src="img/continuidad1.png">
                         </div>
                     </div>
+
                     <p><strong>Definición.</strong> Sea \(f:[a,b]\to\mathbb{R}\) una función. Se dice que \(f\) es continua en \(x_0\) si y solo si
                         \(\displaystyle\lim_{x\to x_0}f(x)=f(x_0)\).</p>
+
                     <p>Se dice que una función que no es continua en un punto determinado es discontinua en dicho punto.</p>
-                    <div class="row">
-                        <div class="col-6"></div>
-                        <div class="col-6"></div>
-                    </div>
+
                     <div class="row">
                         <div class="col-6">
                             <p>Las discontinuidades que se pueden "cubrir con un punto" son llamadas discontinuidades removibles. Estas se caracterizan
@@ -81,11 +80,12 @@
                             <img src="img/continuidad2.png">
                         </div>
                     </div>
+
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4">
                             <img src="img/continuidad3.png">
                         </div>
-                        <div class="col-6">
+                        <div class="col-8">
                             <p>
                                 Las discontinuidades en las que los límites laterales existen pero no coinciden son llamadas discontinuidades de salto, pues
                                 la gráfica aparenta "dar un brinco". Para ejemplificar esto, piénsese en el comportamiento en \(x=0\) de la función \(f\)
@@ -94,21 +94,24 @@
                             </p>
                         </div>
                     </div>
+
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4">
                             <img src="img/continuidad4.png">
                         </div>
-                        <div class="col-6">
+                        <div class="col-8">
                             <p>El último tipo de discontinuidad es denominada discontinuidad por oscilación. Esta se ejemplifica muy claramente con el
                                 comportamiento en cero de \(f\) definida por \(f(x)=\sin(\frac{1}{x})\). Esta función oscila entre \(-1\) y \(1\) en todo
                                 su dominio, y su valor
                                 en el origen no está definido al oscilar "infinitamente".</p>
                         </div>
                     </div>
+
                     <p>Una definición de continuidad mediante \(\varepsilon-\delta\) equivalente a la original es:</p>
-                    <p>Def. Una función \(f:\mathbb{R}\to\mathbb{R}\) es continua en \(x_0\) si y solo si
+                    <p><strong>Definición.</strong> Una función \(f:\mathbb{R}\to\mathbb{R}\) es continua en \(x_0\) si y solo si
                         $$ \forall \varepsilon &gt; 0\;\exists\delta &gt; 0:\; |x-x_0| &lt; \delta\implies |f(x)-f(x_0)| &lt; \varepsilon $$
                     </p>
+
                     <p>Aunque la continuidad es un concepto puntual, también se puede definir sobre intervalos.</p>
                     <p><strong>Definición.</strong> Una función \(f\) es continua en el intervalo \((a,b)\) si es continua en todo punto \(x\in (a,b)\).</p>
                     <p>
@@ -138,6 +141,134 @@
                         continuas facilita enormemente el análisis de las mismas (tanto gráfico como algebraico). Para los primeros dos teoremas será necesario
                         introducir dos lemas, pero el tercer teorema se seguirá sin mucha dificultad.</p>
 
+                    <div class="row">
+                        <div class="col-8">
+                            <p<strong>Lema. Teorema de la conservación del signo.</strong> Sea \(f\) una función continua en \(a\) con \(f(a) &gt; 0\)
+                            (o \(f(a) &lt; 0\)).
+                                Entonces existe \(\delta &gt; 0\) tal que \(f(x) &gt; 0\) (o \(f(x) &gt; 0\)) para toda \(x\) que satisface
+                                \(|x-a| &gt; \delta\).</p>
+                            <p>
+                                <strong>Demostración.</strong> Se demostrará el caso positivo (el caso negativo es análogo). Sea \(f(a)>0\).
+                                Como \(f\) es continua en \(a\), dado \(\varepsilon &gt; 0\) existe \(\delta &gt; 0\) tal que
+                                $$ |x-a| &lt; \delta\implies |f(x)-f(a)| &lt; \varepsilon $$
+                                Como \(f(a) &gt; 0\), sea \(\varepsilon = f(a)\). Así, existe \(\delta\) tal que
+                                $$
+                                    \begin{align}
+                                        |x-a| &lt; \delta&\implies |f(x)-f(a)| &lt; f(a)\\
+                                            &\iff -f(a) &lt; f(x)-f(a) &lt; f(a)\\
+                                            &\iff 0 &lt; f(x) &lt; 2f(a)
+                                    \end{align}
+                                $$
+                                De donde \(f(x)>0\) para cualquier \(x\) tal que \(|x-a|<\delta\).  \(\blacksquare\)
+                            </p>
+                        </div>
+                        <div class="col-4"><img src="img/continuidad5.png"></div>
+                    </div>
+                    
+                    <!-- Teorema fuerte 1 -->
+                    <div class="row">
+                        <p><strong>Teorema fuerte 1. Teorema del valor intermedio (1).</strong> Sea \(f\) una función continua en \([a,b]\) tal que
+                            \(f(a) &lt; 0 &lt; f(b)\). Entonces existe \(x\in[a,b]\) tal que \(f(x)=0\).
+                        </p>
+                        <p>
+                           <strong>Demostración.</strong> Sea \(A=\{x\in[a,b]\}\,|\,f\text{ es negativa en }[a,x]\). Como \(a\in A\) y \(A\) está acotada
+                           por \(b\), entonces \(A\) tiene supremo. Sea \(\alpha=\sup A\). Como \(a\) y \(b\) son cotas de \(A\), \(a &lt; \alpha &lt; b\).
+                           Se verá que \(f(\alpha)=0\).
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><img src="img/continuidad6.png"></div>
+                        <div class="col-8">
+                            <p>Supóngase que \(f(\alpha) &lt; 0\). Debe existir algún \(x_0\in[\alpha-\delta,\alpha]\) tal que \(x_0\in A\), pues \(\alpha\)
+                                es el supremo de \(A\). Asimismo, por el teorema de conservación del signo, la función es negativa en \([\alpha-\delta,
+                                \alpha+\delta]\) y existe \(x_1\in[\alpha,\alpha+\delta]\) tal que \(f(x_1) &lt; 0\). Por tanto, la función es negativa en
+                                \([a,x_0]\) y en \([x_0,x_1]\), por lo que es negativa en \([a,x_1]\) y \(x_1\in A\), por lo que \(x_1\in A\) y
+                                \(x_1 &gt; \alpha\) !
+                                Entonces \(f(\alpha)\geq 0\). Supóngase ahora que \(f(\alpha) &gt; 0\). Nuevamente, por el teorema de conservación del signo,
+                                existe alguna \(\delta\) tal que la función es positiva en \([\alpha-\delta,\alpha+\delta]\) y cualquier
+                                \(x_0\in[\alpha-\delta,\alpha+\delta]\) cumple \(f(x_0) &gt; 0\). Más aun,  debe existir algún \(x_0\in[\alpha-\delta,\alpha]\)
+                                tal que \(x_0\in A\), pues \(\alpha\) es el supremo de \(A\). Así, \(f(x_0) &gt; 0\) y \(x_0\in A\) !
+                                Por lo tanto, \(f(\alpha)=0\).  \(\blacksquare\)</p>
+                        </div>
+                    </div>
+
+                    <p><strong>Lema.</strong> Si \(f\) es continua en \(a\), entonces existe \(\delta &gt; 0\) tal que \(f\) está acotada en
+                        \((a-\delta,a+\delta)\).</p>
+                    <p>
+                        <strong>Demostración.</strong>
+                            $$ \forall\varepsilon &gt; 0\;\exists\delta &gt; 0:\; |x-a| &lt; \delta\implies |f(x)-f(a)| &lt; \varepsilon $$
+                        Bastará con tomar un valor de \(\varepsilon\). Sea \(varepsilon=1\). Así, existe \(\delta\) tal que \(|x-a| &lt; \delta\)
+                        implica \(|f(x)-f(a)| &lt; 1\). Como \(|f(x)-f(a)|\geq f(x)-f(a)\), \(f(x)-f(a) &lt; 1\) y \(f(x) &lt; f(a)+1\). Por tanto,
+                        \(f(a)+1\) es una cota superior de los valores \(f(x)\) tales que \(x\in(a-\delta,a+\delta)\). Lo análogo se cumple con
+                        \(f(a)-1 &lt; f(x)\). Por lo tanto, \(f\) está acotada en \((a-\delta,a+\delta)\).  \(\blacksquare\)
+                    </p>
+
+                    <!-- Teorema fuerte 2 -->
+                    <div class="row">
+                        <div class="col-8">
+                            <p><strong>Teorema fuerte 2.</strong> Si \(f\) es continua en \([a,b]\), entonces está acotada en \([a,b]\).</p>
+                            <p><strong>Demostración.</strong> Se demostrará que \(f\) está acotada superiormente, la cota inferior es un caso análogo.
+                               Sea \(A=\{x\in[a,b]\,|\, f \text{ está acotada superiormente en }[a,x]\}\). Como \(a\in A\) y \(b\) es cota superior de
+                               \(A\), \(A\) tiene supremo. Sea \(\alpha = \sup A\). Primero se procederá a probar que \(\alpha=b\), y después se probará que
+                               \(\alpha\in A\).</p>
+                            <p>Como \(b\) es cota superior de \(A\), \(\alpha\leq b\). Supóngase que \(\alpha &lt; b\). Así, \(\alpha\in[a,b]\), y por hipótesis
+                                se sigue que \(f\) es continua en \(\alpha\). Por el lema, existe \(\delta &gt; 0\) tal que \(f\) está acotada en
+                                \((\alpha-\delta,\alpha+\delta)\). Como \(\alpha\) es supremo de \(A\), existe \(x_0\in A\) tal que \(x_0\in[\alpha-\delta,
+                                \alpha]\), de modo que \(f\) está acotada en \([a,x_0]\). Sea \(x_1\in(\alpha,\alpha+\delta)\). Como \(f\) está acotada en
+                                \((\alpha-\delta,\alpha+\delta)\supseteq [x_0,x_1]\) y \(f\) está acotada en \([a,x_0]\), \(f\) está acotada en \([a,x_1]\) y
+                                \(x_1\in A\) con \(\alpha &lt; x_1\) !</p>
+                            <p>Por lo que \(\alpha=b\). Como nota, obsérvese que \(\alpha>a\), pues si \(\alpha = a\), el lema afirmaría que \(f\) está
+                                acotada en \([a,a+\delta]\) para alguna \(\delta>0\). Esto implicaría que cualquier \(x\in[a,a+\delta]\) también está en
+                                \(A\), y estas \(x\) cumplen con \(x>a=\alpha\), que es una contradicción.</p>
+                            <p>Terminada esta nota, hasta ahora se ha probado que \(f\) está acotada en \([a,b)\), pues no se ha probado necesario que
+                                \(\alpha\in A\). Se probará que \(f\) está acotada en \(b\) también. Por el lema, como \(f\) es continua en \(b\), existe
+                                \(\delta>0\) tal que \(f\) está acotada en \((b-\delta,b]\). Como \(b=\alpha\) es el supremo de \(A\), existe \(x_0\in A\)
+                                tal que \(x_0\in(b-\delta,b]\). Así, \(f\) es continua en \([a,x_0]\) y en \([x_0,b]\), por lo que \(f\) está acotada en
+                                \([a,b]\).  \(\blacksquare\)</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="img/continuidad7.png">
+                        </div>
+                    </div>
+
+                    <!-- Teorema fuerte 3 -->
+                    <p><strong>Teorema fuerte 3.</strong> Si \(f\) es continua en \([a,b]\), entonces existe un número \(y\in [a,b]\) tal que \(f(y)\geq f(x)\)
+                        para toda \(x\in [a,b]\)</p>
+                    <p>
+                        <strong>Demostración.</strong> Sea \(\text{Im}f=\{f(x)\,|\, x\in [a,b]\}\). Por el teorema fuerte 2, \(f\) está acotada en \([a,b]\).
+                        Además, nótese que \(f(a)\in \text{Im}f\), por lo que \(\text{Im}f\not = \varnothing\). Así, \(\text{Im}f\) tiene supremo. Sea
+                        \(\alpha=\sup\text{Im}f\). Como \(\alpha\geq f(x)\) para toda \(x\in[a,b]\), bastará con demostrar que \(\alpha=f(y)\) para alguna
+                        \(y\in[a.b]\). Supóngase por el contrario que \(\alpha\not = f(y)\) para toda \(y\in[a,b]\). Así, la función \(g\) definida por
+                        $$ g(x) = \frac{1}{\alpha-f(x)} $$
+                        con \(x\in[a,b]\) es continua en \([a,b]\), pues \(\alpha-f(x)\) nunca será cero. Como \(\alpha=\sup\text{Im}f\), para cualquier
+                        \(\delta &gt; 0\) existe \(f(x)\) tal que \(\alpha-\delta &lt; f(x) &lt; \alpha\), de donde \(-\delta &lt; f(x)-\alpha &lt; 0\) y
+                        \(\delta>\alpha-f(x) &gt; 0\). Así, \(\forall\delta>0\,\exists x\in[a,b]\) tal que
+                        $$ g(x) = \frac{1}{\alpha-f(x)} &gt; \frac{1}{\delta} $$
+                        Por lo que \(f\) no está acotada, que contradice al teorema fuerte 2 !
+                        Por lo tanto \(\exists y\in[a,b]\) tal que \(f(y)\geq f(x)\;\forall x\in[a,b]\).  \(\blacksquare\)
+                    </p>
+
+                    <p><strong>Corolario.</strong> Teorema del valor intermedio (2). Sea \(f:[a,b]\to\mathbb{R}\) continua, y sea \(y\) tal que \(f(a)
+                        &lt; y &lt; f(b)\). Entonces \(\exists x_0 \in[a,b]\) tal que \(f(x_0)=y\).</p>
+                    <p><strong>Demostración.</strong> Sea \(h\) definida por \(h(x)=f(x)-y\). Como \(f(a) &lt; y &lt; f(b)\), se tiene que \(h(a)=f(a)-y
+                        &lt; 0\) y \(h(b)=f(b)-y>0\). Así, por el teorema fuerte 1 se tiene que existe \(x_0\in[a,b]\) tal que \(h(x_0)=0\), de donde
+                        \(f(x_0)-y=0\) y \(f(x_0)=y\). \(\blacksquare\)</p>
+                    
+                    <p>Obsérvese que este último teorema es el que justifica la interpretación de la continuidad de una función como la capacidad de dibujar
+                        su gráfica sin despegar el lápiz del papel, pues asegura que la gráfica atraviesa todos los valores en el eje \(Y\) del plano entre
+                        \(f(a)\) y \(f(b)\).</p>
+
+                    <p>Para cerrar la sección, se probará un teorema pequeño pero de gran utilidad: el límite conserva desigualdades entre funciones
+                        continuas.</p>
+
+                    <p><strong>Teorema.</strong> Sean \(f\) y \(g\) funciones continuas tales que \(f(x) &lt; g(x)\) para cualquier \(x\) de su dominio.
+                        Entonces
+                        $$\lim_{x\to a}f(x) &lt; \lim_{x\to a}g(x)$$
+                    </p>
+                    <p><strong>Demostración.</strong> Como \(f\) y \(g\) son continuas, \(\displaystyle\lim_{x\to a}f(x)=f(a)\) y \(\displaystyle
+                        \lim_{x\to a}g(x)=g(a)\). Puesto que \(f(x) &lt; g(x)\) para cualquier \(x\) de su dominio, para \(x=a\) se tiene que \(f(a) &lt; g(a)\),
+                        de donde
+                        $$ \lim_{x\to a}f(x) &lt; \lim_{x\to a}g(x)\quad\blacksquare $$ </p>
                 </section>
 
             </div>
