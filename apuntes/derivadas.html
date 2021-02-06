@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+
+<head>
+    <title>Derivadas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Contenido -->
+                <section>
+                    <header class="main">
+                        <h1>Derivadas</h1>
+                    </header>
+
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#tres_teoremas">Tres teoremas fuertes de continuidad</a>
+
+                    <hr class="major"/>
+
+                    <h2 id="introduccion">Introducción</h2>
+                    <p>
+                        En cualquier asignatura de Geometría Analítica se realiza un estudio de líneas rectas en el plano. Una de las propiedades que
+                        define a una recta es su pendiente \(m\), que es una medida de la inclinación de la recta. Suponiendo que la recta contiene
+                        dos puntos \((x_1,y_1)\) y \((x_2,y_2)\), su pendiente está definida por
+                        $$ m = \frac{y_2-y_1}{x_2-x_1} $$
+                    </p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>La pendiente mide la inclinación de una recta al calcular su razón de cambio: la pendiente obtiene la razón a la que asciende
+                                verticalmente una recta por unidad de avance horizontal (en inglés se suele cantar rise over run para recordar esto). Una
+                                pendiente positiva indica que la recta asciende verticalmente al tiempo que se avanza horizontalmente, y una pendiente
+                                negativa indica que la recta desciende verticalmente al tiempo que se avanza horizontalmente (esto debería recordar a la
+                                noción de función creciente y decreciente). Asimismo, una pendiente de valor absoluto grande implica una mayor inclinación
+                                de la recta (al punto que \(m\to \pm\infty\) cuando las rectas tienden a ser verticales), y una pendiente cercana a cero
+                                implicará una recta poco inclinada. Si \(m=0\), la recta es horizontal.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="img/derivadas1.png">
+                        </div>
+                    </div>
+
+                    <p>
+                        La pendiente de una recta es tan importante que la recta misma se puede caracterizar conociendo tan solo uno de sus puntos y su
+                        pendiente. Una definición común de recta es aquel lugar geométrico cuyos puntos guardan siempre la misma pendiente entre ellos.
+                        Esto tiene sentido, pues una recta permanece siempre igual de inclinada. Así, suponiendo que se conoce un punto de la recta,
+                        cualquier punto \((x,y)\) que guarde una determinada pendiente \(m\) con él formará parte de la recta. Suponiendo que este punto es
+                        \((x_1,y_1)\), una ecuación que define a la recta será
+                        $$ m = \frac{y-y_1}{x-x_1} $$
+                        De donde se despeja \(y\) para obtener
+                        $$ y = m (x-x_1) + y_1 $$
+                        Y si se desea que esta ecuación haga de regla de correspondencia de una función, se puede definir \(f\) mediante
+                        $$ f(x) = m(x-x_1) + y_1 $$
+                        Una vez habiendo discutido esto, piénsese si no sería agradable tener esta noción de pendiente para funciones más complejas que una
+                        simple recta.
+                    </p>
+
+                    <p>
+                        Por ejemplo, dada una función \(s\) tal que \(s(t)\) es la posición de un móvil sobre una recta en el tiempo \(t\), si \(s\) fuera
+                        una recta se tendría que la pendiente asociada a ella es su velocidad en cualquier instante. Si \(s\) fuese más compleja ya no se
+                        tendría la facilidad de describir la velocidad en cualquier instante de la trayectoria. No obstante, si se calculara la pendiente
+                        entre dos puntos \(s(t_1)\) y \(s(t_2)\), se podría aproximar la velocidad que tiene el móvil en el intervalo de tiempo \([t_1,t_2]\).
+                        No es difícil observar que nuestra aproximación mejora si \(t_1\) y \(t_2\) son instantes de tiempo cercanos, pues esto se acercaría
+                        cada vez más a un valor de velocidad "instantánea". Para disminuir el número de variables que se manejan, supóngase que la duración
+                        del intervalo de tiempo \(t_2-t_1\) es \(h\), por lo que \(t_2=t_1+h\). Nótese que se puede prescindir del subíndice si solamente se
+                        habla de un \(t_1\) en general, por lo que se puede pensar en una \(t\) cualquiera y un incremento temporal \(h\) arbitrario. La
+                        velocidad aproximada entre el tiempo \(t\) y \(t+h\) se da entonces por
+                        $$ v(t) = \frac{s(t+h)-s(t)}{h} $$
+                    </p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>
+                                Que simplemente toma la velocidad de pendiente y adopta la notación de incrementos propuesta. En términos gráficos, esta
+                                velocidad es la pendiente de una recta secante a la gráfica que la corta en los puntos \((t,s(t))\) y \((t+h,s(t+h))\). Así,
+                                para obtener la velocidad "instantánea" de la que se habló, bastará con acercar estos dos puntos hasta que la recta que definen
+                                sea tangente a la gráfica (siguiendo la noción intuitiva que se tiene de una recta tangente). Esta noción de cercanía recuerda
+                                a la sección de límites, y se puede ver que, a fin de acercar arbitrariamente ambos puntos, basta con hacer el incremento \(h\)
+                                arbitrariamente pequeño. Así, se define la velocidad instantánea como
+                                $$ v(t) = \lim_{h\to 0}\frac{s(t+h)-s(t)}{h} $$
+                            </p>
+                        </div>
+                        <div class="col-4"><img src="img/derivadas2.png"></div>
+                    </div>
+
+                    <p>En general, para cualquier función \(f\) con regla de correspondencia \(f(x)\), se le llama derivada a la función \(f'\) definida por
+                        $$f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$$
+                        Intuitivamente, la derivada evaluada en un punto de la función arroja la razón de cambio de la función en dicho punto, y se puede
+                        ver como la pendiente de la recta tangente a la gráfica de la función en dicho punto (aunque la noción de recta tangente no está
+                        bien definida, e incluso sería más formal definir la tangencia a partir de la derivada).</p>
+
+                    <p>La notación que se usa para indicar derivadas es llamada notación de Lagrange, que ha probado ser la menos ambigua y más práctica
+                        para estos casos. No obstante, otra notación ampliamente utilizada es la de Leibniz, que es
+                        $$ f'(x) = \frac{\text{d}f(x)}{\text{d}x} $$
+                    </p>
+
+                    <p>La derivación de una función resulta ser un proceso no muy laborioso para funciones simples, como se mostrará a continuación.</p>
+
+                    <p>
+                        <strong>Ejemplo.</strong>
+                        <ol>
+                            <li>Probar que la derivada de una recta en cualquier punto es su pendiente.</li>
+                                <strong>Demostración.</strong> Ya se vio que la regla de correspondencia que corresponde a una recta es \(f(x)=m(x-x_1)+y_1\).
+                                Para facilitar la notación, sea \(b=mx_1+y_1\). Se tiene entonces
+                                $$ f(x) = mx + b $$
+                                Obteniendo la derivada,
+                                $$f'(x)=\lim_{h\to0}\frac{m(x+h)+b-mx-b}{h}=\lim_{h\to0}\frac{mh}{h}=\lim_{h\to0}m=m$$
+                                Por lo que \(f'(x)=m\) para cualquier \(x\), que es lo que se quería probar.  \(\blacksquare\)
+
+                            <li>Sea \(f:\mathbb{R}\to\mathbb{R}\) con \(f(x)=x^2\). Obtener \(f'(x)\).</li>
+                                <strong>Solución.</strong>
+                                $$
+                                    \begin{align}\lim_{h\to0}\frac{(x+h)^2-x^2}{h}
+                                        & = \lim_{h\to0}\frac{x^2+2xh+h^2-x^2}{h} = \lim_{h\to0}\frac{2xh+h^2}{h}\\
+                                        & = \lim_{h\to0}2x+h = 2x
+                                    \end{align}
+                                $$
+                                Por lo que \(\boxed{f'(x)=2x}\).    
+                        </ol>
+                    </p>
+                    <p>Aunque en estos casos los procedimientos resultaron ser sencillos, será de mayor utilidad conocer algunos teoremas de derivación
+                        que facilitarán enormemente el proceso de derivación.</p>
+
+                    <hr class="major">
+
+                    <h2 id="teoremas_derivacion">Teoremas de derivación.</h2>
+
+                    <p>Primeramente, formalicemos las definiciones de la sección anterior.</p>
+
+                    <p><strong>Definición.</strong> La derivada de una función \(f\) es la función \(f'\) cuya regla de correspondencia es
+                        $$f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$$</p>
+                    <p>
+                        <strong>Definición.</strong> Una función es derivable o diferenciable en un punto \(a\) si el siguiente límite existe:
+                        $$\lim_{h\to0}\frac{f(a+h)-f(a)}{h}$$
+                        Más aun, se dice que una función es derivable o diferenciable en un intervalo \((a,b)\) si es derivable en todo \(x\in (a,b)\).
+                    </p>
+
+                    <p>En la sección anterior se probó que \(f'(x)=2x\) cuando \(f(x)=x^2\). Para \(f(x)=x^3\) se tiene que
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{(x+h)^3-x^3}{h} = \lim_{h\to0}\frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}\\
+                                & = \lim_{h\to0}3x^2+3xh+h^2 = 3x^2
+                            \end{align}
+                        $$
+                        Por lo que \(f'(x)=3x^2\). Para notar un patrón, derivemos \(f(x)=x^4\):
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{(x+h)^4-x^4}{h} = \lim_{h\to0}\frac{x^4+4x^3h+6x^2h^2+4xh^3+h^4-x^4}{h}\\
+                                & = \lim_{h\to0}4x^3+6x^2h+4xh^2+h^3 = 4 x^3
+                            \end{align}
+                        $$
+                        Así, se puede conjeturar que, dada \(f\) definida por \(f(x)=x^n\), se tiene \(f'(x)=nx^{n-1}\).
+                    </p>
+
+                    <hr class="major">
+
+                    <p><strong>Teorema. Regla de la potencia (versión 1).</strong> Sea \(f:\mathbb{R}\to\mathbb{R}\) con \(f(x)=x^n\), \(n\in\mathbb{N}\).
+                        Así, \(f'(x)=nx^{n-1}\).</p>
+                    <p>
+                        <strong>Demostración.</strong>
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{(x+h)^n-x^n}{h} = \lim_{h\to0}\frac{\displaystyle\sum_{k=0}^{n}{{n}\choose{k}}x^{n-k}h^k-x^n}{h}\\
+                                & = \lim_{h\to0}\frac{x^n+nx^{n-1}h+\displaystyle\sum_{k=2}^{n}{{n}\choose{k}} x^{n-k}h^k-x^n}{h}\\
+                                & = \lim_{h\to0}\left(nx^{n-1}+\sum_{k=2}^{n}{{n}\choose{k}}x^{n-k}h^{k-1}\right)\\
+                                & = nx^{n-1}
+                            \end{align}
+                        $$
+                        Que es lo que se quería demostrar. \(\blacksquare\)
+                    </p>
+
+                    <hr class="major">
+
+                    <p>Del problema 1 en la sección de introducción se obtiene como corolario lo siguiente:</p>
+                    <p><strong>Teorema.</strong> Sea \(f:\mathbb{R}\to\mathbb{R}\).
+                        <ol>
+                            <li>Si \(f(x)=c\) con \(c\) constante, entonces \(f'(x)=0\).</li>
+                            <li>Si \(f(x)=cx\) con \(c\) constante, entonces \(f'(x)=c\).</li>
+                        </ol>
+                        Ahora procederemos a derivar un polinomio un poco más complejo para advertir una propiedad de la derivada.
+                    </p>
+                    <p><strong>Ejemplo.</strong> Hallar la derivada de \(f(x)=x^2+5x+7\).</p>
+                    <p>
+                        <strong>SOlución.</strong>
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{(x+h)^2+5(x+h)+7-x^2-5x-7}{h}\\
+                                & = \lim_{h\to0}\frac{x^2+2xh+h^2+5x+5h+7-x^2-5x-7}{h}\\
+                                & = \lim_{h\to0}2x+h+5 \\
+                                & = 2x+5
+                            \end{align}
+                        $$
+                        Obsérvese en el ejemplo que la derivada de \(x^2\) es \(2x\), la derivada de \(5x\) es \(5\) y la derivada de \(7\) es \(0\). Así,
+                        $$ \frac{\text{d}}{\text{d}x}(x^2+5x+7) = \frac{\text{d}}{\text{d}x}(x^2) + \frac{\text{d}}{\text{d}x}(5x) +
+                            \frac{\text{d}}{\text{d}x}(7)$$
+                        Por lo que, al menos para este caso, la derivada abre sumas. Probaremos que esto es verdad en general.
+                    </p>
+
+                    <hr class="major">
+
+                    <p><strong>Teorema.</strong> Sean \(f\) y \(g\) derivables. Entonces \(f+g\) es derivable y $$(f+g)'(x)=f'(x)+g'(x)$$</p>
+                    <p>
+                        <strong>Demostración.</strong> Por la definición de derivada,
+                        $$
+                            \begin{align}(f+g)'(x)
+                                & = \lim_{h\to0}\frac{(f+g)(x+h)-(f+g)(x)}{h} = \lim_{h\to0}\frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}\\
+                                & = \lim_{h\to0}\frac{f(x+h)-f(x)}{h}+\frac{g(x+h)-g(x)}{h}
+                            \end{align}
+                        $$
+                        Y como \(f\) y \(g\) son derivables, cada límite existe por su cuenta. Entonces
+                        $$
+                            \begin{align}(f+g)'(x)
+                                & = \lim_{h\to0}\frac{f(x+h)-f(x)}{h}+\frac{g(x+h)-g(x)}{h}\\
+                                & = \lim_{h\to0}\frac{f(x+h)-f(x)}{h}+\lim_{h\to0}\frac{g(x+h)-g(x)}{h}\\
+                                & = f'(x)+g'(x)
+                            \end{align}
+                        $$
+                        Que es lo que se quería demostrar.   \(\blacksquare\)
+                    </p>
+
+                    <p>En el caso del producto, la regla de derivación no es tan simple (la derivada no se distribuye sobre el producto).
+                        No obstante, hay una agradable simetría en la ecuación.</p>
+                    
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/./index.html">Home</a></li>
+                        <li>
+                            <span class="opener">Apuntes</span>
+                            <ul>
+                                <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                                <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                                <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                                <li><a href="/apuntes/limites.html">Límites</a></li>
+                                <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                                <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Tareas</span>
+                            <ul>
+                                <li><a href="">Morales</a></li>
+                                <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                                <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Navegación</h2>
+                    </header>
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#tres_teoremas">Tres teoremas fuertes de continuidad</a>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">"Por mi raza hablará el espíritu"</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
