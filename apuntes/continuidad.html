@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+
+<head>
+    <title>Continuidad</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Contenido -->
+                <section>
+                    <header class="main">
+                        <h1>Continuidad</h1>
+                    </header>
+
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#limite">Límite de una sucesión</a><br>
+                    <a href="#acotadas_monotonas">Sucesiones acotadas monótonas</a><br>
+
+                    <hr class="major"/>
+
+                    <h2 id="introduccion">Introducción</h2>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Intuitivamente, podemos entender que una función es continua si su gráfica se puede dibujar sin despegar el lápiz del papel.
+                                Para definir continuidad se puede partir de la idea que, sin importar cuánto se acerque uno a un punto en una función, el
+                                valor de la función en ese punto está determinado por los valores que lo rodean. Si la función tiende a un valor en un punto,
+                                la función tomará ese valor en ese punto. Obsérvese que no siempre se cumple que \(\displaystyle\lim_{x\to a}f(x)=a\)
+                                (ya sea porque no exista el límite, la función no está definida en \(a\), o simplemente no sean iguales), pero las funciones
+                                que lo cumplen son aquellas que consideraremos continuas en el punto (pues se "portan bien" cerca de dicho punto).</p>
+                        </div>
+                        <div class="col-6">
+                            <img src="img/continuidad1.png">
+                        </div>
+                    </div>
+                    <p><strong>Definición.</strong> Sea \(f:[a,b]\to\mathbb{R}\) una función. Se dice que \(f\) es continua en \(x_0\) si y solo si
+                        \(\displaystyle\lim_{x\to x_0}f(x)=f(x_0)\).</p>
+                    <p>Se dice que una función que no es continua en un punto determinado es discontinua en dicho punto.</p>
+                    <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Las discontinuidades que se pueden "cubrir con un punto" son llamadas discontinuidades removibles. Estas se caracterizan
+                                por la existencia de \(\displaystyle\lim_{x\to a}f(x)\), pero o bien no existe \(f(a)\) o bien son distintas. Piénsese en
+                                la función \(f\) definida por \(f(x)=\frac{x^2-9}{x-3}\) en \(x=3\). Todo el comportamiento de la función indicaría que
+                                \(f(3)=6\), pero la función no está definida en ese punto (incluso al ver la gráfica sería imposible notarlo a menos que
+                                el punto se marque). Este es un caso de discontinuidad removible.</p>
+                        </div>
+                        <div class="col-6">
+                            <img src="img/continuidad2.png">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/continuidad3.png">
+                        </div>
+                        <div class="col-6">
+                            <p>
+                                Las discontinuidades en las que los límites laterales existen pero no coinciden son llamadas discontinuidades de salto, pues
+                                la gráfica aparenta "dar un brinco". Para ejemplificar esto, piénsese en el comportamiento en \(x=0\) de la función \(f\)
+                                definida por
+                                $$ f(x) = \left\{\begin{array}x & x &lt; 0\\ x+1 & x\geq 0 \end{array}\right. $$
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/continuidad4.png">
+                        </div>
+                        <div class="col-6">
+                            <p>El último tipo de discontinuidad es denominada discontinuidad por oscilación. Esta se ejemplifica muy claramente con el
+                                comportamiento en cero de \(f\) definida por \(f(x)=\sin(\frac{1}{x})\). Esta función oscila entre \(-1\) y \(1\) en todo
+                                su dominio, y su valor
+                                en el origen no está definido al oscilar "infinitamente".</p>
+                        </div>
+                    </div>
+                    <p>Una definición de continuidad mediante \(\varepsilon-\delta\) equivalente a la original es:</p>
+                    <p>Def. Una función \(f:\mathbb{R}\to\mathbb{R}\) es continua en \(x_0\) si y solo si
+                        $$ \forall \varepsilon &gt; 0\;\exists\delta &gt; 0:\; |x-x_0| &lt; \delta\implies |f(x)-f(x_0)| &lt; \varepsilon $$
+                    </p>
+                    <p>Aunque la continuidad es un concepto puntual, también se puede definir sobre intervalos.</p>
+                    <p><strong>Definición.</strong> Una función \(f\) es continua en el intervalo \((a,b)\) si es continua en todo punto \(x\in (a,b)\).</p>
+                    <p>
+                        <strong>Definición.</strong> Una función \(f\) es continua en el intervalo \([a,b]\) si:
+                        <ol>
+                            <li>Es continua en \((a,b)\).</li>
+                            <li>\(\displaystyle\lim_{x\to a^+}f(x)=f(a)\) y \(\displaystyle\lim_{x\to b^-}f(x)=f(b)\)</li>
+                        </ol>
+                    </p>
+                    <p>Puesto que ya se demostró que los límites abren sumas, productos y cocientes, se tiene que</p>
+                    <p>
+                        <strong>Teorema.</strong> Si dos funciones \(f\) y \(g\) son continuas en \(a\),
+                        <ol>
+                            <li>\(f+g\) es continua en \(a\).</li>
+                            <li>\(f\cdot g\) es continua en \(a\).</li>
+                            <li>Si \(g(a)\not = 0\), \(\frac{f}{g}\) es continua en \(a\).</li>
+                        </ol>
+                    </p>
+                    <p>Y de la discusión de las funciones polinomiales y racionales de la sección de Límites se obtiene que todas estas funciones son continuas
+                        en todo su dominio.</p>
+
+                    <hr class="major">
+
+                    <h2 id="tres_teoremas">Tres teoremas fuertes de continuidad</h2>
+
+                    <p>En esta sección se presentarán tres teoremas de continuidad de gran importancia. La información que otorgan acerca de las funciones
+                        continuas facilita enormemente el análisis de las mismas (tanto gráfico como algebraico). Para los primeros dos teoremas será necesario
+                        introducir dos lemas, pero el tercer teorema se seguirá sin mucha dificultad.</p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/./index.html">Home</a></li>
+                        <li>
+                            <span class="opener">Apuntes</span>
+                            <ul>
+                                <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                                <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                                <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                                <li><a href="/apuntes/limites.html">Límites</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Tareas</span>
+                            <ul>
+                                <li><a href="">Morales</a></li>
+                                <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                                <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Navegación</h2>
+                    </header>
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#limite">Límite de una sucesión</a><br>
+                    <a href="#acotadas_monotonas">Sucesiones acotadas monótonas</a><br>
+                    <a href="#unicidad-limite">Unicidad del límite</a><br>
+                    <a href="#bolzano-weierstrass">Teorema de Bolzano-Weierstrass</a>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">"Por mi raza hablará el espíritu"</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
