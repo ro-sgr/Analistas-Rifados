@@ -332,6 +332,8 @@
                         Que es lo que se deseaba demostrar. \(\blacksquare\)
                     </p>
 
+                    <hr class="major">
+
                     <p>
                         Esto nos lleva a un resultado muy interesante al derivar \(f(x)=x^{-n}\), con \(n\in\mathbb{N}\). Recordando que
                         \(x^{-n}=\frac{1}{x^n}\), aplicando el lema se tiene
@@ -339,7 +341,62 @@
                         Haciendo \(-n=m\), se obtuvo que \(f'(x)=mx^{m-1}\) con \(m\) un entero negativo. Esto nos lleva al siguiente teorema:
                     </p>
 
+                    <p>
+                        <strong>Teorema. Regla de la potencia (versión 2).</strong> Sea \(f:\mathbb{R}\to\mathbb{R}\) con \(f(x)=x^n\),
+                        \(n\in\mathbb{Z}\). Así, \(f'(x)=nx^{n-1}\).
+                    </p>
+                    <p>La última operación que nos falta es la composición, y el teorema que le corresponde es el más complejo de entre todos,
+                        aunque probablemente el más poderoso.</p>
+
                     <hr class="major">
+
+                    <p><strong>Teorema. Regla de la cadena.</strong>Sean \(f\) y \(g\) derivables. Entonces \(f\circ g\) es derivable y
+                        $$(f\circ g)'(x)=f'(g(x))\cdot g'(x)$$
+                    </p>
+
+                    <p>
+                        <strong>Demostración.</strong>
+                        Sea \(\phi\) definida por
+                        $$ \phi(h) = 
+                            \left\{\begin{matrix}
+                                \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} & g(x+h)-g(x)\not = 0\\
+                                f'(g(x)) & g(x+h)-g(x) = 0
+                            \end{matrix}\right.
+                        $$
+
+                        Como \(f\) es derivable en \(g(x)\),
+                        $$ \lim_{k\to 0}\frac{f(g(x)+k)-f(g(x))}{k}=f'(g(x)) $$
+
+                        Así, \(\forall &gt; 0 \,\exists \delta' &gt; 0\) tal que \(\forall k, \; 0 &lt; |k| &lt; \delta\) implica
+                        $$ \left|\frac{f(g(x)+k)-f(g(x))}{k}-f'(g(x))\right| &lt; \varepsilon $$
+
+                        Como \(g\) es derivable, entonces es continua y \(\forall\delta' &gt; 0 \,\exists\delta &gt; 0\) tal que \(\forall h, \; |h| &lt;
+                        \delta\) implica \(|g(x+h)-g(x)| &lt; \delta'\).
+
+                        Así, sea \(h\) tal que \(|h| &lt; \delta\), y sea \(k=g(x+h)-g(x)\not = 0\). Entonces,
+                        $$ \phi(h) = \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}=\frac{f(g(x)+k)-f(g(x))}{k} $$
+
+                        Como \(|h| &lt; \delta\), entonces \(|g(x+h)-g(x)|=|k| &lt; \delta'\), de donde \(|\phi-f'(g(x))| &lt; \varepsilon\). Así,
+                        $$ \lim_{h\to 0}\phi(h) = f'(g(x)) $$
+
+                        Por lo que \(\phi\) es continua en cero. Si \(h\not=0\),
+                        $$
+                            \begin{align}
+                                \frac{f(g(x+h))-f(g(x))}{h}
+                                    & = \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\cdot\frac{g(x+h)-g(x)}{h}\\
+                                    & = \phi(h)\cdot \frac{g(x+h)-g(x)}{h}
+                            \end{align}
+                        $$
+                        Que incluso se cumple al tener \(g(x+h)-g(x)=0\), pues ambos miembros serían cero. Así,
+                        $$
+                            \begin{align}(f\circ g)'(x)
+                                & = \lim_{h\to0}\frac{f(g(x+h))-f(g(x))}{h} = \lim_{h\to0}\phi(h)\cdot \frac{g(x+h)-g(x)}{h}\\
+                                & = \lim_{h\to0}\phi(h)\cdot \lim_{h\to0}\frac{g(x+h)-g(x)}{h} = f'(g(x))\cdot g'(x)
+                            \end{align}
+                        $$
+                        La separación del límite se asegura por la continuidad en cero de \(\phi\) y la derivabilidad de \(g\).   \(\blacksquare\)
+                    </p>
+                    <p>Para cerrar con la sección, se demostrará el teorema para funciones inversas.</p>
                     
                 </section>
 
