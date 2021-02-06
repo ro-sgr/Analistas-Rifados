@@ -203,6 +203,8 @@
                         \(f(a)-1 &lt; f(x)\). Por lo tanto, \(f\) está acotada en \((a-\delta,a+\delta)\).  \(\blacksquare\)
                     </p>
 
+                    <hr class="major">
+
                     <!-- Teorema fuerte 2 -->
                     <div class="row">
                         <div class="col-8">
@@ -211,25 +213,27 @@
                                Sea \(A=\{x\in[a,b]\,|\, f \text{ está acotada superiormente en }[a,x]\}\). Como \(a\in A\) y \(b\) es cota superior de
                                \(A\), \(A\) tiene supremo. Sea \(\alpha = \sup A\). Primero se procederá a probar que \(\alpha=b\), y después se probará que
                                \(\alpha\in A\).</p>
-                            <p>Como \(b\) es cota superior de \(A\), \(\alpha\leq b\). Supóngase que \(\alpha &lt; b\). Así, \(\alpha\in[a,b]\), y por hipótesis
-                                se sigue que \(f\) es continua en \(\alpha\). Por el lema, existe \(\delta &gt; 0\) tal que \(f\) está acotada en
-                                \((\alpha-\delta,\alpha+\delta)\). Como \(\alpha\) es supremo de \(A\), existe \(x_0\in A\) tal que \(x_0\in[\alpha-\delta,
-                                \alpha]\), de modo que \(f\) está acotada en \([a,x_0]\). Sea \(x_1\in(\alpha,\alpha+\delta)\). Como \(f\) está acotada en
-                                \((\alpha-\delta,\alpha+\delta)\supseteq [x_0,x_1]\) y \(f\) está acotada en \([a,x_0]\), \(f\) está acotada en \([a,x_1]\) y
-                                \(x_1\in A\) con \(\alpha &lt; x_1\) !</p>
-                            <p>Por lo que \(\alpha=b\). Como nota, obsérvese que \(\alpha>a\), pues si \(\alpha = a\), el lema afirmaría que \(f\) está
-                                acotada en \([a,a+\delta]\) para alguna \(\delta>0\). Esto implicaría que cualquier \(x\in[a,a+\delta]\) también está en
-                                \(A\), y estas \(x\) cumplen con \(x>a=\alpha\), que es una contradicción.</p>
-                            <p>Terminada esta nota, hasta ahora se ha probado que \(f\) está acotada en \([a,b)\), pues no se ha probado necesario que
-                                \(\alpha\in A\). Se probará que \(f\) está acotada en \(b\) también. Por el lema, como \(f\) es continua en \(b\), existe
-                                \(\delta>0\) tal que \(f\) está acotada en \((b-\delta,b]\). Como \(b=\alpha\) es el supremo de \(A\), existe \(x_0\in A\)
-                                tal que \(x_0\in(b-\delta,b]\). Así, \(f\) es continua en \([a,x_0]\) y en \([x_0,b]\), por lo que \(f\) está acotada en
-                                \([a,b]\).  \(\blacksquare\)</p>
                         </div>
                         <div class="col-4">
                             <img src="img/continuidad7.png">
                         </div>
                     </div>
+                    <p>Como \(b\) es cota superior de \(A\), \(\alpha\leq b\). Supóngase que \(\alpha &lt; b\). Así, \(\alpha\in[a,b]\), y por hipótesis
+                        se sigue que \(f\) es continua en \(\alpha\). Por el lema, existe \(\delta &gt; 0\) tal que \(f\) está acotada en
+                        \((\alpha-\delta,\alpha+\delta)\). Como \(\alpha\) es supremo de \(A\), existe \(x_0\in A\) tal que \(x_0\in[\alpha-\delta,
+                        \alpha]\), de modo que \(f\) está acotada en \([a,x_0]\). Sea \(x_1\in(\alpha,\alpha+\delta)\). Como \(f\) está acotada en
+                        \((\alpha-\delta,\alpha+\delta)\supseteq [x_0,x_1]\) y \(f\) está acotada en \([a,x_0]\), \(f\) está acotada en \([a,x_1]\) y
+                        \(x_1\in A\) con \(\alpha &lt; x_1\) !</p>
+                    <p>Por lo que \(\alpha=b\). Como nota, obsérvese que \(\alpha>a\), pues si \(\alpha = a\), el lema afirmaría que \(f\) está
+                        acotada en \([a,a+\delta]\) para alguna \(\delta>0\). Esto implicaría que cualquier \(x\in[a,a+\delta]\) también está en
+                        \(A\), y estas \(x\) cumplen con \(x>a=\alpha\), que es una contradicción.</p>
+                    <p>Terminada esta nota, hasta ahora se ha probado que \(f\) está acotada en \([a,b)\), pues no se ha probado necesario que
+                        \(\alpha\in A\). Se probará que \(f\) está acotada en \(b\) también. Por el lema, como \(f\) es continua en \(b\), existe
+                        \(\delta>0\) tal que \(f\) está acotada en \((b-\delta,b]\). Como \(b=\alpha\) es el supremo de \(A\), existe \(x_0\in A\)
+                        tal que \(x_0\in(b-\delta,b]\). Así, \(f\) es continua en \([a,x_0]\) y en \([x_0,b]\), por lo que \(f\) está acotada en
+                        \([a,b]\).  \(\blacksquare\)</p>
+
+                    <hr class="major">
 
                     <!-- Teorema fuerte 3 -->
                     <p><strong>Teorema fuerte 3.</strong> Si \(f\) es continua en \([a,b]\), entonces existe un número \(y\in [a,b]\) tal que \(f(y)\geq f(x)\)
