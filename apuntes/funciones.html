@@ -48,77 +48,506 @@
                     <hr class="major"/>
 
                     <h2 id="introduccion">Introducción</h2>
-                    <p>Seguramente hemos escuchado en repetidas ocasiones a nuestro profesor de matemáticas diciendo que
-                        las <strong>funciones</strong> son el objeto más importante que podemos estudiar en un curso de
-                        precálculo; yefectivamente, cuando nos enfrentamos a clases de Cálculo (particularmente Cálculo
-                        I) descubrimos que la importancia de esta herramienta nunca se deja por debajo de algún otro
-                        objeto matemático.
+                    <p>Seguramente hemos escuchado en repetidas ocasiones a nuestro profesor de matemáticas diciendo que las <strong>funciones</strong> son el
+                        objeto más importante que podemos estudiar en un curso de precálculo, y efectivamente,  cuando nos enfrentamos a clases de Cálculo
+                        (particularmente Cálculo I) descubrimos que la importancia de esta herramienta nunca se deja por debajo de algún otro objeto matemático. 
                     </p>
-                    <p>Ya que hemos comprendido un poco mejor cómo se comportan y operan los números reales, a partir de
-                        este punto del curso, estudiaremos la forma en la que interactúan algunos objetos matemáticos
-                        que relacionan a diferentes subconjuntos de números reales entre sí. A estos objetos los
-                        conocemos con el nombre de función. Sin embargo, nunca hay que creer que las funciones sólo
-                        manejan números reales, que son un tema obligatorio a estudiar desde la escuela secundaria, que
-                        siempre tendrán un gráfico ideal a base de líneas continuas dibujadas sobre un plano, o que se
-                        denotan como \(f(x)\), \(y\), \(f(t)\), \(g(x)\), etc.
+                    <p>Ya que hemos comprendido un poco mejor cómo se comportan y operan los números reales, a partir de este punto del curso estudiaremos la
+                        forma en la que interactúan algunas entidades matemáticas que relacionan a diferentes conjuntos de números reales entre sí. A estas
+                        entidades se les conoce con el nombre de función. Sin embargo, no hay que creer que las funciones solo relacionan números reales, que
+                        son un tema obligatorio a estudiar desde la escuela secundaria, que siempre tendrán una gráfica ideal formada por una curva continua
+                        en el plano, o que se denotan por \(f(x)\), \(y\), \(f(t)\), \(g(x)\), etc.
                     </p>
-                    <p>
-                        ¿Recuerdas este juguete?
-                    </p>
-                    <img src="img/funciones1.png">
-                    <p>
-                        Estamos prácticamente seguros de que alguna vez jugaste o viste jugar a algún bebé con tal artefacto. Este juguete
-                        que consiste en relacionar y luego encajar una figura de plástico con una y sólo una de las múltiples cavidades con
-                        las que cuenta, es un claro ejemplo de que el concepto intuitivo de función está presente en nuestra cotidianidad
-                        desde la eduación preescolar.
-                    </p>
-                    <p>
-                        Regresando al ámbito de la ciencia, existen leyes en las que se relacionan distintas magnitudes:
-                        temperatura-presión, masa-velocidad, intensidad del sonido-distancia, etc. Es decir, a partir de los valores de
-                        algunas magnitudes se obtienen los valores de otras directamente de expresiones o fórmulas ya demostradas. Al
-                        conjunto \(A\) de valores iniciales lo conoceremos como el dominio de nuestra función, y al conjunto \(B\) de
-                        valores finales como el contradomio de dicha función.
-                    </p>
-                    <p>
-                        Las características más importantes de una función, están pautadas en su definición formal y rigurosa que
-                        enunciaremos más adelante. Sin embargo, ya podemos adelantar que en una función, todo el dominio debe participar y
-                        cada uno de sus elementos deberá estar relacionado con un sólo elemento del contradominio; mientras que todos los
-                        elementos del contradominio no siempre provendrán de uno del dominio, pues pensemos en lo siguiente: ¿Qué pasa con
-                        las cavidades que no rellenamos a falta de una que otra figura que extravíamos en aquél juguete de la infancia?
-                        Todas las cavidades están ahí, que sean ocupadas dependerá de las condiciones con las que esté definida nuestra
-                        función.
+                    <div class="row">
+                        <div class="col-4"><img src="img/funciones1.png"></div>
+                        <div class="col-8">
+                            <p>¿Recordará el lector este juguete?</p>
+                            <p>Estamos prácticamente seguros que la respuesta es afirmativa. Este juguete consiste en relacionar y luego encajar una figura de
+                                plástico con una y solo una de las múltiples cavidades con las que cuenta. El juguete es un claro ejemplo de que el concepto
+                                intuitivo de función está presente en nuestra cotidianidad desde la educación preescolar.</p>
+                        </div>
+                    </div>
+                    <p>En el ámbito de la ciencia existen múltiples en las que se relacionan distintas magnitudes, una dependiente de la otra:
+                        tiempo-desplazamiento temperatura-presión, intensidad del sonido-distancia, etc. A estas correspondencias que relacionan los valores
+                        de algunas magnitudes con los valores de otras es a lo que nos referimos intuitivamente como una función. Al conjunto \(A\) de donde
+                        se toman los valores independientes se le conoce como el dominio de la función, y al conjunto \(B\) de los valores dependientes le
+                        conocemos como el contradomio de dicha función. </p>
+                    <p>Las características más importantes de una función están pautadas en la definición formal que enunciaremos más adelante. Sin embargo,
+                        ya podemos adelantar que en una función todo el dominio debe participar y cada uno de sus elementos deberá estar relacionado con un
+                        solo elemento del contradominio, mientras que no todos los elementos del contradominio provendrán de uno del dominio, recordando el
+                        juguete: ¿qué ocurre con las cavidades que no rellenamos a falta una figura extraviada? Todas las cavidades están ahí, que sean ocupadas
+                        dependerá de las condiciones con las que esté definida nuestra función.
                     </p>
 
+                    <hr class="major">
+
                     <h2 id="conceptos">Conceptos fundamentales</h2>
-                    <p>En esta sección nos ocuparemos de enunciar las definiciones rigurosas que habrá que conocer para comprender cómo se
-                        comportan las funciones, particularmente en matemáticas.
+                    
+                    <p>
+                        En esta sección nos ocuparemos de enunciar las definiciones rigurosas que habrá que conocer para comprender cómo se comportan las
+                        funciones, particularmente en matemáticas. Intuitivamente, ya se dijo que una función es un objeto matemático (una regla, quizás) que
+                        asigna elementos de un conjunto a elementos de otro. Por ejemplo, la función que a cada número lo asigna con su cuadrado toma a
+                        cualquier número real \(x\) y lo asigna con el real positivo \(x^2\). Esto se suele escribir \(f(x)=x^2\), leído "efe de equis",
+                        donde \(f(x)\) designa al número que le corresponde al valor \(x\). Así, \(f(2)\) designaría al número correspondiente al \(2\), que
+                        es \(4\) en este caso. Para casos de mayor complejidad, esta regla de correspondencia se expresa con una expresión explícita, e.g.
+                        $$f(x)=\frac{x^3+3x+5}{x^2+1}$$
+                        Ya teniendo estas nociones intuitivas, formalizaremos la definición.
                     </p>
-                    <strong>Definición 1.</strong> Sean \(A\) y \(B\) dos conjuntos no vacíos cualesquiera. Una función de
-                    \(A\) en \(B\) es una relación \(f \subseteq A \times B\) la cual cumple que:
-                    <ol type='i'>
-                        <li>Para todo \(x\) en \(A\) existe \(y\) en \(B\) tal que \((x, y)\) pertenece a la función, i.e.\( \forall x, x
-                            \in A \implies (\exists y, y \in B \land (x, y) \in f) \)</li>
-                        <li>
-                            Cada elemento de \(A\) tiene asociado sólo uno de \(B\), i.e. \( \forall x \in A, \forall y_1, y_2 \in B, [((x,
-                            y_1)
-                            \in f \land (x, y_2) \in f) \implies y_1=y_2] \)
-                        </li>
+
+                    <p><strong>Definición.</strong> Sean \(A\) y \(B\) dos conjuntos no vacíos cualesquiera. Una función \(f:A\to B\) (de \(A\) en \(B\)) es
+                        un conjunto de pares ordenados \((x,y)\) que cumple las siguientes dos condiciones:
+                        <ol type="i">
+                            <li>\(\forall x \in A \;\exists y \in B:\, (x, y) \in f\)</li>
+                            <li>\(\forall x\in A,\,\forall y_1,y_2\in B,\,[(x,y_1)\in f\land (x,y_2)\in f\implies y_1=y_2]\)</li>
+                        </ol>
+                        El conjunto \(A\) es llamado dominio de la función \(f\), denotado \(A=\text{Dom}(f)\), y el conjunto \(B\) es llamado contradominio
+                        de la función \(f\), denotado \(B=\text{Cd}(f)\). Al subconjunto \(C\subseteq\text{Cd}(f)\) definido por \(C=\{y\in\text{Cd}(f)\,|\,
+                        (x,y)\in f\}\) se le denomina imagen de la función, y se denota por \(\text{Im}(f)\).
+                    </p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p><strong>Definición.</strong> Si \(f: A \rightarrow B\), para cada elemento \(x \in A\) denotamos con \(f(x)\) al único elemento
+                                \(y \in B\) que le corresponde, es decir, \(y=f(x)\) cuando \((x,y)\in f\). Se le denomina regla de correspondencia de una
+                                función \(f\) a la expresión \(f(x)\) que define la asignación de elementos.</p>
+                        </div>
+                        <div class="col-4"><img src="img/funciones2.png"></div>
+                    </div>
+                    <p><strong>Definición.</strong> La gráfica de una función \(\text{Gr}(f)\) es el lugar geométrico en el plano definido por \(\text{Gr}(f)=
+                        \{(x,y)\in\mathbb{R}^2\,|\, (x,y)\in f\}\), i.e. los puntos del plano que cumplen con la regla de correspondencia de la función.
+                    </p>
+                    <p>
+                        Así, nos atreveremos a afirmar que los cinco elementos que caracterizan a una función son
+                        <ol>
+                            <li>Dominio</li>
+                            <li>Contradominio</li>
+                            <li>Imagen</li>
+                            <li>Regla de correspondencia</li>
+                            <li>Gráfica</li>
+                        </ol>
+                        Como nota, es primordial notar que una función no es su regla de correspondencia. Esto es, la función es el conjunto de pares
+                        \((x,f(x))\), mientras que la regla de correspondencia es la expresión \(f(x)\) que la define. En muchos casos se hallarán expresiones
+                        como "la función \(f(x)=x^2\)", que son incorrectas en términos estrictos, pero que se han arraigado tanto en el léxico colectivo de
+                        la gente que hace matemáticas que las dejaremos pasar.
+                    </p>
+
+                    <hr class="major">
+
+                    <h2 id="funcioens_algebraicas">Funciones Algebraicas</h2>
+
+                    <p>Las funciones de mayor prominencia en nuestro curso son las denominadas funciones algebraicas. A grandes rasgos, las funciones
+                        algebraicas están compuestas por constantes y la variable \(x\), combinadas mediante la suma, el producto y la división, así como
+                        raíces. Como si de Pokémon se tratara, veremos que las funciones algebraicas irán evolucionando al agregar</p>
+
+                    <p>La función más simple es la que asigna el mismo número a todos los elementos del dominio. Esta es la llamada <strong>fucnión constante
+                        </strong>, y su regla de correspondencia es \(f(x)=c\) con \(c\in\mathbb{R}\).</p>
+
+                    <p>El paso siguiente sería agregar variables a la constante. Se le denomina <strong>función monomial</strong> a las de la forma
+                        \(f(x)=ax^n\), con \(n\in\mathbb{N}\) y \(a\in\mathbb{R}\).</p>
+
+                    <p>
+                        Al sumar estos monomios se forma un polinomio. Una <strong>función polinomial</strong> tiene la forma \(f(x)=a_0+ax+...+a_n x^n\),
+                        con \(n\in\mathbb{N}\) y \(a_i\in\mathbb{R}\) para \(i=1,...,n\). Las funciones polinomiales se clasifican por el grado del exponente
+                        mayor que contienen. La función polinomial de grado cero es la constante. A las funciones polinomiales de grado uno se les llama
+                        <strong>lineales</strong>, y son de la forma \(f(x)=mx+b\). A las funciones de segundo y tercer grado se les suele denominar
+                        <strong>cuadráticas</strong> y <strong>cúbicas</strong>, respectivamente, y son de la forma \(f(x)=ax^2+bx+c\) y \(f(x)=ax^3+bx^2+cx+d\).
+                        El resto de las funciones polinomiales solamente se nombran de grado \(n\).
+                    </p>
+
+                    <p>
+                        Sumar y multiplicar polinomios solamente resultará en otro polinomio. Así, la única forma de avanzar es dividiendo dos polinomios.
+                        Dados \(n,m\in\mathbb{N}\) y \(a_i,b_j\in\mathbb{R}\) para \(i=1,...,n\) y \(j=1,..,m\), una <strong>función</strong> racional está
+                        definida por
+                        $$f(x)=\frac{a_0+ax+...+a_n x^n}{b_0+bx+...+b_m x^m}$$
+                    </p>
+
+                    <img src="img/funciones3.png">
+
+                    <p>El resto de funciones algebraicas no suelen tener nombre, y solamente se distinguen de las ya mencionadas por el uso de raíces de
+                        diversos grados en su regla de correspondencia.</p>}
+
+                    <hr class="major">
+
+                    <h2 id="inyec_supr_biy">Inyectividad, suprayectividad y biyectividad</h2>
+
+                    <p>Ya se vio que es necesario que una función se defina sobre todo su dominio, y que a cada elemento del dominio le corresponde solamente
+                        uno del contradominio. Estas condiciones no se cumplen necesariamente para el contradominio, pues hay una multiplicidad de funciones
+                        que no asignan los elementos del dominio a todos los elementos del contradominio, así como funciones que asignan más de un elemento
+                        del dominio a algún elemento del contradominio. A las funciones que cumplen estas condiciones se les distingue de las demás mediante
+                        un nombre especial.</p>
+
+                    <p><strong>Definición.</strong> Se dice que una función \(f\) es inyectiva o uno a uno si \(\forall x,y\in\text{Dom}(f)\), \(x\not = y
+                        \implies f(x)\not = f(y)\).</p>
+                    <p>Esto quiere decir que a cada elemento de la imagen le corresponde un único elemento del dominio.</p>
+
+                    <p><strong>Definición.</strong>Se dice que una función \(f\) es sobreyectiva, suprayectiva o sobre si \(\forall y\in\text{Cd}(f)\,
+                        \exists x\in\text{Dom}(f):\, f(x)=y\).</p>
+                    <p>Esto quiere decir que a cada elemento del contradominio le corresponde algún elemento del dominio, <em>i.e.</em> \(\text{Cd}(f) =
+                        \text{Im}(f)\).</p>
+
+                    <p>A las funciones que cumplen ambas condiciones también se les distingue.</p>
+
+                    <p><strong>Definición.</strong> Se dice que una función \(f\) es biyectiva si es inyectiva y sobreyectiva.</p>
+                    <p>Esto quiere decir que a cada elemento del contradominio le corresponde un único elemento del dominio.</p>
+
+                    <p>
+                        <strong>Ejemplo.</strong>
+                        <ol>
+                            <li>Demostrar que todas las funciones lineales \(f:\mathbb{R}\to\mathbb{R}\) definidas por \(f(x)=mx+b\) son biyectivas.</li>
+                            <p>
+                                <strong>Demostración.</strong> Sean \(a_1,a_2\in\mathbb{R}\) tales que \(f(a_1)=f(a_2)\). Así,
+                                $$
+                                    \begin{align} ma_1+b
+                                        & = ma_2+b\\
+                                        ma_1+b-b & = ma_2+b-b\\
+                                        ma_1 & = ma_2\\
+                                        m^{-1}ma_1 & = m^{-1}ma_2\\
+                                        a_1 & = a_2
+                                    \end{align}
+                                $$
+                                Por lo que es inyectiva. Para demostrar que es sobre se exhibirá un valor \(x\) del que proviene cada \(y\). Sea
+                                \(y\in\text{Cd}(f)\) y \(x=\frac{y-b}{m}\). Así,
+                                $$ f(x) = m \left(\frac{y-b}{m} \right) + b = y - b + b = y $$
+                                Por lo que \(\forall y\,\exists x:\, f(x)=y\)
+                            </p>
+
+                            <li>Demostrar que \(f:\mathbb{R}\to\mathbb{R}\) definida por \(f(x)=x^2\) no es inyectiva.</li>
+                            <p>
+                                <strong>Demostración.</strong> Bastará con exhibir un contraejemplo. Se tiene que \(2\not= -2\) y \(f(2)=2^2=4 = 
+                                (-2)^2=f(-2)\), que contradice la definición de inyectividad.
+                            </p>
+
+                            <li>Demostrar que \(f:\mathbb{R}\to\mathbb{R}\) definida por \(f(x)=x^2\) no es sobreyectiva.</li>
+                            <p>
+                                <strong>Demostración.</strong> Bastará con exhibir un elemento del contradominio que no proviene de ningún elemento del
+                                dominio. Supóngase que \(f(x)=-1\), de donde \(x^2=-1\). Como \(x^2\geq 0\) para cualquier real y \(-1 &lt; 0\) (que ya
+                                se probó), \(x^2=-1\) es una contradicción y \(-1\) no tiene preimagen.
+                            </p>
+
+                            <li>Restringir el dominio y contradominio de \(f:\mathbb{R}\to\mathbb{R}\) definida por \(f(x)=x^2\) para que sea biyectiva.</li>
+                                <strong>Solución.</strong> Ya se vio que \(x^2\geq 0\) para cualquier valor de \(x\), por lo que una conclusión lógica es que
+                                el contradominio se debe restringir a los reales mayores o iguales que cero para que la función sea sobreyectiva. Así, sea
+                                \(\text{Cd}(f)=\mathbb{R}^+\). Ahora obsérvese que \(f(x_1)=f(x_2)\) implica \(x_1^2=x_2^2\), de donde \(|x_1|=|x_2|\) y
+                                \(x_1=x_2\) o \(x_1=-x_2\). Esto quiere decir que \(f(x)=f(-x)\) (las funciones que cumplen esta propiedad se estudiarán en la
+                                sección siguiente). Entonces cualquier elemento del contradominio tendrá dos preimágenes correspondientes, que a su vez son
+                                inversos aditivos una de la otra. Bastará con restringir el dominio a los positivos o a los negativos para solucionar esto.
+                                Así, sea \(\text{Dom}(f)=\mathbb{R}^+\). Por lo tanto, \(f:\mathbb{R}^+\to\mathbb{R}^+\) definida por \(f(x)=x^2\) es biyectiva.
+                        </ol>
+                    </p>
+
+                    <hr class="major">
+
+                    <h2 id="paridad_funciones">Paridad de funciones</h2>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>En la sección anterior se mencionó brevemente que la función \(f(x)=x^2\) cumple con la propiedad \(f(x)=f(-x)\). Observando
+                                la gráfica de esta función, es fácil conjeturar que es simétrica respecto al eje \(Y\). Haciendo un análisis más cuidadoso,
+                                es sencillo probar que esto es verdadero para cualquier función que cumpla con \(f(x)=f(-x)\). Si esto es verdad, se tiene
+                                que \(\forall (x,y)\in\text{Gr}(f),\, (-x,y)\in\text{Gr}(f)\). Como la distancia de un punto \((x,y)\) al eje \(Y\) está dada
+                                por \(|x|\), se tiene que los puntos \((x,y)\) y \((-x,y)\) tienen la misma distancia al eje \(Y\) y se encuentran en lados
+                                opuestos del mismo. Esta es la definición usual de simetría respecto a un eje que estudia en un curso de geometría, por lo
+                                que estas gráficas son simétricas respecto al eje \(Y\).</p>
+                        </div>
+                        <div class="col-4"><img src="img/funciones4.png"></div>
+                    </div>
+
+                    <p>Similarmente, funciones como \(f(x)=x^3\) cumplen con \(f(-x)=-f(x)\). Mediante un análisis similar al anterior se tiene que \(\forall
+                        (x,y)\in\text{Gr}(f),\, (-x,-y)\in\text{Gr}(f)\), y como estas parejas de puntos siempre son colineales con el origen y están a la
+                        misma distancia de él, se dice que son simétricas respecto al origen, pues esta es la definición de simetría respecto a un punto.</p>
+
+                    <div class="row">
+                        <div class="col-4"><img src="img/funciones5.png"></div>
+                        <div class="col-8">
+                            <p>
+                                Este tipo de funciones simétricas respecto al eje \(Y\) y al origen son más fáciles de analizar que aquellas que no lo son,
+                                por lo que se les distingue con nombres particulares. Obsérvese que cualquier función monomial de grado par cumple con
+                                \(f(x)=f(-x)\), y cualquier función monomial de grado impar cumple con \(f(-x)=-f(x)\). Esta propiedad es la que motiva el
+                                nombre de las dos clases de funciones mencionadas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p><strong>Definición.</strong> Se dice que una función \(f\) es par si \(\forall x\in\text{Dom}(f),\,f(x)=f(-x)\).</p>
+                    <p><strong>Definición.</strong> Se dice que una función \(f\) es impar si \(\forall x\in\text{Dom}(f),\,f(-x)=-f(x)\).</p>
+
+                    <p>
+                        <strong>Ejemplo.</strong> Decidir si las siguientes funciones son pares, impares o ninguna.
+                        <ol>
+                            <li>\(f(x)=2x^2-3\)</li>
+                            $$\begin{align}f(-x)&=2(-x)^2-3=2x^2-3=f(x)\end{align}$$
+                            Es par.
+
+                            <li>\(f(x)=-3x^3+2x\)</li>
+                            $$
+                                \begin{align}
+                                    f(-x)&-3(-x)^3+2(-x)=3x^3-2x=-(-3x^3+2x)=-f(x)
+                                \end{align}
+                            $$
+                            Es impar.
+
+                            <li>\(f(x)=10x^3-4x^2+3x-8\)</li>
+                            $$
+                                \begin{align} f(-x)
+                                    & = 10(-x)^3-4(-x)^2+3(-x)-8\\
+                                    & = -10x^3-4x^2-3x-8\\
+                                    &\not = f(x)\\
+                                    &\not = -f(x)
+                                \end{align}
+                            $$
+                            No es ninguna.
+
+                            <li>\(f(x)=-7x^7-x^3+5x\)</li>
+                            $$
+                                \begin{align}f(-x)
+                                    & = -7(-x)^7-(-x)^3+5(-x) = 7x^7+x^3-5x\\
+                                    & =-(7x^7-x^3+5x) = -f(x)
+                                \end{align}
+                            $$
+                            Es impar.
+
+                            <li>\(f(x)=x^3-x^2-1\)</li>
+                            $$
+                                \begin{align}f(-x)
+                                    & = (-x)^3-(-x)^2-1\\
+                                    & = -x^3-x^2-1\\
+                                    &\not = f(x)\\
+                                    &\not = -f(x)
+                                \end{align}
+                            $$
+                            No es ninguna.
+                        </ol>
+                    </p>
+
+                    <hr class="major">
+
+                    <h2 id="operaciones_entre_funciones">Operaciones entre funciones</h2>
+                    <p>Los números reales en sí mismos y solamente como conjunto carecen de gran importancia. Es cuando se definen operaciones sobre ellos
+                        que adquieren mayor complejidad e interés. La noción de operar números nos lleva a pensar que se pueden definir operaciones entre
+                        funciones. Las operaciones entre funciones no son arbitrarias, sino que tienen sentido en ellas mismas. Para dar algunos ejemplos
+                        físicos de su utilidad, imagínese las siguientes tres situaciones:</p>
+
+                    <ol>
+                        <li>Se está deseando medir el tiempo de viaje de una persona en un triatlón en función de su posición en la carrera para poder
+                            optimizar su desempeño. Para ello, se requiere de una función de tiempo para cuando la carrera a pie, una función de tiempo
+                            para la carrera en agua y una función de tiempo para la carrera en bicicleta. Como el viaje en los tres casos es muy distinto
+                            y evoluciona de forma diferente, se debe modelar una función por caso. El tiempo total será la suma de los tres tiempos, por lo
+                            que debemos desarrollar una noción de suma de funciones.</li>
+                        <li>La temperatura de un gas ideal se puede calcular mediante el producto de su presión, su volumen y ciertas constantes. Es sencillo
+                            modelar una función de presión y una de volumen ajustando datos experimentales. Estas dos deberán ser multiplicadas para obtener
+                            una función de temperatura. Es por ello que se debe desarrollar una noción de producto de funciones.</li>
+                        <li>Se está calculando una predicción del PIB per cápita de una nación. Este PIB depende, a grandes rasgos, del cociente entre PIB
+                            nacional y la población del país. Para ello se requiere una función que modele la evolución del PIB nacional a lo largo del
+                            tiempo y otra que prediga el crecimiento de la población. Estas dos funciones deberán ser divididas para obtener el PIB per
+                            cápita. Así, se deberá desarrollar una noción de cociente de funciones.</li>
                     </ol>
-                    <p><strong>Definición 1.1</strong> El hecho de que \(f\) sea función de \(A\) en \(B\) se denota como \(f: A \rightarrow
-                        B\).
+
+                    <p>Estas son solo pocas de las muchísimas situaciones que se modelan operando funciones.</p>
+
+                    <p>
+                        <strong>Definición.</strong> Sean \(f:\text{Dom}(f)\subseteq\mathbb{R}\to\mathbb{R}\) y \(g: \text{Dom}(g) \subseteq \mathbb{R} \to
+                        \mathbb{R}\):
+                        <ol>
+                            <li>Se define la función suma \(f+g\) mediante la regla de correspondencia
+                                $$(f+g)(x)=f(x)+g(x)$$
+                                Con \(\text{Dom}(f+g)=\text{Dom}(f)\cap\text{Dom}(g)\).</li>
+                            <li>Se define la función producto \(f\cdot g\) mediante la regla de correspondencia
+                                $$(f\cdot g)(x)=f(x)\cdot g(x)$$
+                                Con \(\text{Dom}(f\cdot g)=\text{Dom}(f)\cap\text{Dom}(g)\).</li>
+                            <li>Se define la función cociente \(\frac{f}{g}\) mediante la regla de correspondencia
+                                $$\left(\frac{f}{g}\right)(x)=\frac{f(x)}{g(x)}$$
+                                Con \(\text{Dom}(\frac{f}{g})=\text{Dom}(f)\cap\text{Dom}(g)-\{x\,|\, g(x)=0\}\).</li>
+                        </ol>
                     </p>
-                    <p><strong>Definición 1.2</strong> Al conjunto \(B\) se le llama el contradominio de \(f\).</p>
-                    <p><strong>Definición 1.3</strong> La condición expresada en el inciso i) es equivalente a decir que \(\text{Dom}f=A\).
+                    <p>La última operación de funciones merece una motivación más cuidadosa. Imagínese que se quiere obtener una función que modele un fenómeno
+                        dependiente de otro, y que este otro dependa de un tercero. Por ejemplo, los niveles de ácido láctico en los músculos de un corredor
+                        dependen de la distancia que ha corrido, y esta distancia depende del tiempo que lleva corriendo. Así, si se tiene una función de
+                        niveles de ácido láctico y otra función de distancia, la idea de evaluar la primera en la segunda deberá desarrollarse para definir
+                        una última operación.</p>
+
+                    <p>
+                        <strong>Definición.</strong> Sean \(f:\text{Dom}(f)\subseteq\mathbb{R}\to\mathbb{R}\) y \(g:\text{Dom}(g)\subseteq \mathbb{R}\to
+                        \mathbb{R}\). Se define la composición de f y g como la función \(f\circ g\) mediante la regla de correspondencia
+                        $$(f\circ g)(x)=f(g(x))$$
+                        Con \(\text{Dom}(f\circ g)=\{x\in\text{Dom}(g)\,|\, g(x)\in\text{Dom}(f)\}\).   
                     </p>
-                    <p><strong>Definición 1.4</strong> Si \(f: A \rightarrow B\), para cada elemento \(x \in A\) denotamos con \(f(x)\) al
-                        único elemento \(y
-                        \in B\) que le corresponde, es decir, \(y=f(x)\).</p>
-                    <br>
-                    <p><strong>Definición 2.</strong> Sea \(f: A \rightarrow B\) una relación binaria entre A y B, se define la imagen de \(f\) como:
-                    \( \text{im}f=\{b \in B: \exists a (a \in A \land (a, b) \in f)\} \)</p>
-                    <p><strong>Definición 2.1</strong> Como \(f: A \rightarrow B\) es una función, entonces la imagen de \(f\) es:
-                    \( \text{im}f=\{y \in B: \exists x \in A (f(x)=y)\}=\{f(x): x \in A\}, \)
-                    por lo que \( \text{im}f \subseteq B \).</p>
+
+                    <p>Las operaciones entre funciones se practicarán arduamente en el desarrollo de las secciones siguientes, por lo que no realzaremos
+                        ejemplos por ahora. Lo que sí haremos es una pequeña discusión de paridad y operaciones.</p>
+
+                    <p>Los primeros resultados son muy triviales y no se demostrarán. Dadas \(\alpha\) y \(\beta\) dos funciones, si ambas son pares,
+                        entonces \(\alpha+\beta\) y \(\alpha\cdot \beta\) son pares. Si ambas son impares, entonces \(\alpha+\beta\) es impar y
+                        \(\alpha\cdot \beta\) es par. Si una es par y la otra impar, no se puede afirmar nada de \(\alpha+\beta\) (por lo general no es
+                        ninguna) y \(\alpha\cdot \beta\) es impar.</p>
+
+                    <p>Las afirmaciones por demostrar serán respecto a la composición.</p>
+
+                    <p><strong>Afirmación.</strong> Si \(f\) es par y \(g\) es impar, \(f\circ g\) es par.</p>
+                    <p><strong>Demostración.</strong> Por hipótesis, \(f(x)=f(-x)\) y \(g(-x)=-g(x)\). Así,
+                        $$(f\circ g)(-x)=f(g(-x))=f(-g(x))=f(g(x))=(f\circ g)(x)$$
+                        Que es lo que se quería probar.    \(\blacksquare\)</p>
+
+                    <p><strong>Afirmación.</strong> Si \(f\) y \(g\) son ambas pares, \(f\circ g\) es par.</p>
+                    <p><strong>Demostración.</strong> Por hipótesis, \(f(-x)=f(x)\) y \(g(-x)=g(x)\). Así,
+                        $$(f\circ g)(-x)=f(g(-x))=f(g(x))=(f\circ g)(x)$$
+                        Que es lo que se quería probar.    \(\blacksquare\)</p>
+
+                    <p><strong>Afirmación.</strong> Si \(f\) y \(g\) son ambas impares, \(f\circ g\) es impar.</p>
+                    <p><strong>Demostración.</strong> Por hipótesis, \(f(-x)=-f(x)\) y \(g(-x)=-g(x)\). Así,
+                        $$(f\circ g)(-x)=f(g(-x))=f(-g(x))=-f(g(x))=-(f\circ g)(x)$$
+                        Que es lo que se quería probar.    \(\blacksquare\)</p>
+
+                    <p>La composición también se comporta de forma agradable con la inyectividad.</p>
+
+                    <p><strong>Afirmación.</strong> Si \(f\) y \(g\) son ambas inyectivas, \(f\circ g\) es inyectiva.</p>
+                    <p><strong>Demostración.</strong> Sean \(a,b\) tales que \((f\circ g)(a)=(f\circ g)(b)\). Así, \(f(g(a))=f(g(b))\). Como \(f\) es
+                        inyectiva, \(g(a)=g(b)\), y por la inyectividad de \(g\) se asegura que \(a=b\), que es lo que se quería probar. \(\blacksquare\)</p>
+
+                    <p>El siguiente resultado no es tan obvio, pero es bastante curioso.</p>
+
+                    <p><strong>Afirmación.</strong> Si \(f\circ g\) es inyectiva, \(g\) es inyectiva.</p>
+                    <p><strong>Demostración.</strong> Sean \(a,b\) tales que \(g(a)=g(b)\).  Aplicando \(f\), \(f(g(a))=f(g(b))\). Como \(f\circ g\) es
+                        inyectiva, se sigue que \(a=b\), que es lo que se quería probar.    \(\blacksquare\)</p>
+
+                    <hr class="major">
+
+                    <h2 id="funciones_inversas">Funciones inversas</h2>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>La función inversa de una función dada es aquella que "revierte" la acción de la función original. Es decir, la función
+                                inversa devuelve los elementos \(f(x)\) a la \(x\) de la que provienen. Formalmente, se tiene:</p>
+                            <p><strong>Definición.</strong> La inversa \(f^{-1}:\text{Cd}(f)\to\text{Dom}(f)\) de una función \(f\) es el conjunto
+                                \(f^{-1}=\{(y,x)\,|\,(x,y)\in f\}\).</p>
+                            <p>Así, una función será invertible si su inversa es también una función. Nótese que para que \(f^{-1}\) sea función se deben
+                                cumplir dos condiciones:</p>
+                        </div>
+                        <div clsas="col-4"><img src="img/funciones6.png"></div>
+                    </div>
+
+                    <ol>
+                        <li>Como \(\text{Dom}(f^{-1})=\text{Cd}(f)\), \(f\) debe mapear a todo el codominio, pues \(f^{-1}\) debe aplicarse sobre todo
+                            su dominio. Así, \(f\) debe ser sobreyectiva.</li>
+                        <li>Como \(\forall (y,x_1),(y,x_2)\in f^{-1}\) se debe cumplir que \(x_1=x_2\), esto significa que \(\forall (x_1,y),
+                            (x_2,y)\in f\) se cumple que \(x_1=x_2\). Así, \(f\) debe ser biyectiva.</li>
+                    </ol>
+
+                    <p>Por lo tanto, es necesario que \(f\) sea biyectiva para que sea invertible.</p>
+
+                    <p>Para hallar la inversa de una función \(f\), bastará con exhibir el elemento del que proviene cada \(f(x)\) y cambiar la notación:
+                        a este elemento se le denominará \(f^{-1}(x)\) y a \(f(x)\) se le nombrará simplemente \(x\).</p>
+
+                    <p><strong>Ejemplo.</strong> Hallar la inversa de la función lineal \(f(x)=mx+b\).</p>
+                    <p><strong>Solución.</strong> Por sencillez, sea \(y=f(x)\). Así, si \(y=mx+b\) se tiene que \(x=\displaystyle\frac{y-b}{m}\), por lo que
+                        $$f^{-1}(x)=\frac{1}{m}x-\frac{b}{m}$$
+                        Que resulta ser lineal también.</p>
+
+                    <p>Por la definición de función inversa, se tiene que \((f\circ f^{-1})(x)=(f^{-1}\circ f)(x)=x\), pues ambas funciones devuelven a la otra
+                        al elemento del dominio del que provienen.</p>
+
+                    <p>No todas las funciones son invertibles, como ya se vio. No obstante, una función se puede hacer invertible al restringir su dominio y
+                        contradominio con el fin de hacerla biyectiva.</p>
+
+                    <p><strong>Ejemplo.</strong> La función \(f:\mathbb{R}\to\mathbb{R}\) definida por \(f(x)=x^2\) no es inyectiva ni biyectiva (como se vio
+                        en la sección anterior). No obstante, se pueden restringir su dominio y contradominio para que \(f:\mathbb{R}^+\to\mathbb{R}^+\)
+                        definida por \(f(x)=x^2\) sí sea biyectiva. Así, esta función es invertible, y \(f^{-1}:\mathbb{R}^+\to\mathbb{R}^+\) está dada por
+                        \(f^{-1}(x)=\sqrt{x}\)</p>
+
+                    <p><strong>Ejemplo.</strong> Sea \(f:\mathbb{R}\to\mathbb{R}\) definida por \(f(x)=\displaystyle\frac{4}{x+1}\). Hallar f^{-1}. Restringir
+                        dominio y contradominio de ser necesario.</p>
+                    <p><strong>Solución.</strong> ara que \(f\) sea una función bien definida, se tiene que \(\text{Dom}(f)=\mathbb{R}-\{-1\}\), pues la
+                        función no está definida para \(x=-1\). Veamos si \(f\) es inyectiva. Sean \(x_1,x_2\) tales que \(f(x_1)=f(x_2)\). Se tiene que
+                        $$
+                            \begin{align }\frac{4}{x_1+1}
+                                & = \frac{4}{x_2+1}\\
+                                    4^{-1}(x_1+1)(x_2+1)\frac{4}{x_1+1}
+                                & = 4^{-1}(x_1+1)(x_2+1)\frac{4}{x_2+1}\\
+                                    x_2+1&=x_1+1\\
+                                    x_2+1-1&=x_1+1-1\\
+                                x_2 & = x_1
+                            \end{align}
+                        $$
+                        Por lo que \(f\) es inyectiva.
+                        Para probar la sobreyectividad hay que mostrar que todo elemento del contradominio proviene de uno del dominio. Como \(f(x) =
+                        \displaystyle\frac{4}{x+1}\) se puede hacer \(x=\frac{4}{y}-1\). Así,
+                        $$ f(x) = \frac{4}{\frac{4}{y}-1+1} = \frac{4}{\frac{4}{y}} = y $$
+                        Obsérvese que \(x\) solo está bien definida para \(y\not =0\), por lo que deberemos hacer \(\text{Cd}(f)=\mathbb{R}-\{0\}\). Por lo
+                        tanto, la inversa es \(f^{-1}:\mathbb{R}-\{0\}\to\mathbb{R}-\{-1\}\) dada por \(f^{-1}(x)=\displaystyle\frac{4}{x}-1\).</p>
+
+                    <hr class="major">
+
+                    <h2 id="trigonometricas">Funciones trigonométricas</h2>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>
+                                Tradicionalmente, las razones trigonométricas se definen a partir de un triángulo rectángulo como el mostrado. Hay tres
+                                razones trigonométricas directas (el seno, el coseno y la tangente), y a estas les corresponden tres recíprocas (cotangente,
+                                secante y cosecante). Estas son:
+                                $$\sin(x)=\frac{a}{c}$$
+                                $$\cos(x)=\frac{b}{c}$$
+                                $$\tan(x)=\frac{a}{b}$$
+                                $$\cot(x)=\frac{b}{a}$$
+                                $$\sec(x)=\frac{c}{b}$$
+                                $$\csc(x)=\frac{c}{a}$$
+                            </p>
+                        </div>
+                        <div class="col-4"><img src="img/funciones7.png"></div>
+                    </div>
+
+                    <p>
+                        Las razones trigonométricas recíprocas obtienen su nombre debido a que son los recíprocos de las directas. Esto es,
+                        $$\cot(x)=\frac{1}{\tan(x)}$$
+                        $$\sec(x)=\frac{1}{\cos(x)}$$
+                        $$\csc(x)=\frac{1}{\sin(x)}$$
+                    </p>
+
+                    <p>Obsérvese además que \(\tan(x)=\frac{\sin(x)}{\cos(x)}\).</p>
+                    
+                    <p>Las razones trigonométricas solamente están definidas para \(x\in(0,\frac{\pi}{2})\), por lo que se deberá pensar en una definición
+                        extendida para la que las razones trigonométricas estén definidas para cualquier real. La solución es sumamente elegante.</p>
+
+                    <div class="row">
+                        <div class="col-4"><img src="img/funciones8.png"></div>
+                        <div class="col-8">
+                            <p>Piénsese en la circunferencia de radio \(1\) con centro en el origen. Dado un punto arbitrario sobre ella, sea \(x\) el ángulo
+                                formado por el segmento que une al origen con el punto. Si se traza una perpendicular del punto al eje \(X\) se forma un
+                                triángulo rectángulo de ángulo \(x\) e hipotenusa \(1\). Si decimos que el punto escogido es \((x_0,y_0)\), se tiene que
+                                \(\sin(x)=y_0\) y \(\cos(x)=x_0\). Así, las coordenadas de un punto sobre la circunferencia unitaria cuyo segmento al origen
+                                forma un ángulo \(x\) con la horizontal es \((\sin(x),\cos(x))\). Esto define las funciones seno y coseno para todos los
+                                reales.</p>
+                            <p>Obsérvese de la definición que \(\sin^2(x)+\cos^2(x)=1\).</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Para definir la tangente bien se podría hacer \(\tan(x)=\frac{\sin(x)}{\cos(x)}\) y dejarnos de problemas, pero una definición
+                                geométrica será de ayuda en secciones futuras. Si se traza un segmento de recta tangente a la circunferencia desde el punto
+                                \((x_0,y_0)\) hasta el eje \(X\), el triángulo formado por el origen, el punto \((x_0,y_0)\) y la intersección de la tangente
+                                con el eje \(X\) es un triángulo rectángulo, pues una tangente es perpendicular al radio trazado al punto de tangencia.
+                                Aplicando la definición de \(\tan(x)\) a este triángulo, notando que el cateto adyacente mide \(1\), el segmento de recta
+                                tangente desde el punto \((x_0,y_0)\) hasta el eje \(X\) medirá \(\tan(x)\). El signo de la tangente queda determinado por
+                                \(\tan(x)=\frac{\sin(x)}{\cos(x)}\), i.e. la tangente es positiva en el primer y tercer cuadrante, y negativa en los otros
+                                dos.</p>
+                        </div>
+                        <div class="col-4"><img src="img/funciones9.png"></div>
+                    </div>
+
+                    <p>Las funciones recíprocas se definirán solamente como
+                        $$\cot(x)=\frac{1}{\tan(x)}$$
+                        $$\sec(x)=\frac{1}{\cos(x)}$$
+                        $$\csc(x)=\frac{1}{\sin(x)}$$</p>
+
+                    <p>Puesto que los ángulos son periódicos, ninguna de las funciones trigonométricas es biyectiva. No obstante, si hacemos
+                        $$\sin:[0,2\pi]\to [-1,1]$$
+                        $$\cos:[-\pi,\pi]\to [-1,1]$$
+                        $$\tan:[0,\pi]\to\mathbb{R}$$</p>
+
+                    <p>Entonces las funciones trigonométricas resultan ser biyectivas y, por tanto, invertibles. Las funciones trigonométricas inversas correspondientes a cada función se denominan funciones de arco, pues obtienen el valor del arco en la circunferencia unitaria. Se tiene que
+                        $$\sin^{-1}(x)=\arcsin(x)$$
+                        $$\cos^{-1}(x)=\arccos(x)$$
+                        $$\tan^{-1}(x)=\arctan(x)$$
+                        Por ahora dejaremos de discutir estas funciones, pero se retomarán en secciones futuras.</p>
 
                 </section>
 
