@@ -74,7 +74,7 @@
                                 del dominio y es decreciente para valores positivos. Entre las asíntotas se observa que la función es cóncava abajo, y fuera de ellas es cóncava
                                 arriba. Como la función no está definida en los cambios de concavidad, tampoco tiene puntos de inflexión.</p>
                         </div>
-                        <div class="col-4"><img src="img/interpretacion_derivada1.png"></div>
+                        <div class="col-4"><img src="img/interpretacion_derivada1.1.png"></div>
                     </div>
 
                     <p>Este análisis informal podrá parecer sin sentido, pero motiva muchas de las definiciones que seguirán en las secciones subsecuentes.</p>
@@ -233,11 +233,183 @@
 
                     <p>Se enunciarán los criterios de la primera y segunda derivada, y se demostrará el segundo.</p>
 
+                    <p>
+                        <strong>Criterio de la primera derivada.</strong> ea \(c\) un punto crítico de una función \(f\) continua en un intervalo abierto \(I\) que contiene
+                        a \(c\). Si \(f\) es derivable en el intervalo, excepto posiblemente en \(c\), entonces \(f(c)\) puede clasificarse como sigue.
+                        <ol>
+                            <li>Si \(f'(x) &gt; 0\) en algún intervalo \((a,c)\) y \(f'(x) &lt; 0\) en algún intervalo \((c,b)\), entonces \(f\) tiene un máximo local en
+                                \(c\).</li>
+                            <li>Si \(f'(x) &lt; 0\) en algún intervalo \((a,c)\) y \(f'(x) &gt; 0\) en algún intervalo \((c,b)\), entonces \(f\) tiene un mínimo local en
+                                \(c\).</li>
+                            <li>Si \(f'(x) &gt; 0\) en algún intervalo \((a,b)\) que contiene a \(c\) o \(f'(x) &lt; 0\) en algún intervalo \((a,b)\) que contiene a
+                                \(c\), entonces \(c\) no es ni máximo ni mínimo relativo. </li>
+                        </ol>
+                    </p>
+                    <p>
+                        <strong>Criterio de la segunda derivada.</strong> Sea \(f''(c)=0\). Si \(f''(c)>0\) entonces \(c\) es mínimo local de \(f\), si
+                        \(f''(c) &lt; 0\) entonces \(c\) es máximo local de \(f\).
+                    </p>
+                    <p>
+                        <strong>Demostración.</strong> Por definición, como \(f''(c)=0\),
+                        $$f''(c)=\lim_{h\to 0}\frac{f'(c+h)-f'(c)}{h}=\lim_{h\to 0}\frac{f'(c+h)}{h}$$
+                        Si \(f''(c) &gt; 0\), entonces \(\displaystyle\lim_{h\to 0}\frac{f'(c+h)}{h}>0\). Ya se probó que los límites preservan desigualdades, por lo que
+                        $$\lim_{h\to 0}\frac{f'(c+h)}{h}>0\implies\frac{f'(c+h)}{h}>0$$
+                        Caso 1. \(h &gt; 0\)
+                        Se tiene \(f'(c+h)>0\) para cualquier \(h &gt; 0\), por lo que \(f'(x) &gt; 0\) si \(x\in(c,c+h)\) y \(f\) es creciente en \((c,c+h)\).
+                        Caso 2. \(h &lt; 0\)
+                        Se tiene \(f'(c+h) &lt; 0\) para cualquier \(h &lt; 0\). Análogamente, \(f\) es decreciente en \((c+h,c)\).
+                        Por criterio de la primera derivada, \(c\) es mínimo local de \(f\). El otro caso es análogo.   \(\blacksquare\)
+                    </p>
+
+                    <p>
+                        <strong>Teorema.</strong> Supógase que \(f''(c)\) existe. Si \(f\) tiene un mínimo (máximo) local en \(c\), entonces \(f''(c)\geq 0\)
+                        (\(f''(c)\leq 0\)).
+                    </p>
+                    <p><strong>Demostración.</strong> Supóngase por el contrario que \(c\) es mínimo local y \(f''(c) &lt; 0\). Por el criterio de la segunda derivada,
+                        \(c\) es máximo local. Como \(c\) es mínimo y máximo, la función es constante em un intervalo que contiene a \(c\), de donde \(f'(c)=0\) y
+                        \(f''(c)=0\) ! Por lo que \(f''(c)\geq 0\).   \(\blacksquare\)</p>
+
+                    <hr class="major">
+
+                    <h2 id="concavidad">Concavidad</h2>
+
+                    <div class="row">
+                        <div class="col-4"><img src="img/interpretacion_derivada5.png"></div>
+                        <div class="col-8">
+                            <p>La gráfica de una función \(f\) es cóncava hacia arriba en un intervalo \([a,b]\) si para cualesquiera \(x_1,x_2\in [a,b]\) con \(x_1\not =x_2\)
+                                se cumple para toda \(x\in [a,b]\) que
+                                $$ f(x) &lt; f(x_1) + \frac{f(x_2)-f(x_1)}{x_2-x_1}(x-x_1) $$
+                                Análogamente, es cóncava hacia abajo si, dadas las mismas hipótesis, se cumple que
+                                $$ f(x) &gt; f(x_1) + \frac{f(x_2)-f(x_1)}{x_2-x_1}(x-x_1) $$
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Geométricamente, esto significa que la recta que une a cualesquiera dos puntos del intervalo está por encima de la gráfica para funciones
+                                cóncavas hacia arriba, y está por debajo para funciones cóncavas hacia abajo.</p>
+                        </div>
+                        <div class="col-4"><img src="img/interpretacion_derivada6.png"></div>
+                    </div>
+
+                    <p><strong>Definición.</strong> Un punto \((c,f(c))\) es llamado punto de inflexión de \(f\) si \(f\) es continua en \(c\) y existe un intervalo
+                        \([a,b]\) tal que \(f\) es cóncava hacia una dirección en \([a,c]\) y cóncava hacia la otra en \([c,b]\).</p>
+
+                    <p>
+                        Suponiendo que \(f\) es continua en \([a,b]\), un punto \((c,f(c))\) con \(c\in(a,b)\) es de inflexión si ocurre alguna de las siguientes
+                        afirmaciones:
+                        <ol>
+                            <li>\(f''(x) &gt; 0\;\forall x\in[a,c]\) y \(f''(x) &lt; 0\;\forall x\in[c,b]\)</li>
+                            <li>\(f''(x) &lt; 0\;\forall x\in[a,c]\) y \(f''(x) &gt; 0\;\forall x\in[c,b]\)</li>
+                        </ol>
+                    </p>
+                    <p>Si \(f''(c)\not =0\) en el punto de inflexión, por el criterio de la segunda derivada se tendría que el punto es un máximo o mínimo local y la
+                        concavidad se mantendría en una vecindad \((c-\delta,c+\delta)\). Así, es necesario que \(f''(c)=0\) para que \((c,f(c))\) sea punto de inflexión.</p>
+                    
+                    <hr class="major">
+
+                    <h2 id="optimizacion">Problemas de optimización</h2>
+
+                    <p><strong>Ejemplo.</strong>Se quiere construir una caja a partir de un cartón rectangular de \(16\times 15\) cortando cuatro cuadrados de lados iguales,
+                        uno en cada esquina. ¿Cuál debe ser el lado de estos cuadrados de tal forma que el volumen de la caja sea mínimo?</p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p><strong>Solución.</strong> Sea \(x\) el lado del cuadrado. Como se corta \(2x\) de cada lado del cartón, los lados de la base de la caja miden
+                                \(16-2x\) y \(25-2x\), y su altura mide \(x\). Puesto que no tiene sentido hablar de lados negativos, es necesario que \(16-2x\geq 0\), de donde
+                                \(x\leq 8\). Más aun, no tiene sentido que \(x\) sea negativo. Así, \(x\in[0,8]\). El volumen de la caja está dado entonces por</p>
+                        </div>
+                        <div class="col-4"><img src="img/interpretacion_derivada7.png"></div>
+                    </div>
+
+                    <p>$$V(x)=x(16-2x)(25-2x)=x(4x^2-82x+400)=4x^3-82x^2+400x$$
+                        Que es diferenciable en \(x\in[0,8]\). Derivando e igualando a cero para obtener puntos críticos,
+                        $$V'(x)=12x^2-164x+400$$
+                        $$V'(x)=0\implies12x^2-164x+400=0$$
+                        Y por la chicharronera,
+                        $$x=\frac{164\pm\sqrt{164^2-4(12)(400)}}{2(12)}=\frac{41\pm\sqrt{481}}{6}$$
+                        Obsérvese que \(\frac{41+\sqrt{481}}{6}>8\), por lo que no es candidato. Así, los candidatos a punto máximo son \(\frac{41-\sqrt{481}}{6}\), \(0\) y \(8\). Evaluando,
+                        $$V(0)=0$$
+                        $$V(8)=0$$
+                        $$V(\frac{41-\sqrt{481}}{6})\approx 571.41$$
+                        Por lo que el volumen tiene un valor máximo en \(\boxed{x=\frac{41-\sqrt{481}}{6}}\).</p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p><strong>Ejemplo.</strong> Una bala de cañón se lanza desde el suelo con velocidad \(v\) y según un ángulo \(\alpha\), de modo que su componente vertical
+                                de velocidad es \(v\sin\alpha\) y su componente horizontal es \(v\cos\alpha\). Su distancia \(s(t)\) sobre el nivel del suelo obedece la ley
+                                \(s(t)=-4.9t^2+(v\sin\alpha)t\), mientras que su velocidad horizontal permanece constante.</p>
+                            <ol>
+                                <li>Demostrar que la trayectoria de la bala es una parábola.</li>
+                                <li>Hallar el ángulo \(\alpha\) que hace máxima la distancia horizontal recorrida por la bala antes de alcanzar el suelo.</li>
+                            </ol>
+                        </div>
+                        <div class="col-4"><img src="img/interpretacion_derivada8.png"></div>
+                    </div>
+
+                    <p>
+                        <strong>Solución.</strong> 
+                        <ol>
+                            <li>En el instante \(t\), la posición de la bala es \(((v\cos\alpha)t,-4.9t^2+(v\sin\alpha)t)\). Pondremos \(y\) en función de
+                                \(x\). Se tiene
+                                $$x=(v\cos\alpha)t\implies t=\frac{x}{v\cos\alpha}$$
+                                Sustituyendo en el valor de \(y\),
+                                $$
+                                    \begin{align}y
+                                        & = -4.9t^2+(v\sin\alpha)t\\
+                                        & = -4.9\left(\frac{x}{v\cos\alpha}\right)^2+(v\sin\alpha)\left(\frac{x}{v\cos\alpha}\right)\\
+                                        & = -\frac{4.9}{v^2\cos^2\alpha}x^2+\tan\alpha x
+                                    \end{align}
+                                $$
+                                Y esto último tiene la forma \(ax^2+bx+c\), por lo que es una parábola.</li>
+                            <li>
+                                Deberemos encontrar la distancia recorrida en función de \(\alpha\). Cuando el valor de \(y\) es cero, la bala no ha sido disparada o bien ya
+                                cayó. Hallaremos el tiempo de caída haciendo \(y=0\) y sustituiremos en el valor de \(x\) para hallar la distancia recorrida. Se tiene que
+                                $$y=0\implies -4.9t^2+(v\sin\alpha)t=0\implies t(-4.9t+v\sin\alpha)=0$$
+                                Por lo que la altura es cero cuando \(t=0\) (la bala no ha sido disparada) o cuando \(t=\frac{v}{4.9}\sin\alpha\) (la bala ha caído).
+                                Sustituyendo esto último en \(x\), se tiene que
+                                $$x=(v\cos\alpha)(\frac{v}{4.9}\sin\alpha)$$
+                                $$x=\frac{v^2}{4.9}\sin\alpha\cos\alpha$$
+                                $$x=\frac{v^2}{9.8}\sin(2\alpha)$$
+                                Que es la distancia recorrida en función del ángulo. Nótese que \(\alpha\in[0,\frac{\pi}{2}]\). Derivando e igualando a cero para hallar
+                                puntos críticos,
+                                $$x'(\alpha)=\frac{v^2}{4.9}\cos(2\alpha)$$
+                                $$x'(\alpha)=0\implies \frac{v^2}{4.9}\cos(2\alpha)=0 \implies \cos(2\alpha)=0$$
+                                Como \(\alpha\in[0,\frac{\pi}{2}]\), el coseno es biyectivo en ese intervalo y tiene función inversa.
+                                Se tiene \(2\alpha=\arccos(0)=\frac{\pi}{2}\), de donde \(\alpha=\frac{\pi}{4}\). Los candidatos a máximo son \(0\), \(\frac{\pi}{2}\) y
+                                \(\frac{\pi}{4}\). Evaluando,
+                                $$x(0)=0$$
+                                $$x(\tfrac{\pi}{2})=0$$
+                                $$x(\tfrac{\pi}{4})=\frac{v^2}{9.8}$$
+                                Por lo que la distancia es máxima para \(\boxed{\alpha=\frac{\pi}{4}}\).
+                            </li>
+                        </ol>
+                    </p>
+                    <p><strong>Ejemplo.</strong> Se desplaza un ángulo recto a lo largo del diámetro de un círculo de radio \(r\). ¿Qué longitud máxima \(A+B\) puede ser
+                        interceptada por el círculo? </p>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Daremos una expresión en coordenadas polares para facilitar la solución. Supóngase que la circunferencia tiene radio \(r\) y centro en el origen.
+                                Así, si se traza un radio que forma un ángulo \(\theta\) con el semieje positivo de las \(X\), se tiene que la distancia
+                                \(A(\theta)=r\sin\theta\) y la distancia \(B(\theta)=r-r\cos\theta=r(1-\cos\theta)\), por lo que \((A+B)(\theta)=r(1+\sin\theta-\cos\theta)\).
+                                Nótese que \(\theta\in[0,\pi]\). Derivando \(A+B\) e igualando a cero para hallar puntos críticos,
+                                $$(A+B)'(\theta)=r(\cos\theta+\sin\theta)$$
+                                $$(A+B)'(\theta)=0\implies r(\cos\theta+\sin\theta)=0$$
+                                $$\cos\theta=-\sin\theta$$</p>
+                        </div>
+                        <div class="col-4"><img src="img/interpretacion_derivada9.png"></div>
+                    </div>
+                    <p>Como \(\theta\in[0,\pi]\), el coseno es biyectivo e invertible. Así, \(\alpha=\frac{3}{4}\pi\), que está cómodamente en el intervalo considerado.
+                        Los candidatos entonces son \(0\), \(\pi\) y \(\frac{3}{4}\pi\). Evaluando la función,
+                        $$(A+B)(0)=0$$
+                        $$(A+B)(\pi)=2r$$
+                        $$(A+B)(\tfrac{3}{4}\pi)=r(1+\sqrt{2})$$
+                        Por lo que la distancia máxima que se puede interceptar es \(\boxed{A+B=r(1+\sqrt{2})}\).</p>
                 </section>
 
             </div>
         </div>
-
         <!-- Sidebar -->
         <div id="sidebar">
             <div class="inner">
@@ -287,16 +459,13 @@
 
             </div>
         </div>
-
     </div>
-
     <!-- Scripts -->
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/browser.min.js"></script>
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
-
 </body>
 
 </html>
