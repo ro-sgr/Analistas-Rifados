@@ -194,6 +194,45 @@
                     </p>
                     <p>De estos teoremas se desprenden tres corolarios importantes:</p>
 
+                    <p><strong>Corolario 1.</strong> Si \(f\) está definida en un intervalo \(I\) y \(f'(x)=0\) para toda \(x\) en \(I\), entonces \(f\) es constante
+                        sobre \(I\).</p>
+                    <p><strong>Demostración.</strong> Por el TVM, como \(f'(x)=0\) para toda \(x\) en \(I\), para cualesquiera \(a,b\in I\) con \(a &lt; b\) se tiene que
+                        $$\frac{f(b)-f(a)}{b-a}=0\implies f(b)-f(a)=0\implies f(a)=f(b)$$
+                        Como esto se cumple para cualesquiera \(a,b\in I\), \(f\) es constante en \(I\).  \(\blacksquare\)</p>
+
+                    <p><strong>Corolario 2.</strong> Si \(f\) y \(g\) están definidas en un intervalo \(I\) y \(f'(x)=g'(x)\) para toda \(x\) en \(I\), entonces
+                        \(f(x)=g(x)+c\) para alguna \(c\in\mathbb{R}\).</p>
+                    <p><strong>Demostración 1.</strong> Por el TVM, para \(x,b\in I\) se tiene que
+                        $$\frac{f(x)-f(a)}{x-a}=\frac{g(x)-g(a)}{x-a}$$
+                        De donde \(f(x)=g(x)+f(a)-g(a)\), donde \(f(a)-g(a)\in\mathbb{R}\).  \(\blacksquare\)</p>
+                    <p><strong>Demostración 2.</strong> Como \((f-g)'(x)=f'(x)-g'(x)=0\), el corolario 1 afirma que \(f-g\) es constante en \(I\) y
+                        $$f(x)-g(x)=c$$
+                        De donde \(f(x)=g(x)+c\) con \(c\in\mathbb{R}\).  \(\blacksquare\)
+                        </p>
+
+                    <p>
+                        <strong>Corolario 3.</strong>
+                        <ol>
+                            <li>\(f'(x) &gt; 0\) para toda \(x\) en \(I\) implica que \(f\) es estrictamente creciente en \(I\).</li>
+                            <li>\(f'(x) &lt; 0\) para toda \(x\) en \(I\) implica que \(f\) es estrictamente decreciente en \(I\).</li>
+                        </ol>
+                    </p>
+                    <p>
+                        <strong>Demostración.</strong> Sean \(a,b\in I\) con \(a &lt; b\). Por el TVM, existe \(x\in (a,b)\) tal que
+                        $$f'(x)=\frac{f(b)-f(a)}{b-a}$$
+                        <ol>
+                            <li>Si \(f'(x) &gt; 0\) para toda \(x\) en \(I\), como \(b-a &gt; 0\), se obtiene que \(f(b)-f(a) &gt; 0\) y \(f(b) &gt; f(a)\).</li>
+                            <li>Si \(f'(x) &lt; 0\) para toda \(x\) en \(I\), como \(b-a &gt; 0\), se obtiene que \(f(b)-f(a) &lt; 0\) y \(f(b) &lt; f(a)\).</li>
+                        </ol>
+                        Esto concluye la demostración.  \(\blacksquare\)
+                    </p>
+
+                    <hr class="major">
+
+                    <h2 class="max_y_min_2">Máximos y mínimos, parte 2</h2>
+
+                    <p>Se enunciarán los criterios de la primera y segunda derivada, y se demostrará el segundo.</p>
+
                 </section>
 
             </div>
