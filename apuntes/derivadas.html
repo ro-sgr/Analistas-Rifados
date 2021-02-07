@@ -397,7 +397,235 @@
                         La separación del límite se asegura por la continuidad en cero de \(\phi\) y la derivabilidad de \(g\).   \(\blacksquare\)
                     </p>
                     <p>Para cerrar con la sección, se demostrará el teorema para funciones inversas.</p>
-                    
+
+                    <p><strong>Teo. Regla de la función inversa. </strong>Sea \(f\) invertible y derivable en \(f^{-1}(x)\). Entonces \(f^{-1}\) es derivable en \(x\) y
+                        $$(f^{-1})'(x)=\frac{1}{f'(f^{-1}(x))}$$</p>
+
+                    <p><strong>Demostración.</strong> Sea \(x=f(y)\). Entonces
+                        $$\lim_{h\to0}\frac{f^{-1}(x+h)-f^{-1}(x)}{h}=\lim_{h\to0}\frac{f^{-1}(x+h)-y}{h}$$
+                        Defínase \(k\) mediante \(x+h=f(y+k)\), de donde \(k = f^{-1}(x+h)-y\) y \(k = f^{-1}(x+h)-f^{-1}(x)\). Obsérvese que \(k\to0\) cuando \(h\to0\).Así
+                        $$
+                            \begin{align}(f^{-1})'(x)
+                                & = \lim_{h\to0}\frac{f^{-1}(x+h)-y}{h}\\
+                                & = \lim_{k\to0}\frac{f^{-1}(f(y+k))-y}{f(y+k)-x}\\
+                                & = \lim_{h\to0}\frac{k}{f(y+k)-f(y)}\\
+                                & = \lim_{h\to0}\frac{1}{\frac{f(y+k)-f(y)}{k}}\\
+                                & =\frac{1}{\lim_{h\to0}\frac{f(y+k)-f(y)}{k}}\\
+                                & = \frac{1}{f'(y)}\\
+                                & = \frac{1}{f'(f^{-1}(x))}
+                            \end{align}
+                        $$
+                        Que es lo que se deseaba demostrar.   \(\blacksquare\)</p>
+
+                    <p>Este teorema da una recompensa inmediata. Supóngase que \(f(x)=x^n\) con \(n\in\mathbb{Z}\). Así, \(f^{-1}(x)=x^\frac{1}{n}\). Aplicando la regla de la
+                        función inversa,
+                        $$(f^{-1})(x)=\frac{1}{n(x^{\frac{1}{n}})^{n-1}}=\frac{1}{n}x^{\frac{1}{n}-1}$$
+                        Obsérvese que haciendo \(\frac{1}{n}=a\), se tiene que la regla de la potencia funciona para recíprocos de enteros. No obstante, se puede hacer más.
+                        Sea \(g(x)=x^{\frac{m}{n}}=(x^{\frac{1}{n}})^m\). Aplicando la regla de la cadena y el resultado anterior,
+                        $$g'(x)=m(x^{\frac{1}{n}})^{m-1}\cdot\frac{1}{n}x^{\frac{1}{n}-1}=\frac{m}{n}x^{\frac{m-1}{n}+\frac{1}{n}-1}=\frac{m}{n}x^{\frac{m}{n}-1}$$
+                        Y haciendo \(\frac{m}{n}=q\), se llega al teorema final:</p>
+
+                    <p><strong>Teo. Regla de la potencia (versión 3).</strong>Sea \(f:\mathbb{R}\to\mathbb{R}\) con \(f(x)=x^n\), \(n\in\mathbb{Q}\). Así,
+                        \(f'(x)=nx^{n-1}\).</p>
+
+                    <hr class="major">
+
+                    <h2 id="calc_derivadas"><strong>Cálculo de derivadas.</strong></h2>
+                    <p><strong>Ejemplo.</strong>Calcular las derivadas de las siguientes funciones mediante la definición.</p>
+
+                    <ol>
+                        <li>\(f(x)=5\)</li>
+                        $$\begin{align}f'(x)=\lim_{h\to0}\frac{5-5}{h}=\lim_{h\to0}\frac{0}{h}=\lim_{h\to0}0=\boxed{0}\end{align}$$
+
+                        <li>\(f(x)=\frac{1}{x}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{\frac{1}{x+h}-\frac{1}{x}}{h}
+                                    = \lim_{h\to0}\frac{x-x-h}{hx(x+h)}
+                                    = \lim_{h\to0}\frac{-h}{hx(x+h)}\\
+                                & = \lim_{h\to0}\frac{-1}{x(x+h)}
+                                    = \boxed{-\frac{1}{x^2}}
+                            \end{align}
+                        $$
+
+                        <li>\(f(x)=\sqrt{x}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{\sqrt{x+h}-\sqrt{x}}{h}
+                                    = \lim_{h\to0}\frac{\sqrt{x+h}-\sqrt{x}}{h}\cdot\frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}
+                                    = \lim_{h\to0}\frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}\\
+                                & = \lim_{h\to0}\frac{h}{h(\sqrt{x+h}+\sqrt{x})}
+                                    = \lim_{h\to0}\frac{1}{\sqrt{x+h}+\sqrt{x}}
+                                    = \boxed{\frac{1}{2\sqrt{x}}}
+                            \end{align}
+                        $$
+
+                        <li>\(f(x)=3x-1\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{3(x+h)-1-3x+1}{h}
+                                    = \lim_{h\to0}\frac{3x+3h-3x+1}{h}
+                                    = \lim_{h\to0}\frac{3h}{h}\\
+                                & = \lim_{h\to0}3
+                                    = \boxed{3}
+                            \end{align}
+                        $$
+
+                        <li>\(f(x)=\frac{4x}{x+1}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & = \lim_{h\to0}\frac{\frac{4(x+h)}{(x+h)+1}-\frac{4x}{x+1}}{h}
+                                    = \lim_{h\to0}\frac{4(x+h)(x+1)-4x(x+h+1)}{h(x+h)(x+h+1)}\\
+                                & = \lim_{h\to0}\frac{4h}{h(x+h)(x+h+1)}
+                                    = \lim_{h\to0}\frac{4}{(x+h)(x+h+1)}
+                                    = \boxed{\frac{4}{(x+1)^2}}
+                            \end{align}
+                        $$
+                    </ol>
+
+                    <p><strong>Ejemplo.</strong> Calcular las siguientes derivadas de las siguientes funciones utilizando los teoremas de la sección anterior</p>
+
+                    <ol>
+                        <li>\(f(x)=5\)</li>$$\begin{align}f'(x)=\boxed{0}\end{align}$$
+
+                        <li>\(f(x)=\frac{1}{x}\)</li>
+                        $$\begin{align}f'(x)=\frac{\text{d}}{\text{d}x}(x^{-1})=-x^{-2}=\boxed{-\frac{1}{x^2}}\end{align}$$
+
+                        <li>\(f(x)=\sqrt{x}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                =\frac{\text{d}}{\text{d}x}(x^\frac{1}{2})
+                                =\frac{1}{2}x^{\frac{1}{2}-1}
+                                =\frac{1}{2x^\frac{1}{2}}
+                                =\boxed{\frac{1}{2\sqrt{x}}}
+                            \end{align}
+                        $$
+
+                        <li>\(f(x)=3x-1\)</li>
+                        $$\begin{align}f'(x)=\frac{\text{d}}{\text{d}x}(3x)+\frac{\text{d}}{\text{d}x}(-1)=\boxed{3}\end{align}$$
+
+                        <li>\(f(x)=\frac{4x}{x+1}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & = \frac{\frac{\text{d}}{\text{d}x}(4x)(x+1)-\frac{\text{d}}{\text{d}x}(x+1)(4x)}{(x+1)^2}
+                                    =\frac{4(x+1)-4x}{(x+1)^2}\\
+                                & = \frac{4x+4-4x}{(x+1)^2}
+                                    =\boxed{\frac{4}{(x+1)^2}}
+                            \end{align}
+                        $$
+
+                        <li>\(f(x)=\sqrt{\frac{x+1}{x-1}}\)</li>
+                        Se recuperará el resultado del inciso 3 para aplicar la regla de la cadena.
+                        $$
+                            \begin{align}f'(x)
+                                & = \frac{1}{2\sqrt{\frac{x+1}{x-1}}}\cdot \frac{\frac{\text{d}}{\text{d}x}(x+1)(x-1)-\frac{\text{d}}{\text{d}x}(x-1)(x+1)}{(x-1)^2}\\
+                                & = \frac{1}{2}\sqrt{\frac{x-1}{x+1}}\cdot \frac{x-1-(x+1)}{(x-1)^2}
+                                    = \frac{1}{2}\sqrt{\frac{x-1}{x+1}}\cdot \frac{-2}{(x-1)^2}\\
+                                & = -\frac{(x-1)^{\frac{1}{2}-2}}{\sqrt{x+1}}
+                                    =\boxed{-\frac{1}{(x+1)^\frac{1}{2}(x-1)^\frac{3}{2}}}
+                            \end{align}
+                        $$
+
+                        <li>\(f(x)=\frac{3x^2}{2x-11}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & = \frac{\frac{\text{d}}{\text{d}x}(3x^2)(2x-11)-\frac{\text{d}}{\text{d}x}(2x-11)(3x^2)}{(2x-11)^2}
+                                    = \frac{6x(2x-11)-2(3x^2)}{(2x-11)^2}\\
+                                & = \frac{12x^2-66x-6x^2}{(2x-11)^2}
+                                    = \boxed{\frac{6x^2-66x}{(2x-11)^2}}
+                            \end{align}
+                        $$
+
+                        <li>\(f(x)=7\sqrt[3]{x^4}-\frac{8}{5x}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & =\frac{\text{d}}{\text{d}x}(7x^\frac{4}{3})+\frac{\text{d}}{\text{d}x}\left(-\frac{8}{5}x^{-1}\right)
+                                    =7\cdot\frac{4}{3}x^{\frac{4}{3}-1}+\frac{8}{5}\cdot x^{-2}
+                                    =\frac{28}{3}x^\frac{1}{3}+\frac{8}{5x^2}
+                                    =\boxed{\frac{28}{3}\sqrt[3]{x}+\frac{8}{5x^2}}
+                            \end{align}
+                        $$
+
+
+                        <li>\(f(x)=(x+3)(5x-4)\)</li>
+                        $$f'(x)=\frac{\text{d}}{\text{d}x}(x+3)(5x-4)+\frac{\text{d}}{\text{d}x}(5x-4)(x+3)=5x-4+5(x+3)=5x-4+5x+15=\boxed{10x+11}$$
+
+                        <li>\(f(x)=\sqrt[5]{\frac{x^3-2}{x^3+2}}\)</li>
+                        $$
+                            \begin{align}f'(x)
+                                & = \frac{1}{5} \left(\frac{x^3-2}{x^3+2}\right)^{\frac{1}{5}-1} \cdot
+                                    \frac{\frac{\text{d}}{\text{d}x}(x^3-2)(x^3+2)-\frac{\text{d}}{\text{d}x}(x^3+2)(x^3-2)}{(x^3+2)^2}\\
+                                & = \frac{1}{5}\left(\frac{x^3-2}{x^3+2}\right)^{-\frac{4}{5}} \cdot
+                                    \frac{3x^2(x^3+2)-3x^2(x^3-2)}{(x^3+2)^2}\\&=\frac{1}{5}\left(\frac{x^3-2}{x^3+2}\right)^{-\frac{4}{5}}\cdot \frac{12x^2}{(x^3+2)^2}\\
+                                & = \frac{1}{5}\cdot \frac{12x^2(x^3-2)^\frac{-4}{5}}{(x^3+2)^{2-\frac{4}{5}}}
+                                    = \boxed{\frac{12x^2}{5(x^3-2)^\frac{4}{5}(x^3+2)^\frac{6}{5}}}
+                            \end{align}
+                        $$
+                    </ol>
+
+                    <p><strong>Derivadas de funciones trigonométricas</strong></p>
+
+                    <p>Como subtema de esta sección, veremos cómo se comportan las derivadas de las seis funciones trigonométricas directas y las inversas del seno, coseno
+                        y tangente.</p>
+                    <p>La derivada del seno y coseno serán nuestros bloques de construcción, pues el resto de funciones trigonométricas se pueden construir a partir de estas dos.</p>
+                    <p>Para el seno, se tiene
+                        $$
+                            \begin{align}\sin'(x)
+                                & = \lim_{h\to0}\frac{\sin(x+h)-\sin(x)}{h} = \lim_{h\to0}\frac{\sin(x)\cos(h)+\sin(h)\cos(x)-\sin(x)}{h}\\
+                                & = \lim_{h\to0}\frac{\sin(x)(\cos(h)-1)+\sin(h)\cos(x)}{h}=\lim_{h\to0}\frac{\sin(x)(\cos(h)-1)}{h}+\frac{\sin(h)\cos(x)}{h}\\
+                                & = \sin(x)\lim_{h\to0}\frac{(\cos(h)-1)}{h}+\cos(x)\lim_{h\to0}\frac{\sin(h)}{h}\\
+                                & = \sin(x)\cdot 0 +1\cdot\cos(x)=\cos(x)
+                            \end{align}
+                        $$
+                    </p>
+                    <p>Y para el coseno se tiene
+                        $$
+                            \begin{align}\cos'(x)
+                                & = \lim_{h\to0}\frac{\cos(x+h)-\cos(x)}{h}
+                                    = \lim_{h\to0}\frac{\cos(x)\cos(h)-\sin(h)\sin(x)-\cos(x)}{h}\\
+                                & = \lim_{h\to0}\frac{\cos(x)(\cos(h)-1)-\sin(x)\sin(h)}{h}
+                                    = \lim_{h\to0}\frac{\cos(x)(\cos(h)-1)}{h}-\frac{\sin(x)\sin(h)}{h}\\
+                                & = \cos(x)\lim_{h\to0}\frac{(\cos(h)-1)}{h}-\sin(x)\lim_{h\to0}\frac{\sin(h)}{h}\\
+                                & = \cos(x)\cdot 0 -1\cdot\sin(x) = -\sin(x)
+                            \end{align}
+                        $$
+                    </p>
+                    <p>Por lo tanto, las funciones \(\sin\) y \(\cos\) son derivables, y
+                        $$\sin'(x)=\cos(x)$$
+                        $$\cos'(x)=-\sin(x)$$</p>
+                    <p>Estudiemos el resto de las funciones trigonométricas directas. Para la tangente, recordando \(\tan(x)=\frac{\sin(x)}{\cos(x)}\), se utilizará la regla del cociente.
+                        $$\begin{align}\tan'(x)&=\frac{\frac{\text{d}}{\text{d}x}(\sin(x))(\cos(x))-\frac{\text{d}}{\text{d}x}(\cos(x))(\sin(x))}{\cos^2(x)}=\frac{\cos^2(x)+\sin^2(x)}{\cos^2(x)}\\&=\frac{1}{\cos^2(x)}=\sec^2(x)\end{align}$$</p>
+                    <p>Para la secante, la cosecante y la cotangente se recordará que \(\sec(x)=\frac{1}{\cos(x)}\), \(\csc(x)=\frac{1}{\sin(x)}\) y (\cot(x)=\frac{1}{\tan(x)}\), y se derivarán mediante el lema de la regla del cociente.
+                        $$\begin{align}\sec'(x)&=\frac{-\frac{\text{d}}{\text{d}x}(\cos(x))}{\cos^2(x)}=\frac{\sin(x)}{\cos^2(x)}\\&=\frac{\sin(x)}{\cos(x)}\frac{1}{\cos(x)}=\sec(x)\tan(x)\end{align}$$
+                        $$\begin{align}\csc'(x)&=\frac{-\frac{\text{d}}{\text{d}x}(\sin(x))}{\sin^2(x)}=-\frac{\cos(x)}{\sin^2(x)}\\&=-\frac{\cos(x)}{\sin(x)}\frac{1}{\sin(x)}=-\csc(x)\cot(x)\end{align}$$
+                        $$\begin{align}\cot'(x)&=\frac{-\frac{\text{d}}{\text{d}x}(\tan(x))}{\tan^2(x)}=-\frac{\sec^2(x)}{\tan^2(x)}\\&=-\frac{1}{\cos^2(x)}\frac{cos^2}{\sin^2(x)}=-\csc^2(x)\end{align}$$</p>
+                    <p>Uniendo estos resultados en un teorema,</p>
+                    <p><strong>Teorema.</strong> Las funciones \(\sin\), \(\cos\), \(\tan\), \(\cot\), \(\sec\) y \(\csc\) son derivables y
+                        $$\sin'(x)=\cos(x)$$
+                        $$\cos'(x)=-\sin(x)$$
+                        $$\tan'(x)=\sec^2(x)$$
+                        $$\cot'(x)=-\csc^2(x)$$
+                        $$\sec'(x)=\sec(x)\tan(x)$$
+                        $$\csc'(x)=-\csc(x)\cot(x)$$</p>
+                    <p>Nótese que hay una agradable simetría entre cada función y su "co-función", pues en todos los casos se agrega un signo menos y se reemplazan las
+                        funciones involucradas por sus "co-funciones" respectivas.</p>
+                    <p>Finalmente, derivaremos las funciones inversas del seno, el coseno y la tangente. Para ello, es necesario conocer los valores de \(\cos(\arcsin(x))\),
+                        \(\sin(\arccos(x))\) y \(\cos(\arctan(x))\). Construyendo un triángulo para cada caso se concluye que \(\cos(\arcsin(x))=\sqrt{1-x^2}\),
+                        \(\sin(\arccos(x))=\sqrt{1-x^2}\) y \(\cos(\arctan(x))=\frac{1}{\sqrt{x^2+1}}\).</p>
+
+                    <img src="img/derivadas3.png">
+
+                    <p>Por el teorema de la inversa se tiene que
+                        $$\begin{align}\arcsin'(x)&=\frac{1}{\sin'(\arcsin(x))}=\frac{1}{\cos(\arcsin(x))}\\&=\frac{1}{\sqrt{1-x^2}}\end{align}$$
+                        $$\begin{align}\arccos'(x)&=\frac{1}{\cos'(\arccos(x))}=\frac{1}{-\sin(\arccos(x))}\\&=-\frac{1}{\sqrt{1-x^2}}\end{align}$$
+                        $$\begin{align}\arctan'(x)&=\frac{1}{\tan'(\arctan(x))}=\frac{1}{\sec^2(\arctan(x))}\\&=-\cos^2(\arctan(x))=\left(\frac{1}{\sqrt{x^2+1}}\right)^2=\frac{1}{x^2+1}\end{align}$$</p>
+                
+                    <p>Para obtener un último teorema:
+                        <strong>Teorema.</strong> Las funciones \(\arcsin\), \(\arccos\) y \(\arctan\) son derivables y
+                        $$\arcsin'(x)=\frac{1}{\sqrt{1-x^2}}$$
+                        $$\arccos'(x)=-\frac{1}{\sqrt{1-x^2}}$$
+                        $$\arctan'(x)=\frac{1}{x^2+1}$$</p>
+                
                 </section>
 
             </div>

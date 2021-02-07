@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+
+<head>
+    <title>Interpretación de la derivada</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Contenido -->
+                <section>
+                    <header class="main">
+                        <h1>Interpretación de la derivada</h1>
+                    </header>
+
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#teoremas_derivacion">Máximos y mínimos, parte 1</a>
+
+                    <hr class="major"/>
+
+                    <h2 id="introduccion">Introducción</h2>
+
+                    <p>Hablaremos primero en términos informales, sin dar definiciones explícitas (no hay que preocuparse, las daremos tras la discusión informal).</p>
+
+                    <div class="row">
+                        <div class="col-4"><img src="img/interpretacion_derivada1.png"></div>
+                        <div class="col-8">
+                            <p>Obsérvese la primera gráfica que se muestra. Esta es la gráfica de una función cúbica impar con dos raíces.  La función en sí misma carece
+                                de valores máximos y mínimos (que procederemos a llamar máximos y mínimos absolutos), pues los valores de la función se hacen arbitrariamente
+                                grandes positivos y grandes negativos a cada lado de la gráfica. No obstante, en la gráfica se pueden observar unos "montes", dentro de
+                                los cuales sí se pueden evidenciar un valor máximo y un mínimo (que procederemos a llamar máximos y mínimos locales). Obsérvese que si se
+                                restringiera el dominio de la función a un intervalo cerrado \([a,b]\), la función sí alcanzaría un valor máximo y un valor mínimo, pues es
+                                continua en todo su dominio (teorema fuerte 3). La función es creciente hasta el primer máximo local y desde el segundo máximo local, y es
+                                decreciente entre ellos.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Nótese además que que la gráfica "abre hacia abajo" para valores negativos del dominio, y "abre hacia arriba" para valores positivos. A la
+                                dirección en que abre la gráfica le llamamos concavidad. El punto \((0,0)\) es el punto donde se realiza la transición entre ambas aperturas.
+                                A este tipo de puntos se les denomina punto de inflexión.</p>
+                            <p>La otra gráfica que se muestra es la de una función racional par con dos asíntotas verticales simétricas y una asíntota horizontal: el eje \(X\).
+                                La función tiene un máximo local en \(x=0\), no tiene máximo absoluto y no tiene mínimos. La función es creciente para valores negativos
+                                del dominio y es decreciente para valores positivos. Entre las asíntotas se observa que la función es cóncava abajo, y fuera de ellas es cóncava
+                                arriba. Como la función no está definida en los cambios de concavidad, tampoco tiene puntos de inflexión.</p>
+                        </div>
+                        <div class="col-4"><img src="img/interpretacion_derivada1.png"></div>
+                    </div>
+
+                    <p>Este análisis informal podrá parecer sin sentido, pero motiva muchas de las definiciones que seguirán en las secciones subsecuentes.</p>
+
+                    <hr class="major">
+
+                    <h2 id="max_y_min_1">Máximos y mínimos, parte 1</h2>
+
+                    <p>Intuituvamente, se puede ver que una función alcanza un valor máximo o mínimo local cuando la tangente a la gráfica en ese punto es horixontal, i.e.
+                        la derivada es cero (ojo: esta condición no es suficiente). A estos puntos con derivada cero les llamaremos puntos críticos, y serán candidatos a
+                        máximos y mínimos de una función.</p>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Durante la búsqueda de máximos y mínimos nos debemos asegurar mediante diversos criterios que los puntos críticos son máximos o mínimos.
+                                Obsérvese que al tener un máximo local, la tangente a la gráfica pasa de tener pendiente positiva a tener pendiente negativa, y lo contrario
+                                ocurre al tratarse de un punto mínimo. A este criterio le llamaremos criterio de la primera derivada.</p>
+                            <p>De esto se desprende que si el cambio en la derivada en un punto crítico es positivo (la derivada es creciente) el punto es mínimo local, y
+                                si el cambio es negativo (la derivada es decreciente) el punto es máximo local. De ahí que el otro criterio consiste en analizar el signo de
+                                la segunda derivada para determinar la naturaleza del punto. A este criterio le llamaremos criterio de la segunda derivada.</p>
+                        </div>
+                        <div class="col-4"><img src="img/interpretacion_derivada2.png"></div>
+                    </div>
+
+                    <p>Estos dos criterios nos servirán para dar candidatos, mas no para determinar indudablemente la naturaleza del punto. Procederemos a formalizar
+                        todo lo discutido.</p>
+
+                    <p><strong>Definición.</strong> Sea \(f\) una función y \(A\subseteq \text{Dom}(f)\). Un punto \(x\in A\) se dice máximo (mínimo) absoluto de \(f\)
+                        sobre \(A\) si \(f(x)\) es mayor o igual (menor o igual) que \(f(y)\) para cualquier \(y\in A\). El número \(f(x)\) recibe el nombre de valor máximo
+                        (mínimo) absoluto. A los máximos y mínimos absolutos en conjunto se les llama extremos absolutos.</p>
+                
+                    <p><strong>Teorema.</strong>Sea \(f\) una función definida sobre \((a,b)\). Si \(x\) es un extremo absoluto de \(f\) en \((a,b)\) y \(f\) es derivable en
+                        \(x\), \(f'(x)=0\).</p>
+                    <p>
+                        <strong>Demostración.</strong> Supóngase que \(x\) es máximo absoluto. Para \(h\in\mathbb{R}\), si \(x+h\in(a,b)\) se tiene que
+                        $$f(x)\geq f(x+h)$$
+                        De donde
+                        $$f(x+h)-f(x)\leq 0$$
+                        Si \(h &gt; 0\),
+                        $$\lim_{h\to 0^+}\frac{f(x+h)-f(x)}{h}\leq 0$$
+                        Si \(h &lt; 0\),
+                        $$\lim_{h\to 0^-}\frac{f(x+h)-f(x)}{h}\geq 0$$
+                        Como \(f\) es derivable en \(x\), los límites laterales deben coincidir. Así, \(f'(x)\geq 0\) y \(f'(x)leq 0\), de donde \(f'(x)=0\).  \(\blacksquare\)
+                    </p>
+                    <p><strong>Definición.</strong> Sea \(f\) una función y \(A\subseteq \text{Dom}(f)\). Un punto \(x\in A\) se dice máximo (mínimo) local de \(f\) sobre
+                        \(A\) si  existe alguna \(\delta &gt; 0\) tal que \(x\) es máximo (mínimo) absoluto de \(f\) sobre \(A\cap (x-\delta,x+\delta)\). El número \(f(x)\)
+                        recibe el nombre de valor máximo (mínimo) local. A los máximos y mínimos locales en conjunto se les llama extremos locales.</p>
+                    <p><strong>Teorema.</strong> Sea \(f\) una función definida sobre \((a,b)\). Si \(x\) es un extremo local de \(f\) en \((a,b)\) y \(f\) es derivable en
+                        \(x\), \(f'(x)=0\).</p>
+                    <p><strong>Demostración.</strong> Se sigue del teorema anterior.  \(\blacksquare\)</p>
+                    <p><strong>Definición.</strong> Se les llama puntos críticos de \(f\) a los valores \(x\in\text{Dom}(f)\) tales que \(f'(x)=0\).</p>
+                    <p>
+                        El teorema fuerte 3 nos asegura la existencia de ambos valores extremos absolutos para funciones continuas en intervalos cerrados. Para hallar el valor
+                        máximo o mínimo de \(f\) en \([a,b]\) se deben considerar entonces tres clases de puntos:
+                        <ol>
+                            <li>Los puntos críticos de \(f\) en \([a,b]\).</li>
+                            <li>Los extremos \(a\) y \(b\).</li>
+                            <li>Los puntos \(x\in [a,b]\) tales que \(f\) no es derivable en \(x\).</li>
+                        </ol>
+                    </p>
+                    <p><strong>Ejemplo.</strong> Hallar los máximos y mínimos locales de \(f\) definida por \(f(x)=x^3-x\) sobre \([-1,2]\).</p>
+                    <p>
+                        <strong>Solución.</strong> Obtendremos los candidatos.
+                        $$f'(x)=3x^2-1$$
+                        $$f'(x)=0\implies 3x^2-1=0\implies x=\pm\frac{1}{\sqrt{3}}$$
+                        Como \(\pm\frac{1}{\sqrt{3}}\in [-1,2]\), ambos puntos son candidatos. La función es derivable en todo el intervalo, por lo que solamente habrá que
+                        considerar los extremos \(-1\) y \(2\) además de los puntos críticos. Así,
+                        $$f(\tfrac{1}{\sqrt{3}})=-\frac{2}{3}\cdot\frac{1}{\sqrt{3}}$$
+                        $$f(-\tfrac{1}{\sqrt{3}})=\frac{2}{3}\cdot\frac{1}{\sqrt{3}}$$
+                        $$f(-1)=0$$
+                        $$f(2)=6$$
+                        Por lo tanto, el punto mínimo absoluto es \(\tfrac{1}{\sqrt{3}}\) y el punto máximo absoluto es \(2\).
+                    </p>
+
+                    <hr class="major">
+
+                    <h2 id="teoremas_notables">Teoremas notables de derivadas</h2>
+
+                    <p>En esta sección solamente se enunciarán y demostrarán unos cuantos de teoremas de derivadas de gran importancia, algunos relacionados a la sección
+                        anterior pero demasiado importantes como para dejar opacarse en ella.</p>
+
+                    <h4>Teorema de Rolle.</h4> Si \(f\) es continua en \([a,b]\), diferenciable en \((a,b)\) y \(f(a)=f(b)\), entonces existe \(x\in(a,b)\) tal que
+                        \(f'(x)=0\).<br>
+
+                    <p>
+                        <strong>Demostración.</strong> De la continuidad en \([a,b]\) se tiene que la función tiene un valor mínimo y un valor máximo en \([a,b]\)
+                        (teorema fuerte 3). Si el valor máximo o mínimo \(x\) se alcanza en \((a,b)\), por el último teorema de la sección anterior se sigue que \(f'(x)=0\).
+                        Si el máximo y mínimo se alcanzan en los extremos, como \(f(a)=f(b)\), se tiene que el máximo y el mínimo coinciden (sean \(\alpha\) y \(\beta\)
+                        el máximo y el mínimo, respectivamente). Como \(\beta\leq f(x)\leq \alpha\) para toda \(x\in [a,b]\), se tiene que \(f(x)=\alpha=\beta\) para toda
+                        \(x\in [a,b]\). Eso significa que \(f\) es constante en \([a,b]\) y \(f'(x)=0\) para toda \(x\in (a,b)\).
+                    </p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>El teorema siguiente es el teorema del valor medio. La interpretación geométrica del teorema del valor medio es muy bella: alguna de las
+                                rectas tangentes a la gráfica de una función continua en \([a,b]\) debe tener la misma pendiente que la recta que une a \((a,f(a))\) y
+                                \((b,f(b))\). Esto quiere decir que alguna de las tangentes a la gráfica es paralela a la recta que pasa por sus extremos.</p>
+                        </div>
+                        <div class="col-4"><img src="img/interpretacion_derivada3.png"></div>
+                    </div>
+
+                    <h4>Teorema del valor medio (TVM).</h4> Si \(f\) es continua en \([a,b]\) y diferenciable en \((a,b)\) entonces existe \(x\in(a,b)\) tal que
+                    $$f'(x)=\frac{f(b)-f(a)}{b-a}$$
+
+                    <p>
+                        <strong>Demostración.</strong> Sea \(y:\mathbb{R}\to\mathbb{R}\) definida por
+                        $$y(x)=\frac{f(b)-f(a)}{b-a}(x-a)+f(a)$$
+                        Que es la recta por \((a,f(a))\) y \((b,f(b))\). Sea \(h\) la función \(f-y\) dada por
+                        $$h(x)=f(x)-\frac{f(b)-f(a)}{b-a}(x-a)-f(a)$$
+                        Nótese que \(h(a)=h(b)=0\). Como \(f\) y \(y\) son ambas continuas en \([a,b]\) y diferenciables en \((a,b)\), \(h=f-y\) también lo es. Por el
+                        teorema de Rolle, existe \(x\in(a,b)\) tal que \(h'(x)=0\). Obteniendo \(h'(x)\),
+                        $$h'(x)=f'(x)-\frac{f(b)-f(a)}{b-a}$$
+                        De donde
+                        $$f'(x)-\frac{f(b)-f(a)}{b-a}=0$$
+                        Y
+                        $$f'(x)=\frac{f(b)-f(a)}{b-a}$$
+                        Que es lo que se quería demostrar. \(\blacksquare\)
+                    </p>
+                    <p>De estos teoremas se desprenden tres corolarios importantes:</p>
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/./index.html">Home</a></li>
+                        <li>
+                            <span class="opener">Apuntes</span>
+                            <ul>
+                                <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                                <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                                <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                                <li><a href="/apuntes/limites.html">Límites</a></li>
+                                <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                                <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Tareas</span>
+                            <ul>
+                                <li><a href="">Morales</a></li>
+                                <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                                <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Navegación</h2>
+                    </header>
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#teoremas_derivacion">Teoremas de derivación</a>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">"Por mi raza hablará el espíritu"</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
