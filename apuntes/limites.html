@@ -58,6 +58,26 @@
                     <p>Intuitivamente (e incorrectamente), para funciones que se portan bien, bastará con corroborar que \(f(c)=L\) para comprobar que los
                         valores del contradominio bailan cerca de \(L\) cuando los valores del dominio bailan cerca de \(c\).</p>
                     <p>
+
+                    <div class="row">
+                        <style>
+                            #myDIV {
+                              width: 100%;
+                              padding: 50px 0;
+                              text-align: center;
+                              background-color: lightblue;
+                              margin-top: 20px;
+                            }
+                        </style>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="myFunction()">Ejemplo</div>
+                        </div>
+                        <div id="myDIV">
+                            Esto es una prueba
+                        </div>
+                    </div>
+
+                    <p>
                         <strong>Ejemplo:</strong>
                         <ul>
                             <li>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</li>
@@ -725,6 +745,17 @@
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myDIV");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
 
 </body>
 
