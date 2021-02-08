@@ -79,9 +79,11 @@
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="button primary fit" onclick="funcionEjemplo1_2()">Ejemplo 2</div>
                         </div>
+                        <!-- Primer ejemplo -->
                         <div class="ejemplo" id="ejemplo1-1">
                             <p>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</p>
                         </div>
+                        <!-- Segundo ejemplo -->
                         <div class="ejemplo" id="ejemplo1-2">
                             <p>
                                 Calcular \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1}\). Se puede comprobar fácilmente que, al evaluar directamente,
@@ -199,43 +201,58 @@
                         </ol>
                     </p>
 
-                    <p><strong>Ejemplo.</strong> Demostrar que \(\displaystyle\lim_{x\to 2}3x+5=11\).</p>
-                    <p><em>**Trabajo previo.</em> $$ |3x+5-11| &lt; \varepsilon\iff|3x-6| &lt; \varepsilon\iff 3|x-2| &lt; \varepsilon \iff |x-2| &lt;
-                        \frac{\varepsilon}{3} $$</p>
-                    <p><strong>Demostración.</strong> Sea \(\delta = \frac{\varepsilon}{3}\) y \(|x-2| &lt; \delta\). Así,
-                        $$ |x-2| &lt; \frac{\varepsilon}{3} \implies |3x-6| &lt; \varepsilon \implies |3x+5-11| &lt; \varepsilon $$
-                        Que es lo que se quería demostrar.   \(\blacksquare\)
-                    </p>
-                    <p>Habrá casos donde la demostración sea más elaborada. El truco en estos casos es acotar el valor de \(\delta\).</p>
-                    <p>Ej. Demostrar que \(\displaystyle\lim_{x\to3}x^2-9\).</p>
-                    <p><em>** Trabajo previo</em>
-                        $$ |x^2-9 &lt; \varepsilon\iff |x+3|\,|x-3| &lt; \varepsilon\iff |x-3| &lt; \frac{\varepsilon}{|x+3|} $$
-                        No obstante, no se puede hacer \(\delta = \frac{\varepsilon}{|x+3|}\), pues depende del valor que se tome de \(x\).
-                        Para arreglar este detalle, supóngase que \(\delta\leq 1\) (pues si la \(\delta\) necesaria fuera mayor que 1, esta delta menor o igual
-                        que uno también funcionaría). Como en la demostración se supondrá que \(|x-3| &lt; \delta\), se tiene que \(|x-3| &lt; 1\) y
-                        $$ 
-                            \begin{align}
-                                & |x-3| &lt; 1 \iff -1 &lt; x-3 &lt; 1 \iff 2 &lt; x &lt; 4 \iff 5 &lt; x+3 &lt; 7 \\
-                                & \iff |5| &lt; |x+3| &lt; |7| \iff \frac{1}{5} &gt; \frac{1}{|x+3|} &gt; \frac{1}{7} \iff \frac{\varepsilon}{7} &lt;
-                                    \frac{\varepsilon}{|x+3|} &lt; \frac{\varepsilon}{5}
-                            \end{align}
-                        $$
-                        Por transitividad, como \(|x-3| &lt; \frac{\varepsilon}{|x+3|}\) se tiene \(|x-3| &lt; \frac{\varepsilon}{5}\).
-                    </p>
-                    <p>
-                        <strong>Demostración.</strong> Sea \(\delta = \min\{\frac{\varepsilon}{7},1\}\), y sea \(|x-3| &lt; \delta\). Así, \(0 &lt; |x-3| 
-                        &lt; \delta\) implica que \(|x-3| &lt; \frac{\varepsilon}{7}\) y \(|x-3| &lt; 1\). De esto último se tiene que
-                        $$
-                            \begin{align}
-                                & |x-3| &lt; 1\iff -1 &lt; x-3 &lt; 1 \iff 2 &lt; x &lt; 4 \iff 5 &lt; x+3 &lt; 7 \\
-                                & \iff |5| &lt; |x+3| &lt; |7| \iff \frac{1}{5} &gt; \frac{1}{|x+3|} &gt; \frac{1}{7} \iff \frac{\varepsilon}{7} &lt; 
-                                    \frac{\varepsilon}{|x+3|} &lt; \frac{\varepsilon}{5}
-                            \end{align}
-                        $$
-                        Y como \(|x-3| &lt; \frac{\varepsilon}{7}\), por transitividad se sigue que
-                        $$ |x-3| &lt; \frac{\varepsilon}{|x+3|}\implies |x-3|\,|x+3| &lt; \varepsilon\implies |x^2-9| &lt; \varepsilon $$
-                        Que es lo que se quería probar.  \(\blacksquare\)
-                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo3_1()">Ejemplo 1</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo3_2()">Ejemplo 2</div>
+                        </div>
+                        <!-- Primer ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-1">
+                            <p>Demostrar que \(\displaystyle\lim_{x\to 2}3x+5=11\).</p>
+                            <p><em>**Trabajo previo.</em> $$ |3x+5-11| &lt; \varepsilon\iff|3x-6| &lt; \varepsilon\iff 3|x-2| &lt; \varepsilon \iff |x-2| &lt;
+                                \frac{\varepsilon}{3} $$</p>
+                            <p><strong>Demostración.</strong> Sea \(\delta = \frac{\varepsilon}{3}\) y \(|x-2| &lt; \delta\). Así,
+                                $$ |x-2| &lt; \frac{\varepsilon}{3} \implies |3x-6| &lt; \varepsilon \implies |3x+5-11| &lt; \varepsilon $$
+                                Que es lo que se quería demostrar.   \(\blacksquare\)
+                            </p>
+                            <p>Habrá casos donde la demostración sea más elaborada. El truco en estos casos es acotar el valor de \(\delta\).</p>
+                        </div>
+                        <!-- Segundo ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-2">
+                            <p>Demostrar que \(\displaystyle\lim_{x\to3}x^2-9\).</p>
+                            <p><em>** Trabajo previo</em>
+                                $$ |x^2-9 &lt; \varepsilon\iff |x+3|\,|x-3| &lt; \varepsilon\iff |x-3| &lt; \frac{\varepsilon}{|x+3|} $$
+                                No obstante, no se puede hacer \(\delta = \frac{\varepsilon}{|x+3|}\), pues depende del valor que se tome de \(x\).
+                                Para arreglar este detalle, supóngase que \(\delta\leq 1\) (pues si la \(\delta\) necesaria fuera mayor que 1, esta delta menor o igual
+                                que uno también funcionaría). Como en la demostración se supondrá que \(|x-3| &lt; \delta\), se tiene que \(|x-3| &lt; 1\) y
+                                $$ 
+                                    \begin{align}
+                                        & |x-3| &lt; 1 \iff -1 &lt; x-3 &lt; 1 \iff 2 &lt; x &lt; 4 \iff 5 &lt; x+3 &lt; 7 \\
+                                        & \iff |5| &lt; |x+3| &lt; |7| \iff \frac{1}{5} &gt; \frac{1}{|x+3|} &gt; \frac{1}{7} \iff \frac{\varepsilon}{7} &lt;
+                                            \frac{\varepsilon}{|x+3|} &lt; \frac{\varepsilon}{5}
+                                    \end{align}
+                                $$
+                                Por transitividad, como \(|x-3| &lt; \frac{\varepsilon}{|x+3|}\) se tiene \(|x-3| &lt; \frac{\varepsilon}{5}\).
+                            </p>
+                            <p>
+                                <strong>Demostración.</strong> Sea \(\delta = \min\{\frac{\varepsilon}{7},1\}\), y sea \(|x-3| &lt; \delta\). Así, \(0 &lt; |x-3| 
+                                &lt; \delta\) implica que \(|x-3| &lt; \frac{\varepsilon}{7}\) y \(|x-3| &lt; 1\). De esto último se tiene que
+                                $$
+                                    \begin{align}
+                                        & |x-3| &lt; 1\iff -1 &lt; x-3 &lt; 1 \iff 2 &lt; x &lt; 4 \iff 5 &lt; x+3 &lt; 7 \\
+                                        & \iff |5| &lt; |x+3| &lt; |7| \iff \frac{1}{5} &gt; \frac{1}{|x+3|} &gt; \frac{1}{7} \iff \frac{\varepsilon}{7} &lt; 
+                                            \frac{\varepsilon}{|x+3|} &lt; \frac{\varepsilon}{5}
+                                    \end{align}
+                                $$
+                                Y como \(|x-3| &lt; \frac{\varepsilon}{7}\), por transitividad se sigue que
+                                $$ |x-3| &lt; \frac{\varepsilon}{|x+3|}\implies |x-3|\,|x+3| &lt; \varepsilon\implies |x^2-9| &lt; \varepsilon $$
+                                Que es lo que se quería probar.  \(\blacksquare\)
+                            </p>
+                        </div>
+                    </div>
+                    
                     <p>Veamos algunas demostraciones más</p>
                     <p><strong>Ejemplo.</strong></p>
                     <!-- Primer ejemplo -->
@@ -800,6 +817,24 @@
         };
         function funcionEjemplo2_2() {
           var x = document.getElementById("ejemplo2-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+    </script>
+    <script>
+        function funcionEjemplo3_1() {
+          var x = document.getElementById("ejemplo3-1");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo3_2() {
+          var x = document.getElementById("ejemplo3-2");
           if (x.style.display === "block") {
             x.style.display = "none";
           } else {
