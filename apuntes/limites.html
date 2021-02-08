@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -61,19 +64,18 @@
 
                     <div class="row">
                         <style>
-                            #myDIV {
+                            #ejemplo1 {
                               width: 100%;
                               padding: 50px 0;
-                              text-align: center;
                               background-color: lightblue;
                               margin-top: 20px;
                               display: none;
                             }
                         </style>
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="button primary fit" onclick="myFunction()">Ejemplo</div>
+                            <div class="button primary fit" onclick="myFunction()">Ejemplo con JS</div>
                         </div>
-                        <div id="myDIV">
+                        <div id="ejemplo1">
                             <p>
                                 <strong>Ejemplo:</strong>
                                 <ul>
@@ -99,6 +101,11 @@
                                 Continuidad).
                             </p>
                         </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit ejemplo1_ajax">Ejemplo con AJAX</div>
+                        </div>
+                        <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
                     </div>
 
                     <hr class="major"/>
@@ -747,13 +754,21 @@
 
     <script>
         function myFunction() {
-          var x = document.getElementById("myDIV");
+          var x = document.getElementById("ejemplo1");
           if (x.style.display === "block") {
             x.style.display = "none";
           } else {
             x.style.display = "block";
           }
         }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("#ejemplo1_ajax").click(function(){
+                $("#div1").load("limites/prueba.txt");
+            });
+        });
     </script>
 
 </body>

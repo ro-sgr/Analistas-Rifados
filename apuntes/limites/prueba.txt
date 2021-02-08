@@ -1,0 +1,1 @@
+\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)
