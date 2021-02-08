@@ -489,9 +489,26 @@
                         \(n,m\in\mathbb{N}\) cumple con \(\displaystyle\lim_{x\to a}f(x)=f(a)\) siempre que \(b_0+b_1 a+...+b_m a^m\not = 0\).</p>
 
                     <p>En la tarea número 2 se demuestra que la raíz cuadrada cumple con esta misma propiedad. </p>
-                    <p>Procederemos a calcular múltiples límites de funciones racionales y raíces.
-                        <ol>
-                            <!-- Uno -->
+                    <p>Procederemos a calcular múltiples límites de funciones racionales y raíces.</p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_1()">Ejemplo 1</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_2()">Ejemplo 2</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_3()">Ejemplo 3</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_4()">Ejemplo 4</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_5()">Ejemplo 5</div>
+                        </div>
+                        <!-- Primer ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-1">
                             <li>\(\displaystyle\lim_{x\to 0}\frac{1-\sqrt{1-x^2}}{x^2}\)</li>
                             Nótese que evaluar directamente en cero arroja una expresión de la forma \(\frac{0}{0}\).
                             $$
@@ -502,14 +519,16 @@
                                         = \boxed{\frac{1}{2}}
                                 \end{align}
                             $$
-
-                            <!-- Dos -->
-                            <li>\(\displaystyle\lim_{x\to 2}\frac{x^2-8}{x-2}\)</li>
+                        </div>
+                        <!-- Segundo ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-2">
+                            <p>\(\displaystyle\lim_{x\to 2}\frac{x^2-8}{x-2}\)</p>
                             Que se indetermina en 2.
                             $$ \lim_{x\to2}\frac{x^2-8}{x-2} = \lim_{x\to2}\frac{(x-2)(x^2+2x+4)}{x-2} = \lim_{x\to2}x^2+2x+4 = \boxed{12} $$
-
-                            <!-- Tres -->
-                            <li>\(\displaystyle\lim_{x\to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}\)</li>
+                        </div>
+                        <!-- Tercer ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-3">
+                            <p>\(\displaystyle\lim_{x\to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}\)</p>
                             Se indetermina en cero.
                             $$
                                 \begin{align}
@@ -518,18 +537,24 @@
                                     & = \lim_{h\to0}\frac{1}{\sqrt{a+h}+\sqrt{a}} = \boxed{\frac{1}{2\sqrt{a}}}
                                 \end{align}
                             $$
-
-                            <!-- Cuatro -->
-                            <li>\(\displaystyle\lim_{x\to y}\frac{x^n-y^n}{x-y}\)</li>
+                        </div>
+                        <!-- Cuarto ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-4">
+                            <p>\(\displaystyle\lim_{x\to y}\frac{x^n-y^n}{x-y}\)</p>
                             Se indetermina en \(y\).
                             $$ \lim_{x\to y}\frac{(x-y)\sum_{i=0}^{n-1}x^{n-1-i}y^i}{x-y} = \lim_{x\to y}\sum_{i=0}^{n-1}x^{n-1-i}y^i = \sum_{i=0}^{n-1}y^{n-1}
                                 = \boxed{ny^{n-1}} $$
-
-                            <!-- Cinco -->
-                            <li>\(\displaystyle\lim_{y\to x}\frac{x^n-y^n}{x-y}\)</li>
+                        </div>
+                        <!-- Quinto ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-5">
+                            <p>\(\displaystyle\lim_{y\to x}\frac{x^n-y^n}{x-y}\)</p>
                             Se indetermina en \(x\). Por analogía,
                             $$ \lim_{y\to x}\frac{x^n-y^n}{x-y} = \boxed{nx^{n-1}} $$
+                        </div>
+                    </div>
 
+                    <p>
+                        <ol>
                             <!-- Seis -->
                             <li>\(\displaystyle\lim_{x\to 3}\frac{x^2-9}{x-3}\)</li>
                             $$
@@ -874,6 +899,48 @@
         };
         function funcionEjemplo3_5() {
           var x = document.getElementById("ejemplo3-5");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+    </script>
+    <script>
+        function funcionEjemplo4_1() {
+          var x = document.getElementById("ejemplo4-1");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_2() {
+          var x = document.getElementById("ejemplo4-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_3() {
+          var x = document.getElementById("ejemplo4-3");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_4() {
+          var x = document.getElementById("ejemplo4-4");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_5() {
+          var x = document.getElementById("ejemplo4-5");
           if (x.style.display === "block") {
             x.style.display = "none";
           } else {
