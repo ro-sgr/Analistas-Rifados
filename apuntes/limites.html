@@ -95,11 +95,18 @@
                         $$ \lim_{x\to a}f(x) = L \iff \forall \varepsilon &gt; 0 \, \exists \delta &gt; 0:\; 0 &lt; |x-a| &lt; \delta \implies |f(x)-L| &lt;
                         \varepsilon $$
                     </p>
-                    <p>Esta definición retoma la idea de "acercamiento" a \(a\) sin la necesidad de evaluar la función en ese punto, por lo que solamente se
-                        tratan los valores en una vecindad de \(a\).</p>
-                    <p>La definición estipula que, sin importar qué tan cerca se desea estar de \(L\) (a esta distancia se le llama \(\varepsilon\)), siempre
-                        es posible acercarse lo suficiente a \(a\) (tanto como \(\delta\)) para que los valores \(f(x)\) se acerquen a \(L\) tanto como se
-                        deseaba.</p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Esta definición retoma la idea de "acercamiento" a \(a\) sin la necesidad de evaluar la función en ese punto, por lo que solamente se
+                                tratan los valores en una vecindad de \(a\).</p>
+                            <p>La definición estipula que, sin importar qué tan cerca se desea estar de \(L\) (a esta distancia se le llama \(\varepsilon\)), siempre
+                                es posible acercarse lo suficiente a \(a\) (tanto como \(\delta\)) para que los valores \(f(x)\) se acerquen a \(L\) tanto como se
+                                deseaba.</p>
+                        </div>
+                        <div class="col-4"><img src="img/limites1.png"></div>
+                    </div>
+                    
                     <p>Recuperando los ejemplos anteriores,</p>
                     <p><strong>Ejemplo:</strong></p>
                     <ol>
@@ -511,18 +518,26 @@
                     <p>Ahora realizaremos un pequeño estudio de límites trigonométricos. Primero enunciaremos y demostraremos geométricamente un teorema
                         fundamental para los límites trigonométricos.</p>
                     <p><strong>Teorema.</strong> \(\displaystyle\lim_{\theta\to0}\frac{\sin\theta}{\theta}=1\)</p>
+                    
+                    <div class="row">
+                        <div class="col-8">
+                            <p>
+                                <strong>Demostración.</strong> Obsérvese la figura que acompaña la demostración. En la figura se ilustra la definición de
+                                \(\sin\theta\) y \(\tan\theta\) en la circunferencia unitaria. Más aún, como el radio es 1, el arco que subtiende al ángulo
+                                \(\theta\) mide \(\theta\). Suponiendo que \(0 &lt; \theta &lt; \frac{\pi}{2}\) se cumple que
+                                $$ \sin \theta &lt; \theta &lt; \tan\theta $$
+                                Notando que \(\frac{\sin\theta}{\theta}>0\) y \(\theta\) se sigue que
+                                $$ \frac{1}{\sin\theta} &gt; \frac{1}{\theta} &gt; \frac{1}{\tan\theta} $$
+                                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta}{\tan\theta} $$
+                                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta\cdot\cos\theta}{\sin\theta} $$
+                                $$ \frac{\theta}{\sin\theta} \frac{\sin\theta}{\theta} &gt; 1 \cdot \frac{\sin\theta}{\theta} &gt;
+                                    \frac{\theta\cdot\cos\theta}{\sin\theta} \frac{\sin\theta}{\theta} $$
+                                $$ \cos\theta &lt; \frac{\sin\theta}{\theta} &lt; 1 $$
+                            </p>
+                        </div>
+                        <div class="col-4"><img src="img/limites2.png"></div>
+                    </div>
                     <p>
-                        <strong>Demostración.</strong> Obsérvese la figura que acompaña la demostración. En la figura se ilustra la definición de
-                        \(\sin\theta\) y \(\tan\theta\) en la circunferencia unitaria. Más aún, como el radio es 1, el arco que subtiende al ángulo
-                        \(\theta\) mide \(\theta\). Suponiendo que \(0 &lt; \theta &lt; \frac{\pi}{2}\) se cumple que
-                        $$ \sin \theta &lt; \theta &lt; \tan\theta $$
-                        Notando que \(\frac{\sin\theta}{\theta}>0\) y \(\theta\) se sigue que
-                        $$ \frac{1}{\sin\theta} &gt; \frac{1}{\theta} &gt; \frac{1}{\tan\theta} $$
-                        $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta}{\tan\theta} $$
-                        $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta\cdot\cos\theta}{\sin\theta} $$
-                        $$ \frac{\theta}{\sin\theta} \frac{\sin\theta}{\theta} &gt; 1 \cdot \frac{\sin\theta}{\theta} &gt;
-                            \frac{\theta\cdot\cos\theta}{\sin\theta} \frac{\sin\theta}{\theta} $$
-                        $$ \cos\theta &lt; \frac{\sin\theta}{\theta} &lt; 1 $$
                         Además, como el seno es una función impar y el coseno es una función par se tiene que \(\frac{\sin\theta}{\theta} =
                         \frac{\sin(-\theta)}{-\theta}\) y \(\cos\theta=\cos(-\theta)\), la misma desigualdad se cumple para \(\theta &lt; 0\). Esto último nos
                         permite tomar el límite \(\theta\to 0\) sin necesidad de hacerlo por la derecha. Así,
