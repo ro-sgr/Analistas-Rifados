@@ -74,19 +74,20 @@
 
                     <div class="row">                        
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="button primary fit" onclick="funcionEjemplo1()">Ejemplo</div>
+                            <div class="button primary fit" onclick="funcionEjemplo1_1()">Ejemplo 1</div>
                         </div>
-                        <div class="ejemplo" id="ejemplo1">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo1_2()">Ejemplo 2</div>
+                        </div>
+                        <div class="ejemplo" id="ejemplo1-1">
+                            <p>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</p>
+                        </div>
+                        <div class="ejemplo" id="ejemplo1-2">
                             <p>
-                                <strong>Ejemplo:</strong>
-                                <ul>
-                                    <li>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</li>
-                                    <li>
-                                        Calcular \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1}\). Se puede comprobar fácilmente que, al evaluar directamente,
-                                        se llega a una expresión de la forma \(\frac{0}{0}\). Para determinar el valor, se factoriza para obtener
-                                        $$ \lim_{x\to1} \frac{3x^2-3x}{x-1} = \lim_{x\to1}\frac{3x(x-1)}{x-1} = \lim_{x\to1}3x = 3(1) = \boxed{3} $$
-                                    </li>
-                                </ul>
+                                Calcular \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1}\). Se puede comprobar fácilmente que, al evaluar directamente,
+                                se llega a una expresión de la forma \(\frac{0}{0}\). Para determinar el valor, se factoriza para obtener
+                                $$ \lim_{x\to1} \frac{3x^2-3x}{x-1} = \lim_{x\to1}\frac{3x(x-1)}{x-1} = \lim_{x\to1}3x = 3(1) = \boxed{3} $$
+                                
                                 Este acercamiento es muy útil en la mayoría de los contextos, mas es insuficiente para nuestros propósitos, pues se pierde la noción
                                 de cercanía en un punto. Por ejemplo, considérese la función \(f\) definida por
                                 $$
@@ -767,8 +768,20 @@
     <script src="/assets/js/main.js"></script>
 
     <script>
-        function funcionEjemplo1() {
-          var x = document.getElementById("ejemplo1");
+        function funcionEjemplo1_1() {
+          var x = document.getElementById("ejemplo1-1");
+          var y = document.getElementById("ejemplo1-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+              if (y.style.display === "block") {
+                x.style.display = "none";
+              }
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo1_2() {
+          var x = document.getElementById("ejemplo1-2");
           if (x.style.display === "block") {
             x.style.display = "none";
           } else {
