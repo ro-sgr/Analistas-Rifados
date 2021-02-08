@@ -13,6 +13,19 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .ejemplo {
+          width: 110%;
+          padding: 50px 0;
+          background-color: lightblue;
+          margin-top: 20px;
+          display: none;
+        }
+        .ejemplo p {
+          width: 95%;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -59,23 +72,11 @@
                         valores del contradominio bailan cerca de \(L\) cuando los valores del dominio bailan cerca de \(c\).</p>
                     <p>
 
-                    <div class="row">
-                        <style>
-                            #ejemplo1 {
-                              width: 110%;
-                              padding: 50px 0;
-                              background-color: lightblue;
-                              margin-top: 20px;
-                              display: none;
-                            }
-                            #ejemplo1 p {
-                              width: 95%;
-                            }
-                        </style>
+                    <div class="row">                        
                         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="button primary fit" onclick="myFunction()">Ejemplo</div>
+                            <div class="button primary fit" onclick="funcionEjemplo1()">Ejemplo</div>
                         </div>
-                        <div id="ejemplo1">
+                        <div class="ejemplo" id="ejemplo1">
                             <p>
                                 <strong>Ejemplo:</strong>
                                 <ul>
@@ -129,22 +130,43 @@
                     </div>
                     
                     <p>Recuperando los ejemplos anteriores,</p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo1()">Ejemplo 1</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo2()">Ejemplo 2</div>
+                        </div>
+                        <!-- Primer ejemplo -->
+                        <div class="ejemplo" id="ejemplo2-1">
+                            <p>Demostrar que \(\displaystyle\lim_{x\to 2}7x-4=10\)</p>
+
+                            <p><strong>P.D.</strong> \( \forall\varepsilon &gt; 0\,\exists\delta &gt; 0:\; 0 &lt; |x-2| &lt; \delta\implies |7x-4-10| &lt;
+                                \varepsilon \)</p>
+                            
+                            <p><em>**Trabajo previo.</em></p>
+
+                            $$ |7x-4-10| &lt; \varepsilon \iff |7x-14| &lt; \varepsilon \iff 7|x-2| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{7} $$
+
+                            <strong>Demostración.</strong>  Para realizar la demostración se debe exhibir un valor de \(\delta\) (o bien constante o bien
+                            dependiente de \(\varepsilon\)) tal que la implicación se cumpla. Los asteriscos indicarán trabajo previo que no corresponde
+                            a la demostración per se, pero bien pueden ser la parte más importante de ella, pues dan pauta para proponer un valor de \(\delta\).<br>
+                            Sea \(\delta=\frac{\varepsilon}{7}\), y sea \(|x-2| &lt; \delta\), de donde
+
+                            $$ |x-2| &lt; \frac{\varepsilon}{7} \implies 7|x-2| &lt; \varepsilon \implies |7x-14| &lt; \varepsilon \implies |7x-4-10| &lt;
+                            \varepsilon $$
+
+                            <p>Que es lo que se quería demostrar. Obsérvese que hay que ser especialmente cuidadoso con los bicondicionales en el trabajo previo.
+                            \(\blacksquare\)</p>
+                        </div>
+                        <div class="ejemplo" id="ejemplo2-2">
+                            
+                        </div>
+                    </div>
+
                     <p><strong>Ejemplo:</strong></p>
                     <ol>
-                        <!-- Primer ejemplo -->
-                        <li>Demostrar que \(\displaystyle\lim_{x\to 2}7x-4=10\)</li>
-                        <strong>P.D.</strong> \( \forall\varepsilon &gt; 0\,\exists\delta &gt; 0:\; 0 &lt; |x-2| &lt; \delta\implies |7x-4-10| &lt;
-                            \varepsilon \) <br>
-                        <em>**Trabajo previo.</em>
-                        $$ |7x-4-10| &lt; \varepsilon \iff |7x-14| &lt; \varepsilon \iff 7|x-2| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{7} $$
-                        <strong>Demostración.</strong>  Para realizar la demostración se debe exhibir un valor de \(\delta\) (o bien constante o bien
-                        dependiente de \(\varepsilon\)) tal que la implicación se cumpla. Los asteriscos indicarán trabajo previo que no corresponde
-                        a la demostración per se, pero bien pueden ser la parte más importante de ella, pues dan pauta para proponer un valor de \(\delta\).<br>
-                        Sea \(\delta=\frac{\varepsilon}{7}\), y sea \(|x-2| &lt; \delta\), de donde
-                        $$ |x-2| &lt; \frac{\varepsilon}{7} \implies 7|x-2| &lt; \varepsilon \implies |7x-14| &lt; \varepsilon \implies |7x-4-10| &lt;
-                        \varepsilon $$
-                        Que es lo que se quería demostrar. Obsérvese que hay que ser especialmente cuidadoso con los bicondicionales en el trabajo previo.
-                        \(\blacksquare\)
                         <!-- Segundo ejemplo -->
                         <li>Demostrar que \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1} = 3\)</li>
                         <strong>P.D.</strong> \( \forall\varepsilon>0\,\exists\delta>0:\; 0 &lt; |x-1| &lt; \delta\implies |\frac{3x^2-3x}{x-1}-3| &lt; 
@@ -748,8 +770,18 @@
     <script src="/assets/js/main.js"></script>
 
     <script>
-        function myFunction() {
+        function funcionEjemplo1() {
           var x = document.getElementById("ejemplo1");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
+    <script>
+        function funcionEjemplo2() {
+          var x = document.getElementById("ejemplo2-1");
           if (x.style.display === "block") {
             x.style.display = "none";
           } else {
