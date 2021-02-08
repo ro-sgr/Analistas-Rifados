@@ -74,34 +74,32 @@
                             <div class="button primary fit" onclick="myFunction()">Ejemplo</div>
                         </div>
                         <div id="myDIV">
-                            Esto es una prueba
+                            <p>
+                                <strong>Ejemplo:</strong>
+                                <ul>
+                                    <li>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</li>
+                                    <li>
+                                        Calcular \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1}\). Se puede comprobar fácilmente que, al evaluar directamente,
+                                        se llega a una expresión de la forma \(\frac{0}{0}\). Para determinar el valor, se factoriza para obtener
+                                        $$ \lim_{x\to1} \frac{3x^2-3x}{x-1} = \lim_{x\to1}\frac{3x(x-1)}{x-1} = \lim_{x\to1}3x = 3(1) = \boxed{3} $$
+                                    </li>
+                                </ul>
+                                Este acercamiento es muy útil en la mayoría de los contextos, mas es insuficiente para nuestros propósitos, pues se pierde la noción
+                                de cercanía en un punto. Por ejemplo, considérese la función \(f\) definida por
+                                $$
+                                f(x) = \left\{ 
+                                        \begin{array}
+                                            x^2 & x\not = 0\\
+                                            1 & x = 0
+                                        \end{array}
+                                    \right.
+                                $$
+                                Es casi evidente que \(\displaystyle\lim_{x\to0}f(x)=0\), y no obstante \(f(0)\not =0\), por lo que este acercamiento al concepto de
+                                límite es esencialmente incorrecto (las funciones cuyos límites coinciden con su valor en un punto se estudiarán en la sección de
+                                Continuidad).
+                            </p>
                         </div>
                     </div>
-
-                    <p>
-                        <strong>Ejemplo:</strong>
-                        <ul>
-                            <li>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</li>
-                            <li>
-                                Calcular \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1}\). Se puede comprobar fácilmente que, al evaluar directamente,
-                                se llega a una expresión de la forma \(\frac{0}{0}\). Para determinar el valor, se factoriza para obtener
-                                $$ \lim_{x\to1} \frac{3x^2-3x}{x-1} = \lim_{x\to1}\frac{3x(x-1)}{x-1} = \lim_{x\to1}3x = 3(1) = \boxed{3} $$
-                            </li>
-                        </ul>
-                        Este acercamiento es muy útil en la mayoría de los contextos, mas es insuficiente para nuestros propósitos, pues se pierde la noción
-                        de cercanía en un punto. Por ejemplo, considérese la función \(f\) definida por
-                        $$
-                        f(x) = \left\{ 
-                                \begin{array}
-                                    x^2 & x\not = 0\\
-                                    1 & x = 0
-                                \end{array}
-                            \right.
-                        $$
-                        Es casi evidente que \(\displaystyle\lim_{x\to0}f(x)=0\), y no obstante \(f(0)\not =0\), por lo que este acercamiento al concepto de
-                        límite es esencialmente incorrecto (las funciones cuyos límites coinciden con su valor en un punto se estudiarán en la sección de
-                        Continuidad).
-                    </p>
 
                     <hr class="major"/>
 
