@@ -256,7 +256,7 @@
                         </div>
                         <!-- Tercer ejemplo -->
                         <div class="ejemplo" id="ejemplo3-3">
-                            <p><strong>1.</strong> Demostrar que \(\displaystyle \lim_{x\to\infty}\frac{6x+1}{2x+1}=3\)</p>
+                            <p>Demostrar que \(\displaystyle \lim_{x\to\infty}\frac{6x+1}{2x+1}=3\)</p>
                             <p>
                                 <em>**Trabajo previo.</em> Sea \(|\frac{6x+1}{2x+1}-3| &lt; \varepsilon\)
                                 $$
@@ -280,59 +280,61 @@
                                 |\frac{6x+1}{2x+1}-3| &lt; \varepsilon. \quad\blacksquare\)
                             </p>
                         </div>
+                        <!-- Cuarto ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-4">
+                            <p>Demostrar que \(\displaystyle \lim_{x\to 2}4x+1=9\)</p>
+                            <p>
+                                <em>**Trabajo previo.</em> Sea \(|(4x+1)-9| &lt; \varepsilon\)
+                                $$
+                                    \begin{align}
+                                        & \iff |4x-8| &lt; \varepsilon\\
+                                        & \iff |4(x-2)| &lt; \varepsilon\\
+                                        & \iff |4||x-2| &lt; \varepsilon\\
+                                        & \iff |x-2| &lt; \frac{\varepsilon}{4}
+                                    \end{align}
+                                $$
+                            </p>
+                            <p>
+                                <strong>Demostración.</strong> Dem. Sea \(\delta=\frac{\varepsilon}{4}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y por el trabajo
+                                previo se concluye que \(|(4x+1)-9| &lt; \varepsilon\). Así, \(\forall \varepsilon>0\; \exists\delta>0 : 0 &lt; |x-2| &lt; \delta
+                                \implies |(4x+1)-9| &lt; \varepsilon.\quad\blacksquare\)
+                            </p>
+                        </div>
+                        <!-- Quinto ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-5">
+                            <p>Demostrar que \(\displaystyle \lim_{x\to 2}x^2=4\)</p>
+                            <p>
+                                <em>**Trabajo previo.</em> Sea \(|x^2-4| &lt; \varepsilon\)
+                                $$
+                                    \begin{align}
+                                        & \iff |(x+2)(x-2)| &lt; \varepsilon\\
+                                        & \iff |x-2| &lt; \varepsilon\\
+                                        & \iff |x-2| &lt; \frac{\varepsilon}{|x+2|}
+                                    \end{align}
+                                $$
+                                Acotaremos \(\frac{1}{|x+2|}\). Supongamos que \(\delta &lt; 1\). Así,
+                                $$
+                                    \begin{align}
+                                        & \implies|x-2| &lt; 1\\
+                                        & \implies -1 &lt; x-2 &lt; 1\\
+                                        & \implies 3 &lt; x+2 &lt; 5\\
+                                        & \implies|3| &lt; |x+2| &lt; |5|\\
+                                        & \implies\frac{1}{|3|} &gt; \frac{1}{|x+2|} &gt; \frac{1}{|5|}\\
+                                        & \implies\frac{\varepsilon}{3} &gt; \frac{\varepsilon}{|x+2|} &gt; \frac{\varepsilon}{5}
+                                    \end{align}
+                                $$
+                                Por lo que \(|x^2-4| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{3} \).
+                            </p>
+                            <p>
+                                <strong>Demostración.</strong> Dem. Sea \(\delta=\min\{1,\frac{\varepsilon}{3}\}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y
+                                por el trabajo previo se concluye que \(|x^2-4| &lt; \varepsilon\). Así, \(\forall \varepsilon &gt; 0 \; \exists\delta &gt; 0 :
+                                0 &lt; |x-2| &lt; \delta\implies |x^2-4| &lt; \varepsilon.\quad\blacksquare\)
+                            </p>
+                        </div>
                     </div>
 
                     <br>
                     
-                    <p>Veamos algunas demostraciones más</p>
-                    
-                    <!-- Segundo ejemplo -->
-                    <p><strong>1.</strong> Demostrar que \(\displaystyle \lim_{x\to 2}4x+1=9\)</p>
-                    <p>
-                        <em>**Trabajo previo.</em> Sea \(|(4x+1)-9| &lt; \varepsilon\)
-                        $$
-                            \begin{align}
-                                & \iff |4x-8| &lt; \varepsilon\\
-                                & \iff |4(x-2)| &lt; \varepsilon\\
-                                & \iff |4||x-2| &lt; \varepsilon\\
-                                & \iff |x-2| &lt; \frac{\varepsilon}{4}
-                            \end{align}
-                        $$
-                    </p>
-                    <p>
-                        <strong>Demostración.</strong> Dem. Sea \(\delta=\frac{\varepsilon}{4}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y por el trabajo
-                        previo se concluye que \(|(4x+1)-9| &lt; \varepsilon\). Así, \(\forall \varepsilon>0\; \exists\delta>0 : 0 &lt; |x-2| &lt; \delta
-                        \implies |(4x+1)-9| &lt; \varepsilon.\quad\blacksquare\)
-                    </p>
-                    <!-- Tercer ejemplo -->
-                    <p>Demostrar que \(\displaystyle \lim_{x\to 2}x^2=4\)</p>
-                    <p>
-                        <em>**Trabajo previo.</em> Sea \(|x^2-4| &lt; \varepsilon\)
-                        $$
-                            \begin{align}
-                                & \iff |(x+2)(x-2)| &lt; \varepsilon\\
-                                & \iff |x-2| &lt; \varepsilon\\
-                                & \iff |x-2| &lt; \frac{\varepsilon}{|x+2|}
-                            \end{align}
-                        $$
-                        Acotaremos \(\frac{1}{|x+2|}\). Supongamos que \(\delta &lt; 1\). Así,
-                        $$
-                            \begin{align}
-                                & \implies|x-2| &lt; 1\\
-                                & \implies -1 &lt; x-2 &lt; 1\\
-                                & \implies 3 &lt; x+2 &lt; 5\\
-                                & \implies|3| &lt; |x+2| &lt; |5|\\
-                                & \implies\frac{1}{|3|} &gt; \frac{1}{|x+2|} &gt; \frac{1}{|5|}\\
-                                & \implies\frac{\varepsilon}{3} &gt; \frac{\varepsilon}{|x+2|} &gt; \frac{\varepsilon}{5}
-                            \end{align}
-                        $$
-                        Por lo que \(|x^2-4| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{3} \).
-                    </p>
-                    <p>
-                        <strong>Demostración.</strong> Dem. Sea \(\delta=\min\{1,\frac{\varepsilon}{3}\}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y
-                        por el trabajo previo se concluye que \(|x^2-4| &lt; \varepsilon\). Así, \(\forall \varepsilon &gt; 0 \; \exists\delta &gt; 0 :
-                        0 &lt; |x-2| &lt; \delta\implies |x^2-4| &lt; \varepsilon.\quad\blacksquare\)
-                    </p>
                     <p>
                         En dado caso que se desee demostrar la inexistencia de un límite en algún punto determinado, se debe demostrar que la negación
                         de la definición se cumple en ese punto, i.e.
@@ -850,6 +852,22 @@
         };
         function funcionEjemplo3_3() {
           var x = document.getElementById("ejemplo3-3");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo3_4() {
+          var x = document.getElementById("ejemplo3-4");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo3_5() {
+          var x = document.getElementById("ejemplo3-5");
           if (x.style.display === "block") {
             x.style.display = "none";
           } else {
