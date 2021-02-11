@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 29 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 29</h1>
+                </header>
+                <p>Demostrar que si \(f\) es continua en \( [a,b] \), entonces \(f\) está acotada inferiormente y alcanza su mínimo en
+                    \([a,b]\).</p>
+
+                <hr class="major"/>
+                
+                <p><strong>P.D.</strong> \(f\) está acotada inferiormente.</p>
+                <p><strong>Demostración.</strong> Sea \(f\) continua en \( [a,b] \). Ahora bien, suponga que \(f\) no está acotada
+                    inferiormente en \( [a,b] \).</p>
+
+                <p>Puesto que \(f\) es continua a la derecha de \(a\), entonces existe un \( \delta &gt; 0\) tal que \( | f(x) -
+                    f(a) | &lt; \varepsilon \) para toda \( x \in [a, a + \delta] \). De tal modo que \(f\) está acotada por \( f(a) +
+                    \varepsilon \) y \( f(a) - \varepsilon \) en dicho intervalo.</p>
+
+                <p>Ya que \(f\) es continua a la izquierda de \(b\), entonces existe un \( \delta &gt; 0\) tal que \( | f(x) -
+                    f(b) | &lt; \varepsilon \) para toda \( x \in [b - \delta, b] \). De tal modo que \(f\) está acotada por \( f(b) +
+                    \varepsilon \) y \( f(b) - \varepsilon \) en dicho intervalo.</p>
+
+                <p>Como \(f\) está acotada en los intervalos \([a, a + \delta]\) y \([b - \delta, b]\) se sigue entonces que, \(f\) está
+                    acotada inferiormente y superiormente acotada en el intervalo \([a,b]\). Lo cual, al ser \(f\) continua en \( [a,b] \) y
+                    suponer que no está acotada inferiormente en dicho intervalo, nos lleva a una contradicción. Por tanto, \(f\) debe estar
+                    acotada en dicho intervalo. \( \quad \blacksquare \)</p>
+
+                <hr class="major"/>
+                <p><strong>P.D.</strong> \(f\) alcanza su mínimo en \([a,b]\), i.e. \( \exists y \in [a,b]: f(y) &le; f(x), \quad \forall
+                    x \in [a,b] \)</p>
+                <p><strong>Demostración.</strong> Suponga a \(f\) continua en \( [a,b] \). Puesto que \(f\) es continua, entonces se
+                    sabe que el conjunto \( X = \{ f(x): x \in [a,b] \} \) está acotado. Observe que \( X \neq \varnothing \),
+                    consecuentemente, \(X\) tiene una máxima cota inferior a la que dontaremos por \(\beta\). Ya que, \(\beta &le; f(x),
+                    \forall x \in [a,b]\), basta con demostrar que \( \beta = f(y) \) para alguna \(y \in [a,b]\).</p>
+                <p>Por el contrario, suponga que \(\beta \neq f(y), \forall y \in [a,b]\). Ahora bien, denote la función \(g\) como</p>
+                $$ g(x) = \frac{1}{f(x) - \beta}, \quad x \in [a,b] $$
+
+                <p>Observe que \(g\) es continua en \([a,b]\) ya que el denominador nunca se vuelve 0.</p>
+
+                <p>Por otra parte, \( \beta \) es la máxima cota inferior de \( X \), lo cual quiere decir que</p>
+                $$ \forall \varepsilon &gt; 0, \exists x \in [a,b] \quad \text{con } f(x) - \beta &lt; \varepsilon $$
+
+                <p>Esto último, quiere decir que</p>
+                $$ \forall \varepsilon &gt; 0, \exists x \in [a,b] \quad \text{con } g(x) &gt; \frac{1}{\varepsilon} $$
+
+                <p>Sin embargo, esto último quiere decir que \(g\) no está acotada en \([a,b]\), contradiciendo el teorema previament
+                    demostrado.</p>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

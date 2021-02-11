@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 2 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 2</h1>
+                </header>
+                Demostrar por medio de la definición que:
+                
+                <p><strong>a)</strong>\(\displaystyle\lim_{n\to\infty}\left(\frac{1}{r^n}\right)=0\text{, si }r &gt; 1\text{, ¿qué se puede decir cuando }r
+                &lt; 1\text{?}\)</p>
+                
+                <p>**<em>Trabajo previo</em></p>
+                
+                <p>Sea \(|\frac{1}{r^n}| &lt; \varepsilon\). Como \(r &gt; 1\), \(r^n &gt; r &gt; 1\). Así, \(\frac{1}{r^n} &lt;
+                    \varepsilon\) y \(\frac{1}{\varepsilon} &lt; r^n\). Esto último es cierto si y solo si \(n &gt; \log_{r}
+                    (\frac{1}{\varepsilon})\)</p>
+                
+                <p><strong>Demostración.</strong> Sea \(N=\lceil\log_{r}(\frac{1}{\varepsilon})\rceil\). Si \(n &gt; N\), entonces
+                \(n &gt; \log_{r}(\frac{1}{\varepsilon})\). Del trabajo previo se sigue que para todo \(\varepsilon &gt; 0\) existe
+                \(N=\lceil\log_{r}(\frac{1}{\varepsilon})\rceil\) tal que</p>
+                $$ n  &gt; N \implies \left|\left(\frac{1}{r^n}\right)-0\right| &lt; \varepsilon\qquad\blacksquare $$
+                
+                <p><strong>b)</strong></p> \(\displaystyle\lim_{n\to\infty}\left(\frac{n+1}{n-2}\right)=1\)</p>
+                
+                <p>**<em>Trabajo previo</em></p>
+                <p>Sea \(|\frac{n+1}{n-2}-1| &lt; \varepsilon\).</p>
+                $$ \iff \left|\frac{n+1-n+2}{n-2}\right| &lt; \varepsilon $$
+                $$ \iff \left|\frac{3}{n-2}\right| &lt; \varepsilon $$
+                $$ \iff \frac{3}{n-2} &lt; \varepsilon $$
+                $$ \iff \frac{3}{\varepsilon} &lt; n-2 $$
+                $$ \iff \frac{3}{\varepsilon}+2 &lt; n $$
+                
+                <p>Dem. Sea \(N=\lceil\frac{3}{\varepsilon}+2\rceil\). Si \(n &gt; N\), entonces \(n &gt; \frac{3}{\varepsilon}+2\). Del
+                    trabajo previo se sigue que para todo \(\varepsilon &gt; 0\) existe \(N = \lceil \frac{3}{\varepsilon} +
+                    2\rceil\in\mathbb{N}\) tal que</p>
+                $$ n &gt; N \implies \left|\frac{n+1}{n-2}-1\right| &lt; \varepsilon\qquad\blacksquare$$
+                
+                <p><strong>c)</strong> \(\displaystyle\lim_{n\to\infty}\left(\frac{(-1)^{n+1}}{n}\right)=0\)</p>
+                
+                <p>**<em>Trabajo previo</em></p>
+                Sea \(|\frac{(-1)^{n+1}}{n}| &lt; \varepsilon\).
+                $$ \iff\frac{1}{n} &lt; \varepsilon $$
+                $$ \iff\frac{1}{\varepsilon} &lt; n $$
+                
+                <p><strong>Demostración.</strong> Sea \(N=\lceil\frac{1}{\varepsilon}\rceil\). Si \(n &gt; N\), entonces \(n &gt;
+                    \frac{1}{\varepsilon}\). Del trabajo previo se sigue que para todo \(\varepsilon &gt; 0\) existe
+                    \(N=\lceil\frac{1}{\varepsilon}\rceil\in\mathbb{N}\) tal que</p>
+                $$n>N\implies\left|\frac{(-1)^{n+1}}{n}\right| &lt; \varepsilon\qquad\blacksquare$$
+                
+                <p><strong>d)</strong> \(\displaystyle\lim_{n\to\infty}\left(\frac{2n}{n+1}\right)=2\)</p>
+                
+                <p>**<em>Trabajo previo</em></p>
+                <p>Sea \(|\frac{2n}{n+1}-2| &lt; \varepsilon\).</p>
+                $$ \iff\left|\frac{2n-2n-2}{n+1}\right| &lt; \varepsilon$$
+                $$ \iff\left|\frac{-2}{n+1}\right| &lt; \varepsilon$$
+                $$ \iff\frac{2}{n+1} &lt; \varepsilon$$
+                $$ \iff\frac{2}{\varepsilon} &lt; n+1$$
+                $$ \iff\frac{2}{\varepsilon}-1 &lt; n$$
+                    
+                <p><strong>Demostración.</strong> Sea \(N=\lceil\frac{2}{\varepsilon}-1\rceil\). Si \(n &gt; N\), entonces
+                    \(n &gt; \frac{2}{\varepsilon}-1\). Del trabajo previo se sigue que para todo \(\varepsilon &gt; 0\) existe
+                    \(N = \lceil\frac{2}{\varepsilon}-1 \rceil\in\mathbb{N}\) tal que</p>
+                $$ n &gt; N\implies\left|\frac{2n}{n+1} -2 \right| &lt; \varepsilon\qquad\blacksquare$$
+                    
+                <p><strong>e)</strong> \(\displaystyle\lim_{n\to\infty}\left(\frac{n}{2n+3}\right) = \text{ ?}\)</p>
+                
+                <p>**<em>Trabajo previo</em></p>
+                <p>Primero se calculará el límite para poder realizar la demostración.</p>
+                
+                $$ \begin{align}
+                    \lim_{n\to\infty} \left(\frac{n}{2n+3}\right)
+                        & = \lim_{n\to\infty} \left(\frac{\frac{n}{n}}{\frac{2n}{n} + \frac{3}{n}}\right)\\
+                        &=\lim_{n\to\infty}\left(\frac{1}{2+\frac{3}{n}}\right)\\
+                        &=\frac{1}{2+\frac{3}{\infty}}\\
+                        &=\frac{1}{2}
+                \end{align} $$
+                
+                <p>Por lo que se demostrará que \(\displaystyle\lim_{n\to\infty}\left(\frac{n}{2n+3}\right)=\frac{1}{2}\)</p>
+                
+                Sea \(|\frac{n}{2n+3}-\frac{1}{2}| &lt; \varepsilon\).
+                $$ \iff\left|\frac{n-n-\frac{3}{2}}{2n+3}\right| &lt; \varepsilon $$
+                $$ \iff\left|\frac{-\frac{3}{2}}{2n+3}\right| &lt; \varepsilon $$
+                $$ \iff\frac{3}{4n+6} &lt; \varepsilon $$
+                $$ \iff\frac{2}{\varepsilon} &lt; 4n+6 $$
+                $$ \iff\frac{1}{4}\left(\frac{2}{\varepsilon}-6\right) &lt; n $$
+                
+                <p>Dem. Sea \(N = \lceil\frac{1}{4}\left(\frac{2}{\varepsilon} - 6\right)\rceil\). Si \(n &gt; N\), entonces \(n &gt;
+                    \frac{1}{4}\left(\frac{2}{\varepsilon} - 6\right)\). Del trabajo previo se sigue que para todo \(\varepsilon>0\)
+                existe \(N=\lceil\frac{1}{4} \left(\frac{2}{\varepsilon} - 6\right) \rceil \in \mathbb{N}\) tal que </p>
+                $$ n &gt; N \implies\left|\frac{n}{2n+3} - \frac{1}{2}\right| &lt; \varepsilon\qquad\blacksquare $$
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

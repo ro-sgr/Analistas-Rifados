@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 1 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 1</h1>
+                </header>
+                Sean \(U=\{0,1,2,4,6,8,9\}\), \(A=\{0,6,2\}\), \(B=\{2,4,8\}\) y \(C=\{1,6,9\}\). Determine el resultado
+                y dibuja el diagrama de Venn para cada una de las siguientes operaciones:
+                <ol type="a">
+                    <li>\((A\cup(B\cap A)^{c})^{c}\)</li>
+                    <li>\((A-B)\cap C\)</li>
+                    <li>\((A\cup B)\cap (A\cup C)\)</li>
+                    <li>\((A\cap B)\cup (A\cap C)\)</li>
+                    <li>\(C^{c}\cap (A\cup B\cup C)\)</li>
+                </ol>
+
+                <hr class="major"/>
+
+                <h2>P1.1</h2>
+                Comenzamos calculando \(B\cap A\), es decir, el conjunto de los elementos que tienen en común \(A\)
+                y \(B\):
+                $$(B\cap A)=\{2\}$$ Luego, calculamos el complemento de este conjunto, i.e.
+                $$(B\cap A)^{c}=U-(B\cap A)=\{0,1,4,6,8,9\}$$
+                Hacemos la unión entre el conjunto anterior y \(A\):
+                $$(A\cup (B\cap A)^{c})=\{0,1,2,4,6,8,9\}$$
+                Finalmente tendremos que \((A\cup (B\cap A)^{c})^{c}=\emptyset\).<br>
+
+                <img src="img/P1.1.png">
+
+                <hr class="major"/>
+
+                <h2>P1.2</h2>
+                Resolvemos la diferencia de conjuntos, es decir, los elementos de \(A\) que no están en \(B\):
+                $$(A-B)=\{0,6\}$$
+                Luego hacemos la intersección con el conjunto \(C\), teniendo que
+                $$(A-B)\cap C=\{6\}$$
+                <img src="img/P1.2.png">
+
+                <hr class="major"/>
+
+                <h2>P1.3</h2>
+                Calculando primero ambas uniones, se tiene que:
+                $$A\cup B=\{0,2,4,6,8\}$$
+                $$A\cup C=\{0,1,2,6,9\}$$
+                Finalmente, calculamos la intersección entre estos dos conjuntos.
+                $$(A\cup B)\cap (A\cup C)=\{0,2,6\}$$
+                <img src="img/P1.3.png">
+
+                <hr class="major"/>
+
+                <h2>P1.4</h2>
+                Calculando las intersecciones, tendremos
+                $$A\cap B=\{2\}$$
+                $$A\cap C=\{6\}$$
+                Luego la unión entre ambos conjuntos obteniéndose que
+                $$(A\cap B)\cup (A\cap C)=\{2,6\}$$
+                <img src="img/P1.4.png">
+
+                <hr class="major"/>
+
+                <h2>P1.5</h2>
+                Desarrollando tendremos lo siguiente:
+                $$\{0,2,4,8\}\cap (\{0,1,2,4,6,8,9\}=\{0,2,4,8\}=C^{c}$$
+                <img src="img/P1.5.png">
+
+            </section>
+
+            <hr class="major">
+
+            <div align="center"> 
+                <ul class="pagination">
+                    <li><span class="button disabled">Anterior</span></li>
+                    <li><a href="/tareas/derecho_examen1/P1.html" class="page active">1</a></li>
+                    <li><a href="/tareas/derecho_examen1/P2.html" class="page">2</a></li>
+                    <li><a href="/tareas/derecho_examen1/P3.html" class="page">3</a></li>
+                    <li><span>…</span></li>
+                    <li><a href="/tareas/derecho_examen1/P33.html" class="page">33</a></li>
+                    <li><a href="/tareas/derecho_examen1/P34.html" class="page">34</a></li>
+                    <li><a href="/tareas/derecho_examen1/P35.html" class="page">35</a></li>
+                    <li><a href="/tareas/derecho_examen1/P2.html" class="button">Siguiente</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

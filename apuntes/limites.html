@@ -1,0 +1,1024 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+
+<head>
+    <title>Límites</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .ejemplo {
+          width: 110%;
+          padding: 50px 0;
+          background-color: lightblue;
+          margin-top: 20px;
+          display: none;
+        }
+        .ejemplo p {
+          width: 95%;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Contenido -->
+                <section>
+                    <header class="main">
+                        <h1>Límites</h1>
+                    </header>
+
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#def-de">Definición \( \varepsilon - \delta \) del límite</a><br>
+                    <a href="#teoremas">Teoremas de límites</a><br>
+                    <a href="#calc_limites">Cálculo de límites</a>
+
+                    <hr class="major"/>
+
+                    <h2 id="introduccion">Introducción</h2>
+                    <p> La herramienta fundamental para el análisis del comportamiento de funciones es el límite.</p>
+                    <p>Particularmente, se dice que una función \(f\) tiene un límite \(L\) en \(c\) si en las proximidades de \(c\) los valores \(f(x)\)
+                        se acercan arbitrariamente a \(L\). Esto se denota</p>
+                    $$ \lim_{x\to c}f(x) = L $$
+                    <p>Que se lee "el límite de \(f\) cuando \(x\) tiende a \(c\)". Esto quiere decir que los valores de \(f(x)\) se acercan a \(L\) tanto
+                        como se desee haciendo que \(x\) diste lo suficiente de \(c\). </p>
+                    <p>Intuitivamente (e incorrectamente), para funciones que se portan bien, bastará con corroborar que \(f(c)=L\) para comprobar que los
+                        valores del contradominio bailan cerca de \(L\) cuando los valores del dominio bailan cerca de \(c\).</p>
+                    <p>
+
+                    <div class="row">                        
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo1_1()">Ejemplo 1</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo1_2()">Ejemplo 2</div>
+                        </div>
+                        <!-- Primer ejemplo -->
+                        <div class="ejemplo" id="ejemplo1-1">
+                            <p>\(\displaystyle\lim_{x\to 2}7x-4=7(2)-4=\boxed{10}\)</p>
+                        </div>
+                        <!-- Segundo ejemplo -->
+                        <div class="ejemplo" id="ejemplo1-2">
+                            <p>
+                                Calcular \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1}\). Se puede comprobar fácilmente que, al evaluar directamente,
+                                se llega a una expresión de la forma \(\frac{0}{0}\). Para determinar el valor, se factoriza para obtener
+                                $$ \lim_{x\to1} \frac{3x^2-3x}{x-1} = \lim_{x\to1}\frac{3x(x-1)}{x-1} = \lim_{x\to1}3x = 3(1) = \boxed{3} $$
+                                
+                                Este acercamiento es muy útil en la mayoría de los contextos, mas es insuficiente para nuestros propósitos, pues se pierde la noción
+                                de cercanía en un punto. Por ejemplo, considérese la función \(f\) definida por
+                                $$
+                                f(x) = \left\{ 
+                                        \begin{matrix}
+                                            x^2 & x\not = 0\\
+                                            1 & x = 0
+                                        \end{matrix}
+                                    \right.
+                                $$
+                                Es casi evidente que \(\displaystyle\lim_{x\to0}f(x)=0\), y no obstante \(f(0)\not =0\), por lo que este acercamiento al concepto de
+                                límite es esencialmente incorrecto (las funciones cuyos límites coinciden con su valor en un punto se estudiarán en la sección de
+                                Continuidad).
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr class="major"/>
+
+                    <h2 id="def-de">Definición \( \varepsilon - \delta \) del límite</h2>
+                    <p>
+                        La noción de "acercarse" conlleva inherentemente el concepto de "cercanía", que claramente no está definido. ¿Qué tan cerca es cerca?
+                        Pues bien, para evitar ambigüedades, es tanto como uno quiera. De esta idea y de la definición informal de la sección anterior se
+                        tiene la definición.
+                    </p>
+                    <p>
+                        <strong>Definición.</strong> Se denota por \(\displaystyle\lim_{x\to a}f(x)\) al límite en \(a\) de una función \(f\), y
+                        $$ \lim_{x\to a}f(x) = L \iff \forall \varepsilon &gt; 0 \, \exists \delta &gt; 0:\; 0 &lt; |x-a| &lt; \delta \implies |f(x)-L| &lt;
+                        \varepsilon $$
+                    </p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Esta definición retoma la idea de "acercamiento" a \(a\) sin la necesidad de evaluar la función en ese punto, por lo que solamente se
+                                tratan los valores en una vecindad de \(a\).</p>
+                            <p>La definición estipula que, sin importar qué tan cerca se desea estar de \(L\) (a esta distancia se le llama \(\varepsilon\)), siempre
+                                es posible acercarse lo suficiente a \(a\) (tanto como \(\delta\)) para que los valores \(f(x)\) se acerquen a \(L\) tanto como se
+                                deseaba.</p>
+                        </div>
+                        <div class="col-4"><img src="img/limites1.png"></div>
+                    </div>
+                    
+                    <p>Recuperando los ejemplos anteriores,</p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo2_1()">Ejemplo 1</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo2_2()">Ejemplo 2</div>
+                        </div>
+                        <!-- Primer ejemplo -->
+                        <div class="ejemplo" id="ejemplo2-1">
+                            <p>Demostrar que \(\displaystyle\lim_{x\to 2}7x-4=10\)</p>
+
+                            <p><strong>P.D.</strong> \( \forall\varepsilon &gt; 0\,\exists\delta &gt; 0:\; 0 &lt; |x-2| &lt; \delta\implies |7x-4-10| &lt;
+                                \varepsilon \)</p>
+                            
+                            <p><em>**Trabajo previo.</em></p>
+
+                            $$ |7x-4-10| &lt; \varepsilon \iff |7x-14| &lt; \varepsilon \iff 7|x-2| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{7} $$
+
+                            <strong>Demostración.</strong>  Para realizar la demostración se debe exhibir un valor de \(\delta\) (o bien constante o bien
+                            dependiente de \(\varepsilon\)) tal que la implicación se cumpla. Los asteriscos indicarán trabajo previo que no corresponde
+                            a la demostración per se, pero bien pueden ser la parte más importante de ella, pues dan pauta para proponer un valor de \(\delta\).<br>
+                            Sea \(\delta=\frac{\varepsilon}{7}\), y sea \(|x-2| &lt; \delta\), de donde
+
+                            $$ |x-2| &lt; \frac{\varepsilon}{7} \implies 7|x-2| &lt; \varepsilon \implies |7x-14| &lt; \varepsilon \implies |7x-4-10| &lt;
+                            \varepsilon $$
+
+                            <p>Que es lo que se quería demostrar. Obsérvese que hay que ser especialmente cuidadoso con los bicondicionales en el trabajo previo.
+                            \(\blacksquare\)</p>
+                        </div>
+                        <!-- Segundo ejemplo -->
+                        <div class="ejemplo" id="ejemplo2-2">
+                            <p>Demostrar que \(\displaystyle\lim_{x\to 1}\frac{3x^2-3x}{x-1} = 3\)</p>
+
+                            <strong>P.D.</strong> \( \forall\varepsilon>0\,\exists\delta>0:\; 0 &lt; |x-1| &lt; \delta\implies |\frac{3x^2-3x}{x-1}-3| &lt; 
+                            \varepsilon \) <br>
+
+                            <em>**Trabajo previo.</em>
+                            $$
+                                \begin{align}
+                                    \left|\frac{3x^2-3x}{x-1}-3\right| &lt; \varepsilon
+                                    & \iff \left|\frac{3x(x-1)}{x-1}-3\right| &lt; \varepsilon \\
+                                    & \iff |3x-3| &lt; \varepsilon \\ &\iff 3|x-1| &lt; \varepsilon \\
+                                    & \iff |x-1| &lt; \frac{\varepsilon}{3}
+                                \end{align}
+                            $$
+                            <strong>Demostración.</strong> Sea \(\delta=\frac{\varepsilon}{3}\), y sea \(|x-1| &lt; \delta\), de donde
+                            $$
+                                |x-1| &lt; \frac{\varepsilon}{3} \implies |3x-3| &lt; \varepsilon \implies \left| \frac{3x(x-1)}{x-1}-3 \right| &lt; \varepsilon
+                                \implies \left| \frac{3x^2-3x}{x-1} - 3 \right| &lt; \varepsilon
+                            $$
+                            Que es lo que se quería demostrar.   \(\blacksquare\)
+                        </div>
+                    </div>
+
+                    <hr class="major"/>
+
+                    <p>
+                        Podemos definir una suerte de receta (que para nada pretende ser un algoritmo de demostración que sea correcto en todos los casos) para
+                        poder guiar estas demostraciones:
+                        <ol>
+                            <li>Identificar \(|x-a|\).</li>
+                            <li>Evaluar \(|f(x)-L|\).</li>
+                            <li>Simplificar la expresión hasta encontrar algo de la forma \(\alpha|x-a|\)</li>
+                            <li>Hacer \(\delta=\frac{\varepsilon}{\alpha}\) y demostrar el límite.</li>
+                        </ol>
+                    </p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo3_1()">Ejemplo 1</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo3_2()">Ejemplo 2</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo3_3()">Ejemplo 3</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo3_4()">Ejemplo 4</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo3_5()">Ejemplo 5</div>
+                        </div>
+                        <!-- Primer ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-1">
+                            <p>Demostrar que \(\displaystyle\lim_{x\to 2}3x+5=11\).</p>
+                            <p><em>**Trabajo previo.</em> $$ |3x+5-11| &lt; \varepsilon\iff|3x-6| &lt; \varepsilon\iff 3|x-2| &lt; \varepsilon \iff |x-2| &lt;
+                                \frac{\varepsilon}{3} $$</p>
+                            <p><strong>Demostración.</strong> Sea \(\delta = \frac{\varepsilon}{3}\) y \(|x-2| &lt; \delta\). Así,
+                                $$ |x-2| &lt; \frac{\varepsilon}{3} \implies |3x-6| &lt; \varepsilon \implies |3x+5-11| &lt; \varepsilon $$
+                                Que es lo que se quería demostrar.   \(\blacksquare\)
+                            </p>
+                            <p>Habrá casos donde la demostración sea más elaborada. El truco en estos casos es acotar el valor de \(\delta\).</p>
+                        </div>
+                        <!-- Segundo ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-2">
+                            <p>Demostrar que \(\displaystyle\lim_{x\to3}x^2-9\).</p>
+                            <p><em>** Trabajo previo</em>
+                                $$ |x^2-9 &lt; \varepsilon\iff |x+3|\,|x-3| &lt; \varepsilon\iff |x-3| &lt; \frac{\varepsilon}{|x+3|} $$
+                                No obstante, no se puede hacer \(\delta = \frac{\varepsilon}{|x+3|}\), pues depende del valor que se tome de \(x\).
+                                Para arreglar este detalle, supóngase que \(\delta\leq 1\) (pues si la \(\delta\) necesaria fuera mayor que 1, esta delta menor o igual
+                                que uno también funcionaría). Como en la demostración se supondrá que \(|x-3| &lt; \delta\), se tiene que \(|x-3| &lt; 1\) y
+                                $$ 
+                                    \begin{align}
+                                        & |x-3| &lt; 1 \iff -1 &lt; x-3 &lt; 1 \iff 2 &lt; x &lt; 4 \iff 5 &lt; x+3 &lt; 7 \\
+                                        & \iff |5| &lt; |x+3| &lt; |7| \iff \frac{1}{5} &gt; \frac{1}{|x+3|} &gt; \frac{1}{7} \iff \frac{\varepsilon}{7} &lt;
+                                            \frac{\varepsilon}{|x+3|} &lt; \frac{\varepsilon}{5}
+                                    \end{align}
+                                $$
+                                Por transitividad, como \(|x-3| &lt; \frac{\varepsilon}{|x+3|}\) se tiene \(|x-3| &lt; \frac{\varepsilon}{5}\).
+                            </p>
+                            <p>
+                                <strong>Demostración.</strong> Sea \(\delta = \min\{\frac{\varepsilon}{7},1\}\), y sea \(|x-3| &lt; \delta\). Así, \(0 &lt; |x-3| 
+                                &lt; \delta\) implica que \(|x-3| &lt; \frac{\varepsilon}{7}\) y \(|x-3| &lt; 1\). De esto último se tiene que
+                                $$
+                                    \begin{align}
+                                        & |x-3| &lt; 1\iff -1 &lt; x-3 &lt; 1 \iff 2 &lt; x &lt; 4 \iff 5 &lt; x+3 &lt; 7 \\
+                                        & \iff |5| &lt; |x+3| &lt; |7| \iff \frac{1}{5} &gt; \frac{1}{|x+3|} &gt; \frac{1}{7} \iff \frac{\varepsilon}{7} &lt; 
+                                            \frac{\varepsilon}{|x+3|} &lt; \frac{\varepsilon}{5}
+                                    \end{align}
+                                $$
+                                Y como \(|x-3| &lt; \frac{\varepsilon}{7}\), por transitividad se sigue que
+                                $$ |x-3| &lt; \frac{\varepsilon}{|x+3|}\implies |x-3|\,|x+3| &lt; \varepsilon\implies |x^2-9| &lt; \varepsilon $$
+                                Que es lo que se quería probar.  \(\blacksquare\)
+                            </p>
+                        </div>
+                        <!-- Tercer ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-3">
+                            <p>Demostrar que \(\displaystyle \lim_{x\to\infty}\frac{6x+1}{2x+1}=3\)</p>
+                            <p>
+                                <em>**Trabajo previo.</em> Sea \(|\frac{6x+1}{2x+1}-3| &lt; \varepsilon\)
+                                $$
+                                    \begin{align}
+                                        &\iff \left| \frac{6x+1-6x-3}{2x+1}\right| &lt; \varepsilon \\& \iff \left| \frac{-2}{2x+1}\right| 
+                                            &lt; \varepsilon\\&\iff \frac{2}{2x+1} &lt; \varepsilon
+                                    \end{align}
+                                $$
+                                Esto último se asegura porque \(x > 0\). Continuando,
+                                $$
+                                    \begin{align}
+                                        & \iff \frac{2}{\varepsilon} &lt; 2x+1\\
+                                        & \iff \frac{1}{2}\left(\frac{2}{\varepsilon} - 1\right) &lt; x
+                                    \end{align}
+                                $$
+                            </p>
+                            <p>
+                                <strong>Demostración.</strong> Sea \(N = \frac{1}{2} \left(\frac{2}{\varepsilon}-1\right)\). Por hipótesis \(x &gt; N\), por
+                                lo que \(x &gt; \frac{1}{2} \left(\frac{2}{\varepsilon} - 1\right)\) y, por el trabajo previo, se concluye que
+                                \(|\frac{6x+1}{2x+1} - 3| &lt; \varepsilon\). Así, \(\forall \varepsilon &gt; 0 \;\exists N &gt; 0: x &gt; N\implies
+                                |\frac{6x+1}{2x+1}-3| &lt; \varepsilon. \quad\blacksquare\)
+                            </p>
+                        </div>
+                        <!-- Cuarto ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-4">
+                            <p>Demostrar que \(\displaystyle \lim_{x\to 2}4x+1=9\)</p>
+                            <p>
+                                <em>**Trabajo previo.</em> Sea \(|(4x+1)-9| &lt; \varepsilon\)
+                                $$
+                                    \begin{align}
+                                        & \iff |4x-8| &lt; \varepsilon\\
+                                        & \iff |4(x-2)| &lt; \varepsilon\\
+                                        & \iff |4||x-2| &lt; \varepsilon\\
+                                        & \iff |x-2| &lt; \frac{\varepsilon}{4}
+                                    \end{align}
+                                $$
+                            </p>
+                            <p>
+                                <strong>Demostración.</strong> Dem. Sea \(\delta=\frac{\varepsilon}{4}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y por el trabajo
+                                previo se concluye que \(|(4x+1)-9| &lt; \varepsilon\). Así, \(\forall \varepsilon>0\; \exists\delta>0 : 0 &lt; |x-2| &lt; \delta
+                                \implies |(4x+1)-9| &lt; \varepsilon.\quad\blacksquare\)
+                            </p>
+                        </div>
+                        <!-- Quinto ejemplo -->
+                        <div class="ejemplo" id="ejemplo3-5">
+                            <p>Demostrar que \(\displaystyle \lim_{x\to 2}x^2=4\)</p>
+                            <p>
+                                <em>**Trabajo previo.</em> Sea \(|x^2-4| &lt; \varepsilon\)
+                                $$
+                                    \begin{align}
+                                        & \iff |(x+2)(x-2)| &lt; \varepsilon\\
+                                        & \iff |x-2| &lt; \varepsilon\\
+                                        & \iff |x-2| &lt; \frac{\varepsilon}{|x+2|}
+                                    \end{align}
+                                $$
+                                Acotaremos \(\frac{1}{|x+2|}\). Supongamos que \(\delta &lt; 1\). Así,
+                                $$
+                                    \begin{align}
+                                        & \implies|x-2| &lt; 1\\
+                                        & \implies -1 &lt; x-2 &lt; 1\\
+                                        & \implies 3 &lt; x+2 &lt; 5\\
+                                        & \implies|3| &lt; |x+2| &lt; |5|\\
+                                        & \implies\frac{1}{|3|} &gt; \frac{1}{|x+2|} &gt; \frac{1}{|5|}\\
+                                        & \implies\frac{\varepsilon}{3} &gt; \frac{\varepsilon}{|x+2|} &gt; \frac{\varepsilon}{5}
+                                    \end{align}
+                                $$
+                                Por lo que \(|x^2-4| &lt; \varepsilon\iff |x-2| &lt; \frac{\varepsilon}{3} \).
+                            </p>
+                            <p>
+                                <strong>Demostración.</strong> Dem. Sea \(\delta=\min\{1,\frac{\varepsilon}{3}\}\). Por hipótesis, \(0 &lt; |x-2| &lt; \delta\) y
+                                por el trabajo previo se concluye que \(|x^2-4| &lt; \varepsilon\). Así, \(\forall \varepsilon &gt; 0 \; \exists\delta &gt; 0 :
+                                0 &lt; |x-2| &lt; \delta\implies |x^2-4| &lt; \varepsilon.\quad\blacksquare\)
+                            </p>
+                        </div>
+                    </div>
+
+                    <br>
+                    
+                    <p>
+                        En dado caso que se desee demostrar la inexistencia de un límite en algún punto determinado, se debe demostrar que la negación
+                        de la definición se cumple en ese punto, i.e.
+                        $$ \exists \varepsilon \; \forall \delta: \, 0 &lt; |x-a| &lt; \delta\land |f(x)-L| &gt; \varepsilon $$
+                    </p>
+                    <p><strong>Ejemplo.</strong> Demostrar que \(\displaystyle\lim_{x\to 0}\frac{1}{x}\) no existe.</p>
+                    <p>
+                        <strong>Demostración.</strong> Se demostrará que, para cualquier valor \(L\),
+                        $$ \exists \varepsilon \; \forall \delta: \,0 &lt; |x-0| &lt; \delta \land \left|\frac{1}{x}-L\right| &gt; \varepsilon $$
+                        Sea \(|x| &lt; \delta\), de donde \(\frac{1}{|x|}>\frac{1}{\delta}\). Así, \(\left|\frac{1}{x}\right| &gt; \frac{1}{\delta}\),
+                        por lo que
+                        $$ \frac{1}{\delta} &lt; \left|\frac{1}{x}-L+L\right|\leq \left|\frac{1}{x}-L\right|+\left| L\right| $$
+                        Así, \(\left|\frac{1}{x}-L\right| &gt; \frac{1}{\delta}-|L|\). Sea \(\varepsilon=\left|\frac{1}{x}-L\right|\). Se tiene entonces
+                        que \(\forall\delta\) se cumple \(0 &lt; |x-0| &lt; \delta\) y \(\left|\frac{1}{x}-L\right| &gt; \varepsilon\)
+                    </p>
+                    <p>Obsérvese que la definición de límite no ofrece un método de cálculo de límites: el valor del límite ya se encontraba propuesto en
+                        todos los ejemplos vistos. La siguiente sección ofrece algunos teoremas de gran utilidad para el cálculo de límites, y la sección
+                        subsecuente contiene una gran cantidad de ejemplos.</p>
+
+                    <hr class="major"/>
+
+                    <h2 id="teoremas">Teoremas de límites</h2>
+                    <!-- Teorema -->
+                    <p><strong>Teorema de unicidad del límite.</strong> Si \(\displaystyle\lim_{x\to a}f(x)=L\) y \(\displaystyle\lim_{x\to a}f(x)=M\),
+                        entonces \(L=M\).</p>
+                    <p>
+                        <strong>Demostración.</strong> Por hipótesis, \(\forall\varepsilon\;\exists\delta_1,\delta_2:\)
+                        <ol>
+                            <li>\(0 &lt; |x-a| &lt; \delta_1\implies |f(x)-L| &lt; \frac{\varepsilon}{2}\)</li>
+                            <li>\(0 &lt; |x-a| &lt; \delta_1\implies |f(x)-L| &lt; \frac{\varepsilon}{2}\)</li>
+                        </ol>
+                        Así, dada \(\varepsilon>0\), sea \(\delta = \min\{\delta_1,\delta_2\}\). Sumando las desigualdades,
+                        $$ |f(x)-L| + |f(x)-M| &lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} $$
+                        $$ |L-f(x)| + |f(x)-M| &lt; \varepsilon $$
+                        $$ |L-f(x) + f(x)-M| &lt; \varepsilon $$
+                        $$ |L-M| &lt; \varepsilon $$
+                        Y por el lema demostrado en la sección de números reales (y ambas tareas), como esto se cumple para toda \(\varepsilon\), se tiene
+                        que \(|L-M|=0\), de donde \(L=M\).    \(\blacksquare\)
+                    </p>
+                    <!-- Teorema -->
+                    <p>
+                        <strong>Teorema.</strong> Si \(\displaystyle\lim_{x\to a}f(x)=L\) y \(\displaystyle\lim_{x\to a}g(x)=M\), entonces
+                        <ol>
+                            <li>\(\displaystyle\lim_{x\to a}(f+g)(x)=L+M\)</li>
+                            <li>\(\displaystyle\lim_{x\to a}(f\cdot g)(x)=L\cdot M\)</li>
+                            <li>Y si \(M\not = 0\), \(\displaystyle\lim_{x\to a}\left(\frac{f}{g}\right)(x)=\frac{L}{M}\)</li>
+                        </ol>
+                    </p>
+                    <p>
+                        <strong>P.D.</strong> $$ \forall\varepsilon>0\;\exists\delta &gt; 0:\, 0 &lt; |x-a| &lt; \delta \implies |(f+g)(x)-(L+M)|
+                        &lt; \varepsilon $$
+                    </p>
+                    <p>
+                        <strong>Demostración.</strong> Por hipótesis, \(\forall\varepsilon\;\exists\delta_1,\delta_2:\)
+                        <ol>
+                            <li>\(0 &lt; |x-a| &lt; \delta_1\implies |f(x)-L| &lt; \frac{\varepsilon}{2}\)</li>
+                            <li>\(0 &lt; |x-a| &lt; \delta_1\implies |f(x)-L| &lt; \frac{\varepsilon}{2}\)</li>
+                        </ol>
+                        Así, dada \(\varepsilon>0\), sea \(\delta = \min\{\delta_1,\delta_2\}\). Sumando las desigualdades,
+                        $$ |f(x) - L| + |g(x) - M| &lt; \frac{\varepsilon}{2}+\frac{\varepsilon}{2} $$
+                        $$ |f(x) - L + g(x ) - M| &lt; \varepsilon $$
+                        $$ |f(x) + g(x) - L - M| &lt; \varepsilon $$
+                        $$ |(f + g)(x) - (L+M)| &lt; \varepsilon $$
+                    </p>
+                    <p><strong>P.D.</strong> $$ \forall\varepsilon &gt; 0 \; \exists \delta>0:\, 0 &lt; |x-a| &lt; \delta \implies |(f\cdot g)(x)-(L\cdot M)|
+                        &lt; \varepsilon$$ </p>
+                    <p>
+                        <strong>Demostración.</strong> Por hipótesis, \(\forall\varepsilon\;\exists\delta_1,\delta_2:\)
+                        <ol>
+                            <li>\(0 &lt; |x-a| &lt; \delta_1\implies |f(x)-L| &lt; \frac{\varepsilon}{2}\)</li>
+                            <li>\(0 &lt; |x-a| &lt; \delta_1\implies |f(x)-L| &lt; \frac{\varepsilon}{2}\)</li>
+                        </ol>
+                        Así, dada \(\varepsilon>0\), sea \(\delta = \min\{\delta_1,\delta_2\}\).
+                    </p>
+                    <p>
+                        <em>Observación.</em>
+                        $$
+                            \begin{align} |(f\cdot g)(x)-L\cdot M|
+                                & = |f(x)g(x)-M\cdot f(x)+M\cdot f(x)-L\cdot M|\\
+                                & = |f(x)(g(x)-M) + M(f(x)-L)|\\
+                                & \leq |f(x)|\,|g(x)-M|+|M|\,|f(x)-L|
+                            \end{align}
+                        $$
+                        Por lo que bastará mostrar que esto último es menor que \(\varepsilon\). Sin pérdida de generalidad, sea \(\varepsilon_1 \leq 1\),
+                        por lo que \(|f(x)|-|L| &lt; |f(x)-L| &lt; 1\), de donde \(|f(x)| &lt; 1+|L|\). Así, bastará probar que
+                        $$ (1+|L|)|g(x)-M|+(1+|M|)|f(x)-L| &lt; \varepsilon $$
+                        Y se pueden hallar \(\delta_1,\delta_2\) tales que \(0 &lt; |x-a| &lt; \delta_1\implies |f(x)-L| &lt; \frac{\varepsilon}{2(|M|+1)}\)
+                        y \(0 &lt; |x-a| &lt; \delta_2\implies |g(x)-M| &lt; \frac{\varepsilon}{2(|L|+1)}\) De ahí,
+                        $$
+                            \begin{align}|(f\cdot g)(x)-L\cdot M|
+                                & &lt; (|L|+1)|g(x)-M|+(|M|+1)|f(x)-L|\\
+                                & &lt; (|L|+1)\frac{\varepsilon}{2(|L|+1)}+(|M|+1)\frac{\varepsilon}{2(|M|+1)}\\
+                                & &lt; \frac{\varepsilon}{2}+\frac{\varepsilon}{2}\\
+                                & &lt; \varepsilon
+                            \end{align}
+                        $$
+                    </p>
+                    <p><strong>Lema</strong> \(\displaystyle\lim_{x\to a}\frac{1}{g(x)}=\frac{1}{M}\)</p>
+                    <p>
+                        <strong>Demostración.</strong> Por demostrar que
+                        $$ \forall\varepsilon &gt; 0\;\exists\delta &gt; 0:\, 0 &lt; |x-a| &lt; \delta \implies |\frac{1}{g(x)}-\frac{1}{M}| &lt; \varepsilon $$
+                        Obsérvese que
+                        $$ \left|\frac{1}{g(x)}-\frac{1}{M}\right| =\left|\frac{M-g(x)}{Mg(x)}\right| = \frac{|g(x)-M|}{|M|\,|g(x)|} $$
+                        Bastará con probar que esto último es menor que \(\varepsilon\). Como \(\displaystyle\lim_{x\to a}g(x)=M\), se tiene que \(\forall\varepsilon &gt; 0\;
+                        \exists\delta>0:\, 0 &lt; |x-a| &lt; \delta \implies |g(x)-M| &lt; \varepsilon\). En particular, para \(\varepsilon_1=\frac{|M|}{2}\) hay una
+                        \(\delta^*\) tal que \(|g(x)-M| &lt; \frac{|M|}{2}\).
+                    </p>
+                    <p>
+                        Nótese que \(|M|=|M-g(x)+g(x)|\leq |M-g(x)|+|g(x)|\), de donde \(|g(x)|\leq \frac{|M|}{2}\) y \(\frac{1}{|g(x)|} &lt; \frac{2}{|M|}\) en tanto
+                        \(0 &lt; |x-a| &lt; \delta^*\). Por consiguiente,
+                        $$ \frac{1}{|M|\,|g(x)|} &lt; \frac{2}{|M|}\cdot\frac{1}{|M|} &lt; \frac{2}{M^2} $$
+                        Sea \(\delta' &gt; 0\) tal que \(|g(x)-M| &lt; \frac{M^2\varepsilon}{2}\). 
+                        Sea \(\delta = \min\{\delta^*,\delta'\}\) y \(0 &lt; |x-a| &lt; \delta\). Así,
+                        $$ \left|\frac{1}{g(x)} - \frac{1}{M}\right|=\frac{|g(x)-M|}{|M|\,|g(x)|} &lt; \frac{2}{M^2}\cdot\frac{M^2}{2}\cdot\varepsilon = \varepsilon $$
+                        Que concluye el lema. \(\blacksquare\)
+                    </p>
+                    <p>
+                        Para demostrar el inciso 3 basta con aplicar el inciso 2 y el lema, pues
+                        $$
+                            \lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}f(x)\cdot\frac{1}{g(x)}=\lim_{x\to a}f(x)\cdot\lim_{x\to a} \frac{1}{g(x)}=L\cdot\frac{1}{M}
+                            =\frac{L}{M}
+                        $$
+                    </p>
+
+                    <hr class="major"/>
+
+                    <h2 id="calc_limites">Cálculo de límites</h2>
+
+                    <p>El cálculo de límites es un proceso informal mediante el cual se proponen valores para un límite y, posteriormente, demostrarlo. No
+                        obstante, una vez conocidos los valores de ciertos límites se pueden utilizar los teoremas de la sección anterior para realizar
+                        cálculos de límites que son absolutamente formales y no requieren de más demostración que el cálculo mismo. Demostraremos en esta
+                        sección el valor de algunos límites que nos ayudarán en futuros cálculos.</p>
+
+                    <p><strong>Afirmación.</strong> \(\displaystyle\lim_{x\to a}x = a\).</p>
+                    <p><strong>Demostración.</strong> Sea \(\delta = \varepsilon\). Así, dado \(\varepsilon>0\), si \(|x-a| &lt; \delta\) se sigue que
+                        \(|x-a| &lt; \varepsilon\), que es lo que se quería demostrar.   \(\blacksquare\)</p>
+
+                    <p><strong>Afirmación.</strong> Sea \(c\in\mathbb{R}\) una constante. \(\displaystyle\lim_{x\to a}c = c\).</p>
+                    <p><strong>Demsotración.</strong> El valor de \(\delta\) es indistinto, pues dado \(\varepsilon>0\), si \(|x-a| &lt; \delta\) se sigue
+                        que \(|c-c|=0 &lt; \varepsilon\), pues por hipótesis se tiene \(\varepsilon &gt; 0\), que es lo que se quería demostrar.
+                        \(\blacksquare\)</p>
+                    <p>Por estas dos afirmaciones y el último teorema de la sección anterior, se sigue que cualquier función polinomial \(f\) dada por
+                        \(f(x)=a_0+a_1 x +...+ a_n x^n\) cumple con \(\displaystyle\lim_{x\to a}f(x)=f(a)\). Más aun, </p>
+
+                    <p><strong>Corolario.</strong> Una función \(f\) dada por \(f(x)=\frac{a_0+a_1 x +...+ a_n x^n}{b_0+b_1 x+...+b_m x^m}\) con
+                        \(n,m\in\mathbb{N}\) cumple con \(\displaystyle\lim_{x\to a}f(x)=f(a)\) siempre que \(b_0+b_1 a+...+b_m a^m\not = 0\).</p>
+
+                    <p>En la tarea número 2 se demuestra que la raíz cuadrada cumple con esta misma propiedad. </p>
+                    <p>Procederemos a calcular múltiples límites de funciones racionales y raíces.</p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_1()">Ejemplo 1</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_2()">Ejemplo 2</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_3()">Ejemplo 3</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_4()">Ejemplo 4</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_5()">Ejemplo 5</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_6()">Ejemplo 6</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_7()">Ejemplo 7</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_8()">Ejemplo 8</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_9()">Ejemplo 9</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="button primary fit" onclick="funcionEjemplo4_10()">Ejemplo 10</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <!-- Primer ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-1">
+                            <p>\(\displaystyle\lim_{x\to 0}\frac{1-\sqrt{1-x^2}}{x^2}\)</p>
+                            Nótese que evaluar directamente en cero arroja una expresión de la forma \(\frac{0}{0}\).
+                            $$
+                                \begin{align}
+                                    \lim_{x\to 0}\frac{1-\sqrt{1-x^2}}{x^2}\cdot\frac{1+\sqrt{1-x^2}}{1+\sqrt{1-x^2}}
+                                    & = \lim_{x\to 0}\frac{1-1+x^2}{x^2(1+\sqrt{1-x^2})} = \lim_{x\to 0}\frac{x^2}{x^2(1+\sqrt{1-x^2})}\\
+                                    & = \lim_{x\to 0}\frac{1}{1+\sqrt{1-x^2}} = \frac{1}{1+\sqrt{1-0^2}}
+                                        = \boxed{\frac{1}{2}}
+                                \end{align}
+                            $$
+                        </div>
+                        <!-- Segundo ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-2">
+                            <p>\(\displaystyle\lim_{x\to 2}\frac{x^2-8}{x-2}\)</p>
+                            Que se indetermina en 2.
+                            $$ \lim_{x\to2}\frac{x^2-8}{x-2} = \lim_{x\to2}\frac{(x-2)(x^2+2x+4)}{x-2} = \lim_{x\to2}x^2+2x+4 = \boxed{12} $$
+                        </div>
+                        <!-- Tercer ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-3">
+                            <p>\(\displaystyle\lim_{x\to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}\)</p>
+                            Se indetermina en cero.
+                            $$
+                                \begin{align}
+                                    \lim_{x\to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}\cdot\frac{\sqrt{a+h}+\sqrt{a}}{\sqrt{a+h}+\sqrt{a}}
+                                    & = \lim_{h\to0}\frac{a+h-a}{h(\sqrt{a+h}+\sqrt{a})} = \lim_{h\to0}\frac{h}{h(\sqrt{a+h}+\sqrt{a})}\\
+                                    & = \lim_{h\to0}\frac{1}{\sqrt{a+h}+\sqrt{a}} = \boxed{\frac{1}{2\sqrt{a}}}
+                                \end{align}
+                            $$
+                        </div>
+                        <!-- Cuarto ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-4">
+                            <p>\(\displaystyle\lim_{x\to y}\frac{x^n-y^n}{x-y}\)</p>
+                            Se indetermina en \(y\).
+                            $$ \lim_{x\to y}\frac{(x-y)\sum_{i=0}^{n-1}x^{n-1-i}y^i}{x-y} = \lim_{x\to y}\sum_{i=0}^{n-1}x^{n-1-i}y^i = \sum_{i=0}^{n-1}y^{n-1}
+                                = \boxed{ny^{n-1}} $$
+                        </div>
+                        <!-- Quinto ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-5">
+                            <p>\(\displaystyle\lim_{y\to x}\frac{x^n-y^n}{x-y}\)</p>
+                            Se indetermina en \(x\). Por analogía,
+                            $$ \lim_{y\to x}\frac{x^n-y^n}{x-y} = \boxed{nx^{n-1}} $$
+                        </div>
+                        <!-- Sexto ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-6">
+                            <p>\(\displaystyle\lim_{x\to 3}\frac{x^2-9}{x-3}\)</p>
+                            $$
+                                \begin{align} 
+                                    \lim_{x\to 3}\frac{x^2-9}{x-3}
+                                    &= \lim_{x\to 3}\frac{(x+3)(x-3)}{x-3}\\
+                                    &= \lim_{x\to 3}x+3\\&=3+3=\boxed{6}
+                                \end{align}
+                            $$
+                        </div>
+                        <!-- Séptimo ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-7">
+                            <p>\(\displaystyle\lim_{x\to -1}\frac{x+1}{x^3+1}\)</p>
+                            $$
+                                \begin{align} \lim_{x\to -1}\frac{x+1}{x^3+1}
+                                    & = \lim_{x\to -1}\frac{x+1}{(x+1)(x^2-x+1)}\\
+                                    & = \lim_{x\to -1}\frac{1}{x^2-x+1}\\
+                                    & = \frac{1}{(-1)^2-(-1)+1} = \boxed{\frac{1}{3}}
+                                \end{align}
+                            $$
+                        </div>
+                        <!-- Octavo ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-8">
+                            <p>\( lim_{h\to0}\frac{(x+h)^2-x^2}{h} \)</p>
+                            $$
+                                \begin{align} \lim_{h\to0}\frac{(x+h)^2-x^2}{h}
+                                    & = \lim_{h\to0}\frac{x^2+2xh+h^2-x^2}{h}\\
+                                    & = \lim_{h\to0}\frac{2xh+h^2}{h}\\
+                                    & = \lim_{h\to0} 2x+h\\
+                                    & = 2x+0 = \boxed{2x}
+                                \end{align}
+                            $$
+                        </div>
+                        <!-- Noveno ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-9">
+                            <p>\(\displaystyle\lim_{x\to-2}\frac{3x^2+2x-8}{x+2}\)</p>
+                            <em>** Trabajo previo:</em> \(3x^2+2x-8=\frac{(3x)^2+2(3x)-24}{3}=\frac{(3x+6)(3x-4)}{3}=(x+2)(3x-4)\)
+                            $$
+                                \begin{align} \lim_{x\to-2}\frac{3x^2+2x-8}{x+2}
+                                    & = \lim_{x\to-2}\frac{(x+2)(3x-4)}{x+2}\\
+                                    & = \lim_{x\to-2}3x-4\\
+                                    & = 3(-2)-4\\
+                                    & = \boxed{-10}
+                                \end{align}
+                            $$
+                        </div>
+                        <!-- Décimo ejemplo -->
+                        <div class="ejemplo" id="ejemplo4-10">
+                            <p>\(\displaystyle\lim_{x\to2}\frac{\sqrt{2x-3}-\sqrt{x-1}}{x^2-4}\)</p>
+                            $$
+                                \begin{align} \lim_{x\to2}\frac{\sqrt{2x-3}-\sqrt{x-1}}{x^2-4}
+                                    & = \lim_{x\to2}\frac{\sqrt{2x-3}-\sqrt{x-1}}{x^2-4}\cdot\frac{\sqrt{2x-3}+\sqrt{x-1}}{\sqrt{2x-3}+\sqrt{x-1}}\\
+                                    & = \lim_{x\to2}\frac{2x-3-x+1}{(x^2-4)(\sqrt{2x-3}+\sqrt{x-1})}\\
+                                    & = \lim_{x\to2}\frac{x-2}{(x+2)(x-2)(\sqrt{2x-3}+\sqrt{x-1})}\\
+                                    & = \lim_{x\to2}\frac{1}{(x+2)(\sqrt{2x-3}+\sqrt{x-1})}\\
+                                    & = \frac{1}{(2+2)(\sqrt{2(2)-3}+\sqrt{2-1})}\\
+                                    & = \frac{1}{(4)(\sqrt{1}+\sqrt{1})} = \boxed{\frac{1}{8}}
+                                \end{align}
+                            $$
+                        </div>
+                    </div>
+
+                    <p>Ahora realizaremos un pequeño estudio de límites trigonométricos. Primero enunciaremos y demostraremos geométricamente un teorema
+                        fundamental para los límites trigonométricos.</p>
+                    <p><strong>Teorema.</strong> \(\displaystyle\lim_{\theta\to0}\frac{\sin\theta}{\theta}=1\)</p>
+                    
+                    <div class="row">
+                        <div class="col-8">
+                            <p>
+                                <strong>Demostración.</strong> Obsérvese la figura que acompaña la demostración. En la figura se ilustra la definición de
+                                \(\sin\theta\) y \(\tan\theta\) en la circunferencia unitaria. Más aún, como el radio es 1, el arco que subtiende al ángulo
+                                \(\theta\) mide \(\theta\). Suponiendo que \(0 &lt; \theta &lt; \frac{\pi}{2}\) se cumple que
+                                $$ \sin \theta &lt; \theta &lt; \tan\theta $$
+                                Notando que \(\frac{\sin\theta}{\theta}>0\) y \(\theta\) se sigue que
+                                $$ \frac{1}{\sin\theta} &gt; \frac{1}{\theta} &gt; \frac{1}{\tan\theta} $$
+                                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta}{\tan\theta} $$
+                                $$ \frac{\theta}{\sin\theta} &gt; 1 &gt; \frac{\theta\cdot\cos\theta}{\sin\theta} $$
+                                $$ \frac{\theta}{\sin\theta} \frac{\sin\theta}{\theta} &gt; 1 \cdot \frac{\sin\theta}{\theta} &gt;
+                                    \frac{\theta\cdot\cos\theta}{\sin\theta} \frac{\sin\theta}{\theta} $$
+                                $$ \cos\theta &lt; \frac{\sin\theta}{\theta} &lt; 1 $$
+                            </p>
+                        </div>
+                        <div class="col-4"><img src="img/limites2.png"></div>
+                    </div>
+                    <p>
+                        Además, como el seno es una función impar y el coseno es una función par se tiene que \(\frac{\sin\theta}{\theta} =
+                        \frac{\sin(-\theta)}{-\theta}\) y \(\cos\theta=\cos(-\theta)\), la misma desigualdad se cumple para \(\theta &lt; 0\). Esto último nos
+                        permite tomar el límite \(\theta\to 0\) sin necesidad de hacerlo por la derecha. Así,
+                        $$ \lim_{\theta\to 0} \cos\theta \leq \lim_{\theta\to 0} \frac{\sin\theta}{\theta} \leq \lim_{\theta\to 0} 1 $$
+                        Notando que \(\displaystyle \lim_{\theta\to 0}\cos\theta=1\), por el teorema del sándwich se tiene que
+                        $$ \lim_{\theta\to 0} \frac{\sin\theta}{\theta} = 1 \qquad \blacksquare $$
+                        Del que se desprende el siguiente corolario.
+                    </p>
+                    <p><strong>Corolario.</strong> \(\displaystyle\lim_{x\to 0}\frac{1-\cos x}{x}=0\)</p>
+                    <p>
+                        <strong>Demostración.</strong>
+                        $$
+                            \begin{align} \lim_{x\to0}\frac{1-\cos x}{x}\frac{1+\cos x}{1+\cos x}
+                                & = \lim_{x\to0} \frac{1-\cos^2 x}{x(1+\cos x)} = \lim_{x\to0}\frac{\sin^2 x}{x(1+\cos x)}\\
+                                & = \lim_{x\to0} \frac{\sin x}{x} \cdot \frac{\sin x}{1+\cos x} = \lim_{x\to0} \frac{\sin x}{x} \cdot \lim_{x\to0}
+                                    \frac{\sin x}{1+\cos x}\\
+                                & = 1\cdot\frac{\sin (0)}{1+\cos(0)} = \frac{0}{2} = 0 \qquad\blacksquare
+                            \end{align}
+                        $$
+                    </p>
+                    <p>
+                        Procederemos a calcular algunos límites trigonométrcos importantes para futuros ejercicios.
+                        <ol>
+                            <!-- Uno -->
+                            <li>\(\displaystyle\lim_{x\to0}\frac{\sin 3x}{x}\)</li>
+                            $$ \lim_{x\to0}\frac{\sin 3x}{x}=\lim_{x\to0}\frac{3\sin 3x}{3x}=3\lim_{x\to0}\frac{\sin 3x}{3x} $$
+                            Y haciendo \(u=3x\), nótese que \(u\to 0\) cuando \(x\to 0\). Así,
+                            $$ 3 \lim_{u\to0}\frac{\sin u}{u}=3\cdot 1 = \boxed{3} $$
+
+                            <!-- Dos -->
+                            <li>\(\displaystyle\lim_{x\to0}\frac{\tan x}{x}\)</li>
+                            $$
+                                \begin{align} \lim_{x\to0}\frac{\tan x}{x}
+                                    & = \lim_{x\to0}\frac{\frac{\sin x}{\cos x}}{x} = \lim_{x\to0}\frac{1}{\cos x}\cdot\frac{\sin x}{x}\\
+                                    & = \lim_{x\to0}\frac{1}{\cos x}\cdot \lim_{x\to0}\frac{\sin x}{x} = \frac{1}{\cos(0)}\cdot 1 = \boxed{1}
+                                \end{align}
+                            $$
+
+                            <!-- Tres -->
+                            <li>\(\displaystyle\lim_{x\to0}\frac{\sin (ax)}{x}\)</li>
+                            $$ \lim_{x\to0} \frac{\sin (ax)}{x} = \lim_{x\to0} \frac{a\sin (ax)}{ax} = a \lim_{x\to0}\frac{\sin (ax)}{ax} $$
+                            Y haciendo \(u=ax\), nótese que \(u\to 0\) cuando \(x\to 0\). Así,
+                            $$ a\lim_{u\to0}\frac{\sin u}{u} = a\cdot 1 = \boxed{a} $$
+
+                            <!-- Cuatro -->
+                            <li>\(\displaystyle\lim_{x\to0}\frac{\tan (kx)}{x}\)</li>
+                            $$ \lim_{x\to0} \frac{\tan (kx)}{x} = \lim_{x\to0} \frac{k\tan (kx)}{kx} = k \lim_{x\to0} \frac{\tan (kx)}{kx} $$
+                            Y haciendo \(u = kx\), nótese que \(u\to 0\) cuando \(x\to 0\). Así,
+                            $$ k \lim_{x\to0} \frac{\tan (kx)}{kx} = k \lim_{u\to0} \frac{\tan u}{u} = k \cdot 1 = \boxed{k} $$
+
+                            <!-- Cinco -->
+                            <li>\(\displaystyle\lim_{x\to0}\frac{x}{\sin x}\)</li>
+                            $$ \lim_{x\to0}\frac{x}{\sin x} = \lim_{x\to0} \frac{1}{\frac{\sin x}{x}} = \frac{\lim_{x\to0}1}{\lim_{x\to0}
+                                \frac{\sin x}{x}} = \frac{1}{1} = \boxed{1} $$
+
+                            <!-- Seis -->
+                            <li>\(\displaystyle\lim_{x\to0}\frac{x}{\sin (\beta x)}\)</li>
+                            $$ \lim_{x\to0}\frac{x}{\sin (\beta x)} = \lim_{x\to0}\frac{1}{\frac{\sin (\beta x)}{x}} =
+                                \frac{\displaystyle\lim_{x\to0}1}{\displaystyle\lim_{x\to0}\frac{\sin (\beta x)}{x}} = \boxed{\frac{1}{\beta}}
+                            $$
+                        </ol>
+                    </p>
+                    <p>Se resolverán múltiples límites trigonométricos.</p>
+                    <p>
+                        <strong>Ej.</strong>
+                        <ol>
+                            <!-- Uno -->
+                            <li>\(\displaystyle\lim_{x\to 0}\frac{\sin 2x+\sin 3x}{\sin 4x+\sin 5x}\)</li>
+                            $$\lim_{x\to 0}\frac{\frac{\sin 2x}{x}+\frac{\sin 3x}{x}}{\frac{\sin 4x}{x}+\frac{\sin 5x}{x}}=\frac{2+3}{4+5}=\boxed{\frac{5}{9}}$$
+
+                            <!-- Dos -->
+                            <li>\(\displaystyle\lim_{x\to 0}\frac{x\sec x}{\tan x}\)</li>
+                            $$\lim_{x\to 0}\frac{x\sec x}{\tan x}=\lim_{x\to 0}\frac{x\frac{1}{\cos x}}{\frac{\sin x}{\cos x}}=\lim_{x\to0}\frac{x}{\sin x}=\boxed{1}$$
+
+                            <!-- Tres -->
+                            <li>\(\displaystyle\lim_{x\to a}\frac{\sin x-\sin a}{x-a}\)</li>
+                            Sea \(u=x-a\), y obsérvese que \(u\to 0\) cuando \(x\to a\)
+                            $$
+                                \begin{align} \lim_{x\to a}\frac{\sin x-\sin a}{x-a}
+                                    & = \lim_{u\to 0}\frac{\sin(u+a)-\sin a}{u} = \lim_{u\to 0}\frac{\sin u\cos a+\cos u\sin a-\sin a}{u}\\
+                                    & = \lim_{u\to 0}\frac{\sin u}{u}\cos a-\frac{1-\cos u}{u}\sin a=\cos a-0\cdot \sin{a}
+                                        = \boxed{\cos a}
+                                \end{align}
+                            $$
+
+                            <!-- Cuatro -->
+                            <li>\(\displaystyle\lim_{x\to 0}\frac{\cos x\tan x+\sqrt{1-\cos^2 x}}{x\cos x}\)</li>
+                            $$
+                                \begin{align}\lim_{x\to 0}\frac{\cos x\tan x+\sqrt{1-\cos^2 x}}{x\cos x}
+                                    &=\lim_{x\to 0}\frac{\tan x}{x}+\frac{\sin x}{x\cos x}=\lim_{x\to 0}\frac{\tan x}{x}+\frac{\tan x}{x}\\
+                                    &=\lim_{x\to 0}\frac{2\tan x}{x}=2\lim_{x\to 0}\frac{\tan x}{x}=\boxed{2}
+                                \end{align}
+                            $$
+
+                            <!-- Cinco -->
+                            <li>\(\displaystyle\lim_{x\to 0}\frac{\sqrt{1-x}-1}{\sin 4x}\)</li>
+                            $$
+                                \begin{align}\lim_{x\to 0}\frac{\sqrt{1-x}-1}{\sin 4x}
+                                    & = \lim_{x\to 0}\frac{\sqrt{1-x}-1}{\sin 4x}\cdot\frac{\sqrt{1-x}+1}{\sqrt{1-x}+1}
+                                        = \lim_{x\to 0}\frac{1-x-1}{\sin 4x}\cdot\frac{1}{\sqrt{1-x}+1} \\
+                                    & = \lim_{x\to 0}\frac{-x}{\sin 4x}\cdot\frac{1}{\sqrt{1-x}+1} = -\frac{1}{4}\cdot\frac{1}{2}
+                                        = \boxed{-\frac{1}{8}}
+                                \end{align}
+                            $$
+
+                            <!-- Seis -->
+                            <li>\(\displaystyle\lim_{x\to 0}\frac{\cos^2 x-1}{\sin x+\sin x\cos x}\)</li>
+                            $$
+                                \begin{align}\lim_{x\to 0}\frac{\cos^2 x-1}{\sin x+\sin x\cos x}
+                                    &=\lim_{x\to 0}\frac{(\cos x-1)(\cos x +1)}{\sin x(1+\cos x)}=\lim_{x\to 0}\frac{\cos x-1}{\sin x}\\
+                                    &=\lim_{x\to 0}-\frac{1-\cos x}{\sin x}=-\lim_{x\to 0}\frac{\frac{1-\cos x}{x}}{\frac{\sin x}{x}}=-\frac{0}{1}
+                                        =\boxed{0}
+                                \end{align}
+                            $$
+
+                            <!-- Siete -->
+                            <li>\(\displaystyle\lim_{x\to 0}\frac{4\sin^2 x}{x}\)</li>
+                            $$\begin{align}\lim_{x\to 0}\frac{4\sin^2 x}{x}=4\lim_{x\to 0}\frac{\sin x}{x}\sin x = 4\cdot 1\cdot 0=\boxed{0}\end{align}$$
+
+                            <!-- Ocho -->
+                            <li>\(\displaystyle\lim_{x\to 0}x\csc 6x\)</li>
+                            $$\begin{align}\lim_{x\to 0}x\csc 6x=\lim_{x\to 0}\frac{x}{\sin 6x}\sin x = \boxed{\frac{1}{6}}\end{align}$$
+                        </ol>
+                    </p>
+
+                    
+
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="/./index.html">Home</a></li>
+                        <li>
+                            <span class="opener">Apuntes</span>
+                            <ul>
+                                <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                                <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                                <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                                <li><a href="/apuntes/limites.html">Límites</a></li>
+                                <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                                <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                                <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Tareas</span>
+                            <ul>
+                                <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                                <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Navegación</h2>
+                    </header>
+                    <a href="#introduccion">Introducción</a><br>
+                    <a href="#def-de">Definición \( \varepsilon - \delta \) del límite</a><br>
+                    <a href="#teoremas">Teoremas de límites</a><br>
+                    <a href="#calc_limites">Cálculo de límites</a>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">"Por mi raza hablará el espíritu"</p>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <script>
+        function funcionEjemplo1_1() {
+          var x = document.getElementById("ejemplo1-1");
+          var y = document.getElementById("ejemplo1-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+              if (y.style.display === "block") {
+                x.style.display = "none";
+              }
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo1_2() {
+          var x = document.getElementById("ejemplo1-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
+    <script>
+        function funcionEjemplo2_1() {
+          var x = document.getElementById("ejemplo2-1");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo2_2() {
+          var x = document.getElementById("ejemplo2-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+    </script>
+    <script>
+        function funcionEjemplo3_1() {
+          var x = document.getElementById("ejemplo3-1");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo3_2() {
+          var x = document.getElementById("ejemplo3-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo3_3() {
+          var x = document.getElementById("ejemplo3-3");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo3_4() {
+          var x = document.getElementById("ejemplo3-4");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo3_5() {
+          var x = document.getElementById("ejemplo3-5");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+    </script>
+    <script>
+        function funcionEjemplo4_1() {
+          var x = document.getElementById("ejemplo4-1");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_2() {
+          var x = document.getElementById("ejemplo4-2");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_3() {
+          var x = document.getElementById("ejemplo4-3");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_4() {
+          var x = document.getElementById("ejemplo4-4");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_5() {
+          var x = document.getElementById("ejemplo4-5");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_6() {
+          var x = document.getElementById("ejemplo4-6");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_7() {
+          var x = document.getElementById("ejemplo4-7");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_8() {
+          var x = document.getElementById("ejemplo4-8");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_9() {
+          var x = document.getElementById("ejemplo4-9");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+        function funcionEjemplo4_10() {
+          var x = document.getElementById("ejemplo4-10");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        };
+    </script>
+
+</body>
+
+</html>

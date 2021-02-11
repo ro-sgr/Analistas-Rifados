@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 32 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 32</h1>
+                </header>
+                Recuerda que los números reales son la unión de los números racionales e irracionales, y que estos
+                conjuntos son ajenos (su intersección es vacía).
+                <ol>
+                    <li>
+                        Demuestra que si \(z\) es irracional y \(r\not=0\) es racional, entonces su producto es
+                        irracional. Dar por hecho los axiomas de \(\mathbb{}\) y que los enteros son cerrados bajo sumas
+                        y productos.
+                    </li>
+                    <li>
+                        Demuestra que si \(z\) es irracional y \(r\) es racional, entonces su suma es irracional. Dar
+                        por hecho los axiomas de \(\mathbb{}\) y que los enteros son cerrados bajo sumas y productos.
+                    </li>
+                </ol>
+
+                <hr class="major"/>
+
+                <h2>P32.A</h2>
+                <strong>Demostración.</strong><br>
+                Supóngase lo contrario; es decir, \(z\in\mathbb{Q}'\), \(r\in\mathbb{Q}\) y \(z\cdot r \in \mathbb{Q}\).<br>
+                Por la definición de racional se puede escribir que \( r = \frac{a}{b} \), con \( a , b \in \mathbb{Z}
+                \), \(b \not = 0 \) y \( a \not = 0 \) (esto último porque \( r \not = 0 \) ) \(z \cdot r = \frac{c}{d}
+                \), con \(c,d \in \mathbb{Z}\), \(d\not=0\)<br>
+                Así, se tiene que
+                $$ z=(z\cdot r)\cdot \frac{1}{r}$$
+                $$ z=\frac{c}{d}\cdot \frac{b}{a}$$
+                $$ z=\frac{cb}{da}\qquad\text{por el problema 4, inciso f}$$
+                <p>Como \(a,b,c,d\in\mathbb{Z}\), la propiedad de cerradura del producto afirma que \(cb\in\mathbb{Z}\)
+                    y \(da\in\mathbb{Z}\). Además, como \(a\not=0\) y \(d\not=0\), \(da\not=0\). Luego
+                    \(z\in\mathbb{Q}\) </p>
+                <p>Por lo tanto, \(z\cdot r\) es irracional. \(\blacksquare\)</p>
+
+                <hr class="major"/>
+
+                <h2>P32.B</h2>
+                <strong>Demostración.</strong><br>
+                Supóngase lo contrario; es decir, \(z\in\mathbb{Q}'\), \(r\in\mathbb{Q}\) y \(z+r\in\mathbb{Q}\). Por la
+                definición de racional se puede escribir que
+                \(r=\frac{a}{b}\), con \(a,b\in\mathbb{Z}\), \(b\not=0\) y \(a\not=0\) (esto último porque \(r\not=0\))
+                \(z+r=\frac{c}{d}\), con \(c,d\in\mathbb{Z}\), \(d\not=0\)
+                Así, se tiene que
+                $$z=(z+r)-r$$
+                $$z=\frac{c}{d}-\frac{a}{b}$$
+                $$z=\frac{bc-ad}{bd}\qquad\text{por el problema 4, inciso h}$$
+                <p>Como \(a,b,c,d\in\mathbb{Z}\), las propiedades de cerradura del producto y la suma afirman que
+                    \(bc-ad\in\mathbb{Z}\) y \(bd\in\mathbb{Z}\). Además, como \(b\not=0\) y \(d\not=0\), \(bd\not=0\).
+                    Luego \(z\in\mathbb{Q}\) !</p>
+                <p>Por lo tanto, \(z+r\) es irracional. \(\blacksquare\)</p>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

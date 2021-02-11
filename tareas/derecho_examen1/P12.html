@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 12 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 12</h1>
+                </header>
+                <p>Obtén el conjunto solución de</p>
+                <ol type="a">
+                    <li>\( \lvert 4x-5 \rvert \leq 13 \)</li>
+                    <li>\( \lvert x^{2}-1 \rvert \leq 3 \)</li>
+                    <li>\( \lvert x-1 \rvert > \lvert x+1 \rvert \)</li>
+                    <li>\( \lvert x-3 \rvert < \lvert x+5 \rvert \)</li>
+                </ol>
+
+                <hr class="major"/>
+
+                <h3>P12.A</h3>
+                <p>\( \lvert 4x-5 \rvert \leq 13 \)</p>
+                $$ \begin{align*} \lvert 4x-5 \rvert \leq 13 & \implies -13 \leq \lvert 4x-5 \rvert \leq 13 \end{align*}
+                $$
+                <ul>
+                    <li> Caso 1. \( 4x-5 \geq - 13 \)<br/>
+                        \( 4x \geq - 8 \)<br/>
+                        \( x \geq -2 \)</li>
+                    <li> Caso 2. \( 4x-5 \leq 13 \)<br/>
+                        \( 4x \leq 18 \)<br/>
+                        \( x \leq \frac{9}{2} \)</li>
+                </ul>
+                $$ \begin{align*} \{ x \mid -2 \leq x \leq \frac{9}{2} \} \end{align*} $$
+
+                <hr class="major"/>
+
+                <h3>P12.B</h3>
+                <p>\( \lvert x^{2}-1 \rvert \leq 3 \)</p>
+                $$ \begin{align*} \lvert x^{2}-1 \rvert \leq 3 &amp; \implies -3 \leq \lvert x^{2}-1 \rvert \leq 3
+                \end{align*} $$
+                <ul>
+                    <li> Caso 1. \( x^{2}-1 \geq -3 \)<br/>
+                        \( x^{2} \geq -2 \)<br/>
+                        No existe solución en \( \mathbb{R} \) para este caso
+                    </li>
+                    <li> Caso 2. \( x^{2}-1 \leq 3 \)<br/>
+                        \( x^{2} \leq 4 \)<br/>
+                        \( x^{2} \leq 4 \)<br/>
+                        \( x \leq \pm 2 \)
+                    </li>
+                </ul>
+                $$ \begin{align*} \{ x \mid -2 \leq x \leq 2 \} \end{align*} $$
+
+                <hr class="major"/>
+
+                <h3>P12.C</h3>
+                <p>\( \lvert x-1 \rvert &gt; \lvert x+1 \rvert \)</p>
+                <iframe height="500px" scrolling="no"
+                        src="https://www.geogebra.org/material/iframe/id/qvxxnmyr/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false"
+                        style="border: 0px;" title="Tarea. Problema 12.c" width="700px"></iframe>
+                <br/>
+                Note que \( \lvert x-1 \rvert &gt; \lvert x+1 \rvert \implies x &lt; 0 \)<br/>
+                \( (x-1)^{2} &gt; (x+1)^{2} \implies x^{2} -2x + 1 &gt; x^{2} +2x + 1 \)<br/>
+                \( \implies -2x + 1 &gt; 2x +1 \)<br/>
+                \( \implies -4x &gt; 0 \)<br/>
+                \( \implies x &lt; 0 \)
+                $$ \begin{align*} \{ x \mid x &lt; 0 \} \end{align*} $$
+
+                <hr class="major"/>
+
+                <h3>P12.D</h3>
+                <p>\( \lvert x-3 \rvert &lt; \lvert x+5 \rvert \)</p>
+                <iframe height="500px" scrolling="no"
+                        src="https://www.geogebra.org/material/iframe/id/uv4vbquw/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false"
+                        style="border: 0px;" title="Tarea 12.d" width="700px"></iframe>
+                <br/>
+                Note que \( \lvert x-3 \rvert &gt; \lvert x+5 \rvert \implies x &lt; 0 \)<br/>
+                \( (x-3)^{2} &gt; (x+5)^{2} \implies x^{2} -6x + 9 &gt; x^{2} +10x + 25 \)<br/>
+                \( \implies -6x + 9 &gt; 10x + 25 \)<br/>
+                \( \implies -16x &gt; 16 \)<br/>
+                \( \implies x &lt; -1 \)
+                $$ \begin{align*} \{ x \mid x &gt; -1 \} \end{align*} $$
+            </section>
+
+            <hr class="major">
+
+            <div align="center"> 
+                <ul class="pagination">
+                    <li><a href="/tareas/derecho_examen1/P11.html" class="button">Anterior</a></li>
+                    <li><a href="/tareas/derecho_examen1/P12.html" class="page active">12</a></li>
+                    <li><a href="/tareas/derecho_examen1/P13.html" class="page">13</a></li>
+                    <li><a href="/tareas/derecho_examen1/P14.html" class="page">14</a></li>
+                    <li><span>…</span></li>
+                    <li><a href="/tareas/derecho_examen1/P33.html" class="page">33</a></li>
+                    <li><a href="/tareas/derecho_examen1/P34.html" class="page">34</a></li>
+                    <li><a href="/tareas/derecho_examen1/P35.html" class="page">35</a></li>
+                    <li><a href="/tareas/derecho_examen1/P13.html" class="button">Siguiente</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

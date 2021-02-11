@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 23 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 23</h1>
+                </header>
+                <p>Demuestra que las siguientes funciones son continuas en su dominio.</p>
+                
+                <p><strong>a.</strong> \(\sqrt{x}\) en \([0, \infty)\)</p>
+                
+                <p><strong>P.D.</strong> \(\displaystyle \lim_{x\to a}\sqrt{x}=\sqrt{a}\;\forall a\in[0,\infty)\)
+                
+                <p>**<em>Trabajo previo</em></p>
+                
+                Supóngase que \(|\sqrt{x}-\sqrt{a}| &lt; \varepsilon\). Como \(\sqrt{x} &gt; 0\) y \(\sqrt{a}&gt;0\),
+                \(\sqrt{x}+\sqrt{a}&gt;0\) y
+                
+                    $$|\sqrt{x}-\sqrt{a}|(\sqrt{x}+\sqrt{a}) &lt; \varepsilon(\sqrt{x}+\sqrt{a})$$
+                    $$\iff |(\sqrt{x}-\sqrt{a})(\sqrt{x}+\sqrt{a})| &lt; \varepsilon(\sqrt{x}+\sqrt{a})$$
+                    $$\iff |x-a| &lt; \varepsilon(\sqrt{x}+\sqrt{a})\qquad(a.1)$$
+                    
+                <p>Supóngase que \(\delta &lt; 1 \), de donde</p>
+                $$|x-a| &lt; 1$$
+                $$-1 &lt; x-a &lt; 1$$
+                $$-1+a &lt; x &lt; 1+a $$
+                $$\sqrt{x} &lt; \sqrt{1+a}$$
+                $$\sqrt{x}+\sqrt{a} &lt; \sqrt{1+a}+\sqrt{a}\qquad(a.2)$$
+                
+                <p>De \((a.1)\) y \((a.2)\),</p>
+                <p>$$|x-a| &lt; \varepsilon(\sqrt{1+a}+\sqrt{a})$$</p>
+                
+                <p><strong>Dem.</strong> Sea \(\delta=\min\{1,\varepsilon(\sqrt{1+a}+\sqrt{a})\}\). Del trabajo previo se sigue que para
+                    toda \(\varepsilon &gt; 0\) existe \(\delta=\min\{1,\varepsilon(\sqrt{1+a}+\sqrt{a})\}\) tal que</p>
+                $$|x-a| &lt; \delta\implies |\sqrt{x}-\sqrt{a}| &lt; \varepsilon$$
+                
+                <p>Por lo que \(\displaystyle \lim_{x\to a}\sqrt{x}=\sqrt{a}\;\forall a\in[0,\infty)\) y \(\sqrt{x}\) es continua en
+                    todo su dominio. \(\blacksquare\)</p>
+                
+                <p><strong>b.</strong> \(\frac{1}{x}\) en \(\mathbb{R} \backslash \{0\}\) Se demostrará que \(\displaystyle \lim_{x\to
+                    a}\frac{1}{x}=\frac{1}{a}\;\forall a\in\mathbb{R} \backslash \{0\}\).</p>
+                    
+                <p>**<em>Trabajo previo</em></p>
+                    
+                <p>Supóngase que \(|\frac{1}{x}-\frac{1}{a}| &lt; \varepsilon\)</p>
+                
+                $$\iff \left| \frac{a-x}{ax}\right| &lt; \varepsilon$$
+                $$\iff \left| \frac{x-a}{ax}\right| &lt; \varepsilon$$
+                $$\iff |x-a| &lt; \varepsilon |ax|\qquad(b.1)$$
+                
+                Supóngase que \(\delta &lt; 1\), de donde
+                $$|x-a| &lt; 1$$
+                $$-1 &lt; x-a &lt; 1$$
+                $$-1+a &lt; x &lt; 1+a $$
+                $$ a(-1+a) &lt; ax &lt; a(1+a) $$
+                $$ |ax| &lt; |a(1+a)| \qquad(b.2) $$
+                
+                <p>De \((b.1)\) y \((b.2)\),</p>
+                $$\iff |x-a| &lt; \varepsilon |a(1+a)|$$
+                
+                <p><strong>Dem.</strong> Sea \(\delta=\min\{1,\varepsilon |a(1+a)|\}\). Del trabajo previo se sigue que para toda
+                    \(\varepsilon &gt; 0\) existe \(\delta=\min\{1,\varepsilon |a(1+a)|\}\) tal que</p>
+                $$|x-a| &lt; \delta\implies \left|\frac{1}{x}-\frac{1}{a}\right| &lt; \varepsilon$$
+                
+                <p>Por lo que \(\displaystyle \lim_{x\to a}\frac{1}{x}=\frac{1}{a}\;\forall a\in\mathbb{R} \backslash \{0\}\) y
+                    \(\frac{1}{x}\) es continua en todo su dominio. \(\blacksquare\)</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

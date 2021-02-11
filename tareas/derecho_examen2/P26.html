@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 26 | Tarea 2</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/octaviosaucedo25" class="icon brands fa-github"><span class="label">Github</span></a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 26</h1>
+                </header>
+                <p>Teorema del valor intermedio. Si \(f\) es continua en \( [a,b] \) y \( f(a) &lt; 0 &lt; f(b) \), entonces existe
+                    algún \(x\) en \( [a,b] \) tal que \(f(x)=0\). Demostrar usando el método de bisección de Bolzano.</p>
+
+                <img src="img/P26.gif">
+
+                <p>Geométricamente, el teorema establece que si dos puntos \((a, f(a))\) y \((b, f(b))\) de la gráfica de una función
+                    continua en el intervalo cerrado \([a,b]\) están situados en diferentes lados del eje \(x\), entonces la gráfica
+                    interseca al eje en algún punto entre \(a\) y \(b\). Claro que pueden haber varias intersecciones.</p>
+                    
+                <p>Demostración (Método de Bisección de Bolzano). Supongamos que \(f(a) &lt; 0\) y \(f(b) &gt; 0\). (La demostración
+                    sería análoga si supusiéramos \(f(a) &gt; 0\) y \(f(b) &lt; 0\)).</p>
+                    
+                <p>Consideremos el punto medio de \([a,b]\):</p>
+                $$ \frac{a+b}{2} $$
+                
+                <p>Si \( f( \frac{a+b}{2})=0 \) queda demostrado el teorema. Sino, \(f\) será positiva o negativa en \(\frac{a+b}{2}\).
+                </p>
+                        
+                <p>Tomemos una de las mitades del intervalo \([a,b]\) donde la función sea negativa en un extremo y positiva en el otro.
+                    Llamemos \(a_1\) y \(b_1\) a los extremos de este intervalo. Ahora dividamos \([a_1,b_1]\) a la mitad. Si \(f\) no
+                    vale cero en el punto medio, será positiva o negativa. Tomemos la mitad donde \(f\) tiene distinto signo en cada
+                    extremo, y llamemos a estos puntos \(a_2\) y \(b_2\).</p>
+                
+                <p>Si continuamos de esta manera, obtenemos una sucesión de intervalos</p>
+                $$ [a, b], [a_1, b_1], [a_2, b_2],... $$
+                
+                <p>tales que</p>
+                $$ a\leq a_1 \leq a_2 \leq ... \leq a_n \ \ y \ \ b \geq b_1 \geq b_2 \geq ... \geq b_n. $$
+                
+                Es decir, Los \(a_i\) forman una sucesión creciente, los \(b_i\) forman una sucesión decreciente y
+                se cumple que \(a_i &lt; b_i, \forall i \in \mathbb{N}\).
+                
+                <p>Veamos cúal es el \( \lim_{n\to \infty} (b_n -a_n) \).</p>
+
+                <p>\(b_n - a_n\) es la longitud del intervalo \([a_n, b_n]\). La longitud del intervalo \([a_1, b_1]\) es
+                    \(\frac{b-a}{2}\), la mitad de la longitud de \([a,b]\) que es \(b-a\). La longitud del intervalo \([a_2, b_2]\) es
+                    \( \frac{b-a}{2^2}\), la mitad de la longitud de \([a_1, b_1]\) que es \(\frac{b-a}{2}\). Y siguiendo de esta
+                    manera, la longitud del intervalo \([a_n, b_n]\) es \(\frac{b-a}{2^n}\).</p>
+                
+                <p>De modo que,</p>
+                $$ \lim_{n\to \infty} (b_n -a_n)=\lim_{n\to \infty} \frac{b-a}{2^n}=0. $$
+                
+                <p>Cuando tenemos una sucesión de intervalos como los anteriores, se dice que es una sucesión de intervalos anidados o
+                    encajados. Entonces se cumplirá el siguiente teorema:</p>
+                
+                <p><strong>Teorema de los intervalos anidados de Cantor.</strong> Para cada \(n \in \mathbb{N}\), sea \(I_n=[a_n, b_n]\) un intervalo
+                    cerrado en \(\mathbb{R}\). Si</p>
+                <ol>
+                    <li>\(I_{n+1} \subset I_n\), para cad \(n \in \mathbb{N}\)</li>
+                    <li>\( \lim_{n\to \infty} (b_n -a_n)=0. \)</li>
+                </ol>
+                
+                <p>Entonces, existe un único punto \(c \in \mathbb{R}\) tal que \(c\) pertence a todos los intervalos \(I_n\). Es decir
+                    \( \{c\}=\cap_{n \in \mathbb{N}} I_n. \)</p>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

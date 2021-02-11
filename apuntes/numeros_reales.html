@@ -1,0 +1,704 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Números Reales</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        .ejemplo {
+          width: 110%;
+          padding: 50px 0;
+          background-color: lightblue;
+          margin-top: 20px;
+          display: none;
+        }
+        .ejemplo p {
+          width: 95%;
+          padding: 15px;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a>
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Números Reales</h1>
+                </header>
+
+                <hr class="major"/>
+
+                <h2 id="introduccion" >Introducción</h2>
+                <p>El concepto de número es uno con el que estamos familiarizados desde una corta edad, y no obstante
+                    sigue siendo un concepto increíblemente difícil de definir. En las secciones venideras se verá que
+                    la noción de número real se puede comprender a partir de sus propiedades, por lo que no nos
+                    preocuparemos por dar una definición concreta.</p>
+                <p>Los llamados tipos de números conllevan un sentido de historicidad, nos arrojan una fragmentación de
+                    los reales basada en el acontecer histórico del ser humano: la forma en que el humano encontró a los
+                    números con el paso del tiempo. Los tipos de números que nos competen son:</p>
+                <ol>
+                    <li>Los <strong>números naturales</strong> \(\mathbb{N}\), entendidos comúnmente como los números de
+                        contar, i.e.
+                        $$\mathbb{N}=\{1,2,3,...\}$$
+                    </li>
+                    <li>Los <strong>números enteros</strong> \(\mathbb{Z}\), que introducen la noción del cero y de los
+                        negativos, además de contemplar a los naturales, i.e.
+                        $$\mathbb{Z}=\{...,-3,-2,-1,0,1,2,3,...\}$$
+                    </li>
+                    <li>Los <strong>números racionales</strong> \(\mathbb{Q}\), que incluyen el concepto de fracción,
+                        los números que
+                        pueden ser expresados como un cociente de dos enteros, i.e.
+                        $$\mathbb{Q}=\left\{\frac{p}{q}\,|\,p,q\in\mathbb{Z};q\not=0\right\}$$
+                    </li>
+                    <li>Los <strong>números irracionales</strong> \(\mathbb{Q'}\) o \(\mathbb{I}\), probablemente los
+                        más difíciles de definir en esta lista. Un número es considerado irracional si no es racional
+                        (evidentemente), lo que quiere decir que es imposible expresarlo como un cociente de dos
+                        enteros. Algunos ejemplos de irracionales son los números \(\pi\), \(e\) y \(\sqrt{2}\).
+                        Generalmente no es para nada trivial demostrar que un número es irracional, aunque la
+                        demostración de la irracionalidad de \(\sqrt{2}\) se verá en una sección futura (la tarea).
+                    </li>
+                    <li>Entenderemos a los números reales \(\mathbb{R}\) como la unión de los racionales y los
+                        irracionales, i.e.
+                        $$\mathbb{R}=\mathbb{Q}\cup\mathbb{Q'}$$
+                    </li>
+                </ol>
+                <p>Los números reales conllevan inherentemente la idea de continuidad, que por ahora entenderemos como
+                    una carencia de huecos en los reales (no existen dos números reales entre los cuales no haya otro
+                    real). En matemáticas es de gran ayuda poder ilustrar el tema en cuestión mediante diagramas o
+                    dibujos, aunque sea como un apoyo. Así, los números reales se asocian a los puntos de una línea
+                    recta, llamada la recta real, que va en concordancia con la idea de carencia de huecos en los
+                    reales. En la recta se escoge un punto arbitrario, que jugará el rol del cero, y una unidad (de
+                    longitud) para poder ubicar a los demás reales a partir del cero. Por convención, los números
+                    positivos se hallan a la derecha del cero y los negativos se hallan a su izquierda.</p>
+
+                <img src="numeros_reales/numeros_reales1.png">
+
+                <hr class="major"/>
+
+                <h2 id="prop_reales">Propiedades de los números Reales</h2>
+                <p>A lo largo de nuestra vida académica hemos cursado una multitud de materias donde se han atacado "de
+                    lado" los conceptos que se verán en esta sección. Aquí se hará evidente que todas las operaciones y
+                    <em>características</em> de los números (entiéndase por ello la suma, la resta, la multiplicación,
+                    la
+                    división, la factorización, los productos notables, la resolución de ecuaciones e inecuaciones y
+                    otros procesos algebraicos) se pueden sintetizar en una serie de propiedades sencillas e
+                    inmediatas.</p>
+                <p>El sistema de los números reales es un conjunto \(\mathbb{R}\), junto con dos operaciones \(+\) y
+                    \(\cdot\) (suma y producto, o adición y multiplicación) y una relación de orden \( &lt; \) (leída
+                    "es menor que"), que satisfacen una serie de axiomas o propiedades, que se estudiarán en tres
+                    subsecciones siguientes.</p>
+
+                <h3 id="prop_camp_reales">Propiedades de campo de los Reales</h3>
+                <p>Para cualesquiera \(a,b,c\in\mathbb{R}\) se satisfacen las siguientes propiedades:</p>
+                <ul>
+                    <li><b>Cerradura</b></li>
+                    $$\text{A}_1:\qquad a+b\in\mathbb{R}$$
+                    $$\text{M}_1:\qquad a\cdot b\in\mathbb{R}$$
+                    <li><b>Conmutatividad</b></li>
+                    $$\text{A}_2:\qquad a+b=b+a$$
+                    $$\text{M}_2:\qquad a\cdot b=b\cdot a$$
+                    <li><b>Asociatividad</b></li>
+                    $$\text{A}_3:\qquad a+(b+c)=(a+b)+c$$
+                    $$\text{M}_3:\qquad a\cdot (b\cdot c)=(a\cdot b)\cdot c$$
+                    <li><b>Existencia del elemento neutro</b></li>
+                    $$\text{A}_4:\qquad \exists 0\in\mathbb{R}: \forall a\in\mathbb{R},\, a+0=0+a=a$$
+                    $$\text{M}_4:\qquad \exists 1\in\mathbb{R},\,1\not=0: \forall a\in\mathbb{R}, \, a\cdot 1=1\cdot
+                    a=a$$
+                    <li><b>Existencia de elementos inversos</b></li>
+                    $$\text{A}_5:\qquad \forall a\in\mathbb{R}\quad \exists -a\in\mathbb{R}:a+(-a)=-a+a=0$$
+                    $$\text{M}_5:\qquad \forall a\in\mathbb{R}-\{0\}\quad \exists a^{-1}\in\mathbb{R}-\{0\}:a\cdot
+                    a^{-1}=a^{-1}\cdot a=1$$
+                    <li><b>Distributividad</b></li>
+                    $$\text{D}:\qquad a\cdot (b+c)=a\cdot b+a\cdot c$$
+                </ul>
+                <p>Nótese que las propiedades \(\text{A}_1\) hasta \(\text{A}_5\) refieren a la adición, mientras que
+                    \(\text{M}_1\) a \(\text{M}_4\) son propiedades análogas de la multiplicación. Las propiedades
+                    \(\text{A}_4\) y \(\text{M}_4\) definen la existencia de dos elementos neutros para cada operación,
+                    distintos entre ellos y llamados "cero" y "uno", respectivamente. La propiedad \(\text{D}\)
+                    relaciona ambas operaciones.</p>
+                <p>Aunque no se incluye ninguna definición para la relación de equivalencia \(=\), se entiende que
+                    \(a=b\) significa que \(a\) y \(b\) son el mismo elemento. Así, se obviarán identidades como "\(a=b
+                    \land b=c \Rightarrow a=c\)" y "\(a=b \Rightarrow a+c=b+c\)".</p>
+                <p>De las propiedades de campo se desprende una cantidad colosal de teoremas, de los cuales se
+                    enunciarán y demostrarán varios (los más útiles para nuestros fines).</p>
+
+                <h3 id="rel_ord_reales">Relación de orden en los reales</h3>
+                <p>Dentro de los reales está contenido un conjunto llamado el conjunto de los <em>positivos</em>,
+                    denotado como \(\mathbb R^+\) o simplemente \(P\). Este conjunto también cumple con las dos
+                    propiedades de cerradura ya expuestas en la sección anterior; es decir, se cumple que</p>
+                $$\text{A}_1':\qquad a+b\in\mathbb{R}^+$$
+                $$\text{M}_1':\qquad a\cdot b\in\mathbb{R}^+$$
+                <p>Además de una nueva propiedad, denominada tricotomía, que afirma lo siguiente:</p>
+                $$\text{T}:\,\forall a\in\mathbb{R}\text{ se cumple una y solo una de las siguientes tres afirmaciones
+                :}$$
+                <ol type="i">
+                    <li>\( a \in \mathbb R^{+} \)</li>
+                    <li>\( -a \in \mathbb R^{+} \)</li>
+                    <li>\( a=0 \)</li>
+                </ol>
+                <p>Y motivados por estas propiedades se define la relación de orden en los reales.</p>
+
+                <p><b>Definición.</b> Se define la relación de orden \( &lt; \) en los reales, leída "es menor que",
+                    para dos elementos \(a,b\in\mathbb R\) como:
+                    $$ a &lt; b \iff b-a \in \mathbb R^{+} $$</p>
+                <p>Además, se define lo siguiente:</p>
+                <p><strong>Definición. </strong>Dados \(a,b\in\mathbb R\), se define:</p>
+                <ol type="i">
+                    <li>\( a &gt; b \iff b &lt; a\), y \( &gt; \) se lee "mayor que".</li>
+                    <li>\( a\leq b \iff a &lt; b \lor a=b\), y \(\leq\) se lee "menor o igual que".</li>
+                    <li>\( a\geq b \iff a &gt; b \lor a=b\), y \(\geq\) se lee "mayor o igual que".</li>
+                </ol>
+                <p>Esta relación de orden cumple con una serie de "axiomas" (que con estas definiciones pasan a ser
+                    teoremas), que a continuación se enunciarán y demostrarán. Nótese que el primero de ellos es una
+                    equivalencia de la tricotomía ya expuesta.</p>
+
+                <strong>Tricotomía</strong><br>
+
+                <p>Dados \(a,b\in\mathbb R\), se cumple una y solo una de las siguientes tres afirmaciones</p>
+                <ol>
+                    <li>\( a &lt; b \)</li>
+                    <li>\( a &gt; b \)</li>
+                    <li>\( a = b \)</li>
+                </ol>
+                <p><strong>Demostración.</strong> Se aplicará la propiedad ya expuesta de tricotomía sobre el número \(b-a\). De ella se tiene que se cumple
+                    una y solo una de las siguientes tres afirmaciones:</p>
+                <ol>
+                    <li>\( b-a \in \mathbb R^+ \)</li>
+                    <li>\( -(b-a) \in \mathbb R^+ \)</li>
+                    <li>\( b-a = 0 \)</li>
+                </ol>
+                <p>De \(i)\) se sigue inmediatamente que \(a &lt; b\). En \(ii)\) se observa que \(-(b-a)=a-b\in\mathbb R^+\), de donde \(b &lt; a\) y,
+                    por definición, \(a &gt; b\). De \(iii)\) se sigue inmediatamente que \(a=b\). \(\blacksquare\) </p>
+                      
+                <p><strong>Transitividad</strong></p>
+                <p>Sean \(a,b,c\in\mathbb R\). Si \(a &lt; b\)  y  \(b &lt; c\), entonces \(a &lt; c\).</p>
+                <p><strong>Demostración.</strong> Por definición, la hipótesis afirma que \(b-a\in\mathbb R^+\) y \(c-b\in\mathbb R^+\). Por la propiedad de
+                    cerradura de la suma en \(\mathbb R^+\) se tiene que \((b-a)+(c-b)\in\mathbb R^+\). Más aún, \((b-a)+(c-b)=c-a\), por lo que
+                    \(c-a\in\mathbb R^+\) y, por definición, \(a &lt; c\). \(\blacksquare\).</p>
+                       
+                <p><strong>Aditividad</strong></p>
+                <p>Sean \(a,b,c\in\mathbb R\). Si \(a &lt; b\), entonces \(a+c &lt; b+c\).</p>
+                <p><strong>Demostración.</strong> Por definición, la hipótesis afirma que \(b-a\in\mathbb R^+\). Obsérvese que
+                    \(b-a=b-a+c-c=b+c-a-c=(b+c)-(a+c)\). Como \(b-a\in\mathbb R^+\), entonces  \((b+c)-(a+c)\in\mathbb R^+\) y, por definición,
+                    \(a+c &lt; b+c\). \(\blacksquare\)</p>
+                
+                <p><strong>Propiedad multiplicativa</strong></p>
+                <p>Sean \(a,b,c\in\mathbb R\). Si \(a &lt; b\)  y  \(c\in\mathbb R^+\), entonces \(ac &lt; bc\).</p>
+                <p><strong>Demostración.</strong> Por definición, la hipótesis afirma que \(b-a\in\mathbb R^+\) y \(c\in\mathbb R^+\). Por la propiedad de
+                    cerradura de la multiplicación en \(\mathbb R^+\) se sigue que \((b-a)c\in\mathbb R^+\). Se tiene que  \((b-a)c=bc-ac\). Así,
+                    \(bc-ac\in\mathbb R^+\) y, por definición, \(ac &lt; bc\). \(\blacksquare\)</p>
+                
+                <p>Estos cuatro "axiomas" de orden se usarán extensivamente para demostrar más teoremas respecto a las relaciones de orden.</p>
+                <p>Nótese que \(a &gt; 0\iff a-0=a\in\mathbb R^+\). Por lo tanto, se tomarán como afirmaciones equivalentes \(a\in\mathbb{R}^+\) y \(a &gt; 0\).</p>   
+                    
+                <p><strong>Intervalos</strong></p>
+                <p>Los intervalos serán una herramienta de gran utilidad conforme se desarrollen los subsecuentes temas. Intuitivamente, entendemos los
+                    intervalos son subconjuntos continuos de números reales, i.e. números reales tomados uno tras otro entre dos extremos determinados.
+                    Gráficamente se pueden entender como segmentos de la recta real. Se definirán como sigue
+                </p>    
+                <p><strong>Def.</strong> Sean \(a,b\in\mathbb R\):</p>
+                <ol>
+                    <li>El intervalo abierto \((a,b)\) es un conjunto definido como $$(a,b)=\{x\in\mathbb R\,|\, a &lt; x &lt; b\}$$</li>
+                    <li>El intervalo cerrado \([a,b]\) es un conjunto definido como $$[a,b]=\{x\in\mathbb R\,|\, a\leq x\leq b\}$$</li>
+                    <li>
+                        Los intervalos semiabiertos/semicerrados son los conjuntos definidos como
+                        $$(a,b]=\{x\in\mathbb R\,|\, a &lt; x\leq b\}$$
+                        $$[a,b)=\{x\in\mathbb R\,|\, a\leq x &lt; b\}$$
+                    </li>
+                    <li>
+                        Los intervalos infinitos son los conjuntos definidos como
+                        $$(a,\infty)=\{x\in\mathbb R\,|\, a &lt; x\}$$
+                        $$(-\infty,a)=\{x\in\mathbb R\,|\, x &lt; a\}$$
+                        $$[a,\infty)=\{x\in\mathbb R\,|\, a\leq x\}$$
+                        $$(-\infty,a]=\{x\in\mathbb R\,|\, x\leq a\}$$
+                    </li>
+                </ol>
+                <p>Es muy importante cuidar el orden en que se escriban \(a\) y \(b\). Nótese que, por la naturaleza de la definición, si \(a &gt; b\)
+                    entonces \((a,b)=[a,b]=\emptyset\)</p>
+                
+                <p><strong>Valor absoluto</strong></p>
+                <p><strong>Def.</strong> El valor absoluto de un número \(x\), denotado por \(|x|\), se define como</p>
+                $$ |x|=\left\{\begin{array}\\ x&& x\geq 0 \\ -x&& x &lt; 0 \end{array}\right.$$
+                
+                <p>Geométricamente, el valor absoluto representa la distancia que hay entre el cero y cualquier número en la recta real, como si se midiera
+                    con una regla. Es fácil ver (aunque se demostrará en esta sección) que el valor absoluto es siempre positivo, propiedad que va de acuerdo
+                    con nuestra noción intuitiva de distancia. El valor absoluto de la diferencia de dos números \(a\) y \(b\), \(|a-b|\) o \(|b-a|\)
+                    (ya se demostrará que son iguales), representa geométricamente la distancia entre ambos números sobre la recta de los reales.
+                </p>
+
+                <p>A continuación se enunciarán y demostrarán una serie de teoremas respecto al valor absoluto.</p>
+                <p>TEOREMAS</p>
+                <p><strong>Def.</strong> Se define a la raíz cuadrada de un número \(x\geq 0\), denotada \(\sqrt{x}\), como un número tal que \(\sqrt{x} \cdot
+                    \sqrt{x} = \sqrt{x}^2=x\), con \(\sqrt{x}\geq 0\).</p>
+                <p>Obsérvese que \(\sqrt{x^2}=|x|\)</p>
+                
+                <p><strong>Desigualdades</strong></p>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_1()">Ejemplo 1</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_2()">Ejemplo 2</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_3()">Ejemplo 3</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_4()">Ejemplo 4</div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_5()">Ejemplo 5</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_6()">Ejemplo 6</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_7()">Ejemplo 7</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="button primary fit" onclick="funcionEjemplo1_8()">Ejemplo 8</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Primer ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-1">
+                        <p>\(4x-5 &lt; 7x-4\)</p>
+                        \(\implies -5+4 &lt; 7x-4x \implies -1 &lt; 3x\implies x &gt; -\frac{1}{3}\)<br>
+                        Por lo que \(\boxed{x\in(-\frac{1}{3},\infty)}\)
+                    </div>
+                    <!-- Segundo ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-2">
+                        <p>\(x &lt; \frac{5x-2}{2} &lt; 7-x\)</p>
+                        <ol type="i">
+                            <li>\(x &lt; \frac{5x-2}{2} \implies 2x &lt; 5x-2 \implies 2 &lt; 3x \implies x &gt; \frac{2}{3}\)
+                                Por lo que \(x\in(\frac{2}{3},\infty)\)<br>
+                            </li>
+                            <li>\(\frac{5x-2}{2} &lt; 7-x\implies 5x-2 &lt; 14-2x \implies 7x &lt; 16\implies x &lt;
+                                \frac{16}{7}\)<br>
+                                Por lo que \(x\in(-\infty,\frac{16}{7})\)
+                            </li>
+                            Así, \(x\in(\frac{2}{3},\infty)\cap(-\infty,\frac{16}{7})\), de donde
+                            \(\boxed{x \in ( \frac{2}{3},\frac{16}{7} ) } \)
+                        </ol>
+                    </div>
+                    <!-- Tercer ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-3">
+                        <p>\(\frac{3}{x+5} &lt; x\)</p>
+                        <ol type="i">
+                            <li>\(x+5 &gt; 0\implies x &gt; -5\)</li>
+                            \(\implies 3 &lt; x(x+5) = x^{2} + 5x\)<br>
+                            \(\implies x^{2} + 5x + \frac{25}{4} &gt; 3 + \frac{25}{4}\)<br>
+                            \(\implies (x + \frac{5}{2})^{2} &gt; \frac{37}{4}\)<br>
+                            \(\implies |x + \frac{5}{2}| &gt; \frac{\sqrt{37}}{2}\)<br>
+                            \(\implies x + \frac{5}{2} &gt; \frac{\sqrt{37}}{2}\) o \(x+\frac{5}{2} &lt;
+                            -\frac{\sqrt{37}}{2}\)<br>
+                            \(\implies x>\frac{-5+\sqrt{37}}{2}\) o \(x &lt; \frac{-5-\sqrt{37}}{2}\)<br>
+                            Así, \( x \in [( - \infty, \frac{-5 -\sqrt{37}}{2}) \cup (\frac{ -5 + \sqrt{37}}{2}, \infty)] \cap
+                            (-5,\infty)\).<br>
+                            Por lo tanto, \(x\in(\frac{-5+\sqrt{37}}{2},\infty)\).<br><br>
+        
+                            <li>\(x+5 &lt; 0\implies x &lt; -5\)</li>
+                            \(\implies 3 &lt; x(x+5)\)
+                            \(\vdots\)
+                            \( \mid x+\frac{5}{2} \mid &lt; \frac{\sqrt{37}}{2}\)
+                            \(-\frac{\sqrt{37}}{2} &lt; x + \frac{5}{2}<\frac{\sqrt{37}}{2}\)
+                            \(\frac{-5-\sqrt{37}}{2} &lt; x &lt; \frac{-5+\sqrt{37}}{2}\)
+                            Así, \(x\in(\frac{-5-\sqrt{37}}{2},\frac{-5+\sqrt{37}}{2})\cap(-\infty,-5)\).
+                            Por lo tanto, \(x\in(\frac{-5-\sqrt{37}}{2},-5)\).
+        
+                            Así, \(\boxed{x\in(\frac{-5-\sqrt{37}}{2},-5) \cup (\frac{-5+\sqrt{37}}{2},\infty)}\)
+                        </ol>
+                    </div>
+                    <!-- Cuarto ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-4">
+                        <p>\(x^{2} &lt; 4x\)</p>
+                        \(\implies x^{2} - 4x &lt; 0 \implies x^{2} - 4x + 4 &lt; 4 \implies (x-2)^{2} &lt; 4\)
+                        \(\implies \lvert x-2 \rvert &lt; 2\)
+                        \(\implies -2 &lt; x-2 &lt; 2\)
+                        \(\implies 0 &lt; x &lt; 4\)
+                        Por lo tanto, \(\boxed{x\in(0,4)}\)
+                    </div>
+                    <!-- Quinto ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-5">
+                        <p>\(x^{2} \leq x+2\)</p>
+                        \(\implies x^{2} - x \leq 2 \implies x^{2} - x + \frac{1}{4} \leq 2 + \frac{1}{4} \implies
+                        (x - \frac{1}{2})^{2} \leq \frac{9}{4}\)
+                        \(\implies | x - \frac{1}{2} | \leq \frac{3}{2}\)
+                        \(\implies -\frac{3}{2} \leq x-\frac{1}{2} \leq \frac{3}{2}\)
+                        \(\implies -1 \leq x \leq 2 \)
+                        Por lo tanto, \(\boxed{x\in(-1,2)}\)
+                    </div>
+                    <!-- Sexto ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-6">
+                        <p>\(\frac{x}{1-x} \geq \frac{2+x}{x}\)</p>
+                            <ol type="i">
+                                <li>\(1-x &gt; 0\) y \(x &gt; 0 \implies x &gt; 0\) y \(x &lt; 1\implies 0 &lt; x &lt; 1\)</li>
+                                \(\implies x^{2} \geq (2+x)(1-x) = 2 -2x + x -x^{2} \) <br>
+                                \(\implies x^{2} \geq 2-x-x^2 \implies 2x^{2} + x \geq 2\) <br>
+                                \(\implies x^{2} + \frac{1}{2}x \geq 1 \implies x^{2} + \frac{1}{2}x + \frac{1}{16} \geq 1 +
+                                \frac{1}{16}\)<br>
+                                \(\implies (x + \frac{1}{4})^{2} \geq \frac{17}{16}\implies |x+\frac{1}{4}|\geq
+                                \frac{\sqrt{17}}{4}\)<br>
+                                \(\implies x + \frac{1}{4}\geq\frac{\sqrt{17}}{4}\) o \(x+\frac{1}{4}\leq -\frac{\sqrt{17}}{4}\)<br>
+                                \(\implies x \geq \frac{-1+\sqrt{17}}{4}\) o \(x \leq \frac{-1-\sqrt{17}}{4}\)<br>
+                                Así, \(x\in\{(-\infty,\frac{-1-\sqrt{17}}{4})\cup(\frac{-1+\sqrt{17}}{4},\infty)\}\cap(0,1)\).<br>
+                                Por lo tanto, \(x\in [\frac{-1+\sqrt{17}}{4},1)\).<br>
+                                <li>\(1-x &gt; 0\) y \(x &lt; \implies x &lt; 0\) y \(x &lt; 1\implies x &lt; 0\)</li>
+                                \(\implies x^2\leq (2+x)(1-x)\) <br>
+                                \(\vdots\) <br>
+                                \(\implies | x + \frac{1}{4} | \leq \frac{\sqrt{17}}{4}\) <br>
+                                \(\implies -\frac{\sqrt{17}}{4} \leq x + \frac{1}{4} \leq \frac{\sqrt{17}}{4}\) <br>
+                                \(\implies \frac{-1-\sqrt{17}}{4}\leq x \leq \frac{-1+\sqrt{17}}{4}\) <br>
+                                Así, \(x\in [\frac{-1-\sqrt{17}}{4},\frac{-1+\sqrt{17}}{4}] \cap (-\infty,0)\). <br>
+                                Por lo tanto, \(x \in [\frac{-1-\sqrt{17}}{4},0)\). <br>
+                                <li>\(1-x &lt; 0\) y \(x &gt; 0\implies x &gt; 0\) y \(x &gt; 1 \implies 1 &lt; x\)</li>
+                                \(\implies x^2\leq (2+x)(1-x)\) <br>
+                                \(\vdots\) <br>
+                                \(\implies \frac{-1-\sqrt{17}}{4} \leq x \leq \frac{-1+\sqrt{17}}{4}\) <br>
+                                Así, \(x\in [\frac{-1-\sqrt{17}}{4},\frac{-1+\sqrt{17}}{4}]\cup(1,\infty)\). <br>
+                                Por lo tanto, \(x \in \emptyset\).
+
+                                <li>\(1-x &lt; 0\) y \(x &lt; 0\implies x &lt; 0\) y \(x &gt; 1\) !</li>
+                                Por lo tanto, \(x\in\emptyset\).<br>
+                                Así, \(\boxed{x \in [\frac{-1-\sqrt{17}}{4},0) \cup [\frac{-1+\sqrt{17}}{4},1)}\)
+                            </ol>
+                    </div>
+                    <!-- Séptimo ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-7">
+                        <p>\(\frac{x^{2} - 1}{x^{2} + 2} &lt; 3\)</p>
+                        <ol type="i">
+                            <li>\(x^{2} + 2 &gt; 0 \implies x^{2} &gt; -2\) (tautología, pues \(x^{2} \geq 0 &gt; -2\))</li>
+                            \(x^{2} - 1 = 3x^{2} + 6 \implies -7 &lt; 2x^{2} \implies x^{2} &gt; -\frac{7}{2}\) (tautología,
+                            pues \(x^{2} \geq 0 &gt; -\frac{7}{2}\)) <br>
+                            Por lo tanto, \(x \in \mathbb{R}\).
+                            <li>\(x^{2} + 2 &lt; 0 \implies x^{2} &lt; -2\) !</li>
+                            Así, \(\boxed{x \in \mathbb{R}}\)
+                        </ol>
+                    </div>
+                    <!-- Octavo ejemplo -->
+                    <div class="ejemplo" id="ejemplo1-8">
+                        <p> \(\frac{x^{2} - 4x}{x^{2}} \geq 1-x\)</p>
+                        <p>Como \(x^2\geq 0\), </p>
+                        \(x^{2} - 4x \geq x^{2}(1-x) \implies x^{2} - 4x \geq x^{2} - x^{3} \) <br>
+                        \(\implies -4x \geq -x^{3} \implies x^{3} - 4x \geq 0 \implies x(x^{2} - 4) \geq 0\) <br><br>
+                        Que se cumple si:
+                        <ol type="i">
+                            <li>\(x \geq 0\) y \(x^{2} - 4 \geq 0\) \(\implies x \geq 0\) y \(x^{2} \geq 4\)</li>
+                            \(\implies x\geq 0\) y \((x\geq 2\) o \(x\leq -2)\) <br>
+                            \(\implies x\geq 2\), i.e. \(x\in [2,\infty)\). <br>
+
+                            <li>\(x &lt; 0\) y \(x^{2} - 4 &lt; 0\) \(\implies x &lt; 0\) y \(x^{2} &lt; 4\)</li>
+                            \(\implies x &lt; 0\) y \(-2 &lt; x &lt; 2\)<br>
+                            \(\implies 0 &lt; x &lt; 2\), i.e. \(x\in (0,2)\). <br>
+                        </ol>
+                        <p>Por lo tanto, \(x\in(0,2)\cup [2,\infty)\), de donde\(\boxed{x\in (0,\infty)}\)</p>
+                    </div>
+                </div>
+                
+                <hr class="major"/>
+
+                <h2 id="axioma_supremo"><strong>Axioma del supremo</strong></h2>
+                <p>Comencemos dando algunas definiciones importantes.</p>
+                
+                <p><strong>Def.</strong> Considérese un conjunto \(A\) no vacío de números reales.</p>
+                <ol>
+                    <li>Un número real \(c\) es elemento máximo de \(A\), denotado como \(c=\text{máx}(A)\), si
+                        \(a) c\in A\) y
+                        \(b) c\geq a \;\forall a \in A\)</li>
+                    <li>
+                        Un número real \(c\) es elemento mínimo de \(A\), denotado como \(c=\text{mín}(A)\), si
+                        \(a) c\in A\) y
+                        \(b) c\leq a \;\forall a \in A\)
+                    </li>
+                </ol>
+                
+                <p><strong>Def.</strong> Considérese un conjunto \(A\) de números reales.</p>
+                <ol>
+                    <li>
+                        Un número real \(c\) es una cota superior de \(A\) si \(c\geq a \;\forall a \in A\). Se dice que el conjunto \(A\) está acotado
+                        superiormente si tiene una cota superior.
+                    </li>
+                    <li>
+                        Un número real \(c\) es una cota inferior de \(A\) si \(c\leq a \;\forall a \in A\). Se dice que el conjunto \(A\) está acotado
+                        inferiormente si tiene una cota inferior.
+                    </li>
+                    <li>
+                        Se dice que el conjunto \(A\) está acotado si está acotado superior e inferiormente.
+                    </li>
+                </ol>
+                
+                <p><strong>Def.</strong> Considérese un conjunto \(A\) no vacío de números reales.</p>
+                <ol>
+                    <li>
+                        Un número real \(c\) es el supremo de \(A\), denotado como \(c=\text{sup}(A)\), si
+                        \(a) c\) es cota superior de \(A\) y
+                        \(b) c\leq x \) para toda cota superior \(x\) de \(A\).
+                    </li>
+                    <li>
+                        Un número real \(c\) es el ínfimo de \(A\), denotado como \(c=\text{ínf}(A)\), si
+                        \(a) c\) es cota inferior de \(A\) y
+                        \(b) c\geq x \) para toda cota inferior \(x\) de \(A\).
+                    </li>
+                </ol>
+                
+                <p>
+                    En la introducción al tema de los números reales se habló de una característica importante de los reales: no hay dos reales
+                    entre los cuales no exista otro real. Esta es una idea de extrema importancia, pues podemos hablar de una noción de continuidad
+                    en ellos, una carencia de agujeros en los reales. Esta idea no está soportada por ninguno de los axiomas que hasta aquí se han
+                    expuesto, por lo que hace falta un axioma más para completar nuestra discusión de los reales.
+                </p>
+                <p>
+                    Para motivar el axioma faltante, piénsese en el conjunto \(A=\{x\in\mathbb R\,|\,x &gt; 0;x^2 &lt; 2\}\). Es evidente que
+                    \(\text{sup}(A)=\sqrt{2}\). No obstante, ninguna de las propiedades de los reales nos ha asegurado hasta ahora la existencia de un
+                    número \(x\) tal que \(x^2=2\), por lo que, hasta donde sabemos, no está asegurada la existencia de \(\sqrt{2}\) (siempre podemos
+                    agregar un axioma que diga "existe un número \(x\) tal que \(x^2=2\)", pero esto no resolvería todos nuestros problemas, además de
+                    ser poco elegante). Si el número \(\sqrt{2}\) no existiera, entonces no podríamos asegurar la existencia de una cota superior mínima
+                    de \(A\), pues para cualquier \(y &gt; \sqrt{2}\) siempre podríamos escoger un número \(y' &gt; \sqrt{2}\) más pequeño que \(y\). Ahora que
+                    hemos descubierto este problema, es casi evidente la nueva propiedad que necesitan los números reales para rellenar estos hoyos que
+                    hemos encontrado.
+                </p>
+
+                <p><strong>Axioma del supremo.</strong> Todo subconjunto de \(\mathbb R\) no vacío y acotado superiormente tiene un supremo.</p>
+                <p>
+                    Este axioma es la cereza sobre el pastel de los números reales, y asegura al fin que los números reales no tienen hoyos.
+                    A continuación pasaremos a demostrar que el supremo de cualquier conjunto es único, no sin antes demostrar un lema que nos servirá de
+                    apoyo.
+                </p>
+
+                <p><strong>Lema.</strong> Sean \(a,b\in\mathbb{R}\). Si \(a\leq b\) y \(b\leq a\), entonces \(a=b\).</p>
+                <p><strong>Demostración.</strong> Por la definición de \(\leq\), la hipótesis afirma que $$(a=b\lor a &lt; b)\land(a=b\lor b &lt; a)$$</p>
+                
+                <p>
+                    De donde se sigue que \((a=b)\lor (a &lt; b\land  b &lt; a)\). Por la propiedad de tricotomía se tiene que \(a &lt; b\land  b &lt; a\)
+                    es una contradicción, por lo que \(a=b\).
+                </p>
+
+                <p><strong>Teorema de unicidad del supremo.</strong> El supremo de cualquier conjunto de números reales es único.</p>
+                <p><strong>Demostración.</strong> Sean \(\alpha\) y \(\beta\) ambos supremos de un conjunto \(A\supseteq\mathbb{R}\). Así, ambos son cotas
+                    superiores de \(A\). Por la definición de supremo se tiene que \(\alpha\leq\beta\) y \(\beta\leq\alpha\), y por el lema se concluye que
+                    \(\alpha=\beta\). \(\blacksquare\)
+                </p>
+
+                <hr class="major"/>
+                
+                <h2 id="induccion">Principio de inducción matemática</h2>
+                <p>En lógica se dice que un argumento es deductivo si va de la generalidad a la particularidad, e.g. </p>
+                <ol>
+                    <li>Todos los hombres tienen barba.</li>
+                    <li>Sócrates es hombre.</li>
+                    <li>Por lo tanto, Sócrates tiene barba.</li>
+                </ol>
+
+                <p>De igual forma, se dice que un argumento es inductivo si va de una aseveración particular a un caso general, e.g.</p>
+                <ol>
+                    <li>Juan es alto y corre rápido.</li>
+                    <li>María es alta y corre rápido.</li>
+                    <li>Pepe es alto y corre rápido.</li>
+                    <li>Por lo tanto, toda la gente alta también corre rápido.</li>
+                </ol>
+
+                <p>
+                    Nótese que esto último es una generalización apresurada. Por lo general, los argumentos inductivos no son válidos en la vida cotidiana;
+                    no obstante, en las matemáticas hay un principio fortísimo que se fundamenta en el concepto de argumento inductivo.
+                </p>
+                <p>
+                    Piénsese en los números naturales como si fueran un juego de dominó, donde cada número es una ficha. Supóngase que se colocan todos
+                    los números-ficha en una fila, parados uno tras otro. Si yo tirara la primera ficha, y pudiera asegurar que cada ficha que cayera
+                    tirará a su sucesora, entonces puedo asegurar que todos los números-ficha van a caer.
+                </p>
+                <p>Esta es la idea detrás del principio de inducción, el cual postula lo siguiente: </p>
+                <p>
+                    Si existe un determinado número natural \(n\) que cumple una propiedad \(P\), y si este hecho implica que \(n+1\) también cumple
+                    \(P\), entonces todos los números naturales a partir de \(n\) la cumplirán.
+                </p>
+                <p>
+                    Partiendo de este principio, una demostración por inducción consiste en los siguientes pasos:
+                </p>
+               <ol>
+                   <li>
+                       <strong>Base inductiva.</strong> Consiste en probar que la propiedad a demostrar se cumple para algún \(n\in\mathbb{N}\) en particular.
+                       Por lo general se toma \(n=1\).</li>
+                    <li>
+                        <strong>Hipótesis inductiva. Se supone válida la propiedad para algún número natural \(n=k\).</strong>
+                    </li>
+                    <li>
+                        <strong>Paso inductivo.</strong> Se demuestra a partir de la hipótesis inductiva que \(n=k+1\) cumple con la propiedad también.
+                    </li>
+               </ol>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/./index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>Navegación</h2>
+                </header>
+                <a href="#introduccion">Introducción</a><br>
+                <a href="#prop_reales">Propiedades de los números Reales</a><br>
+                <ul>
+                    <li><a href="#prop_camp_reales">Propiedades de campo de los Reales</a></li>
+                    <li><a href="#rel_ord_reales">Relación de orden en los reales</a></li>
+                    <li><a href="#axioma_supremo">Axioma del Supremo</a></li>
+                </ul>
+                <a href="#induccion">Principio de inducción matemática</a>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<script>
+    function funcionEjemplo1_1() {
+      var x = document.getElementById("ejemplo1-1");
+      var y = document.getElementById("ejemplo1-2");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+          if (y.style.display === "block") {
+            x.style.display = "none";
+          }
+        x.style.display = "block";
+      }
+    };
+    function funcionEjemplo1_2() {
+      var x = document.getElementById("ejemplo1-2");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    };
+    function funcionEjemplo1_3() {
+      var x = document.getElementById("ejemplo1-3");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    };
+    function funcionEjemplo1_4() {
+      var x = document.getElementById("ejemplo1-4");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    };
+    function funcionEjemplo1_5() {
+      var x = document.getElementById("ejemplo1-5");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    };
+    function funcionEjemplo1_6() {
+      var x = document.getElementById("ejemplo1-6");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    };
+    function funcionEjemplo1_7() {
+      var x = document.getElementById("ejemplo1-7");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    };
+    function funcionEjemplo1_8() {
+      var x = document.getElementById("ejemplo1-8");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    };
+</script>
+
+</body>
+</html>

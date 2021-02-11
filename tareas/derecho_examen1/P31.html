@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 31 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 31</h1>
+                </header>
+                <strong>Teorema.</strong> \(\sqrt{2}\) es irracional.
+
+                <hr class="major"/>
+
+                <strong>Demostración.</strong><br>
+                Por contradicción, supóngase que \(\sqrt{2}\) es racional, es decir,<br>
+                $$ \sqrt{2}=\frac{p}{q}: p,q \in \mathbb{Z}, q \neq 0 $$
+                Se puede suponer sin ningún problema que el máximo común divisor de \(p\) y \(q\) es 1, es decir, que no
+                tienen factores comunes y por tanto \(p/q\) es irreducible. Elevando al cuadrado ambos lados de la
+                igualdad, tendremos que<br>
+                $$ 2=\frac{p^{2}}{q^{2}} \implies 2q^{2}=p^{2} $$
+                De donde \(p^{2}\) debe ser múltiplo de 2, lo cual implica que \(p\) también es múltiplo de 2; es decir,
+                \(p=2k\) para un cierto \(k \in \mathbb{R}\). Sustituyendo este valor de \(p\) en la expresión anterior
+                y simplificando, se tendrá lo siguiente:<br>
+                \(2q^{2}=(2k)^{2} \implies q^{2}=2k^{2}\)<br>
+                Esta última expresión nos asegura que \(q^{2}\) es múltiplo de 2 y por tanto \(q\) también lo es. Sin
+                embargo, se ha llegado a un absurdo, pues habíamos supuesto que \(mcd(p, q)=1\) y hemos llegado a que
+                \(p\) y \(q\) son múltiplos de 2. Por lo tanto, \(p/q\) no es irreducible y \(\sqrt{2}\) es
+                irracional.<br>
+                \(\blacksquare\)
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

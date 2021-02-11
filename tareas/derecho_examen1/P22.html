@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 22 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 22</h1>
+                </header>
+                Calcula el mínimo, máximo, ínfimo y supremo si es que existe de los siguientes conjuntos.
+
+                <hr class="major"/>
+
+                Para resolver todos los ejercicios, recordaremos las siguientes definiciones fundamentales:<br>
+                Considérese un conjunto A no vació de números reales.
+                <ol type="a">
+                    <li>Un número real \(c\) es elemento máximo de A; denotado ello como \(c=maxA\), si
+                        \(\bullet c \in A\) y
+                        \(\bullet a \leq c\) para todo \(a \in A\)
+                    </li>
+                    <li>Un número real \(c\) es elemento mínimo de A; denotado ello como \(c=minA\), si
+                        \(\bullet c \in A\) y
+                        \(\bullet c \leq a\) para todo \(a \in A\)
+                    </li>
+                    <li>Un número real \(c\) es el supremo de A; denotado ello como \(c=supA\), si
+                        \(\bullet c\) es cota superior de \(A\) y
+                        \(\bullet c \leq x\) para toda cota superior \(x\) de \(A\)
+                    </li>
+                    <li>Un número real \(c\) es el ínfimo de A; denotado ello como \(c=infA\), si
+                        \(\bullet c\) es cota inferior de \(A\) y
+                        \(\bullet x \leq c\) para toda cota inferior \(x\) de \(A\)
+                    </li>
+                </ol>
+
+                <hr class="major"/>
+
+                <h2>P22.A</h2>
+                \(A=\{\frac{-1}{n}:n \in \mathbb{N}\}\) <br>
+                Comenzamos visualizando al conjunto como una función cuyo dominio son los números naturales. Obtendremos
+                su gráfica mediante Geogebra de esta y el resto de funciones (mientras sea viable).<br>
+
+                <img src="img/P22.A.png">
+
+                <ul>
+                    <li>Como -1 es cota inferior del conjunto A y \(x \leq -1\) para toda cota inferior \(x\) del
+                        conjunto, entonces \(infA=-1\).
+                    </li>
+                    <li>Como \(-1 \leq a\) para todo \(a \in A\) y \(-1 \in A\), entonces \(minA=-1\).</li>
+                    <li>Como 0 es cota superior de A y \(0 \leq x\) para toda cota superior \(x\) de A, entonces
+                        \(supA=0\).
+                    </li>
+                    <li>Como \(a \leq 0\) para todo \(a \in A\), pero \(0 \notin A\), entonces
+                        \(maxA=\nexists\).
+                    </li>
+                </ul>
+
+                <hr class="major"/>
+
+                <h2>P22.B</h2>
+                \(B=\{1+\frac{1}{n}: n \in \mathbb{N}\}\)<br>
+
+                <img src="img/P22.B.png">
+
+                <ul>
+                    <li>Como 1 es cota inferior del conjunto B y \(x \leq 1\) para toda cota inferior \(x\) del
+                        conjunto, entonces \(infB=1\).
+                    </li>
+                    <li>Como \(1 \leq a\) para todo \(a \in B\), pero \(1 \notin B\), entonces
+                        \(minA=\nexists\).
+                    </li>
+                    <li>Como 2 es cota superior de B y \(2 \leq x\) para toda cota superior \(x\) de B, entonces
+                        \(supA=2\).
+                    </li>
+                    <li>Como \(a \leq 2\) para todo \(a \in B\) y \(0 \in B\), entonces \(maxB=2\).</li>
+                </ul>
+
+                <hr class="major"/>
+
+                <h2>P22.C</h2>
+                \(C=\{\frac{(-1)^{n}}{n}+n: n \in \mathbb{N}\}\)<br>
+
+                <img src="img/P22.C.png">
+
+                <ul>
+                    <li>Como se observa, a medida que \(n\) aumenta, el valor de la función también lo hace. Así,
+                        recurriendo al cálculo de límites de preparatoria, nos daremos cuenta de que el límite cuando
+                        \(n\) tiende a infinito es igual a infinito; por lo tanto, el conjunto C no tiene supremo y por
+                        tanto tampoco máximo, pues no está acotado superiormente.
+                    </li>
+                    <li>Como \( 0 \) es cota inferior del conjunto C y \(x \leq 0\) para toda cota inferior \(x\) del
+                        conjunto, entonces \(infC = 0\).
+                    </li>
+                    <li>Como \(0 \leq a\) para todo \(a \in C\), y \(0 \in C\), entonces \(minC=0\).</li>
+                </ul>
+
+                <hr class="major"/>
+
+                <h2>P22.D</h2>
+                \(D=\{(-1)^{n}(\frac{1-n}{n}): n \in \mathbb{N}\}\)<br>
+
+                <img src="img/P22.D.png">
+
+                <ul>
+                    <li>Como \( -1 \) es cota inferior del conjunto D y \(x \leq -1\) para toda cota inferior \(x\) del
+                        conjunto, entonces \(infD=-1\).
+                    </li>
+                    <li>Como \( 1 \) es cota superior de D y \(1 \leq x\) para toda cota superior \(x\) de D, entonces
+                        \(supD=1\).
+                    </li>
+                    <li>Tanto el supremo como el ínfimo del conjunto D no pertencen al conjunto, por lo tanto, decimos
+                        que no existe un máximo ni un mínimo para este conjunto, pues sus valores oscilan entre \( 1 \)
+                        y \( -1 \) cuando \(n\) tiende a infinito, sin llegar a tocarlos.
+                    </li>
+                </ul>
+
+                <hr class="major"/>
+
+                <h2>P22.E</h2>
+                \(E=\{x \in \mathbb{Q}:x^{2}<2\}\)<br>
+                <p>Este es uno de los conjuntos más famosos para introducir el axioma del supremo para los números
+                    reales. Resulta que en los números racionales, este conjunto no está acotado inferior ni
+                    superiormente; pues siempre encontramos un racional ya sea positivo o negativo que elevado al
+                    cuadrado sea menor que 2. Por ejemplo, veamos el siguiente análisis:</p>
+                $$0^{2}<2 \checkmark$$
+                $$1^{2}<2 \checkmark$$
+                $$(\frac{7}{5})^{2}<2 \checkmark$$
+                $$(\frac{1393}{985})^{2}<2 \checkmark$$
+                $$\cdot$$
+                $$\cdot$$
+                $$\cdot$$
+                $$d^{2}<2$$
+                $$\cdot$$
+                $$\cdot$$
+                $$\cdot$$
+                <p>No hay cota superior mínima (supremo)</p>
+                $$(\frac{3363}{2378})^{2} &gt; 2$$
+                $$(\frac{3}{2})^{2} &gt; 2$$
+                $$2^{2} &gt; 2$$
+                <p>Es por esto que el conjunto E no posee máximo ni supremo. Y al suceder algo análogo pero con números
+                    negativos deducimos que el conjunto no tiene mínimo y tampoco ínfimo.</p>
+                <p>Aunque este conjunto se haya vuelto un poco aburrido, vale la pena mencionar que la importancia del
+                    axioma del supremo radica en que, en los números reales \(\mathbb{R}\), dicho conjunto sí tendría
+                    supremo e ínfimo, que serían \(\sqrt{2}\) y \(-\sqrt{2}\), respectivamente; así como máximo y
+                    mínimo, que coincidirían con el supremo e ínfimo, respectivamente.</p>
+
+                <hr class="major"/>
+
+                <h2>P22.F</h2>
+                \(\{n:2^{n} \leq n!, n \in \mathbb{N}\}\)<br>
+                <p>Se puede demostrar mediante Inducción matemática que \(2^{n} \leq n!\) para todo \(n \in
+                    \mathbb{N}\).
+                    Lo anterior significa que todos los números naturales complen con dicha propiedad, es decir,
+                    tendremos la siguiente equivalencia: </p>
+                $$\{n:2^{n} \leq n!, n \in \mathbb{N}\}=\mathbb{N}$$
+                <p>Entonces el conjunto en cuestión es el de los números naturales; el cual no tiene supremo ni máximo,
+                    pero sí ínfimo y mínimo, el cual es 1.</p>
+
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

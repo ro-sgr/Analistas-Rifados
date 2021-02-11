@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es">
+<head>
+    <title>Problema 4 | Tarea</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo"><strong>Analistas</strong> Rifados</a> | Tarea
+                <ul class="icons">
+                    <li><a href="https://github.com/ro-sgr" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="https://github.com/Andreo696" class="icon brands fa-github"><span
+                            class="label">Github</span></a></li>
+                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Contenido -->
+            <section>
+                <header class="main">
+                    <h1>Problema 4</h1>
+                </header>
+                <p> Si \(a\) es un número real cualquiera, entonces:</p>
+                <ol type="a">
+                    <li><a href="#P4A">\(-(-a)=a\)</a></li>
+                    <li><a href="#P4B">\((-1)a=-a\)</a></li>
+                    <li>\(a(-b)=(-a)b=-ab\)</li>
+                    <li>\((-a)(-b)=ab\)</li>
+                    <li>\((ab)^{-1}=a^{-1}b^{-1}, a\not=0, b\not=0\)</li>
+                    <li>\(\frac{a}{b}\frac{c}{d}=\frac{ac}{bd}\), \(b\not=0\), \(d\not=0\)</li>
+                    <li>\(\frac{a}{c}+\frac{b}{c}=\frac{a+b}{c}\), \(c\not=0\)</li>
+                    <li>\(\frac{a}{b}+\frac{c}{d}=\frac{ad+cb}{bd}\), \(b\not=0\), \(d\not=0\)</li>
+                </ol>
+
+                <strong id="t1">Teorema 1. </strong>\(\forall a \in \mathbb{R}, a \cdot 0=0\)<br>
+                <strong id="t2">Teorema 2. </strong>Sean \(a, b\) y \(c\) números reales. Si \(a+c=b+c \implies a=b\)
+
+                <hr class="major"/>
+
+                <!-- Demostración A -->
+                <h2 id="P4A">P4.A</h2>
+                <strong>P.D. </strong>\(-(-a)=a\)<br>
+                <strong>Demostración</strong><br>
+                \(-a-(-a)=0\quad\) Inversos aditivos<br>
+                \(a-a-(-a)=a+0\)<br>
+                \(0-(-a)=a+0\quad\) Inversos aditivos b<br>
+                \(-(-a)=a\quad\) Neutro aditivo<br>
+                \(\blacksquare\)<br>
+
+                <hr class="major"/>
+
+                <!-- Demostración B -->
+                <h2 id="P4B">P4.B</h2>
+                <strong>P.D. </strong>\( (-1)a = -a\)<br>
+                <strong>Demostración</strong><br>
+                \((-1)a=(-1)a+0\quad\) Neutro aditivo<br>
+                \((-1)a=(-1)a+a+(-a)\quad\) Inversos aditivos<br>
+                \((-1)a=((-1)a+a)+(-a)\quad\) Asociatividad<br>
+                \((-1)a=((-1)a+1\cdot a)+(-a)\quad\) Neutro multiplicativo<br>
+                \((-1)a=(-1+1)a+(-a)\quad\) Distributividad<br>
+                \((-1)a=(0)a+(-a)\quad\) Inversos aditivos<br>
+                \((-1)a=0+(-a)\quad\) Teorema 1 de las notas<br>
+                \((-1)a=-a\quad\) Neutro aditivo<br>
+                Por lo tanto, \((-1)a=-a\) \(\blacksquare\)<br>
+
+                <hr class="major"/>
+
+                <!-- Demostración C -->
+                <h2>P4.C</h2>
+                <strong>P.D. </strong>\(a(-b)=(-a)b=-ab\)<br>
+                <strong>Demostración</strong><br>
+                \(a(-b)=a((-1)b)\quad\) Propiedad del inciso b<br>
+                \(a(-b)=(a(-1))b\quad\) Asociatividad<br>
+                \(a(-b)=((-1)a)b\quad\) Conmutatividad<br>
+                \(a(-b)=(-a)b\quad\) Propiedad del inciso b<br>
+                Asociando y conmutando el producto de otra forma, tenemos<br>
+                \(a(-b)=a((-1)b)\quad\) Propiedad del inciso b<br>
+                \(a(-b)=a(-1)b\quad\) Asociatividad<br>
+                \(a(-b)=(-1)ab\quad\) Conmutatividad<br>
+                \(a(-b)=(-1)(ab)\quad\) Asociatividad<br>
+                \(a(-b)=-ab\quad\) Propiedad del inciso b<br>
+                Así, hemos obtenido las dos equivalencias buscadas. \(\blacksquare\)<br>
+
+                <hr class="major"/>
+
+                <!-- Demostración D -->
+                <h2>P4.D</h2>
+                <strong>P.D. </strong>\((-a)(-b)=ab\)<br>
+                <strong>Demostración</strong><br>
+                \((-a)(-b)+0=(-a)(-b)+ab-ab\) Neutro y opuesto aditivo <br>
+                \(=(-a)(-b)+ab+a(-b)\) Propiedad del inciso c <br>
+                \(=((-a)(-b)+a(-b))+ab\) Asociatividad<br>
+                \(=(-b)(-a+a)+ab\) Distributividad<br>
+                \(=(-b)(0)+ab\) Opuesto aditivo<br>
+                \(=ab\) Por <a href="#t1">Teorema 1</a> \(\blacksquare\)
+
+                <hr class="major"/>
+
+                <!-- Demostración E -->
+                <h2>P4.E</h2>
+                <strong>P.D. </strong>((ab)^{-1}=a^{-1}b^{-1}, a\not=0, b\not=0\)<br>
+                <strong>Demostración</strong><br>
+                Como todo real distinto de cero tiene inverso multiplicativo, tenemos que:
+                $$aa^{-1}=1, bb^{-1}=1$$
+                Multiplicando miembro a miembro e igualando:
+                $$(aa^{-1})(bb^{-1})=1$$
+                Por conmutatividad y asociatividad del producto, podemos reescribir como sigue:
+                $$(a^{-1}b^{-1})(ab)=1$$
+                Dado que \((ab)\) es un real no nulo, existe su inverso multiplicativo \((ab)^{-1}\). Multiplicando a
+                ambos lados de la igualdad anterior por este inverso tendremos que
+                $$(a^{-1}b^{-1})(ab)(ab)^{-1}=1(ab)^{-1}$$
+                Finalmente, por el neutro e inverso multiplicativo, obtenemos lo que se quería demostrar.
+                $$a^{-1}b^{-1}=(ab)^{-1} \blacksquare$$
+
+                <hr class="major"/>
+
+                <!-- Demostración F -->
+                <h2>P4.F</h2>
+                <strong>P.D. </strong>\(\frac{a}{b}\frac{c}{d}=\frac{ac}{bd}\), \(b\not=0\), \(d\not=0\)<br>
+                <strong>Definición 2. </strong>\(\frac{a}{b}=a\frac{1}{b}=ab^{-1}\), \(b\not=0\)<br>
+                <strong>Demostración.</strong><br>
+                \( \frac{a}{b}\frac{c}{d} = a b^{-1} c d^{-1} \) Definición 2<br>
+                \( \frac{a}{b}\frac{c}{d} = (ac)(b^{-1}d^{-1}) \) ASociatividad del producto<br>
+                \( \frac{a}{b}\frac{c}{d}= (ac)(bd)^{-1} \) Por la propiedad del inciso <em>e</em><br>
+                \( \frac{a}{b}\frac{c}{d} = \frac{ac}{bd} \) Definición 2<br>
+                \( \blacksquare \)
+
+                <hr class="major"/>
+
+                <!-- Demostración G -->
+                <h2>P4.G</h2>
+                <strong>P.D. </strong>\(\frac{a}{c}+\frac{b}{c}=\frac{a+b}{c}\), \(c\not=0\)<br>
+                <strong>Demostración.</strong>
+                \( \frac{a}{c} + \frac{b}{c}= a c^{-1} + b c^{-1} \) Definición 2<br>
+                \( \frac{a}{c} + \frac{b}{c} = (c^{-1})(a+b) \) Distributividad<br>
+                \( \frac{a}{c} + \frac{b}{c} = (a+b)(c^{-1} \)) Conmutatividad del producto<br>
+                \( \frac{a}{c} + \frac{b}{c}= \frac{a+b}{c} \) Definición 2<br>
+                \( \blacksquare \)
+
+                <!-- Demostración H -->
+                <h2>P4.H</h2>
+                <strong>P.D. </strong>\(\frac{a}{b}+\frac{c}{d}=\frac{ad+cb}{bd}\), \(b\not=0\), \(d\not=0\)<br>
+                <strong>Demostración.</strong>
+                \( \frac{a}{b} + \frac{c}{d} = a b^{-1} + c d^{-1} \) Definición 2<br>
+                \( \frac{a}{b} + \frac{c}{d} = (a b^{-1}) \cdot 1 + (c d^{-1}) \cdot 1 \) Neutro multiplicativo<br>
+                \( \frac{a}{b} + \frac{c}{d} = (a b^{-1})(d d^{-1}) + (c d^{-1})(b b^{-1}) \) Inverso multiplicativo<br>
+                \( \frac{a}{b} + \frac{c}{d} = (a d)(b^{-1} d^{-1}) + (c b)(b^{-1} d^{-1}) \) ASociatividad y conmutatividad del producto<br>
+                \( \frac{a}{b} + \frac{c}{d} = (a d)(b d)^{-1} + (c b)(b d)^{-1} \) Propiedad del inciso <em>e</em><br>
+                \( \frac{a}{b} + \frac{c}{d} = (ad + cb) (b d)^{-1} \) Distributividad y conmutatividad<br>
+                \( \frac{a}{b} + \frac{c}{d}= \frac{ad + bc}{bd} \) Definición 2<br>
+                \( \blacksquare \)
+
+
+            </section>
+
+            <hr class="major">
+
+            <div align="center"> 
+                <ul class="pagination">
+                    <li><a href="/tareas/derecho_examen1/P3.html" class="button">Anterior</a></li>
+                    <li><a href="/tareas/derecho_examen1/P4.html" class="page active">4</a></li>
+                    <li><a href="/tareas/derecho_examen1/P5.html" class="page">5</a></li>
+                    <li><a href="/tareas/derecho_examen1/P6.html" class="page">6</a></li>
+                    <li><span>…</span></li>
+                    <li><a href="/tareas/derecho_examen1/P33.html" class="page">33</a></li>
+                    <li><a href="/tareas/derecho_examen1/P34.html" class="page">34</a></li>
+                    <li><a href="/tareas/derecho_examen1/P35.html" class="page">35</a></li>
+                    <li><a href="/tareas/derecho_examen1/P5.html" class="button">Siguiente</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>
+                        <span class="opener">Apuntes</span>
+                        <ul>
+                            <li><a href="/apuntes/numeros_reales.html">Números reales</a></li>
+                            <li><a href="/apuntes/funciones.html">Funciones</a></li>
+                            <li><a href="/apuntes/sucesiones.html">Sucesiones</a></li>
+                            <li><a href="/apuntes/limites.html">Límites</a></li>
+                            <li><a href="/apuntes/continuidad.html">Continuidad</a></li>
+                            <li><a href="/apuntes/derivadas.html">Derivadas</a></li>
+                            <li><a href="/apuntes/interpretacion_derivada.html">Interpretación de la derivada</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Tareas</span>
+                        <ul>
+                            <li><a href="/tareas/derecho_examen1.html">Derecho a 1° examen</a></li>
+                            <li><a href="/tareas/derecho_examen2.html">Derecho a 2° examen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">"Por mi raza hablará el espíritu"</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
